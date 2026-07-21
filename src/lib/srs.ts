@@ -32,6 +32,7 @@ interface Store {
   streak: { count: number; last: string };
   totalReviews: number;
   pace?: PaceId;
+  hskStart?: number; // 1-4: HSK levels up to this are open without completing priors
 }
 
 const emptyStore = (): Store => ({
@@ -80,14 +81,30 @@ export interface SessionQueue {
   fresh: DeckItem[];
 }
 
+const hskLevel = (scenarioId: string): number | null => {
+  const m = scenarioId.match(/^hsk(\d)$/);
+  return m ? Number(m[1]) : null;
+};
+
 // Sequential scenario gating: the first scenario is always open; each next one
 // unlocks once every card of the previous scenario has been met. Single-scenario
-// decks (imported Anki decks) are effectively ungated.
-export function unlockedScenarioIds(deck: Deck, cardIds: Set<string>): Set<string> {
+// decks (imported Anki decks) are effectively ungated. HSK decks honor a
+// user-chosen starting level: every level up to hskStart is open immediately.
+export function unlockedScenarioIds(
+  deck: Deck,
+  cardIds: Set<string>,
+  hskStart = 1,
+): Set<string> {
   const unlocked = new Set<string>();
   for (let i = 0; i < deck.scenarios.length; i++) {
+    const sc = deck.scenarios[i];
+    const lvl = hskLevel(sc.id);
+    if (lvl !== null && lvl <= hskStart) {
+      unlocked.add(sc.id);
+      continue;
+    }
     if (i === 0) {
-      unlocked.add(deck.scenarios[i].id);
+      unlocked.add(sc.id);
       continue;
     }
     const prev = deck.scenarios[i - 1].id;
@@ -95,9 +112,20 @@ export function unlockedScenarioIds(deck: Deck, cardIds: Set<string>): Set<strin
       .filter((it) => it.scenario === prev)
       .every((it) => cardIds.has(it.id));
     if (!prevDone) break;
-    unlocked.add(deck.scenarios[i].id);
+    unlocked.add(sc.id);
   }
   return unlocked;
+}
+
+export async function getHskStart(): Promise<number> {
+  const store = await loadStore();
+  return store.hskStart ?? 1;
+}
+
+export async function setHskStart(level: number): Promise<void> {
+  const store = await loadStore();
+  store.hskStart = Math.min(4, Math.max(1, level));
+  await saveStore(store);
 }
 
 export async function getPace(): Promise<(typeof PACES)[number]> {
@@ -120,9 +148,17 @@ export async function buildQueue(deck: Deck): Promise<SessionQueue> {
   });
   const introduced = store.introducedToday.date === today() ? store.introducedToday.count : 0;
   const freshBudget = Math.max(0, paceById(store.pace ?? DEFAULT_PACE).perDay - introduced);
-  const unlocked = unlockedScenarioIds(deck, new Set(Object.keys(store.cards)));
+  const hskStart = store.hskStart ?? 1;
+  const unlocked = unlockedScenarioIds(deck, new Set(Object.keys(store.cards)), hskStart);
+  // When the user starts at a higher HSK level, its words come before leftovers
+  // from the skipped lower levels.
+  const backfill = (it: DeckItem) => {
+    const lvl = hskLevel(it.scenario);
+    return lvl !== null && lvl < hskStart ? 1 : 0;
+  };
   const fresh = deck.items
     .filter((it) => !store.cards[it.id] && unlocked.has(it.scenario))
+    .sort((a, b) => backfill(a) - backfill(b))
     .slice(0, freshBudget);
   return { due, fresh };
 }
@@ -174,7 +210,7 @@ export async function deckStats(deck: Deck): Promise<DeckStats> {
   const store = await loadStore();
   const q = await buildQueue(deck);
   const metIds = new Set(Object.keys(store.cards));
-  const unlocked = unlockedScenarioIds(deck, metIds);
+  const unlocked = unlockedScenarioIds(deck, metIds, store.hskStart ?? 1);
   const perScenario: DeckStats['perScenario'] = {};
   for (const sc of deck.scenarios) {
     perScenario[sc.id] = { seen: 0, total: 0, unlocked: unlocked.has(sc.id) };

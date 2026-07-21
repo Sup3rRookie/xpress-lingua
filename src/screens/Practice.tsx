@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Deck } from '../data/types';
 import { zhHsk } from '../data/zh-hsk';
-import { deckStats, DeckStats } from '../lib/srs';
+import { deckStats, DeckStats, getHskStart, setHskStart } from '../lib/srs';
 import { PickedApkg, pickAndParseApkg } from '../lib/apkgImport';
 import { ImportedDeck, listImportedDecks, removeImportedDeck } from '../lib/importedDecks';
 import { fonts, shadows, tokens } from '../theme';
@@ -36,6 +36,7 @@ export default function Practice({
   onSentences: (tab: SentencesTab) => void;
 }) {
   const [hskStats, setHskStats] = useState<DeckStats | null>(null);
+  const [hskStart, setHskStartState] = useState(1);
   const [imported, setImported] = useState<ImportedDeck[]>([]);
   const [parsing, setParsing] = useState(false);
   const [importError, setImportError] = useState<string | null>(null);
@@ -43,8 +44,15 @@ export default function Practice({
 
   useEffect(() => {
     deckStats(zhHsk).then(setHskStats);
+    getHskStart().then(setHskStartState);
     listImportedDecks().then(setImported);
   }, []);
+
+  const changeHskStart = async (level: number) => {
+    await setHskStart(level);
+    setHskStartState(level);
+    deckStats(zhHsk).then(setHskStats);
+  };
 
   const pickDeck = async () => {
     if (parsing) return;
@@ -141,6 +149,28 @@ export default function Practice({
               pct={hskStats && hskStats.total > 0 ? Math.round((hskStats.learned / hskStats.total) * 100) : 0}
               height={6}
             />
+            <View style={styles.hskLevelRow}>
+              <Text style={styles.hskLevelLabel}>Start at:</Text>
+              {[1, 2, 3, 4].map((lvl) => (
+                <Pressable
+                  key={lvl}
+                  style={[styles.hskLevelChip, hskStart === lvl && styles.hskLevelChipActive]}
+                  onPress={() => changeHskStart(lvl)}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: hskStart === lvl }}
+                  accessibilityLabel={`Start at HSK ${lvl}`}
+                >
+                  <Text
+                    style={[
+                      styles.hskLevelChipText,
+                      hskStart === lvl && styles.hskLevelChipTextActive,
+                    ]}
+                  >
+                    {lvl}
+                  </Text>
+                </Pressable>
+              ))}
+            </View>
           </View>
           <Pressable
             style={[styles.deckActionBtn, styles.studyBtn]}
@@ -241,6 +271,33 @@ export default function Practice({
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: tokens.bg.base },
   content: { paddingHorizontal: 20, paddingTop: 16, paddingBottom: 88 },
+  hskLevelRow: { flexDirection: 'row', alignItems: 'center', gap: 6, marginTop: 6 },
+  hskLevelLabel: {
+    fontFamily: fonts.bodyMedium,
+    fontSize: 12,
+    color: tokens.text.secondary,
+    marginRight: 2,
+  },
+  hskLevelChip: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: tokens.bg.elevated,
+    borderWidth: 1,
+    borderColor: tokens.border.subtle,
+  },
+  hskLevelChipActive: {
+    backgroundColor: 'rgba(139,92,246,0.22)',
+    borderColor: tokens.brand.primary,
+  },
+  hskLevelChipText: {
+    fontFamily: fonts.bodySemiBold,
+    fontSize: 13,
+    color: tokens.text.secondary,
+  },
+  hskLevelChipTextActive: { color: tokens.text.primary },
   headerGlow: { top: -140, alignSelf: 'center' },
   inner: {
     width: '100%',
