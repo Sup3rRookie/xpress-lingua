@@ -42,3 +42,4 @@ yarn-error.*
 samples/
 scripts/.parser-build/
 scripts/.content-build/
+dist/

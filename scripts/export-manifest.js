@@ -15,10 +15,12 @@ execSync(
 
 const { zhSurvival } = require(path.join(buildDir, 'zh-survival.js'));
 const { ZH_SENTENCES } = require(path.join(buildDir, 'zh-sentences.js'));
+const zhHsk = require(path.join(root, 'src', 'data', 'zh-hsk.json'));
 
 const entries = [
   ...zhSurvival.items.map((it) => ({ id: it.id, text: it.hanzi })),
   ...ZH_SENTENCES.map((s) => ({ id: s.id, text: s.hanzi })),
+  ...zhHsk.items.map((it) => ({ id: it.id, text: it.hanzi })),
 ];
 
 const outDir = path.join(root, 'content');
