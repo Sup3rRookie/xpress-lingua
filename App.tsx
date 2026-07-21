@@ -15,12 +15,13 @@ import Home from './src/screens/Home';
 import Session from './src/screens/Session';
 import ImportMap from './src/screens/ImportMap';
 import Sentences from './src/screens/Sentences';
+import ToneTrainer from './src/screens/ToneTrainer';
 import { zhSurvival } from './src/data/zh-survival';
 import { Deck } from './src/data/types';
 import { ImportResult, PickedApkg } from './src/lib/apkgImport';
 import { tokens } from './src/theme';
 
-type Screen = 'home' | 'import-map' | 'session' | 'sentences';
+type Screen = 'home' | 'import-map' | 'session' | 'sentences' | 'tone-trainer';
 
 export default function App() {
   const [screen, setScreen] = useState<Screen>('home');
@@ -82,9 +83,11 @@ export default function App() {
             setScreen('import-map');
           }}
           onSentences={() => setScreen('sentences')}
+          onToneTrainer={() => setScreen('tone-trainer')}
         />
       )}
       {screen === 'sentences' && <Sentences onDone={() => setScreen('home')} />}
+      {screen === 'tone-trainer' && <ToneTrainer onDone={() => setScreen('home')} />}
       {screen === 'import-map' && pendingImport && (
         <ImportMap
           picked={pendingImport}

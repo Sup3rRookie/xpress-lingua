@@ -6,6 +6,7 @@ import { zhHsk } from '../data/zh-hsk';
 import { initBuiltinAudio, initVoice } from '../lib/audio';
 import { deckStats, DeckStats, PACES, PaceId, setPace } from '../lib/srs';
 import { unlockedSentences } from '../lib/sentences';
+import { exportBackup, importBackup } from '../lib/backup';
 import { PickedApkg, pickAndParseApkg } from '../lib/apkgImport';
 import { ImportedDeck, listImportedDecks, removeImportedDeck } from '../lib/importedDecks';
 import { fonts, shadows, tokens } from '../theme';
@@ -38,6 +39,7 @@ export default function Home({
   onStudyDeck,
   onParsed,
   onSentences,
+  onToneTrainer,
   banner,
 }: {
   deck: Deck;
@@ -46,6 +48,7 @@ export default function Home({
   onStudyDeck: (d: Deck) => void;
   onParsed: (picked: PickedApkg) => void;
   onSentences: () => void;
+  onToneTrainer: () => void;
   banner: string | null;
 }) {
   const [stats, setStats] = useState<DeckStats | null>(null);
@@ -280,6 +283,23 @@ export default function Home({
           </View>
           <Text style={styles.sentencesChevron}>›</Text>
         </Pressable>
+        <Pressable
+          style={[styles.tile, styles.scenarioRow]}
+          onPress={onToneTrainer}
+          accessibilityRole="button"
+          accessibilityHint="Opens tone quiz, minimal pairs and shadowing drills"
+        >
+          <View style={[styles.scenarioEmojiWrap, { backgroundColor: 'rgba(34,211,238,0.14)' }]}>
+            <Text style={styles.scenarioEmoji}>🎵</Text>
+          </View>
+          <View style={styles.scenarioBody}>
+            <Text style={styles.scenarioTitle}>Tone Trainer</Text>
+            <Text style={styles.deckMeta}>
+              Ear training — tone quiz · which word? · repeat after me
+            </Text>
+          </View>
+          <Text style={styles.sentencesChevron}>›</Text>
+        </Pressable>
 
         {/* HSK ladder deck */}
         <Text style={styles.sectionTitle}>Level up</Text>
@@ -404,6 +424,34 @@ export default function Home({
         {parsing && (
           <Text style={styles.parsingText}>Unpacking and reading the deck — big files can take a moment…</Text>
         )}
+
+        {/* Progress safety */}
+        <Text style={styles.sectionTitle}>Your progress</Text>
+        <View style={styles.backupRow}>
+          <Pressable
+            style={styles.backupBtn}
+            onPress={() => exportBackup()}
+            accessibilityRole="button"
+            accessibilityHint="Downloads a JSON backup of your learning progress"
+          >
+            <Text style={styles.backupBtnText}>⬇️ Back up progress</Text>
+          </Pressable>
+          <Pressable
+            style={styles.backupBtn}
+            onPress={async () => {
+              const r = await importBackup();
+              if (r === 'ok') refresh();
+            }}
+            accessibilityRole="button"
+            accessibilityHint="Restores progress from a backup file"
+          >
+            <Text style={styles.backupBtnText}>⬆️ Restore</Text>
+          </Pressable>
+        </View>
+        <Text style={styles.backupHint}>
+          Progress lives in this browser — back it up before switching devices or clearing
+          browser data.
+        </Text>
       </View>
     </ScrollView>
   );
@@ -748,6 +796,27 @@ const styles = StyleSheet.create({
     fontFamily: fonts.bodySemiBold,
     fontSize: 13,
     color: tokens.semantic.danger,
+  },
+  backupRow: { flexDirection: 'row', gap: 10 },
+  backupBtn: {
+    flex: 1,
+    alignItems: 'center',
+    paddingVertical: 12,
+    borderRadius: tokens.radius.button,
+    backgroundColor: tokens.bg.raised,
+    borderWidth: 1,
+    borderColor: tokens.border.subtle,
+  },
+  backupBtnText: {
+    fontFamily: fonts.bodySemiBold,
+    fontSize: 14,
+    color: tokens.text.primary,
+  },
+  backupHint: {
+    fontFamily: fonts.bodyMedium,
+    fontSize: 12,
+    lineHeight: 17,
+    color: tokens.text.muted,
   },
   parsingText: {
     fontFamily: fonts.bodyMedium,
