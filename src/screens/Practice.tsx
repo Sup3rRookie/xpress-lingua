@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Deck } from '../data/types';
 import { zhHsk } from '../data/zh-hsk';
-import { deckStats, DeckStats, getHskStart, setHskStart } from '../lib/srs';
+import { deckStats, DeckStats, getHskStart, grantBonusCards, setHskStart } from '../lib/srs';
 import { PickedApkg, pickAndParseApkg } from '../lib/apkgImport';
 import { ImportedDeck, listImportedDecks, removeImportedDeck } from '../lib/importedDecks';
 import { fonts, shadows, tokens } from '../theme';
@@ -174,7 +174,17 @@ export default function Practice({
           </View>
           <Pressable
             style={[styles.deckActionBtn, styles.studyBtn]}
-            onPress={() => onStudyDeck(zhHsk)}
+            onPress={async () => {
+              // Self-heal: pace used up but words remain — grant extras and go.
+              if (
+                hskStats &&
+                hskStats.dueCount + hskStats.freshAvailable === 0 &&
+                hskStats.learned < hskStats.total
+              ) {
+                await grantBonusCards(hskStats.pace.perDay);
+              }
+              onStudyDeck(zhHsk);
+            }}
             accessibilityRole="button"
             accessibilityHint="Starts a speaking session with the HSK ladder deck"
           >

@@ -153,10 +153,11 @@ function SessionComplete({
   keepGoingBlocked: boolean;
 }) {
   const reduced = useReducedMotion();
+  const empty = reviewed === 0; // opened with nothing due — no fake celebration
   const [streak, setStreak] = useState<number | null>(null);
   const [hasMore, setHasMore] = useState(false);
-  const cardAnim = useRef(new Animated.Value(reduced ? 1 : 0)).current;
-  const ctaAnim = useRef(new Animated.Value(reduced ? 1 : 0)).current;
+  const cardAnim = useRef(new Animated.Value(reduced || empty ? 1 : 0)).current;
+  const ctaAnim = useRef(new Animated.Value(reduced || empty ? 1 : 0)).current;
 
   useEffect(() => {
     deckStats(deck).then((s) => {
@@ -169,7 +170,7 @@ function SessionComplete({
   }, [deck]);
 
   useEffect(() => {
-    if (reduced) return;
+    if (reduced || empty) return;
     Animated.spring(cardAnim, {
       toValue: 1,
       delay: 300,
@@ -183,7 +184,7 @@ function SessionComplete({
       easing: Easing.out(Easing.quad),
       useNativeDriver: false,
     }).start();
-  }, [reduced, cardAnim, ctaAnim]);
+  }, [reduced, empty, cardAnim, ctaAnim]);
 
   const xp = useCountUp(reviewed * XP_PER_CARD, 600, reduced);
   const spoken = useCountUp(reviewed, 600, reduced);
@@ -192,28 +193,37 @@ function SessionComplete({
   return (
     <View style={styles.center}>
       <GlowEllipse style={styles.doneGlow} />
-      <Confetti />
-      <Text style={styles.doneEmoji}>🎉</Text>
-      <Text style={styles.doneTitle}>Session complete</Text>
+      {!empty && <Confetti />}
+      <Text style={styles.doneEmoji}>{empty ? '😴' : '🎉'}</Text>
+      <Text style={styles.doneTitle}>
+        {empty ? 'Nothing ready right now' : 'Session complete'}
+      </Text>
 
-      <Animated.View
-        style={[styles.doneCard, { opacity: cardAnim, transform: [{ scale: cardScale }] }]}
-      >
-        <Text style={styles.doneXp}>+{xp} XP</Text>
-        <View style={styles.doneStatRow}>
-          <View style={styles.doneStat}>
-            <Text style={styles.doneStatNum}>{spoken}</Text>
-            <Text style={styles.doneStatLabel}>
-              card{reviewed === 1 ? '' : 's'} spoken{'\n'}out loud
-            </Text>
+      {empty ? (
+        <Text style={styles.keepGoingHint}>
+          Today's new-card pace is used up — it's shared across all decks.
+          {hasMore ? ' "Keep going" adds extra cards beyond the pace.' : ''}
+        </Text>
+      ) : (
+        <Animated.View
+          style={[styles.doneCard, { opacity: cardAnim, transform: [{ scale: cardScale }] }]}
+        >
+          <Text style={styles.doneXp}>+{xp} XP</Text>
+          <View style={styles.doneStatRow}>
+            <View style={styles.doneStat}>
+              <Text style={styles.doneStatNum}>{spoken}</Text>
+              <Text style={styles.doneStatLabel}>
+                card{reviewed === 1 ? '' : 's'} spoken{'\n'}out loud
+              </Text>
+            </View>
+            <View style={styles.doneStatDivider} />
+            <View style={styles.doneStat}>
+              <Text style={styles.doneStatNum}>🔥 {streak ?? '–'}</Text>
+              <Text style={styles.doneStatLabel}>day streak{'\n'}see you tomorrow!</Text>
+            </View>
           </View>
-          <View style={styles.doneStatDivider} />
-          <View style={styles.doneStat}>
-            <Text style={styles.doneStatNum}>🔥 {streak ?? '–'}</Text>
-            <Text style={styles.doneStatLabel}>day streak{'\n'}see you tomorrow!</Text>
-          </View>
-        </View>
-      </Animated.View>
+        </Animated.View>
+      )}
 
       <Animated.View style={{ opacity: ctaAnim, width: '100%', maxWidth: 320, gap: 10 }}>
         {hasMore && !keepGoingBlocked && (
