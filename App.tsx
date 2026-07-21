@@ -18,13 +18,22 @@ import Session from './src/screens/Session';
 import ImportMap from './src/screens/ImportMap';
 import Sentences from './src/screens/Sentences';
 import ToneTrainer from './src/screens/ToneTrainer';
+import Browse from './src/screens/Browse';
 import TabBar, { TabId } from './src/components/TabBar';
 import { zhSurvival } from './src/data/zh-survival';
 import { Deck } from './src/data/types';
 import { ImportResult, PickedApkg } from './src/lib/apkgImport';
 import { tokens } from './src/theme';
 
-type Screen = 'home' | 'practice' | 'profile' | 'import-map' | 'session' | 'sentences' | 'tone-trainer';
+type Screen =
+  | 'home'
+  | 'practice'
+  | 'profile'
+  | 'import-map'
+  | 'session'
+  | 'sentences'
+  | 'tone-trainer'
+  | 'browse';
 type ToneMode = 'quiz' | 'pairs' | 'shadow';
 type SentencesTab = 'learned' | 'mix';
 
@@ -122,6 +131,7 @@ export default function App() {
             setSentencesTab(tab);
             setScreen('sentences');
           }}
+          onBrowse={() => setScreen('browse')}
         />
       )}
       {screen === 'profile' && <Profile />}
@@ -139,7 +149,8 @@ export default function App() {
         </View>
       ) : (
         <>
-          {screen === 'sentences' && (
+          {screen === 'browse' && <Browse onDone={() => selectTab('practice')} />}
+      {screen === 'sentences' && (
             <Sentences initialTab={sentencesTab} onDone={() => selectTab('practice')} />
           )}
           {screen === 'tone-trainer' && (

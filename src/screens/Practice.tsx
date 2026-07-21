@@ -27,6 +27,7 @@ export default function Practice({
   onStudyDeck,
   onToneTrainer,
   onSentences,
+  onBrowse,
 }: {
   banner: string | null;
   onParsed: (picked: PickedApkg) => void;
@@ -34,6 +35,7 @@ export default function Practice({
   onStudyDeck: (d: Deck) => void;
   onToneTrainer: (mode: ToneMode) => void;
   onSentences: (tab: SentencesTab) => void;
+  onBrowse: () => void;
 }) {
   const [hskStats, setHskStats] = useState<DeckStats | null>(null);
   const [hskStart, setHskStartState] = useState(1);
@@ -191,6 +193,16 @@ export default function Practice({
             <Text style={styles.studyBtnText}>▶ Study</Text>
           </Pressable>
         </View>
+        <Pressable
+          style={styles.browseRow}
+          onPress={onBrowse}
+          accessibilityRole="button"
+          accessibilityHint="Browse all words and sentences in every level without studying"
+        >
+          <Text style={styles.browseText}>
+            👀 Browse all materials — peek at any level, no studying required ›
+          </Text>
+        </Pressable>
 
         {/* Imported decks */}
         <Text style={styles.sectionTitle}>Your decks</Text>
@@ -281,6 +293,15 @@ export default function Practice({
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: tokens.bg.base },
   content: { paddingHorizontal: 20, paddingTop: 16, paddingBottom: 88 },
+  browseRow: {
+    backgroundColor: tokens.bg.raised,
+    borderWidth: 1,
+    borderColor: tokens.border.subtle,
+    borderRadius: tokens.radius.button,
+    paddingVertical: 11,
+    paddingHorizontal: 14,
+  },
+  browseText: { fontFamily: fonts.bodySemiBold, fontSize: 13, color: tokens.text.secondary },
   hskLevelRow: { flexDirection: 'row', alignItems: 'center', gap: 6, marginTop: 6 },
   hskLevelLabel: {
     fontFamily: fonts.bodyMedium,

@@ -33,11 +33,20 @@ for (const e of data) {
   const lvl = Math.min(...olds.filter((n) => n >= 1 && n <= 4));
   if (!Number.isFinite(lvl)) continue;
   if (knownHanzi.has(e.simplified)) continue; // already in the survival deck
-  const form = e.forms[0];
+  // CC-CEDICT puts obscure senses (surnames, archaic variants) in their own
+  // leading forms — pick the form with the most everyday meanings.
+  const OBSCURE = /^(surname |old variant|archaic|variant of|\(bound form\)|\(chess\)|\(literary\)|used in )/i;
+  const scored = e.forms.map((f) => ({
+    form: f,
+    everyday: (f.meanings || []).filter((m) => !OBSCURE.test(m)),
+  }));
+  scored.sort((a, b) => b.everyday.length - a.everyday.length);
+  const form = scored[0].form;
+  const meanings = scored[0].everyday.length > 0 ? scored[0].everyday : form.meanings;
   byLevel[lvl].push({
     hanzi: e.simplified,
     pinyin: (form.transcriptions.pinyin || '').trim(),
-    gloss: form.meanings.slice(0, 2).join('; ').slice(0, 110),
+    gloss: meanings.slice(0, 2).join('; ').slice(0, 110),
     emoji: POS_EMOJI[(e.pos && e.pos[0]) || 'x'] || '🀄',
     frequency: e.frequency ?? 999999,
   });
