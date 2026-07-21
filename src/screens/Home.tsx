@@ -47,6 +47,7 @@ export default function Home({
 }) {
   const [stats, setStats] = useState<DeckStats | null>(null);
   const [voiceOk, setVoiceOk] = useState(true);
+  const [builtinClips, setBuiltinClips] = useState(0);
   const [imported, setImported] = useState<ImportedDeck[]>([]);
   const [parsing, setParsing] = useState(false);
   const [importError, setImportError] = useState<string | null>(null);
@@ -55,7 +56,7 @@ export default function Home({
   const refresh = useCallback(() => {
     deckStats(deck).then(setStats);
     initVoice(deck.ttsLocale).then(setVoiceOk);
-    initBuiltinAudio(deck.lang);
+    initBuiltinAudio(deck.lang).then(setBuiltinClips);
     listImportedDecks().then(setImported);
   }, [deck]);
 
@@ -201,8 +202,8 @@ export default function Home({
           )}
         </View>
 
-        {/* Voice warning */}
-        {!voiceOk && (
+        {/* Voice warning — moot once pre-rendered clips exist */}
+        {!voiceOk && builtinClips === 0 && (
           <View style={styles.warnBanner}>
             <Text style={styles.warnIcon}>⚠️</Text>
             <Text style={styles.warnText}>
