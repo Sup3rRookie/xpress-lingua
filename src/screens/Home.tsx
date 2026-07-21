@@ -40,6 +40,14 @@ export default function Home({
   const [voiceOk, setVoiceOk] = useState(true);
   const [builtinClips, setBuiltinClips] = useState(0);
   const scenarioScroll = useRef<ScrollView>(null);
+  const scrollX = useRef(0);
+
+  // Mouse users can't touch-drag the carousel — arrows page it instead.
+  const pageCarousel = (dir: 1 | -1) => {
+    const next = Math.max(0, scrollX.current + dir * 2 * (CARD_W + CARD_GAP));
+    scenarioScroll.current?.scrollTo({ x: next, animated: true });
+    scrollX.current = next;
+  };
 
   const refresh = useCallback(() => {
     deckStats(deck).then(setStats);
@@ -59,7 +67,9 @@ export default function Home({
       return !locked && pct < 100;
     });
     if (idx > 0) {
-      scenarioScroll.current?.scrollTo({ x: idx * (CARD_W + CARD_GAP), animated: false });
+      const x = idx * (CARD_W + CARD_GAP);
+      scenarioScroll.current?.scrollTo({ x, animated: false });
+      scrollX.current = x;
     }
   }, [stats, deck]);
 
@@ -162,7 +172,27 @@ export default function Home({
         )}
 
         {/* Scenarios — sequential unlock: finish one to open the next */}
-        <Text style={styles.sectionTitle}>Conversations</Text>
+        <View style={styles.sectionRow}>
+          <Text style={styles.sectionTitle}>Conversations</Text>
+          <View style={styles.arrowRow}>
+            <Pressable
+              style={styles.arrowBtn}
+              onPress={() => pageCarousel(-1)}
+              accessibilityRole="button"
+              accessibilityLabel="Scroll scenarios left"
+            >
+              <Text style={styles.arrowText}>‹</Text>
+            </Pressable>
+            <Pressable
+              style={styles.arrowBtn}
+              onPress={() => pageCarousel(1)}
+              accessibilityRole="button"
+              accessibilityLabel="Scroll scenarios right"
+            >
+              <Text style={styles.arrowText}>›</Text>
+            </Pressable>
+          </View>
+        </View>
       </View>
 
       <ScrollView
@@ -171,6 +201,10 @@ export default function Home({
         snapToInterval={CARD_W + CARD_GAP}
         decelerationRate="fast"
         showsHorizontalScrollIndicator={false}
+        onScroll={(e) => {
+          scrollX.current = e.nativeEvent.contentOffset.x;
+        }}
+        scrollEventThrottle={32}
         style={styles.scenarioScroll}
         contentContainerStyle={styles.scenarioScrollContent}
       >
@@ -225,6 +259,28 @@ const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: tokens.bg.base },
   content: { paddingTop: 16, paddingBottom: 88 },
   headerGlow: { top: -140, alignSelf: 'center' },
+  sectionRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  arrowRow: { flexDirection: 'row', gap: 6 },
+  arrowBtn: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: tokens.bg.raised,
+    borderWidth: 1,
+    borderColor: tokens.border.subtle,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  arrowText: {
+    fontFamily: fonts.bodyBold,
+    fontSize: 18,
+    color: tokens.text.secondary,
+    lineHeight: 20,
+  },
   inner: {
     width: '100%',
     maxWidth: 480,
