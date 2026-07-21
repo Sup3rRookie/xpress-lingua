@@ -1,12 +1,21 @@
 # ⚡ XpressLingua
 
-> **v0.4.0** | **Tech stack:** Expo SDK 57 (React Native 0.86 + TypeScript) · ts-fsrs · open-source TTS (Piper local / MeloTTS + Qwen3-TTS via Colab) · expo-speech fallback · expo-linear-gradient · sql.js + fflate (Anki import) · Google Fonts (Baloo 2, Instrument Sans, Space Grotesk, Noto Sans SC) · AsyncStorage + IndexedDB · web-first, app stores via EAS
+> **v0.5.0** | **Tech stack:** Expo SDK 57 (React Native 0.86 + TypeScript) · ts-fsrs · open-source TTS (Piper local / MeloTTS + Qwen3-TTS via Colab) · expo-speech fallback · expo-linear-gradient · sql.js + fflate (Anki import) · Google Fonts (Baloo 2, Instrument Sans, Space Grotesk, Noto Sans SC) · AsyncStorage + IndexedDB · web-first, app stores via EAS
 
 Speak first. A speaking/listening-first language app — you cannot pass a card without opening your mouth.
 
 **Design:** "Neon Court" — dark-first playful-premium: violet-tinted near-black, violet→cyan gradients, light flashcards that pop, chunky pressed-edge buttons, tiered celebrations (card flip, XP pops, confetti), reduce-motion respected.
 
-## What it does (v0.4.0)
+## Use it
+
+**Live app:** https://sup3rrookie.github.io/xpress-lingua/ (deployed from the `gh-pages` branch — redeploy with `npx expo export --platform web`, add `.nojekyll`, push `dist` to `gh-pages`). Progress is per-browser: use **Back up progress / Restore** on the home screen to move between devices.
+
+## What it does (v0.5.0)
+
+- 🎵 **Tone Trainer** — ear training with three modes: tone quiz (hear a word, pick the tone pattern), which-word minimal pairs (confusable distractors), and repeat-after-me shadowing reps
+- 👂 **Listening cards** — ~30% of review cards flip direction: audio first, say the meaning
+- 💾 **Progress backup/restore** — JSON export/import of all learning state
+- 🔥 **Merciful streak** — one missed day no longer resets your streak
 
 - 🀄 **HSK Ladder (1–4)** — 1,156 HSK-aligned words as a second built-in deck, frequency-sorted within each level, sequential level unlocking (finish HSK 1 to open HSK 2), full audio
 - 🔊 **1,322 pre-rendered audio clips** — every phrase, sentence, and HSK word has real Mandarin audio (open-source TTS, zero API cost, works offline); browser TTS is only a fallback. Colab notebook in `content/` upgrades quality with MeloTTS/Qwen3-TTS at will
@@ -40,7 +49,8 @@ npm run web       # opens in your browser
 | v0.2.x ✅ | "Neon Court" visual redesign: card flip, chunky buttons, confetti celebrations, bento home |
 | v0.3.x ✅ | Anki .apkg import, sentence library + generator, scenario gating, daily pace setting |
 | v0.4.x ✅ | Open-source TTS pipeline (Piper/Colab), 1,322 bundled audio clips, HSK 1–4 ladder deck |
-| v0.5.x | Open-source pronunciation scoring (wav2vec2 + pitch contour), tone-pair minimal games, listen-and-shadow phase, daily reminder notifications |
+| v0.5.x ✅ | Web deployment (GitHub Pages), Tone Trainer, listening cards, progress backup, merciful streak |
+| v0.5.x+ | Open-source pronunciation scoring (wav2vec2 + pitch contour), daily reminder notifications, session listen-shadow phases |
 | v0.6.x | Japanese + Spanish packs (same pipeline: Qwen3-TTS / Chatterbox), generated flashcard images, "voice time capsule" |
 | v0.7.x | Egyptian Arabic pack (Habibi-TTS EGY, Arabizi notation), Korean, French, Levantine |
 | v1.0 | App Store + Play Store via EAS, accounts/sync, freemium (unlimited pronunciation scoring + AI roleplay premium) |
