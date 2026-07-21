@@ -146,7 +146,12 @@ export async function review(itemId: string, rating: Grade): Promise<void> {
 
   if (store.streak.last !== today()) {
     const yesterday = new Date(Date.now() - 86_400_000).toISOString().slice(0, 10);
-    store.streak.count = store.streak.last === yesterday ? store.streak.count + 1 : 1;
+    const dayBefore = new Date(Date.now() - 2 * 86_400_000).toISOString().slice(0, 10);
+    // Merciful streak: one missed day doesn't break it (punitive streaks churn users).
+    store.streak.count =
+      store.streak.last === yesterday || store.streak.last === dayBefore
+        ? store.streak.count + 1
+        : 1;
     store.streak.last = today();
   }
 

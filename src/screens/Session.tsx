@@ -224,6 +224,7 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
   const [myTakeUrl, setMyTakeUrl] = useState<string | null>(null);
   const [reviewed, setReviewed] = useState(0);
   const [fx, setFx] = useState<{ color: string } | null>(null);
+  const [listenIds, setListenIds] = useState<Set<string>>(new Set());
 
   const flipAnim = useRef(new Animated.Value(0)).current;
   const fxAnim = useRef(new Animated.Value(0)).current;
@@ -231,12 +232,15 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
   useEffect(() => {
     buildQueue(deck).then((q) => {
       setNewIds(new Set(q.fresh.map((i) => i.id)));
+      // ~30% of REVIEW cards flip direction: audio-first listening comprehension.
+      setListenIds(new Set(q.due.filter(() => Math.random() < 0.3).map((i) => i.id)));
       setQueue([...q.due, ...q.fresh]);
     });
   }, [deck]);
 
   const item = useMemo(() => (queue && index < queue.length ? queue[index] : null), [queue, index]);
   const isNew = item ? newIds.has(item.id) : false;
+  const isListen = item ? listenIds.has(item.id) : false;
   const isZh = deck.lang === 'zh';
 
   // Audio priority: imported deck audio → pre-rendered open-source clip → TTS.
@@ -249,6 +253,12 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
       playText(it.id, it.hanzi, deck.ttsLocale);
     }
   };
+
+  // Listening cards lead with their audio.
+  useEffect(() => {
+    if (item && listenIds.has(item.id)) playItemAudio(item);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [item?.id]);
 
   if (!queue) {
     return (
@@ -363,20 +373,39 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                     <Text style={styles.newBadgeText}>✨ NEW — listen first, then copy it</Text>
                   </LinearGradient>
                 )}
-                <View
-                  style={[
-                    styles.emojiCircle,
-                    {
-                      backgroundColor: isZh
-                        ? toneTint(item.pinyin, 0.1)
-                        : 'rgba(139,92,246,0.10)',
-                    },
-                  ]}
-                >
-                  <Text style={styles.emoji}>{item.emoji ?? '🃏'}</Text>
-                </View>
-                <Text style={styles.gloss}>{item.gloss}</Text>
-                <Text style={styles.speakPrompt}>🗣️ Say it out loud</Text>
+                {isListen ? (
+                  <>
+                    <Pressable
+                      style={[styles.emojiCircle, { backgroundColor: 'rgba(34,211,238,0.12)' }]}
+                      onPress={() => playItemAudio(item)}
+                      accessibilityRole="button"
+                      accessibilityLabel="Replay audio"
+                    >
+                      <Text style={styles.emoji}>🔊</Text>
+                    </Pressable>
+                    <Text style={styles.gloss}>What did they say?</Text>
+                    <Text style={styles.speakPrompt}>
+                      👂 Listen, then say the MEANING out loud
+                    </Text>
+                  </>
+                ) : (
+                  <>
+                    <View
+                      style={[
+                        styles.emojiCircle,
+                        {
+                          backgroundColor: isZh
+                            ? toneTint(item.pinyin, 0.1)
+                            : 'rgba(139,92,246,0.10)',
+                        },
+                      ]}
+                    >
+                      <Text style={styles.emoji}>{item.emoji ?? '🃏'}</Text>
+                    </View>
+                    <Text style={styles.gloss}>{item.gloss}</Text>
+                    <Text style={styles.speakPrompt}>🗣️ Say it out loud</Text>
+                  </>
+                )}
                 {isNew && (
                   <Pressable
                     style={styles.pillChip}
@@ -420,6 +449,7 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                 >
                   {item.hanzi}
                 </Text>
+                {isListen && <Text style={styles.gloss}>= {item.gloss}</Text>}
 
                 {isZh && exampleFor(item.id) && (
                   <View style={styles.exampleBox}>

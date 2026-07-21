@@ -12,7 +12,8 @@ export async function initBuiltinAudio(lang: string): Promise<number> {
     return Object.keys(builtinFiles[lang] ?? {}).length;
   }
   try {
-    const res = await fetch(`/audio/${lang}/manifest.json`);
+    // Relative path so the app works from a sub-path host (e.g. GitHub Pages).
+    const res = await fetch(`audio/${lang}/manifest.json`);
     if (res.ok) {
       builtinFiles[lang] = (await res.json()).files ?? {};
     }
@@ -24,7 +25,7 @@ export async function initBuiltinAudio(lang: string): Promise<number> {
 
 export function builtinAudioUrl(lang: string, id: string): string | null {
   const f = builtinFiles[lang]?.[id];
-  return f ? `/audio/${lang}/${f}` : null;
+  return f ? `audio/${lang}/${f}` : null;
 }
 
 // Play by id: rendered clip first, TTS fallback.
