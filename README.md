@@ -13,7 +13,7 @@ Speak first. A speaking/listening-first language app — you cannot pass a card 
 - 🔒 **Scenario progression** — start with Greetings & Basics; each scenario unlocks by completing the previous one
 - ⚡ **Daily pace setting** — Relaxed 5 / Standard 8 / Fast 15 / Beast 25 new cards per day (with an honest review-debt warning)
 
-- 🇨🇳 **Mandarin Survival Deck** — 60 high-frequency phrases across 5 real-life scenarios (greetings, money, food, taxi, rescue phrases), chunk-based, not word lists
+- 🇨🇳 **Mandarin Survival Deck** — 120 high-frequency phrases across 10 real-life scenarios (greetings, money, food, taxi, rescue phrases, time, family, feelings, hotel, small talk), chunk-based, not word lists — plus one-click import of the 500-word HSK-1 deck for volume
 - 🗣️ **Speak-to-flip flashcards** — front shows emoji + meaning; you say it in Mandarin *out loud* before flipping
 - 🎨 **Tone-colored pinyin** — Pleco-style colors (T1 red, T2 green, T3 blue, T4 purple, neutral gray); hanzi shown small (reading not required)
 - 🔊 **Native TTS** — normal + slow playback (browser/device voices for now; Azure Neural pre-generated audio planned)

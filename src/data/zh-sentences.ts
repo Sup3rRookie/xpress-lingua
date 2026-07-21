@@ -61,6 +61,32 @@ export const ZH_SENTENCES: SentenceEntry[] = [
   { id: 'zs-28', itemIds: ['zh-r08', 'zh-r11'], scenario: 'repair', hanzi: '我是马来西亚人，我在学中文。', pinyin: 'wǒ shì mǎ lái xī yà rén wǒ zài xué zhōng wén', gloss: "I'm Malaysian — I'm learning Chinese." },
   { id: 'zs-29', itemIds: ['zh-r10', 'zh-r11'], scenario: 'repair', hanzi: '我说一点点中文。', pinyin: 'wǒ shuō yì diǎn diǎn zhōng wén', gloss: 'I speak a little bit of Chinese.' },
   { id: 'zs-30', itemIds: ['zh-n10', 'zh-r07'], scenario: 'repair', hanzi: '这个用中文怎么说？', pinyin: 'zhè ge yòng zhōng wén zěn me shuō', gloss: 'How do you say this in Chinese? (用 = using)' },
+
+  // Time & Days
+  { id: 'zs-31', itemIds: ['zh-ti02', 'zh-ti11', 'zh-ti03'], scenario: 'time', hanzi: '今天没有时间，明天好吗？', pinyin: 'jīn tiān méi yǒu shí jiān míng tiān hǎo ma', gloss: 'No time today — tomorrow, okay?' },
+  { id: 'zs-32', itemIds: ['zh-ti12', 'zh-ti11'], scenario: 'time', hanzi: '快一点！没有时间了！', pinyin: 'kuài yì diǎn méi yǒu shí jiān le', gloss: "Hurry up! There's no time!" },
+  { id: 'zs-33', itemIds: ['zh-g08', 'zh-ti10'], scenario: 'time', hanzi: '请问，几点开门？', pinyin: 'qǐng wèn jǐ diǎn kāi mén', gloss: 'Excuse me, what time do you open?' },
+
+  // People & Family
+  { id: 'zs-34', itemIds: ['zh-p03', 'zh-p10'], scenario: 'people', hanzi: '我朋友有两个孩子。', pinyin: 'wǒ péng you yǒu liǎng ge hái zi', gloss: 'My friend has two kids.' },
+  { id: 'zs-35', itemIds: ['zh-p11', 'zh-p05'], scenario: 'people', hanzi: '他是谁？— 他是我哥哥。', pinyin: 'tā shì shéi tā shì wǒ gē ge', gloss: "Who is he? — He's my older brother." },
+  { id: 'zs-36', itemIds: ['zh-p08', 'zh-g11'], scenario: 'people', hanzi: '这是我朋友。— 很高兴认识你！', pinyin: 'zhè shì wǒ péng you hěn gāo xìng rèn shi nǐ', gloss: 'This is my friend. — Nice to meet you!' },
+
+  // Feelings & Reactions
+  { id: 'zs-37', itemIds: ['zh-fe01', 'zh-fe02', 'zh-f01', 'zh-f02'], scenario: 'feelings', hanzi: '我喜欢咖啡，不喜欢茶。', pinyin: 'wǒ xǐ huan kā fēi bù xǐ huan chá', gloss: "I like coffee, I don't like tea." },
+  { id: 'zs-38', itemIds: ['zh-fe05', 'zh-fe06', 'zh-fe10'], scenario: 'feelings', hanzi: '为什么？— 因为没意思。', pinyin: 'wèi shén me yīn wèi méi yì si', gloss: "Why? — Because it's boring." },
+  { id: 'zs-39', itemIds: ['zh-fe07', 'zh-fe09'], scenario: 'feelings', hanzi: '真的吗？太好了！', pinyin: 'zhēn de ma tài hǎo le', gloss: "Really?! That's great!" },
+  { id: 'zs-40', itemIds: ['zh-fe03', 'zh-c11'], scenario: 'feelings', hanzi: '我累了，我们改天吧。', pinyin: 'wǒ lèi le wǒ men gǎi tiān ba', gloss: "I'm tired — let's do it another day." },
+
+  // Hotel & Wi-Fi
+  { id: 'zs-41', itemIds: ['zh-g01', 'zh-h04'], scenario: 'hotel', hanzi: '你好，我有预订。', pinyin: 'nǐ hǎo wǒ yǒu yù dìng', gloss: 'Hello, I have a reservation.' },
+  { id: 'zs-42', itemIds: ['zh-h02', 'zh-h09', 'zh-h10'], scenario: 'hotel', hanzi: '房间太吵了，可以换房间吗？', pinyin: 'fáng jiān tài chǎo le kě yǐ huàn fáng jiān ma', gloss: 'The room is too noisy — can I change rooms?' },
+  { id: 'zs-43', itemIds: ['zh-h11', 'zh-h12'], scenario: 'hotel', hanzi: '我要退房，帮我叫出租车。', pinyin: 'wǒ yào tuì fáng bāng wǒ jiào chū zū chē', gloss: "I'd like to check out — please call me a taxi." },
+
+  // Opinions & Chat
+  { id: 'zs-44', itemIds: ['zh-c05', 'zh-c06'], scenario: 'chat', hanzi: '你做什么工作？— 我是学生。', pinyin: 'nǐ zuò shén me gōng zuò wǒ shì xué sheng', gloss: "What do you do? — I'm a student." },
+  { id: 'zs-45', itemIds: ['zh-c08', 'zh-c09'], scenario: 'chat', hanzi: '周末我们一起去吧！', pinyin: 'zhōu mò wǒ men yì qǐ qù ba', gloss: "Let's go together this weekend!" },
+  { id: 'zs-46', itemIds: ['zh-c10', 'zh-c04'], scenario: 'chat', hanzi: '好主意！明天见！', pinyin: 'hǎo zhǔ yi míng tiān jiàn', gloss: 'Good idea! See you tomorrow!' },
 ];
 
 const DRINKS_FOOD = ['zh-f01', 'zh-f02', 'zh-f03', 'zh-f04', 'zh-f05'];
@@ -101,5 +127,19 @@ export const ZH_PATTERNS: SentencePattern[] = [
     pinyin: '{0} xiè xie',
     gloss: '{0} — thanks!',
     slots: [['zh-f10', 'zh-t08', 'zh-n12']],
+  },
+  {
+    id: 'zp-06',
+    hanzi: '我喜欢{0}。',
+    pinyin: 'wǒ xǐ huan {0}',
+    gloss: 'I like {0}.',
+    slots: [[...DRINKS_FOOD, 'zh-c08']],
+  },
+  {
+    id: 'zp-07',
+    hanzi: '我不喜欢{0}。',
+    pinyin: 'wǒ bù xǐ huan {0}',
+    gloss: "I don't like {0}.",
+    slots: [DRINKS_FOOD],
   },
 ];
