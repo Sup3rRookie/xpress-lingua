@@ -10,8 +10,9 @@ import {
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Deck, DeckItem } from '../data/types';
-import { playText, speak } from '../lib/audio';
+import { builtinAudioUrl, playText, speak } from '../lib/audio';
 import { playAudioKey } from '../lib/mediaStore';
+import { contourFromUrl, similarity } from '../lib/pitch';
 import { playUrl, recordingSupported, startRecording, stopRecording } from '../lib/recorder';
 import { checkPronunciation, CheckResult, speechCheckSupported } from '../lib/speechCheck';
 import { buildQueue, deckStats, review, Rating, type Grade } from '../lib/srs';
@@ -23,10 +24,12 @@ import TonePinyin from '../components/TonePinyin';
 import ChunkyButton from '../components/ChunkyButton';
 import Confetti from '../components/Confetti';
 import GlowEllipse from '../components/GlowEllipse';
+import PitchCompare from '../components/PitchCompare';
 
 type Phase = 'front' | 'back';
 
-const CARD_H = 540;
+// Tall enough for the zh card back incl. the pitch-contour comparison.
+const CARD_H = 640;
 const XP_PER_CARD = 10;
 
 const GRADES: {
@@ -228,6 +231,9 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
   const [listenIds, setListenIds] = useState<Set<string>>(new Set());
   const [checking, setChecking] = useState(false);
   const [checkResult, setCheckResult] = useState<CheckResult | null>(null);
+  const [refContour, setRefContour] = useState<number[] | null>(null);
+  const [userContour, setUserContour] = useState<number[] | null>(null);
+  const [toneScore, setToneScore] = useState<number | null>(null);
 
   const flipAnim = useRef(new Animated.Value(0)).current;
   const fxAnim = useRef(new Animated.Value(0)).current;
@@ -260,6 +266,25 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
   // Listening cards lead with their audio.
   useEffect(() => {
     if (item && listenIds.has(item.id)) playItemAudio(item);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [item?.id]);
+
+  // Mandarin tone feedback: prefetch the native clip's pitch contour per card.
+  // Reference comes from builtin rendered audio only — imported (audioKey) cards skip it.
+  useEffect(() => {
+    setRefContour(null);
+    setUserContour(null);
+    setToneScore(null);
+    if (!item || deck.lang !== 'zh' || item.audioKey) return;
+    const url = builtinAudioUrl(deck.lang, item.id);
+    if (!url) return;
+    let stale = false;
+    contourFromUrl(url).then((c) => {
+      if (!stale) setRefContour(c);
+    });
+    return () => {
+      stale = true;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [item?.id]);
 
@@ -308,6 +333,8 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
     setMyTakeUrl(null);
     setChecking(false);
     setCheckResult(null);
+    setUserContour(null);
+    setToneScore(null);
     setFx(null);
     fxAnim.setValue(0);
     flipAnim.setValue(0);
@@ -336,7 +363,15 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
       const url = await stopRecording();
       setRecording(false);
       setMyTakeUrl(url);
-      if (url) playUrl(url);
+      if (url) {
+        playUrl(url);
+        if (isZh) {
+          contourFromUrl(url).then((c) => {
+            setUserContour(c);
+            if (c && refContour) setToneScore(similarity(refContour, c));
+          });
+        }
+      }
     } else {
       const ok = await startRecording();
       setRecording(ok);
@@ -543,6 +578,10 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                       </Pressable>
                     )}
                   </View>
+                )}
+
+                {isZh && refContour && (
+                  <PitchCompare reference={refContour} user={userContour} score={toneScore} />
                 )}
 
                 {checkResult && (

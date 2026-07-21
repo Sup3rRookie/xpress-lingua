@@ -1,6 +1,6 @@
 {
   "name": "xpress-lingua",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "main": "index.ts",
   "dependencies": {
     "@expo-google-fonts/baloo-2": "^0.4.2",
@@ -19,6 +19,7 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-native": "0.86.0",
+    "react-native-svg": "15.15.4",
     "react-native-web": "^0.21.2",
     "sql.js": "^1.14.1",
     "ts-fsrs": "^5.4.1"
