@@ -40,3 +40,4 @@ yarn-error.*
 /ios
 /android
 samples/
+scripts/.parser-build/
