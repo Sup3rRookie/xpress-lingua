@@ -10,8 +10,13 @@ Speak first. A speaking/listening-first language app — you cannot pass a card 
 
 **Live app:** https://sup3rrookie.github.io/xpress-lingua/ (deployed from the `gh-pages` branch — redeploy with `npx expo export --platform web`, add `.nojekyll`, push `dist` to `gh-pages`). Progress is per-browser: use **Back up progress / Restore** on the home screen to move between devices.
 
-## What it does (v0.5.0)
+## What it does (v0.7.0)
 
+- 📈 **Pitch contour tone feedback** — every Mandarin card back draws the native speaker's pitch curve; record your take and see YOUR curve overlaid with a tone-match score (YIN F0 tracking, register-invariant)
+- 🎯 **Pronunciation check** — browser speech recognition verifies you were understood, with what-it-heard feedback
+- 📝 **A sample sentence on every word** — 100% coverage: real Tatoeba sentences (CC-BY, attributed) + hand-written originals for corpus gaps, all with audio (2,566 clips total)
+- 🧭 **3-tab layout** — Learn / Practice / You; practice modes 1 tap from launch; scenario carousel; desktop side rail
+- 🀄 **HSK starting level** — jump straight to HSK 2/3/4 without grinding lower levels
 - 🎵 **Tone Trainer** — ear training with three modes: tone quiz (hear a word, pick the tone pattern), which-word minimal pairs (confusable distractors), and repeat-after-me shadowing reps
 - 👂 **Listening cards** — ~30% of review cards flip direction: audio first, say the meaning
 - 💾 **Progress backup/restore** — JSON export/import of all learning state
@@ -50,9 +55,9 @@ npm run web       # opens in your browser
 | v0.3.x ✅ | Anki .apkg import, sentence library + generator, scenario gating, daily pace setting |
 | v0.4.x ✅ | Open-source TTS pipeline (Piper/Colab), 1,322 bundled audio clips, HSK 1–4 ladder deck |
 | v0.5.x ✅ | Web deployment (GitHub Pages), Tone Trainer, listening cards, progress backup, merciful streak |
-| v0.5.x+ | Open-source pronunciation scoring (wav2vec2 + pitch contour), daily reminder notifications, session listen-shadow phases |
-| v0.6.x | Japanese + Spanish packs (same pipeline: Qwen3-TTS / Chatterbox), generated flashcard images, "voice time capsule" |
-| v0.7.x | Egyptian Arabic pack (Habibi-TTS EGY, Arabizi notation), Korean, French, Levantine |
+| v0.6.x ✅ | 3-tab IA redesign, HSK Tatoeba example sentences, pronunciation check (speech recognition) |
+| v0.7.x ✅ | Pitch contour tone feedback, 100% sentence coverage, HSK starting-level selector |
+| next | Daily reminders, wav2vec2 phoneme scoring, Colab audio quality pass, Japanese + Spanish packs, generated images, app stores via EAS |
 | v1.0 | App Store + Play Store via EAS, accounts/sync, freemium (unlimited pronunciation scoring + AI roleplay premium) |
 
 ## Conventions
