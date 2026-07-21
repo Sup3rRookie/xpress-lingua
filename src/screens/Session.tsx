@@ -11,9 +11,11 @@ import {
 import { LinearGradient } from 'expo-linear-gradient';
 import { Deck, DeckItem } from '../data/types';
 import { speak } from '../lib/audio';
+import { playAudioKey } from '../lib/mediaStore';
 import { playUrl, recordingSupported, startRecording, stopRecording } from '../lib/recorder';
 import { buildQueue, deckStats, review, Rating, type Grade } from '../lib/srs';
 import { syllables, toneOf, TONE_COLORS } from '../lib/pinyin';
+import { exampleFor } from '../lib/sentences';
 import { fonts, hanziSize, shadows, springs, tokens } from '../theme';
 import { useReducedMotion } from '../lib/motion';
 import TonePinyin from '../components/TonePinyin';
@@ -235,6 +237,18 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
 
   const item = useMemo(() => (queue && index < queue.length ? queue[index] : null), [queue, index]);
   const isNew = item ? newIds.has(item.id) : false;
+  const isZh = deck.lang === 'zh';
+
+  // Imported audio wins over TTS; TTS remains the fallback when playback fails.
+  const playItemAudio = (it: DeckItem) => {
+    if (it.audioKey) {
+      playAudioKey(it.audioKey).then((ok) => {
+        if (!ok) speak(it.hanzi, deck.ttsLocale);
+      });
+    } else {
+      speak(it.hanzi, deck.ttsLocale);
+    }
+  };
 
   if (!queue) {
     return (
@@ -250,7 +264,7 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
 
   const flip = () => {
     setPhase('back');
-    speak(item.hanzi, deck.ttsLocale);
+    playItemAudio(item);
     if (reduced) {
       flipAnim.setValue(1);
       setFlipDone(true);
@@ -349,15 +363,24 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                     <Text style={styles.newBadgeText}>✨ NEW — listen first, then copy it</Text>
                   </LinearGradient>
                 )}
-                <View style={[styles.emojiCircle, { backgroundColor: toneTint(item.pinyin, 0.1) }]}>
-                  <Text style={styles.emoji}>{item.emoji}</Text>
+                <View
+                  style={[
+                    styles.emojiCircle,
+                    {
+                      backgroundColor: isZh
+                        ? toneTint(item.pinyin, 0.1)
+                        : 'rgba(139,92,246,0.10)',
+                    },
+                  ]}
+                >
+                  <Text style={styles.emoji}>{item.emoji ?? '🃏'}</Text>
                 </View>
                 <Text style={styles.gloss}>{item.gloss}</Text>
                 <Text style={styles.speakPrompt}>🗣️ Say it out loud</Text>
                 {isNew && (
                   <Pressable
                     style={styles.pillChip}
-                    onPress={() => speak(item.hanzi, deck.ttsLocale)}
+                    onPress={() => playItemAudio(item)}
                     accessibilityRole="button"
                   >
                     <Text style={styles.pillChipText}>🔊 Hear it first (new card)</Text>
@@ -383,24 +406,56 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
           >
             <View style={styles.faceEdge}>
               <View style={styles.faceSurface}>
-                <TonePinyin pinyin={item.pinyin} size={26} />
-                <Text style={[styles.hanzi, { fontSize: hanziSize(item.hanzi) }]}>{item.hanzi}</Text>
+                {isZh && item.pinyin ? (
+                  <TonePinyin pinyin={item.pinyin} size={26} />
+                ) : item.pinyin ? (
+                  <Text style={styles.notation}>{item.pinyin}</Text>
+                ) : null}
+                <Text
+                  style={[
+                    styles.hanzi,
+                    { fontSize: hanziSize(item.hanzi) },
+                    !isZh && styles.phrasePlain,
+                  ]}
+                >
+                  {item.hanzi}
+                </Text>
+
+                {isZh && exampleFor(item.id) && (
+                  <View style={styles.exampleBox}>
+                    <Text style={styles.exampleLabel}>IN A SENTENCE</Text>
+                    <Pressable
+                      onPress={() => speak(exampleFor(item.id)!.hanzi, deck.ttsLocale)}
+                      accessibilityRole="button"
+                      accessibilityLabel="Play example sentence"
+                    >
+                      <Text style={styles.exampleHanzi}>
+                        {exampleFor(item.id)!.hanzi} <Text style={styles.examplePlay}>▶</Text>
+                      </Text>
+                    </Pressable>
+                    <TonePinyin pinyin={exampleFor(item.id)!.pinyin} size={13} />
+                    <Text style={styles.exampleGloss}>{exampleFor(item.id)!.gloss}</Text>
+                  </View>
+                )}
 
                 <View style={styles.chipRow}>
                   <Pressable
                     style={styles.pillChip}
-                    onPress={() => speak(item.hanzi, deck.ttsLocale)}
+                    onPress={() => playItemAudio(item)}
                     accessibilityRole="button"
                   >
                     <Text style={styles.pillChipText}>🔊 Native</Text>
                   </Pressable>
-                  <Pressable
-                    style={styles.pillChip}
-                    onPress={() => speak(item.hanzi, deck.ttsLocale, true)}
-                    accessibilityRole="button"
-                  >
-                    <Text style={styles.pillChipText}>🐢 Slow</Text>
-                  </Pressable>
+                  {/* Slow is TTS-only, so it hides when the card has imported audio. */}
+                  {!item.audioKey && (
+                    <Pressable
+                      style={styles.pillChip}
+                      onPress={() => speak(item.hanzi, deck.ttsLocale, true)}
+                      accessibilityRole="button"
+                    >
+                      <Text style={styles.pillChipText}>🐢 Slow</Text>
+                    </Pressable>
+                  )}
                 </View>
 
                 {recordingSupported() && (
@@ -509,6 +564,34 @@ const styles = StyleSheet.create({
     bottom: 0,
     backfaceVisibility: 'hidden',
   },
+  exampleBox: {
+    alignSelf: 'stretch',
+    alignItems: 'center',
+    gap: 3,
+    marginTop: 4,
+    padding: 12,
+    borderRadius: 14,
+    backgroundColor: 'rgba(139,92,246,0.07)',
+  },
+  exampleLabel: {
+    fontFamily: fonts.bodySemiBold,
+    fontSize: 10,
+    letterSpacing: 1.2,
+    color: '#8A84B0',
+  },
+  exampleHanzi: {
+    fontFamily: fonts.hanzi,
+    fontSize: 17,
+    color: tokens.text.onCard,
+    textAlign: 'center',
+  },
+  examplePlay: { color: tokens.brand.primary, fontSize: 13 },
+  exampleGloss: {
+    fontFamily: fonts.bodyMedium,
+    fontSize: 12,
+    color: '#6E6893',
+    textAlign: 'center',
+  },
   faceEdge: {
     flex: 1,
     backgroundColor: tokens.card.faceEdge,
@@ -554,6 +637,17 @@ const styles = StyleSheet.create({
   flipBtnWrap: { marginTop: 8, alignSelf: 'stretch' },
   hanzi: {
     fontFamily: fonts.hanzi,
+    color: tokens.text.onCard,
+    textAlign: 'center',
+  },
+  // Non-zh target phrase — drop the Hanzi face, keep the plain card ink.
+  phrasePlain: {
+    fontFamily: fonts.bodyBold,
+  },
+  // Pronunciation line for non-zh decks (no tone coloring).
+  notation: {
+    fontFamily: fonts.bodySemiBold,
+    fontSize: 24,
     color: tokens.text.onCard,
     textAlign: 'center',
   },

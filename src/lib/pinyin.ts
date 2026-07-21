@@ -29,3 +29,12 @@ export const TONE_COLORS: Record<number, string> = {
   4: '#7C3AED',
   5: '#8A8798',
 };
+
+// Brightened variants for DARK backgrounds (sentence lists on bg.base tiles).
+export const TONE_COLORS_DARK: Record<number, string> = {
+  1: '#FF7A66',
+  2: '#4ADE80',
+  3: '#60A5FA',
+  4: '#C4B5FD',
+  5: '#9CA3AF',
+};
