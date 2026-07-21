@@ -15,7 +15,7 @@ import { playAudioKey } from '../lib/mediaStore';
 import { contourFromUrl, similarity } from '../lib/pitch';
 import { playUrl, recordingSupported, startRecording, stopRecording } from '../lib/recorder';
 import { checkPronunciation, CheckResult, speechCheckSupported } from '../lib/speechCheck';
-import { buildQueue, deckStats, review, Rating, type Grade } from '../lib/srs';
+import { buildQueue, deckStats, grantBonusCards, review, Rating, type Grade } from '../lib/srs';
 import { syllables, toneOf, TONE_COLORS } from '../lib/pinyin';
 import { exampleFor } from '../lib/sentences';
 import { fonts, hanziSize, shadows, springs, tokens } from '../theme';
@@ -143,18 +143,29 @@ function SessionComplete({
   reviewed,
   deck,
   onDone,
+  onKeepGoing,
+  keepGoingBlocked,
 }: {
   reviewed: number;
   deck: Deck;
   onDone: () => void;
+  onKeepGoing: () => void;
+  keepGoingBlocked: boolean;
 }) {
   const reduced = useReducedMotion();
   const [streak, setStreak] = useState<number | null>(null);
+  const [hasMore, setHasMore] = useState(false);
   const cardAnim = useRef(new Animated.Value(reduced ? 1 : 0)).current;
   const ctaAnim = useRef(new Animated.Value(reduced ? 1 : 0)).current;
 
   useEffect(() => {
-    deckStats(deck).then((s) => setStreak(s.streak));
+    deckStats(deck).then((s) => {
+      setStreak(s.streak);
+      // More to learn = an unlocked scenario still has unmet cards.
+      setHasMore(
+        Object.values(s.perScenario).some((p) => p.unlocked && p.seen < p.total),
+      );
+    });
   }, [deck]);
 
   useEffect(() => {
@@ -204,12 +215,29 @@ function SessionComplete({
         </View>
       </Animated.View>
 
-      <Animated.View style={{ opacity: ctaAnim, width: '100%', maxWidth: 320 }}>
+      <Animated.View style={{ opacity: ctaAnim, width: '100%', maxWidth: 320, gap: 10 }}>
+        {hasMore && !keepGoingBlocked && (
+          <ChunkyButton
+            label="🚀 Keep going — more new cards"
+            gradient={tokens.brand.gradient}
+            edge={tokens.brand.primaryDown}
+            textColor={tokens.text.onCard}
+            onPress={onKeepGoing}
+            accessibilityHint="Adds extra new cards beyond today's pace and continues"
+          />
+        )}
+        {keepGoingBlocked && (
+          <Text style={styles.keepGoingHint}>
+            Nothing more to unlock right now — finish the current scenario or raise your
+            HSK starting level.
+          </Text>
+        )}
         <ChunkyButton
           label="Back to home"
-          gradient={tokens.brand.gradient}
-          edge={tokens.brand.primaryDown}
-          textColor={tokens.text.onCard}
+          face={hasMore ? tokens.bg.elevated : undefined}
+          edge={hasMore ? '#141031' : tokens.brand.primaryDown}
+          gradient={hasMore ? undefined : tokens.brand.gradient}
+          textColor={hasMore ? tokens.text.primary : tokens.text.onCard}
           onPress={onDone}
         />
       </Animated.View>
@@ -231,6 +259,7 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
   const [listenIds, setListenIds] = useState<Set<string>>(new Set());
   const [checking, setChecking] = useState(false);
   const [checkResult, setCheckResult] = useState<CheckResult | null>(null);
+  const [keepGoingBlocked, setKeepGoingBlocked] = useState(false);
   const [refContour, setRefContour] = useState<number[] | null>(null);
   const [userContour, setUserContour] = useState<number[] | null>(null);
   const [toneScore, setToneScore] = useState<number | null>(null);
@@ -297,7 +326,29 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
   }
 
   if (!item) {
-    return <SessionComplete reviewed={reviewed} deck={deck} onDone={onDone} />;
+    return (
+      <SessionComplete
+        reviewed={reviewed}
+        deck={deck}
+        onDone={onDone}
+        keepGoingBlocked={keepGoingBlocked}
+        onKeepGoing={async () => {
+          await grantBonusCards(8);
+          const q = await buildQueue(deck);
+          const next = [...q.due, ...q.fresh];
+          if (next.length === 0) {
+            setKeepGoingBlocked(true);
+            return;
+          }
+          setNewIds(new Set(q.fresh.map((i) => i.id)));
+          setListenIds(new Set(q.due.filter(() => Math.random() < 0.3).map((i) => i.id)));
+          setQueue(next);
+          setIndex(0);
+          setPhase('front');
+          setFlipDone(false);
+        }}
+      />
+    );
   }
 
   const flip = () => {
@@ -854,6 +905,13 @@ const styles = StyleSheet.create({
     fontFamily: fonts.display,
     fontSize: 30,
     color: tokens.text.primary,
+  },
+  keepGoingHint: {
+    fontFamily: fonts.bodyMedium,
+    fontSize: 13,
+    lineHeight: 18,
+    color: tokens.text.secondary,
+    textAlign: 'center',
   },
   doneCard: {
     width: '100%',

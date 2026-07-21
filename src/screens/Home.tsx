@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Deck } from '../data/types';
 import { zhHsk } from '../data/zh-hsk';
 import { initBuiltinAudio, initVoice } from '../lib/audio';
-import { deckStats, DeckStats } from '../lib/srs';
+import { deckStats, DeckStats, grantBonusCards } from '../lib/srs';
 import { fonts, shadows, tokens } from '../theme';
 import ChunkyButton from '../components/ChunkyButton';
 import GradientBar from '../components/GradientBar';
@@ -113,12 +113,21 @@ export default function Home({
               </Text>
             </View>
             <ChunkyButton
-              label={toStudy === 0 && stats ? 'All done for today 🎉' : 'Start session'}
+              label={
+                !stats || toStudy > 0
+                  ? 'Start session'
+                  : stats.learned < stats.total
+                    ? '🚀 Pace done — keep going'
+                    : 'Deck complete 🏆'
+              }
               gradient={tokens.brand.gradient}
               edge={tokens.brand.primaryDown}
               textColor={tokens.text.onCard}
-              disabled={!stats || toStudy === 0}
-              onPress={onStart}
+              disabled={!stats || (toStudy === 0 && stats.learned >= stats.total)}
+              onPress={async () => {
+                if (stats && toStudy === 0) await grantBonusCards(stats.pace.perDay);
+                onStart();
+              }}
               accessibilityHint="Starts a speaking session"
             />
           </View>

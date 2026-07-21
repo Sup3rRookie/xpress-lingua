@@ -33,6 +33,7 @@ interface Store {
   totalReviews: number;
   pace?: PaceId;
   hskStart?: number; // 1-4: HSK levels up to this are open without completing priors
+  bonusToday?: { date: string; count: number }; // user-requested extra new cards beyond the pace
 }
 
 const emptyStore = (): Store => ({
@@ -128,6 +129,16 @@ export async function setHskStart(level: number): Promise<void> {
   await saveStore(store);
 }
 
+// "Keep going": the daily cap is a default, not a wall. Grants extra new-card
+// budget for today only.
+export async function grantBonusCards(n: number): Promise<void> {
+  const store = await loadStore();
+  const bonus =
+    store.bonusToday?.date === today() ? store.bonusToday.count : 0;
+  store.bonusToday = { date: today(), count: bonus + n };
+  await saveStore(store);
+}
+
 export async function getPace(): Promise<(typeof PACES)[number]> {
   const store = await loadStore();
   return paceById(store.pace ?? DEFAULT_PACE);
@@ -147,7 +158,11 @@ export async function buildQueue(deck: Deck): Promise<SessionQueue> {
     return s && new Date(s.due) <= now;
   });
   const introduced = store.introducedToday.date === today() ? store.introducedToday.count : 0;
-  const freshBudget = Math.max(0, paceById(store.pace ?? DEFAULT_PACE).perDay - introduced);
+  const bonus = store.bonusToday?.date === today() ? store.bonusToday.count : 0;
+  const freshBudget = Math.max(
+    0,
+    paceById(store.pace ?? DEFAULT_PACE).perDay + bonus - introduced,
+  );
   const hskStart = store.hskStart ?? 1;
   const unlocked = unlockedScenarioIds(deck, new Set(Object.keys(store.cards)), hskStart);
   // When the user starts at a higher HSK level, its words come before leftovers
