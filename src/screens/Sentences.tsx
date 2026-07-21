@@ -45,8 +45,14 @@ function SentenceRow({
   );
 }
 
-export default function Sentences({ onDone }: { onDone: () => void }) {
-  const [tab, setTab] = useState<Tab>('learned');
+export default function Sentences({
+  onDone,
+  initialTab,
+}: {
+  onDone: () => void;
+  initialTab?: Tab;
+}) {
+  const [tab, setTab] = useState<Tab>(initialTab ?? 'learned');
   const [metIds, setMetIds] = useState<Set<string> | null>(null);
   const [scenario, setScenario] = useState<string | null>(null);
   const [generated, setGenerated] = useState<GeneratedSentence[]>([]);
@@ -73,7 +79,7 @@ export default function Sentences({ onDone }: { onDone: () => void }) {
       <View style={styles.inner}>
         <View style={styles.topBar}>
           <Pressable onPress={onDone} style={styles.backBtn} accessibilityRole="button">
-            <Text style={styles.backBtnText}>← Home</Text>
+            <Text style={styles.backBtnText}>← Back</Text>
           </Pressable>
         </View>
         <Text style={styles.title}>Sentences</Text>

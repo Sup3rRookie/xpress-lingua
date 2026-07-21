@@ -1,6 +1,6 @@
 # ⚡ XpressLingua
 
-> **v0.5.0** | **Tech stack:** Expo SDK 57 (React Native 0.86 + TypeScript) · ts-fsrs · open-source TTS (Piper local / MeloTTS + Qwen3-TTS via Colab) · expo-speech fallback · expo-linear-gradient · sql.js + fflate (Anki import) · Google Fonts (Baloo 2, Instrument Sans, Space Grotesk, Noto Sans SC) · AsyncStorage + IndexedDB · web-first, app stores via EAS
+> **v0.6.0** | **Tech stack:** Expo SDK 57 (React Native 0.86 + TypeScript) · ts-fsrs · open-source TTS (Piper local / MeloTTS + Qwen3-TTS via Colab) · expo-speech fallback · expo-linear-gradient · sql.js + fflate (Anki import) · Google Fonts (Baloo 2, Instrument Sans, Space Grotesk, Noto Sans SC) · AsyncStorage + IndexedDB · web-first, app stores via EAS
 
 Speak first. A speaking/listening-first language app — you cannot pass a card without opening your mouth.
 

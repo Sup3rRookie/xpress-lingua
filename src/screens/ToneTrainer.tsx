@@ -221,8 +221,14 @@ function AnswerTile({
 
 // ----- screen ---------------------------------------------------------------
 
-export default function ToneTrainer({ onDone }: { onDone: () => void }) {
-  const [mode, setMode] = useState<Mode>('quiz');
+export default function ToneTrainer({
+  onDone,
+  initialMode,
+}: {
+  onDone: () => void;
+  initialMode?: Mode;
+}) {
+  const [mode, setMode] = useState<Mode>(initialMode ?? 'quiz');
   const [phase, setPhase] = useState<'question' | 'result'>('question');
   const [qNum, setQNum] = useState(0); // 0-based within the round
   const [score, setScore] = useState(0);
@@ -232,7 +238,9 @@ export default function ToneTrainer({ onDone }: { onDone: () => void }) {
 
   // Shadow mode: prefer items the learner has already met in SRS.
   const [shadowPool, setShadowPool] = useState<DeckItem[]>(PAIR_POOL);
-  const [shadowItem, setShadowItem] = useState<DeckItem | null>(null);
+  const [shadowItem, setShadowItem] = useState<DeckItem | null>(
+    initialMode === 'shadow' ? pick(PAIR_POOL) : null,
+  );
   const [reps, setReps] = useState(0);
 
   const advanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -356,7 +364,7 @@ export default function ToneTrainer({ onDone }: { onDone: () => void }) {
       <View style={styles.inner}>
         <View style={styles.topBar}>
           <Pressable onPress={onDone} style={styles.backBtn} accessibilityRole="button">
-            <Text style={styles.backBtnText}>← Home</Text>
+            <Text style={styles.backBtnText}>← Back</Text>
           </Pressable>
         </View>
         <Text style={styles.title}>Tone Trainer</Text>
