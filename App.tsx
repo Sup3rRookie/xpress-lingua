@@ -72,6 +72,10 @@ export default function App() {
             setActiveDeck(imported.deck);
             setScreen('session');
           }}
+          onStudyDeck={(d) => {
+            setActiveDeck(d);
+            setScreen('session');
+          }}
           onParsed={(picked) => {
             setPendingImport(picked);
             setBanner(null);

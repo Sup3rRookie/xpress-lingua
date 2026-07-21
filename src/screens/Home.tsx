@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Deck } from '../data/types';
+import { zhHsk } from '../data/zh-hsk';
 import { initBuiltinAudio, initVoice } from '../lib/audio';
 import { deckStats, DeckStats, PACES, PaceId, setPace } from '../lib/srs';
 import { unlockedSentences } from '../lib/sentences';
@@ -34,6 +35,7 @@ export default function Home({
   deck,
   onStart,
   onStudyImported,
+  onStudyDeck,
   onParsed,
   onSentences,
   banner,
@@ -41,11 +43,13 @@ export default function Home({
   deck: Deck;
   onStart: () => void;
   onStudyImported: (imported: ImportedDeck) => void;
+  onStudyDeck: (d: Deck) => void;
   onParsed: (picked: PickedApkg) => void;
   onSentences: () => void;
   banner: string | null;
 }) {
   const [stats, setStats] = useState<DeckStats | null>(null);
+  const [hskStats, setHskStats] = useState<DeckStats | null>(null);
   const [voiceOk, setVoiceOk] = useState(true);
   const [builtinClips, setBuiltinClips] = useState(0);
   const [imported, setImported] = useState<ImportedDeck[]>([]);
@@ -55,6 +59,7 @@ export default function Home({
 
   const refresh = useCallback(() => {
     deckStats(deck).then(setStats);
+    deckStats(zhHsk).then(setHskStats);
     initVoice(deck.ttsLocale).then(setVoiceOk);
     initBuiltinAudio(deck.lang).then(setBuiltinClips);
     listImportedDecks().then(setImported);
@@ -275,6 +280,36 @@ export default function Home({
           </View>
           <Text style={styles.sentencesChevron}>›</Text>
         </Pressable>
+
+        {/* HSK ladder deck */}
+        <Text style={styles.sectionTitle}>Level up</Text>
+        <View style={[styles.tile, styles.scenarioRow]}>
+          <View style={[styles.scenarioEmojiWrap, { backgroundColor: 'rgba(255,201,74,0.14)' }]}>
+            <Text style={styles.scenarioEmoji}>🀄</Text>
+          </View>
+          <View style={styles.scenarioBody}>
+            <Text style={styles.scenarioTitle}>HSK Ladder (1–4)</Text>
+            <Text style={styles.deckMeta}>
+              {hskStats
+                ? `${hskStats.learned}/${hskStats.total} words · ${
+                    hskStats.dueCount + hskStats.freshAvailable
+                  } ready today`
+                : 'loading…'}
+            </Text>
+            <GradientBar
+              pct={hskStats && hskStats.total > 0 ? Math.round((hskStats.learned / hskStats.total) * 100) : 0}
+              height={6}
+            />
+          </View>
+          <Pressable
+            style={[styles.deckActionBtn, styles.studyBtn]}
+            onPress={() => onStudyDeck(zhHsk)}
+            accessibilityRole="button"
+            accessibilityHint="Starts a speaking session with the HSK ladder deck"
+          >
+            <Text style={styles.studyBtnText}>▶ Study</Text>
+          </Pressable>
+        </View>
 
         {/* Upcoming languages */}
         <Text style={styles.sectionTitle}>Coming next</Text>
