@@ -13,6 +13,7 @@ import { Deck, DeckItem } from '../data/types';
 import { playText, speak } from '../lib/audio';
 import { playAudioKey } from '../lib/mediaStore';
 import { playUrl, recordingSupported, startRecording, stopRecording } from '../lib/recorder';
+import { checkPronunciation, CheckResult, speechCheckSupported } from '../lib/speechCheck';
 import { buildQueue, deckStats, review, Rating, type Grade } from '../lib/srs';
 import { syllables, toneOf, TONE_COLORS } from '../lib/pinyin';
 import { exampleFor } from '../lib/sentences';
@@ -225,6 +226,8 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
   const [reviewed, setReviewed] = useState(0);
   const [fx, setFx] = useState<{ color: string } | null>(null);
   const [listenIds, setListenIds] = useState<Set<string>>(new Set());
+  const [checking, setChecking] = useState(false);
+  const [checkResult, setCheckResult] = useState<CheckResult | null>(null);
 
   const flipAnim = useRef(new Animated.Value(0)).current;
   const fxAnim = useRef(new Animated.Value(0)).current;
@@ -290,10 +293,21 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
     });
   };
 
+  const runCheck = async () => {
+    if (checking) return;
+    setChecking(true);
+    setCheckResult(null);
+    const res = await checkPronunciation(item.hanzi, deck.ttsLocale);
+    setChecking(false);
+    setCheckResult(res);
+  };
+
   const advance = async (rating: Grade) => {
     await review(item.id, rating);
     setReviewed((n) => n + 1);
     setMyTakeUrl(null);
+    setChecking(false);
+    setCheckResult(null);
     setFx(null);
     fxAnim.setValue(0);
     flipAnim.setValue(0);
@@ -516,6 +530,39 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                         <Text style={styles.pillChipText}>▶️ My take</Text>
                       </Pressable>
                     )}
+                    {speechCheckSupported() && (
+                      <Pressable
+                        style={[styles.pillChip, checking && styles.pillChipRec]}
+                        onPress={runCheck}
+                        accessibilityRole="button"
+                        accessibilityHint="Listens to you say the phrase and checks it was understood"
+                      >
+                        <Text style={[styles.pillChipText, checking && styles.pillChipRecText]}>
+                          {checking ? '👂 Listening — say it!' : '🎯 Check me'}
+                        </Text>
+                      </Pressable>
+                    )}
+                  </View>
+                )}
+
+                {checkResult && (
+                  <View
+                    style={[
+                      styles.checkBox,
+                      checkResult.status === 'match' && styles.checkBoxMatch,
+                      checkResult.status === 'close' && styles.checkBoxClose,
+                    ]}
+                  >
+                    <Text style={styles.checkText}>
+                      {checkResult.status === 'match' &&
+                        `✓ Understood you perfectly! Heard: ${checkResult.heard}`}
+                      {checkResult.status === 'close' &&
+                        `~ Almost — heard: ${checkResult.heard || '…'}. Listen and try again.`}
+                      {checkResult.status === 'miss' &&
+                        `✗ Heard: ${checkResult.heard || 'nothing clear'} — play the native audio and copy it.`}
+                      {checkResult.status === 'error' &&
+                        '⚠ Microphone or recognition unavailable in this browser.'}
+                    </Text>
                   </View>
                 )}
 
@@ -715,6 +762,21 @@ const styles = StyleSheet.create({
     backgroundColor: tokens.semantic.dangerBg,
   },
   pillChipRecText: { color: '#B91C3C' },
+  checkBox: {
+    alignSelf: 'stretch',
+    borderRadius: 12,
+    padding: 10,
+    backgroundColor: 'rgba(251,113,133,0.10)',
+  },
+  checkBoxMatch: { backgroundColor: 'rgba(52,211,153,0.14)' },
+  checkBoxClose: { backgroundColor: 'rgba(251,191,36,0.12)' },
+  checkText: {
+    fontFamily: fonts.bodyMedium,
+    fontSize: 13,
+    lineHeight: 18,
+    color: tokens.text.onCard,
+    textAlign: 'center',
+  },
   gradeHint: {
     fontFamily: fonts.bodyMedium,
     fontSize: 13,
