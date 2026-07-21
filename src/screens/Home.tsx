@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Deck } from '../data/types';
-import { initVoice } from '../lib/audio';
+import { initBuiltinAudio, initVoice } from '../lib/audio';
 import { deckStats, DeckStats, PACES, PaceId, setPace } from '../lib/srs';
 import { unlockedSentences } from '../lib/sentences';
 import { PickedApkg, pickAndParseApkg } from '../lib/apkgImport';
@@ -55,6 +55,7 @@ export default function Home({
   const refresh = useCallback(() => {
     deckStats(deck).then(setStats);
     initVoice(deck.ttsLocale).then(setVoiceOk);
+    initBuiltinAudio(deck.lang);
     listImportedDecks().then(setImported);
   }, [deck]);
 

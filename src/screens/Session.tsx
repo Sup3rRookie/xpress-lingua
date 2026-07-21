@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Deck, DeckItem } from '../data/types';
-import { speak } from '../lib/audio';
+import { playText, speak } from '../lib/audio';
 import { playAudioKey } from '../lib/mediaStore';
 import { playUrl, recordingSupported, startRecording, stopRecording } from '../lib/recorder';
 import { buildQueue, deckStats, review, Rating, type Grade } from '../lib/srs';
@@ -239,14 +239,14 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
   const isNew = item ? newIds.has(item.id) : false;
   const isZh = deck.lang === 'zh';
 
-  // Imported audio wins over TTS; TTS remains the fallback when playback fails.
+  // Audio priority: imported deck audio → pre-rendered open-source clip → TTS.
   const playItemAudio = (it: DeckItem) => {
     if (it.audioKey) {
       playAudioKey(it.audioKey).then((ok) => {
         if (!ok) speak(it.hanzi, deck.ttsLocale);
       });
     } else {
-      speak(it.hanzi, deck.ttsLocale);
+      playText(it.id, it.hanzi, deck.ttsLocale);
     }
   };
 
@@ -425,7 +425,10 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                   <View style={styles.exampleBox}>
                     <Text style={styles.exampleLabel}>IN A SENTENCE</Text>
                     <Pressable
-                      onPress={() => speak(exampleFor(item.id)!.hanzi, deck.ttsLocale)}
+                      onPress={() => {
+                        const ex = exampleFor(item.id)!;
+                        playText(ex.id, ex.hanzi, deck.ttsLocale);
+                      }}
                       accessibilityRole="button"
                       accessibilityLabel="Play example sentence"
                     >

@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { zhSurvival } from '../data/zh-survival';
 import { SentenceEntry } from '../data/zh-sentences';
-import { speak } from '../lib/audio';
+import { playText, speak } from '../lib/audio';
 import { deckStats } from '../lib/srs';
 import { GeneratedSentence, generateSentences, unlockedSentences } from '../lib/sentences';
 import { fonts, shadows, tokens } from '../theme';
@@ -14,10 +14,12 @@ type Tab = 'learned' | 'mix';
 const GEN_COUNT = 6;
 
 function SentenceRow({
+  id,
   hanzi,
   pinyin,
   gloss,
 }: {
+  id?: string; // curated sentences have rendered audio; generated ones use TTS
   hanzi: string;
   pinyin: string;
   gloss: string;
@@ -26,7 +28,9 @@ function SentenceRow({
     <View style={styles.row}>
       <Pressable
         style={styles.playBtn}
-        onPress={() => speak(hanzi, zhSurvival.ttsLocale)}
+        onPress={() =>
+          id ? playText(id, hanzi, zhSurvival.ttsLocale) : speak(hanzi, zhSurvival.ttsLocale)
+        }
         accessibilityRole="button"
         accessibilityLabel={`Play ${hanzi}`}
       >
@@ -123,7 +127,7 @@ export default function Sentences({ onDone }: { onDone: () => void }) {
               </View>
             )}
             {filtered.map((s) => (
-              <SentenceRow key={s.id} hanzi={s.hanzi} pinyin={s.pinyin} gloss={s.gloss} />
+              <SentenceRow key={s.id} id={s.id} hanzi={s.hanzi} pinyin={s.pinyin} gloss={s.gloss} />
             ))}
             {metIds && filtered.length === 0 && (
               <Text style={styles.emptyText}>

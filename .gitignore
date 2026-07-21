@@ -41,3 +41,4 @@ yarn-error.*
 /android
 samples/
 scripts/.parser-build/
+scripts/.content-build/
