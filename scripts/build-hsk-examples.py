@@ -31,21 +31,32 @@ def main():
 
     with open(DECK, encoding='utf-8') as f:
         deck = json.load(f)
+    items = list(deck['items'])
 
-    out, misses = {}, 0
-    for item in deck['items']:
-        word = item['hanzi']
-        best = None
-        for cmn, eng, attr in pairs:
-            # Skip degenerate matches: sentence must be longer than the word itself
-            # and short enough to read (4-16 hanzi).
-            if word in cmn and len(cmn) > len(word) + 1:
-                han_len = len(re.sub(r'[^一-鿿]', '', cmn))
-                if 3 <= han_len <= 16:
-                    best = (cmn, eng, attr)
-                    break
+    # Also cover survival-deck words/chunks (curated sentences win at runtime,
+    # so these only fill the gaps).
+    survival = os.path.join(ROOT, 'scripts', '.content-build', 'zh-survival.js')
+    surv_json = os.path.join(ROOT, 'src', 'data', 'zh-survival-items.json')
+    if os.path.exists(surv_json):
+        with open(surv_json, encoding='utf-8') as f:
+            items += json.load(f)
+
+    def find_best(word):
+        # Tiered: short readable sentence first, then progressively longer.
+        for max_len in (16, 24, 60):
+            for cmn, eng, attr in pairs:
+                if word in cmn and len(cmn) > len(word) + 1:
+                    han_len = len(re.sub(r'[^一-鿿]', '', cmn))
+                    if 3 <= han_len <= max_len:
+                        return (cmn, eng, attr)
+        return None
+
+    out, missing = {}, []
+    for item in items:
+        word = item['hanzi'].replace(' ', '')
+        best = find_best(word)
         if not best:
-            misses += 1
+            missing.append(f"{item['id']}:{word}")
             continue
         cmn, eng, attr = best
         out[item['id']] = {
@@ -55,9 +66,20 @@ def main():
             'attribution': attr.replace('CC-BY 2.0 (France) Attribution: ', ''),
         }
 
+    # Hand-authored supplements (words absent from the corpus) override nothing,
+    # they only fill remaining holes.
+    supp = os.path.join(ROOT, 'src', 'data', 'zh-examples-authored.json')
+    if os.path.exists(supp):
+        with open(supp, encoding='utf-8') as f:
+            for k, v in json.load(f).items():
+                if k not in out:
+                    v.setdefault('pinyin', to_pinyin(v['hanzi']))
+                    out[k] = v
+
     with open(OUT, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False)
-    print(f'matched {len(out)}/{len(deck["items"])} HSK words ({misses} without a sentence)')
+    print(f'matched {len(out)}/{len(items)} words')
+    print('still missing:', ' '.join(missing) if missing else 'none')
 
 if __name__ == '__main__':
     main()

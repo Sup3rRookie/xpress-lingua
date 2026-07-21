@@ -9,7 +9,7 @@ interface HskExample {
   hanzi: string;
   pinyin: string;
   gloss: string;
-  attribution: string;
+  attribution?: string; // Tatoeba CC-BY entries carry it; authored originals don't
 }
 const HSK_EXAMPLES = hskExamples as Record<string, HskExample>;
 
