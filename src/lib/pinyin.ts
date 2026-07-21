@@ -21,11 +21,11 @@ export function syllables(pinyin: string): string[] {
   return pinyin.split(/\s+/).filter(Boolean);
 }
 
-// Pleco-style tone colors: 1 red, 2 green, 3 blue, 4 purple, neutral gray.
+// Pleco-style tone colors tuned for the LIGHT card face: 1 red, 2 green, 3 blue, 4 purple, neutral gray.
 export const TONE_COLORS: Record<number, string> = {
-  1: '#EF4444',
-  2: '#22C55E',
-  3: '#3B82F6',
-  4: '#A855F7',
-  5: '#9CA3AF',
+  1: '#E0442C',
+  2: '#1B9E4B',
+  3: '#2563EB',
+  4: '#7C3AED',
+  5: '#8A8798',
 };

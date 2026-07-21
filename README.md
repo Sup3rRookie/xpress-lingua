@@ -1,10 +1,12 @@
 # ⚡ XpressLingua
 
-> **v0.1.0** | **Tech stack:** Expo SDK 57 (React Native 0.86 + TypeScript) · ts-fsrs · expo-speech · AsyncStorage · web-first, app stores via EAS
+> **v0.2.0** | **Tech stack:** Expo SDK 57 (React Native 0.86 + TypeScript) · ts-fsrs · expo-speech · expo-linear-gradient · Google Fonts (Baloo 2, Instrument Sans, Space Grotesk, Noto Sans SC) · AsyncStorage · web-first, app stores via EAS
 
 Speak first. A speaking/listening-first language app — you cannot pass a card without opening your mouth.
 
-## What it does (v0.1.0)
+**Design:** "Neon Court" — dark-first playful-premium: violet-tinted near-black, violet→cyan gradients, light flashcards that pop, chunky pressed-edge buttons, tiered celebrations (card flip, XP pops, confetti), reduce-motion respected.
+
+## What it does (v0.2.0)
 
 - 🇨🇳 **Mandarin Survival Deck** — 60 high-frequency phrases across 5 real-life scenarios (greetings, money, food, taxi, rescue phrases), chunk-based, not word lists
 - 🗣️ **Speak-to-flip flashcards** — front shows emoji + meaning; you say it in Mandarin *out loud* before flipping
@@ -26,10 +28,11 @@ npm run web       # opens in your browser
 
 | Version | Scope |
 |---|---|
-| v0.1.x | Mandarin survival deck, speak-to-flip loop, FSRS, record & compare |
-| v0.2.x | Azure AI pronunciation scoring, tone-pair minimal games, listen-and-shadow phase, daily reminder notifications |
-| v0.3.x | Japanese + Spanish packs, generated flashcard images, "voice time capsule" |
-| v0.4.x | Egyptian Arabic pack (Arabizi notation), remaining languages, content pipeline (Azure Neural TTS pre-generation) |
+| v0.1.x ✅ | Mandarin survival deck, speak-to-flip loop, FSRS, record & compare |
+| v0.2.x ✅ | "Neon Court" visual redesign: card flip, chunky buttons, confetti celebrations, bento home |
+| v0.3.x | Azure AI pronunciation scoring, tone-pair minimal games, listen-and-shadow phase, daily reminder notifications |
+| v0.4.x | Japanese + Spanish packs, generated flashcard images, "voice time capsule", Anki .apkg import |
+| v0.5.x | Egyptian Arabic pack (Arabizi notation), remaining languages, content pipeline (Azure Neural TTS pre-generation) |
 | v1.0 | App Store + Play Store via EAS, accounts/sync, freemium (unlimited pronunciation scoring + AI roleplay premium) |
 
 ## Conventions
