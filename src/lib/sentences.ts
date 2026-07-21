@@ -1,16 +1,38 @@
 import { zhSurvival } from '../data/zh-survival';
 import { SentenceEntry, SentencePattern, ZH_PATTERNS, ZH_SENTENCES } from '../data/zh-sentences';
+// Real Tatoeba sentences (CC-BY, attribution preserved) matched per HSK word.
+import hskExamples from '../data/zh-hsk-examples.json';
 
 const ITEM_BY_ID = new Map(zhSurvival.items.map((it) => [it.id, it]));
+
+interface HskExample {
+  hanzi: string;
+  pinyin: string;
+  gloss: string;
+  attribution: string;
+}
+const HSK_EXAMPLES = hskExamples as Record<string, HskExample>;
+
+export interface Example {
+  id: string; // audio clip id
+  hanzi: string;
+  pinyin: string;
+  gloss: string;
+  attribution?: string;
+}
 
 // Sentences whose every component word has been met.
 export function unlockedSentences(metIds: Set<string>): SentenceEntry[] {
   return ZH_SENTENCES.filter((s) => s.itemIds.every((id) => metIds.has(id)));
 }
 
-// First example sentence that uses this item (shown on card backs).
-export function exampleFor(itemId: string): SentenceEntry | undefined {
-  return ZH_SENTENCES.find((s) => s.itemIds.includes(itemId));
+// Example sentence for a card back: curated survival sentence first,
+// then the word's matched Tatoeba sentence (HSK deck).
+export function exampleFor(itemId: string): Example | undefined {
+  const curated = ZH_SENTENCES.find((s) => s.itemIds.includes(itemId));
+  if (curated) return curated;
+  const hsk = HSK_EXAMPLES[itemId];
+  return hsk ? { id: `hske-${itemId}`, ...hsk } : undefined;
 }
 
 export interface GeneratedSentence {

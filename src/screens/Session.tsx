@@ -468,6 +468,11 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                     </Pressable>
                     <TonePinyin pinyin={exampleFor(item.id)!.pinyin} size={13} />
                     <Text style={styles.exampleGloss}>{exampleFor(item.id)!.gloss}</Text>
+                    {exampleFor(item.id)!.attribution && (
+                      <Text style={styles.exampleAttribution}>
+                        Sentence: {exampleFor(item.id)!.attribution} · CC-BY
+                      </Text>
+                    )}
                   </View>
                 )}
 
@@ -619,6 +624,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   examplePlay: { color: tokens.brand.primary, fontSize: 13 },
+  exampleAttribution: {
+    fontFamily: fonts.bodyMedium,
+    fontSize: 9,
+    color: '#A5A0C2',
+    textAlign: 'center',
+  },
   exampleGloss: {
     fontFamily: fonts.bodyMedium,
     fontSize: 12,
