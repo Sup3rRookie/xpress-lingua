@@ -4,6 +4,7 @@ Speaking-first language app. Full product spec lives in the `project-language-fl
 
 ## Hard rules
 - Commit messages: `feat:` / `fix:` / `chore:` / `doc:` prefix, one brief line. **No Co-Authored-By lines.**
+- README and docs: plain professional developer writing. Never use em dashes. No AI-sounding or marketing prose, no emoji-heavy bullets.
 - README must always carry the current **version + tech stack** label; bump both together.
 - Reading/writing instruction is out of scope forever — audio is the source of truth, notation (pinyin/romaji/Arabizi) is a scaffold.
 - Every card interaction must require speaking aloud; never add silent-tap recall paths.

@@ -1,66 +1,72 @@
-# ⚡ XpressLingua
+# XpressLingua
 
-> **v0.7.0** | **Tech stack:** Expo SDK 57 (React Native 0.86 + TypeScript) · ts-fsrs · open-source TTS (Piper local / MeloTTS + Qwen3-TTS via Colab) · expo-speech fallback · expo-linear-gradient · sql.js + fflate (Anki import) · Google Fonts (Baloo 2, Instrument Sans, Space Grotesk, Noto Sans SC) · AsyncStorage + IndexedDB · web-first, app stores via EAS
+Version: 0.8.1
 
-Speak first. A speaking/listening-first language app — you cannot pass a card without opening your mouth.
+Tech stack: Expo SDK 57 (React Native 0.86, TypeScript), ts-fsrs, MeloTTS (pre-rendered audio), expo-speech fallback, sql.js + fflate for Anki import, AsyncStorage + IndexedDB, GitHub Pages deployment.
 
-**Design:** "Neon Court" — dark-first playful-premium: violet-tinted near-black, violet→cyan gradients, light flashcards that pop, chunky pressed-edge buttons, tiered celebrations (card flip, XP pops, confetti), reduce-motion respected.
+A speaking-first Mandarin trainer. Cards cannot be passed silently: the learner says the answer out loud before flipping. Reading and writing are out of scope by design.
 
-## Use it
+Live app: https://sup3rrookie.github.io/xpress-lingua/
 
-**Live app:** https://sup3rrookie.github.io/xpress-lingua/ (deployed from the `gh-pages` branch — redeploy with `npx expo export --platform web`, add `.nojekyll`, push `dist` to `gh-pages`). Progress is per-browser: use **Back up progress / Restore** on the home screen to move between devices.
+Progress is stored per browser. Use Back up / Restore (You tab) to move between devices.
 
-## What it does (v0.7.0)
+## Features
 
-- 📈 **Pitch contour tone feedback** — every Mandarin card back draws the native speaker's pitch curve; record your take and see YOUR curve overlaid with a tone-match score (YIN F0 tracking, register-invariant)
-- 🎯 **Pronunciation check** — browser speech recognition verifies you were understood, with what-it-heard feedback
-- 📝 **A sample sentence on every word** — 100% coverage: real Tatoeba sentences (CC-BY, attributed) + hand-written originals for corpus gaps, all with audio (2,566 clips total)
-- 🧭 **3-tab layout** — Learn / Practice / You; practice modes 1 tap from launch; scenario carousel; desktop side rail
-- 🀄 **HSK starting level** — jump straight to HSK 2/3/4 without grinding lower levels
-- 🎵 **Tone Trainer** — ear training with three modes: tone quiz (hear a word, pick the tone pattern), which-word minimal pairs (confusable distractors), and repeat-after-me shadowing reps
-- 👂 **Listening cards** — ~30% of review cards flip direction: audio first, say the meaning
-- 💾 **Progress backup/restore** — JSON export/import of all learning state
-- 🔥 **Merciful streak** — one missed day no longer resets your streak
+- Speak-to-flip flashcards with FSRS scheduling (long-term intervals, no same-day repeats)
+- Two built-in decks: Survival (120 phrases, 10 scenario chapters with sequential unlock) and HSK Ladder (1,156 words, levels 1-4, selectable starting level)
+- Example sentence with audio on every card back. Sources: Tatoeba (CC-BY, attributed) plus hand-written sentences for corpus gaps
+- 2,566 pre-rendered audio clips, MeloTTS voice, each clip verified by Whisper transcription or human review before shipping. Unverifiable clips fall back to browser TTS
+- Tone-colored pinyin (Pleco convention), hanzi shown small and optional
+- Pitch contour comparison: records the learner, plots their F0 curve against the native clip, scores tone shape match (YIN tracking, register-invariant)
+- Pronunciation check via browser speech recognition
+- Tone Trainer: tone quiz, minimal pairs, shadowing reps
+- Sentence library plus a generator that builds practice sentences from learned words only
+- Anki .apkg import: in-browser SQLite parsing, automatic field mapping, bundled audio stored in IndexedDB
+- Browse screen: full word list per level with search and sentence preview
+- Daily pace setting (5/8/15/25 new cards per day) with a keep-going override
+- Progress backup and restore as JSON
 
-- 🀄 **HSK Ladder (1–4)** — 1,156 HSK-aligned words as a second built-in deck, frequency-sorted within each level, sequential level unlocking (finish HSK 1 to open HSK 2), full audio
-- 🔊 **1,322 pre-rendered audio clips** — every phrase, sentence, and HSK word has real Mandarin audio (open-source TTS, zero API cost, works offline); browser TTS is only a fallback. Colab notebook in `content/` upgrades quality with MeloTTS/Qwen3-TTS at will
-
-- 📥 **Anki .apkg import** — bring any Anki deck: unzips + parses the SQLite collection in-browser, auto-maps fields (phrase/pronunciation/meaning/audio), imports bundled native-speaker audio into IndexedDB, per-deck language selection. Tested against a real 500-note HSK-1 deck with 498 audio files.
-- 📖 **Sentences** — words in action: curated example sentences that unlock as you learn their pieces, an example sentence on every card back, and a "Mix it up" generator that builds fresh natural sentences from YOUR learned words (substitution frames, never AI-slop)
-- 🔒 **Scenario progression** — start with Greetings & Basics; each scenario unlocks by completing the previous one
-- ⚡ **Daily pace setting** — Relaxed 5 / Standard 8 / Fast 15 / Beast 25 new cards per day (with an honest review-debt warning)
-
-- 🇨🇳 **Mandarin Survival Deck** — 120 high-frequency phrases across 10 real-life scenarios (greetings, money, food, taxi, rescue phrases, time, family, feelings, hotel, small talk), chunk-based, not word lists — plus one-click import of the 500-word HSK-1 deck for volume
-- 🗣️ **Speak-to-flip flashcards** — front shows emoji + meaning; you say it in Mandarin *out loud* before flipping
-- 🎨 **Tone-colored pinyin** — Pleco-style colors (T1 red, T2 green, T3 blue, T4 purple, neutral gray); hanzi shown small (reading not required)
-- 🔊 **Native TTS** — normal + slow playback (browser/device voices for now; Azure Neural pre-generated audio planned)
-- 🎙️ **Record & compare** — record your take, play it against the native audio (web)
-- 🧠 **FSRS spaced repetition** — the modern Anki scheduler via ts-fsrs; 8 new cards/day cap
-- 🔥 **Streaks + Conversations Unlocked** — progress per scenario, phrases-spoken counter
-
-## Run it
+## Development
 
 ```bash
-nvm use 22.11.0   # Node 18+ required
+nvm use 22.11.0
 npm install
-npm run web       # opens in your browser
+npm run web
+```
+
+Node 18+ is required.
+
+## Content pipeline
+
+Deck data is generated by scripts, not written by hand:
+
+- `scripts/build-hsk-deck.js` builds the HSK deck from the complete-hsk-vocabulary dataset (MIT)
+- `scripts/build-hsk-examples.py` matches each word to a Tatoeba example sentence and generates pinyin
+- `scripts/render-zh-melo.py` renders sentence audio with MeloTTS
+- `scripts/render-zh-words-v2.py` renders word audio with verification: each clip is transcribed by Whisper and must match the expected pinyin syllable sequence before it is accepted. Short words that fail as single utterances are rendered as the word spoken twice
+- `scripts/verify-audio.py` audits existing clips against expected pinyin
+
+GPU is used automatically when available. All scripts are resumable and show tqdm progress.
+
+## Deployment
+
+```bash
+npx expo export --platform web
+touch dist/.nojekyll
+# push dist to the gh-pages branch
 ```
 
 ## Roadmap
 
-| Version | Scope |
-|---|---|
-| v0.1.x ✅ | Mandarin survival deck, speak-to-flip loop, FSRS, record & compare |
-| v0.2.x ✅ | "Neon Court" visual redesign: card flip, chunky buttons, confetti celebrations, bento home |
-| v0.3.x ✅ | Anki .apkg import, sentence library + generator, scenario gating, daily pace setting |
-| v0.4.x ✅ | Open-source TTS pipeline (Piper/Colab), 1,322 bundled audio clips, HSK 1–4 ladder deck |
-| v0.5.x ✅ | Web deployment (GitHub Pages), Tone Trainer, listening cards, progress backup, merciful streak |
-| v0.6.x ✅ | 3-tab IA redesign, HSK Tatoeba example sentences, pronunciation check (speech recognition) |
-| v0.7.x ✅ | Pitch contour tone feedback, 100% sentence coverage, HSK starting-level selector |
-| next | Daily reminders, wav2vec2 phoneme scoring, Colab audio quality pass, Japanese + Spanish packs, generated images, app stores via EAS |
-| v1.0 | App Store + Play Store via EAS, accounts/sync, freemium (unlimited pronunciation scoring + AI roleplay premium) |
+| Version | Scope | Status |
+|---|---|---|
+| 0.1 - 0.4 | Core loop, redesign, Anki import, sentences, HSK deck, audio pipeline | done |
+| 0.5 - 0.6 | Web deployment, Tone Trainer, 3-tab layout, pronunciation check | done |
+| 0.7 - 0.8 | Pitch contours, full sentence coverage, MeloTTS voice, audio verification | done |
+| next | Daily reminders, phoneme-level scoring, Japanese and Spanish packs, flashcard images, app store builds via EAS | planned |
 
 ## Conventions
 
-- Commits: `feat:` `fix:` `chore:` `doc:` — brief and concise
-- README stays labelled with current **version + tech stack**
+- Commits: `feat:` `fix:` `chore:` `doc:` prefixes, one brief line
+- README keeps the current version and tech stack at the top
+- Docs are written in plain developer prose. No em dashes
