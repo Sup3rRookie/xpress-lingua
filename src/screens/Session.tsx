@@ -26,6 +26,7 @@ import { exampleFor } from '../lib/sentences';
 import { fonts, hanziSize, shadows, springs, tokens } from '../theme';
 import { useReducedMotion } from '../lib/motion';
 import TonePinyin from '../components/TonePinyin';
+import ItemVisual from '../components/ItemVisual';
 import ChunkyButton from '../components/ChunkyButton';
 import Confetti from '../components/Confetti';
 import GlowEllipse from '../components/GlowEllipse';
@@ -506,18 +507,11 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                   </>
                 ) : (
                   <>
-                    <View
-                      style={[
-                        styles.emojiCircle,
-                        {
-                          backgroundColor: isZh
-                            ? toneTint(item.pinyin, 0.1)
-                            : 'rgba(139,92,246,0.10)',
-                        },
-                      ]}
-                    >
-                      <Text style={styles.emoji}>{item.emoji ?? '🃏'}</Text>
-                    </View>
+                    <ItemVisual
+                      item={item}
+                      size={148}
+                      tint={isZh ? toneTint(item.pinyin, 0.1) : 'rgba(139,92,246,0.10)'}
+                    />
                     <Text style={styles.gloss}>{item.gloss}</Text>
                     <Text style={styles.speakPrompt}>🗣️ Say it out loud</Text>
                   </>
