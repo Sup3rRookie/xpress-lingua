@@ -67,8 +67,10 @@ def main():
     items = [it for it in items if it['id'] not in checked]
     print(f'{len(items)} clips to check this run ({len(checked)} already done)', flush=True)
 
+    from tqdm import tqdm
     model = whisper.load_model('small')
-    for n, it in enumerate(items):
+    progress = tqdm(items, desc='audit', unit='clip', mininterval=2)
+    for n, it in enumerate(progress):
         path = os.path.join(AUDIO, it['id'] + '.wav')
         if not os.path.exists(path):
             continue
@@ -79,9 +81,10 @@ def main():
         audio = np.concatenate([gap, clip, gap, clip, gap])
         heard = model.transcribe(audio, language='zh', fp16=False, temperature=0.0,
                                  condition_on_previous_text=False)['text']
-        want = ''.join(base_pinyin(it['hanzi']))
-        got = ''.join(base_pinyin(heard))
-        ok = want in got
+        # Syllable-SEQUENCE match ('ai' must be a syllable, not a substring of 'bai').
+        want = base_pinyin(it['hanzi'])
+        got = base_pinyin(heard)
+        ok = any(got[i : i + len(want)] == want for i in range(len(got) - len(want) + 1))
         if not ok:
             flags.append({'id': it['id'], 'hanzi': it['hanzi'],
                           'want': ' '.join(tone_pinyin(it['hanzi'])), 'heard': heard.strip(),
@@ -92,7 +95,7 @@ def main():
                 json.dump(sorted(checked), f)
             with open(flags_path, 'w', encoding='utf-8') as f:
                 json.dump(flags, f, ensure_ascii=False, indent=1)
-            print(f'{n+1}/{len(items)} checked, {len(flags)} flagged total', flush=True)
+            progress.set_postfix(flagged=len(flags))
 
     with open(checked_path, 'w', encoding='utf-8') as f:
         json.dump(sorted(checked), f)

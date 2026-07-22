@@ -106,7 +106,9 @@ def main():
     print(f'{len(flags)} flags to process this run ({len(done_ids)} already done)', flush=True)
     tmpdir = tempfile.mkdtemp()
 
-    for n, fl in enumerate(flags):
+    from tqdm import tqdm
+    progress = tqdm(flags, desc='repair', unit='clip', mininterval=2)
+    for n, fl in enumerate(progress):
         word = fl['hanzi'].replace(' ', '')
         want = base_pinyin(word)
         target = os.path.join(AUDIO, fl['id'] + '.wav')
@@ -139,7 +141,7 @@ def main():
         if not done:
             unfixable.append({'id': fl['id'], 'hanzi': word, 'want': fl['want']})
         if (n + 1) % 5 == 0:
-            print(f'{n+1}/{len(flags)}: {len(fixed)} fixed, {len(unfixable)} unfixable', flush=True)
+            progress.set_postfix(fixed=len(fixed), unfixable=len(unfixable))
             with open(fixes_path, 'w', encoding='utf-8') as f:
                 json.dump({'fixed': fixed, 'unfixable': unfixable}, f, ensure_ascii=False, indent=1)
 
