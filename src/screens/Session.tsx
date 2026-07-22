@@ -13,6 +13,11 @@ import { Deck, DeckItem } from '../data/types';
 import { builtinAudioUrl, playText, speak } from '../lib/audio';
 import { playAudioKey } from '../lib/mediaStore';
 import { contourFromUrl, similarity } from '../lib/pitch';
+import doubledClipIds from '../data/zh-audio-doubles.json';
+
+// Word clips rendered as "word, word" (spoken twice) — fine for listening,
+// unusable as a single-utterance pitch reference.
+const DOUBLED_CLIPS = new Set<string>(doubledClipIds as string[]);
 import { playUrl, recordingSupported, startRecording, stopRecording } from '../lib/recorder';
 import { checkPronunciation, CheckResult, speechCheckSupported } from '../lib/speechCheck';
 import { buildQueue, deckStats, grantBonusCards, review, Rating, type Grade } from '../lib/srs';
@@ -309,12 +314,13 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
   }, [item?.id]);
 
   // Mandarin tone feedback: prefetch the native clip's pitch contour per card.
-  // Reference comes from builtin rendered audio only — imported (audioKey) cards skip it.
+  // Reference comes from builtin rendered audio only — imported (audioKey) cards
+  // and "spoken twice" clips (doubled contour ≠ single utterance) skip it.
   useEffect(() => {
     setRefContour(null);
     setUserContour(null);
     setToneScore(null);
-    if (!item || deck.lang !== 'zh' || item.audioKey) return;
+    if (!item || deck.lang !== 'zh' || item.audioKey || DOUBLED_CLIPS.has(item.id)) return;
     const url = builtinAudioUrl(deck.lang, item.id);
     if (!url) return;
     let stale = false;
