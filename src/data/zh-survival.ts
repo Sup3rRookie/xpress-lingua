@@ -1,6 +1,6 @@
 import { Deck } from './types';
 
-// Mandarin Survival Deck v1 — 5 scenarios x 12 items, chunk-heavy per spec.
+// Mandarin Survival Deck: 10 scenarios x 12 items, chunk-heavy per spec.
 // Pinyin is tone-marked; tone colors are derived at render time.
 export const zhSurvival: Deck = {
   lang: 'zh',
