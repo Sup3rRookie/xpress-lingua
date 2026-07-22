@@ -96,6 +96,14 @@ def main():
 
     model = whisper.load_model('small')
     fixed, unfixable = [], []
+    fixes_path = os.path.join(ROOT, 'scripts', 'audio-fixes.json')
+    if os.path.exists(fixes_path):
+        with open(fixes_path, encoding='utf-8') as f:
+            prev = json.load(f)
+        fixed, unfixable = prev.get('fixed', []), prev.get('unfixable', [])
+    done_ids = {x['id'] for x in fixed} | {x['id'] for x in unfixable}
+    flags = [fl for fl in flags if fl['id'] not in done_ids]
+    print(f'{len(flags)} flags to process this run ({len(done_ids)} already done)', flush=True)
     tmpdir = tempfile.mkdtemp()
 
     for n, fl in enumerate(flags):
@@ -130,9 +138,9 @@ def main():
                 break
         if not done:
             unfixable.append({'id': fl['id'], 'hanzi': word, 'want': fl['want']})
-        if (n + 1) % 10 == 0:
+        if (n + 1) % 5 == 0:
             print(f'{n+1}/{len(flags)}: {len(fixed)} fixed, {len(unfixable)} unfixable', flush=True)
-            with open(os.path.join(ROOT, 'scripts', 'audio-fixes.json'), 'w', encoding='utf-8') as f:
+            with open(fixes_path, 'w', encoding='utf-8') as f:
                 json.dump({'fixed': fixed, 'unfixable': unfixable}, f, ensure_ascii=False, indent=1)
 
     with open(os.path.join(ROOT, 'scripts', 'audio-fixes.json'), 'w', encoding='utf-8') as f:

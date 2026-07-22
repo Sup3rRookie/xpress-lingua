@@ -1,5 +1,10 @@
 import { Platform } from 'react-native';
 import * as Speech from 'expo-speech';
+import suspectIds from '../data/zh-audio-suspect.json';
+
+// Word clips that failed Whisper verification (wrong/garbled isolated-syllable
+// synthesis). Browser TTS is the safer fallback until the Colab re-render.
+const SUSPECT = new Set<string>(suspectIds as string[]);
 
 let voiceId: string | undefined;
 
@@ -24,6 +29,7 @@ export async function initBuiltinAudio(lang: string): Promise<number> {
 }
 
 export function builtinAudioUrl(lang: string, id: string): string | null {
+  if (SUSPECT.has(id)) return null;
   const f = builtinFiles[lang]?.[id];
   return f ? `audio/${lang}/${f}` : null;
 }
