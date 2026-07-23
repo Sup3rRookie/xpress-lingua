@@ -25,12 +25,16 @@ const CARD_GAP = 8;
 // Learn tab — slim: header + streak, hero Continue, quick actions, conversations.
 export default function Home({
   deck,
+  activeLang,
+  onSwitchLang,
   onStart,
   onStudyDeck,
   onSentences,
   onToneTrainer,
 }: {
   deck: Deck;
+  activeLang: 'zh' | 'ja';
+  onSwitchLang: (lang: 'zh' | 'ja') => void;
   onStart: () => void;
   onStudyDeck: (d: Deck) => void;
   onSentences: () => void;
@@ -91,18 +95,37 @@ export default function Home({
       <GlowEllipse style={styles.headerGlow} />
 
       <View style={styles.inner}>
-        {/* Header — wordmark + streak pill */}
+        {/* Header — wordmark + language switcher + streak pill */}
         <View style={styles.headerRow}>
           <Text style={styles.wordmark}>⚡ XpressLingua</Text>
-          <LinearGradient
-            colors={tokens.game.streakGradient}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 1 }}
-            style={styles.streakPill}
-          >
-            <Text style={styles.streakEmoji}>🔥</Text>
-            <Text style={styles.streakCount}>{stats?.streak ?? 0}</Text>
-          </LinearGradient>
+          <View style={styles.headerRight}>
+            {(
+              [
+                ['zh', '🇨🇳'],
+                ['ja', '🇯🇵'],
+              ] as const
+            ).map(([lang, flag]) => (
+              <Pressable
+                key={lang}
+                style={[styles.langChip, activeLang === lang && styles.langChipActive]}
+                onPress={() => onSwitchLang(lang)}
+                accessibilityRole="button"
+                accessibilityState={{ selected: activeLang === lang }}
+                accessibilityLabel={lang === 'zh' ? 'Mandarin' : 'Japanese'}
+              >
+                <Text style={styles.langChipText}>{flag}</Text>
+              </Pressable>
+            ))}
+            <LinearGradient
+              colors={tokens.game.streakGradient}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              style={styles.streakPill}
+            >
+              <Text style={styles.streakEmoji}>🔥</Text>
+              <Text style={styles.streakCount}>{stats?.streak ?? 0}</Text>
+            </LinearGradient>
+          </View>
         </View>
 
         {/* Hero "Continue" tile with gradient border glow */}
@@ -113,7 +136,9 @@ export default function Home({
           style={styles.heroBorder}
         >
           <View style={styles.heroTile}>
-            <Text style={styles.heroKicker}>🇨🇳 Mandarin — Survival Deck</Text>
+            <Text style={styles.heroKicker}>
+              {activeLang === 'zh' ? '🇨🇳' : '🇯🇵'} {deck.langLabel} Survival Deck
+            </Text>
             <View style={styles.heroCountRow}>
               <Text style={styles.heroCount}>{stats ? toStudy : '–'}</Text>
               <Text style={styles.heroCountLabel}>
@@ -143,7 +168,8 @@ export default function Home({
           </View>
         </LinearGradient>
 
-        {/* Quick actions */}
+        {/* Quick actions — Mandarin practice tools; Japanese equivalents come later */}
+        {activeLang === 'zh' && (
         <View style={styles.quickRow}>
           {quickActions.map((q) => (
             <Pressable
@@ -159,13 +185,14 @@ export default function Home({
             </Pressable>
           ))}
         </View>
+        )}
 
         {/* Voice warning — moot once pre-rendered clips exist */}
         {!voiceOk && builtinClips === 0 && (
           <View style={styles.warnBanner}>
             <Text style={styles.warnIcon}>⚠️</Text>
             <Text style={styles.warnText} numberOfLines={2}>
-              No Mandarin voice found in this browser yet. Chrome or Edge usually has one —
+              No {deck.langLabel} voice found in this browser yet. Chrome or Edge usually has one —
               audio may use a default voice until then.
             </Text>
           </View>
@@ -259,6 +286,22 @@ const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: tokens.bg.base },
   content: { paddingTop: 16, paddingBottom: 88 },
   headerGlow: { top: -140, alignSelf: 'center' },
+  headerRight: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  langChip: {
+    width: 34,
+    height: 34,
+    borderRadius: 17,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: tokens.bg.raised,
+    borderWidth: 1,
+    borderColor: tokens.border.subtle,
+  },
+  langChipActive: {
+    backgroundColor: 'rgba(139,92,246,0.22)',
+    borderColor: tokens.brand.primary,
+  },
+  langChipText: { fontSize: 16 },
   sectionRow: {
     flexDirection: 'row',
     alignItems: 'center',

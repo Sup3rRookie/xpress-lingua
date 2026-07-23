@@ -20,7 +20,9 @@ import Sentences from './src/screens/Sentences';
 import ToneTrainer from './src/screens/ToneTrainer';
 import Browse from './src/screens/Browse';
 import TabBar, { TabId } from './src/components/TabBar';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { zhSurvival } from './src/data/zh-survival';
+import { jaSurvival } from './src/data/ja-survival';
 import { Deck } from './src/data/types';
 import { ImportResult, PickedApkg } from './src/lib/apkgImport';
 import { tokens } from './src/theme';
@@ -37,10 +39,24 @@ type Screen =
 type ToneMode = 'quiz' | 'pairs' | 'shadow';
 type SentencesTab = 'learned' | 'mix';
 
+const SURVIVAL: Record<string, Deck> = { zh: zhSurvival, ja: jaSurvival };
+
 export default function App() {
   const [screen, setScreen] = useState<Screen>('home');
   const [lastTab, setLastTab] = useState<TabId>('home');
+  const [activeLang, setActiveLang] = useState<'zh' | 'ja'>('zh');
   const [activeDeck, setActiveDeck] = useState<Deck>(zhSurvival);
+
+  React.useEffect(() => {
+    AsyncStorage.getItem('xl-lang').then((v) => {
+      if (v === 'ja' || v === 'zh') setActiveLang(v);
+    });
+  }, []);
+
+  const switchLang = (lang: 'zh' | 'ja') => {
+    setActiveLang(lang);
+    AsyncStorage.setItem('xl-lang', lang);
+  };
   const [pendingImport, setPendingImport] = useState<PickedApkg | null>(null);
   const [banner, setBanner] = useState<string | null>(null);
   const [toneMode, setToneMode] = useState<ToneMode | undefined>(undefined);
@@ -88,9 +104,11 @@ export default function App() {
     <>
       {screen === 'home' && (
         <Home
-          deck={zhSurvival}
+          deck={SURVIVAL[activeLang]}
+          activeLang={activeLang}
+          onSwitchLang={switchLang}
           onStart={() => {
-            setActiveDeck(zhSurvival);
+            setActiveDeck(SURVIVAL[activeLang]);
             setScreen('session');
           }}
           onStudyDeck={(d) => {
