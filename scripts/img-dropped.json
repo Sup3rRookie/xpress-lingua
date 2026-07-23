@@ -1,0 +1,4902 @@
+[
+ {
+  "id": "hsk1-003",
+  "concept": "to be",
+  "p": 0.004
+ },
+ {
+  "id": "hsk1-004",
+  "concept": "you",
+  "p": 0.002
+ },
+ {
+  "id": "hsk1-005",
+  "concept": "to exist",
+  "p": 0.001
+ },
+ {
+  "id": "hsk1-007",
+  "concept": "to have",
+  "p": 0.003
+ },
+ {
+  "id": "hsk1-009",
+  "concept": "this",
+  "p": 0.021
+ },
+ {
+  "id": "hsk1-011",
+  "concept": "and",
+  "p": 0.005
+ },
+ {
+  "id": "hsk1-014",
+  "concept": "good",
+  "p": 0.003
+ },
+ {
+  "id": "hsk1-015",
+  "concept": "one",
+  "p": 0.03
+ },
+ {
+  "id": "hsk1-016",
+  "concept": "can",
+  "p": 0.079
+ },
+ {
+  "id": "hsk1-018",
+  "concept": "first",
+  "p": 0.004
+ },
+ {
+  "id": "hsk1-021",
+  "concept": "to go",
+  "p": 0.001
+ },
+ {
+  "id": "hsk1-023",
+  "concept": "to think",
+  "p": 0.008
+ },
+ {
+  "id": "hsk1-024",
+  "concept": "can",
+  "p": 0.009
+ },
+ {
+  "id": "hsk1-025",
+  "concept": "that",
+  "p": 0.003
+ },
+ {
+  "id": "hsk1-026",
+  "concept": "to see",
+  "p": 0.002
+ },
+ {
+  "id": "hsk1-027",
+  "concept": "to make",
+  "p": 0.003
+ },
+ {
+  "id": "hsk1-028",
+  "concept": "what",
+  "p": 0.019
+ },
+ {
+  "id": "hsk1-029",
+  "concept": "point",
+  "p": 0.005
+ },
+ {
+  "id": "hsk1-030",
+  "concept": "drowned",
+  "p": 0.002
+ },
+ {
+  "id": "hsk1-031",
+  "concept": "big",
+  "p": 0.011
+ },
+ {
+  "id": "hsk1-032",
+  "concept": "down",
+  "p": 0.002
+ },
+ {
+  "id": "hsk1-035",
+  "concept": "many",
+  "p": 0.066
+ },
+ {
+  "id": "hsk1-036",
+  "concept": "what",
+  "p": 0.005
+ },
+ {
+  "id": "hsk1-037",
+  "concept": "highest",
+  "p": 0.001
+ },
+ {
+  "id": "hsk1-039",
+  "concept": "small",
+  "p": 0.001
+ },
+ {
+  "id": "hsk1-041",
+  "concept": "to work",
+  "p": 0.006
+ },
+ {
+  "id": "hsk1-042",
+  "concept": "home",
+  "p": 0.005
+ },
+ {
+  "id": "hsk1-043",
+  "concept": "how",
+  "p": 0.0
+ },
+ {
+  "id": "hsk1-045",
+  "concept": "to like",
+  "p": 0.001
+ },
+ {
+  "id": "hsk1-046",
+  "concept": "to eat",
+  "p": 0.123
+ },
+ {
+  "id": "hsk1-047",
+  "concept": "who",
+  "p": 0.003
+ },
+ {
+  "id": "hsk1-048",
+  "concept": "moon",
+  "p": 0.287
+ },
+ {
+  "id": "hsk1-049",
+  "concept": "how much",
+  "p": 0.03
+ },
+ {
+  "id": "hsk1-050",
+  "concept": "to listen to",
+  "p": 0.001
+ },
+ {
+  "id": "hsk1-051",
+  "concept": "to open",
+  "p": 0.002
+ },
+ {
+  "id": "hsk1-052",
+  "concept": "to shout",
+  "p": 0.001
+ },
+ {
+  "id": "hsk1-053",
+  "concept": "to ask",
+  "p": 0.022
+ },
+ {
+  "id": "hsk1-054",
+  "concept": "root",
+  "p": 0.0
+ },
+ {
+  "id": "hsk1-056",
+  "concept": "thing",
+  "p": 0.009
+ },
+ {
+  "id": "hsk1-057",
+  "concept": "three",
+  "p": 0.003
+ },
+ {
+  "id": "hsk1-058",
+  "concept": "to buy",
+  "p": 0.021
+ },
+ {
+  "id": "hsk1-060",
+  "concept": "to live",
+  "p": 0.366
+ },
+ {
+  "id": "hsk1-061",
+  "concept": "to write",
+  "p": 0.002
+ },
+ {
+  "id": "hsk1-064",
+  "concept": "school",
+  "p": 0.0
+ },
+ {
+  "id": "hsk1-065",
+  "concept": "to sit",
+  "p": 0.001
+ },
+ {
+  "id": "hsk1-066",
+  "concept": "to know",
+  "p": 0.072
+ },
+ {
+  "id": "hsk1-067",
+  "concept": "minute",
+  "p": 0.032
+ },
+ {
+  "id": "hsk1-068",
+  "concept": "four",
+  "p": 0.001
+ },
+ {
+  "id": "hsk1-070",
+  "concept": "number",
+  "p": 0.005
+ },
+ {
+  "id": "hsk1-071",
+  "concept": "few",
+  "p": 0.005
+ },
+ {
+  "id": "hsk1-072",
+  "concept": "movie",
+  "p": 0.121
+ },
+ {
+  "id": "hsk1-073",
+  "concept": "how",
+  "p": 0.04
+ },
+ {
+  "id": "hsk1-074",
+  "concept": "book",
+  "p": 0.338
+ },
+ {
+  "id": "hsk1-075",
+  "concept": "five",
+  "p": 0.004
+ },
+ {
+  "id": "hsk1-076",
+  "concept": "teacher",
+  "p": 0.004
+ },
+ {
+  "id": "hsk1-077",
+  "concept": "hospital",
+  "p": 0.149
+ },
+ {
+  "id": "hsk1-080",
+  "concept": "student",
+  "p": 0.002
+ },
+ {
+  "id": "hsk1-081",
+  "concept": "two",
+  "p": 0.003
+ },
+ {
+  "id": "hsk1-082",
+  "concept": "son",
+  "p": 0.014
+ },
+ {
+  "id": "hsk1-083",
+  "concept": "China",
+  "p": 0.012
+ },
+ {
+  "id": "hsk1-085",
+  "concept": "afternoon",
+  "p": 0.004
+ },
+ {
+  "id": "hsk1-086",
+  "concept": "to learn",
+  "p": 0.22
+ },
+ {
+  "id": "hsk1-087",
+  "concept": "six",
+  "p": 0.001
+ },
+ {
+  "id": "hsk1-089",
+  "concept": "name",
+  "p": 0.012
+ },
+ {
+  "id": "hsk1-090",
+  "concept": "ten",
+  "p": 0.0
+ },
+ {
+  "id": "hsk1-091",
+  "concept": "to see",
+  "p": 0.002
+ },
+ {
+  "id": "hsk1-093",
+  "concept": "to speak",
+  "p": 0.0
+ },
+ {
+  "id": "hsk1-095",
+  "concept": "pretty",
+  "p": 0.014
+ },
+ {
+  "id": "hsk1-096",
+  "concept": "happy",
+  "p": 0.005
+ },
+ {
+  "id": "hsk1-097",
+  "concept": "to warm up",
+  "p": 0.003
+ },
+ {
+  "id": "hsk1-098",
+  "concept": "to go to bed",
+  "p": 0.009
+ },
+ {
+  "id": "hsk1-100",
+  "concept": "to read out",
+  "p": 0.003
+ },
+ {
+  "id": "hsk1-101",
+  "concept": "cold",
+  "p": 0.001
+ },
+ {
+  "id": "hsk1-105",
+  "concept": "the back",
+  "p": 0.261
+ },
+ {
+  "id": "hsk1-106",
+  "concept": "hey",
+  "p": 0.001
+ },
+ {
+  "id": "hsk1-107",
+  "concept": "eight",
+  "p": 0.027
+ },
+ {
+  "id": "hsk1-108",
+  "concept": "how",
+  "p": 0.004
+ },
+ {
+  "id": "hsk1-109",
+  "concept": "seven",
+  "p": 0.005
+ },
+ {
+  "id": "hsk1-113",
+  "concept": "weather",
+  "p": 0.022
+ },
+ {
+  "id": "hsk1-114",
+  "concept": "ahead",
+  "p": 0.005
+ },
+ {
+  "id": "hsk1-115",
+  "concept": "to study at the same school",
+  "p": 0.11
+ },
+ {
+  "id": "hsk1-116",
+  "concept": "week",
+  "p": 0.004
+ },
+ {
+  "id": "hsk1-117",
+  "concept": "nine",
+  "p": 0.002
+ },
+ {
+  "id": "hsk1-118",
+  "concept": "morning",
+  "p": 0.026
+ },
+ {
+  "id": "hsk1-120",
+  "concept": "noon",
+  "p": 0.004
+ },
+ {
+  "id": "hsk1-122",
+  "concept": "store",
+  "p": 0.06
+ },
+ {
+  "id": "hsk1-123",
+  "concept": "zero",
+  "p": 0.005
+ },
+ {
+  "id": "hsk1-124",
+  "concept": "table",
+  "p": 0.089
+ },
+ {
+  "id": "hsk2-000",
+  "concept": "in that case",
+  "p": 0.02
+ },
+ {
+  "id": "hsk2-001",
+  "concept": "to want",
+  "p": 0.004
+ },
+ {
+  "id": "hsk2-002",
+  "concept": "also",
+  "p": 0.004
+ },
+ {
+  "id": "hsk2-003",
+  "concept": "to reach",
+  "p": 0.003
+ },
+ {
+  "id": "hsk2-004",
+  "concept": "still",
+  "p": 0.002
+ },
+ {
+  "id": "hsk2-005",
+  "concept": "to touch",
+  "p": 0.005
+ },
+ {
+  "id": "hsk2-007",
+  "concept": "to yield",
+  "p": 0.005
+ },
+ {
+  "id": "hsk2-009",
+  "concept": "to obtain",
+  "p": 0.01
+ },
+ {
+  "id": "hsk2-010",
+  "concept": "can",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-012",
+  "concept": "from",
+  "p": 0.012
+ },
+ {
+  "id": "hsk2-013",
+  "concept": "really",
+  "p": 0.006
+ },
+ {
+  "id": "hsk2-014",
+  "concept": "two",
+  "p": 0.005
+ },
+ {
+  "id": "hsk2-015",
+  "concept": "to go out",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-016",
+  "concept": "already",
+  "p": 0.004
+ },
+ {
+  "id": "hsk2-017",
+  "concept": "most",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-018",
+  "concept": "again",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-019",
+  "concept": "next in sequence",
+  "p": 0.002
+ },
+ {
+  "id": "hsk2-020",
+  "concept": "to know",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-021",
+  "concept": "question",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-024",
+  "concept": "but",
+  "p": 0.008
+ },
+ {
+  "id": "hsk2-026",
+  "concept": "to begin",
+  "p": 0.091
+ },
+ {
+  "id": "hsk2-027",
+  "concept": "new",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-028",
+  "concept": "to try to find",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-029",
+  "concept": "rapid",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-030",
+  "concept": "to compare",
+  "p": 0.009
+ },
+ {
+  "id": "hsk2-031",
+  "concept": "therefore",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-032",
+  "concept": "to think that ",
+  "p": 0.006
+ },
+ {
+  "id": "hsk2-033",
+  "concept": "towards",
+  "p": 0.002
+ },
+ {
+  "id": "hsk2-034",
+  "concept": "to hope",
+  "p": 0.007
+ },
+ {
+  "id": "hsk2-036",
+  "concept": "very",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-037",
+  "concept": "to leave",
+  "p": 0.007
+ },
+ {
+  "id": "hsk2-038",
+  "concept": "company",
+  "p": 0.004
+ },
+ {
+  "id": "hsk2-039",
+  "concept": "first",
+  "p": 0.002
+ },
+ {
+  "id": "hsk2-040",
+  "concept": "to ask",
+  "p": 0.343
+ },
+ {
+  "id": "hsk2-042",
+  "concept": "to press charges",
+  "p": 0.012
+ },
+ {
+  "id": "hsk2-043",
+  "concept": "affair",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-044",
+  "concept": "ordinal number",
+  "p": 0.005
+ },
+ {
+  "id": "hsk2-045",
+  "concept": "high",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-046",
+  "concept": "item",
+  "p": 0.025
+ },
+ {
+  "id": "hsk2-047",
+  "concept": "to open up",
+  "p": 0.012
+ },
+ {
+  "id": "hsk2-048",
+  "concept": "preparation",
+  "p": 0.003
+ },
+ {
+  "id": "hsk2-049",
+  "concept": "to go forward",
+  "p": 0.019
+ },
+ {
+  "id": "hsk2-050",
+  "concept": "each",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-051",
+  "concept": "you",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-052",
+  "concept": "to send",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-055",
+  "concept": "hour",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-056",
+  "concept": "to finish",
+  "p": 0.326
+ },
+ {
+  "id": "hsk2-059",
+  "concept": "to play",
+  "p": 0.003
+ },
+ {
+  "id": "hsk2-060",
+  "concept": "just at",
+  "p": 0.002
+ },
+ {
+  "id": "hsk2-062",
+  "concept": "to wear",
+  "p": 0.005
+ },
+ {
+  "id": "hsk2-063",
+  "concept": "outside",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-064",
+  "concept": "assistance",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-065",
+  "concept": "mistake",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-066",
+  "concept": "to sell",
+  "p": 0.004
+ },
+ {
+  "id": "hsk2-067",
+  "concept": "far",
+  "p": 0.004
+ },
+ {
+  "id": "hsk2-068",
+  "concept": "happy",
+  "p": 0.003
+ },
+ {
+  "id": "hsk2-070",
+  "concept": "medicine",
+  "p": 0.048
+ },
+ {
+  "id": "hsk2-071",
+  "concept": "black",
+  "p": 0.002
+ },
+ {
+  "id": "hsk2-072",
+  "concept": "the body",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-074",
+  "concept": "to introduce",
+  "p": 0.01
+ },
+ {
+  "id": "hsk2-075",
+  "concept": "red",
+  "p": 0.349
+ },
+ {
+  "id": "hsk2-076",
+  "concept": "to welcome",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-078",
+  "concept": "near",
+  "p": 0.016
+ },
+ {
+  "id": "hsk2-081",
+  "concept": "to leave",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-082",
+  "concept": "white",
+  "p": 0.025
+ },
+ {
+  "id": "hsk2-083",
+  "concept": "last year",
+  "p": 0.015
+ },
+ {
+  "id": "hsk2-085",
+  "concept": "idea",
+  "p": 0.002
+ },
+ {
+  "id": "hsk2-086",
+  "concept": "to reply",
+  "p": 0.004
+ },
+ {
+  "id": "hsk2-087",
+  "concept": "to move",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-090",
+  "concept": "tired",
+  "p": 0.003
+ },
+ {
+  "id": "hsk2-091",
+  "concept": "rest",
+  "p": 0.003
+ },
+ {
+  "id": "hsk2-092",
+  "concept": "to wash",
+  "p": 0.01
+ },
+ {
+  "id": "hsk2-094",
+  "concept": "husband",
+  "p": 0.002
+ },
+ {
+  "id": "hsk2-095",
+  "concept": "to go to work",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-096",
+  "concept": "birthday",
+  "p": 0.344
+ },
+ {
+  "id": "hsk2-098",
+  "concept": "subject",
+  "p": 0.006
+ },
+ {
+  "id": "hsk2-099",
+  "concept": "to take an exam",
+  "p": 0.012
+ },
+ {
+  "id": "hsk2-100",
+  "concept": "thousand",
+  "p": 0.019
+ },
+ {
+  "id": "hsk2-101",
+  "concept": "slow",
+  "p": 0.025
+ },
+ {
+  "id": "hsk2-102",
+  "concept": "side",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-103",
+  "concept": "color",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-104",
+  "concept": "snow",
+  "p": 0.176
+ },
+ {
+  "id": "hsk2-106",
+  "concept": "expensive",
+  "p": 0.024
+ },
+ {
+  "id": "hsk2-108",
+  "concept": "to kick",
+  "p": 0.0
+ },
+ {
+  "id": "hsk2-110",
+  "concept": "hundred",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-111",
+  "concept": "trip",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-112",
+  "concept": "to get out of bed",
+  "p": 0.012
+ },
+ {
+  "id": "hsk2-113",
+  "concept": "topic",
+  "p": 0.001
+ },
+ {
+  "id": "hsk2-114",
+  "concept": "cheap",
+  "p": 0.002
+ },
+ {
+  "id": "hsk2-116",
+  "concept": "right side",
+  "p": 0.002
+ },
+ {
+  "id": "hsk2-117",
+  "concept": "cow's milk",
+  "p": 0.127
+ },
+ {
+  "id": "hsk2-120",
+  "concept": "family name",
+  "p": 0.046
+ },
+ {
+  "id": "hsk2-121",
+  "concept": "swimming",
+  "p": 0.007
+ },
+ {
+  "id": "hsk2-123",
+  "concept": "overcast",
+  "p": 0.009
+ },
+ {
+  "id": "hsk2-124",
+  "concept": "to fall ill",
+  "p": 0.016
+ },
+ {
+  "id": "hsk2-125",
+  "concept": "left",
+  "p": 0.005
+ },
+ {
+  "id": "hsk2-127",
+  "concept": "classroom",
+  "p": 0.083
+ },
+ {
+  "id": "hsk2-129",
+  "concept": "to run",
+  "p": 0.099
+ },
+ {
+  "id": "hsk2-131",
+  "concept": "clear",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-001",
+  "concept": "to hold",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-002",
+  "concept": "quilt",
+  "p": 0.268
+ },
+ {
+  "id": "hsk3-004",
+  "concept": "to use",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-006",
+  "concept": "again",
+  "p": 0.011
+ },
+ {
+  "id": "hsk3-007",
+  "concept": "only",
+  "p": 0.013
+ },
+ {
+  "id": "hsk3-008",
+  "concept": "more",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-009",
+  "concept": "to need",
+  "p": 0.015
+ },
+ {
+  "id": "hsk3-011",
+  "concept": "ability",
+  "p": 0.011
+ },
+ {
+  "id": "hsk3-013",
+  "concept": "to resemble",
+  "p": 0.008
+ },
+ {
+  "id": "hsk3-014",
+  "concept": "still",
+  "p": 0.014
+ },
+ {
+  "id": "hsk3-015",
+  "concept": "to believe",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-016",
+  "concept": "ought to",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-017",
+  "concept": "band",
+  "p": 0.04
+ },
+ {
+  "id": "hsk3-018",
+  "concept": "position",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-019",
+  "concept": "seed",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-020",
+  "concept": "to notice",
+  "p": 0.008
+ },
+ {
+  "id": "hsk3-021",
+  "concept": "surely",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-022",
+  "concept": "straight",
+  "p": 0.002
+ },
+ {
+  "id": "hsk3-023",
+  "concept": "for",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-024",
+  "concept": "same",
+  "p": 0.002
+ },
+ {
+  "id": "hsk3-025",
+  "concept": "world",
+  "p": 0.01
+ },
+ {
+  "id": "hsk3-026",
+  "concept": "but also",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-027",
+  "concept": "important",
+  "p": 0.009
+ },
+ {
+  "id": "hsk3-028",
+  "concept": "to have to",
+  "p": 0.011
+ },
+ {
+  "id": "hsk3-029",
+  "concept": "area",
+  "p": 0.002
+ },
+ {
+  "id": "hsk3-031",
+  "concept": "other",
+  "p": 0.006
+ },
+ {
+  "id": "hsk3-032",
+  "concept": "competition",
+  "p": 0.002
+ },
+ {
+  "id": "hsk3-033",
+  "concept": "then",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-034",
+  "concept": "anxious",
+  "p": 0.054
+ },
+ {
+  "id": "hsk3-035",
+  "concept": "strip",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-036",
+  "concept": "to put",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-037",
+  "concept": "to hold",
+  "p": 0.009
+ },
+ {
+  "id": "hsk3-038",
+  "concept": "early",
+  "p": 0.008
+ },
+ {
+  "id": "hsk3-039",
+  "concept": "relation",
+  "p": 0.015
+ },
+ {
+  "id": "hsk3-040",
+  "concept": "to appear",
+  "p": 0.002
+ },
+ {
+  "id": "hsk3-041",
+  "concept": "to understand",
+  "p": 0.04
+ },
+ {
+  "id": "hsk3-042",
+  "concept": "past",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-043",
+  "concept": "to participate",
+  "p": 0.026
+ },
+ {
+  "id": "hsk3-044",
+  "concept": "country",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-045",
+  "concept": "to decide",
+  "p": 0.033
+ },
+ {
+  "id": "hsk3-046",
+  "concept": "to divide",
+  "p": 0.139
+ },
+ {
+  "id": "hsk3-047",
+  "concept": "to select",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-049",
+  "concept": "opportunity",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-051",
+  "concept": "station",
+  "p": 0.251
+ },
+ {
+  "id": "hsk3-052",
+  "concept": "to make",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-053",
+  "concept": "actually",
+  "p": 0.014
+ },
+ {
+  "id": "hsk3-054",
+  "concept": "after",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-055",
+  "concept": "to request",
+  "p": 0.01
+ },
+ {
+  "id": "hsk3-056",
+  "concept": "letter",
+  "p": 0.286
+ },
+ {
+  "id": "hsk3-057",
+  "concept": "to receive",
+  "p": 0.004
+ },
+ {
+  "id": "hsk3-058",
+  "concept": "to be convinced",
+  "p": 0.025
+ },
+ {
+  "id": "hsk3-059",
+  "concept": "flower",
+  "p": 0.248
+ },
+ {
+  "id": "hsk3-060",
+  "concept": "although",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-061",
+  "concept": "to solve",
+  "p": 0.023
+ },
+ {
+  "id": "hsk3-062",
+  "concept": "pertaining to",
+  "p": 0.007
+ },
+ {
+  "id": "hsk3-063",
+  "concept": "to complete",
+  "p": 0.006
+ },
+ {
+  "id": "hsk3-064",
+  "concept": "termination",
+  "p": 0.006
+ },
+ {
+  "id": "hsk3-065",
+  "concept": "to make an effort",
+  "p": 0.004
+ },
+ {
+  "id": "hsk3-066",
+  "concept": "before",
+  "p": 0.002
+ },
+ {
+  "id": "hsk3-067",
+  "concept": "means",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-068",
+  "concept": "unusual",
+  "p": 0.002
+ },
+ {
+  "id": "hsk3-069",
+  "concept": "difficult",
+  "p": 0.056
+ },
+ {
+  "id": "hsk3-070",
+  "concept": "to take note of",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-071",
+  "concept": "to speak",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-072",
+  "concept": "to depart",
+  "p": 0.034
+ },
+ {
+  "id": "hsk3-073",
+  "concept": "ten thousand",
+  "p": 0.027
+ },
+ {
+  "id": "hsk3-074",
+  "concept": "to think  (Usually there is an implication that the notion is mistaken –",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-075",
+  "concept": "to exceed",
+  "p": 0.103
+ },
+ {
+  "id": "hsk3-077",
+  "concept": "influence",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-078",
+  "concept": "game",
+  "p": 0.073
+ },
+ {
+  "id": "hsk3-080",
+  "concept": "to compare",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-081",
+  "concept": "recently",
+  "p": 0.006
+ },
+ {
+  "id": "hsk3-082",
+  "concept": "to exchange",
+  "p": 0.002
+ },
+ {
+  "id": "hsk3-083",
+  "concept": "at last",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-086",
+  "concept": "besides",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-087",
+  "concept": "always",
+  "p": 0.007
+ },
+ {
+  "id": "hsk3-088",
+  "concept": "two",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-089",
+  "concept": "sudden",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-090",
+  "concept": "paragraph",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-093",
+  "concept": "easy",
+  "p": 0.006
+ },
+ {
+  "id": "hsk3-094",
+  "concept": "clear",
+  "p": 0.009
+ },
+ {
+  "id": "hsk3-095",
+  "concept": "according to",
+  "p": 0.011
+ },
+ {
+  "id": "hsk3-096",
+  "concept": "to remember",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-098",
+  "concept": "simple",
+  "p": 0.006
+ },
+ {
+  "id": "hsk3-099",
+  "concept": "half",
+  "p": 0.007
+ },
+ {
+  "id": "hsk3-100",
+  "concept": "to wish",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-101",
+  "concept": "music",
+  "p": 0.368
+ },
+ {
+  "id": "hsk3-102",
+  "concept": "to cover",
+  "p": 0.005
+ },
+ {
+  "id": "hsk3-104",
+  "concept": "clear",
+  "p": 0.21
+ },
+ {
+  "id": "hsk3-105",
+  "concept": "photograph",
+  "p": 0.017
+ },
+ {
+  "id": "hsk3-106",
+  "concept": "bank",
+  "p": 0.338
+ },
+ {
+  "id": "hsk3-107",
+  "concept": "old practice",
+  "p": 0.005
+ },
+ {
+  "id": "hsk3-108",
+  "concept": "same",
+  "p": 0.01
+ },
+ {
+  "id": "hsk3-109",
+  "concept": "adorable",
+  "p": 0.048
+ },
+ {
+  "id": "hsk3-110",
+  "concept": "news",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-111",
+  "concept": "voice",
+  "p": 0.011
+ },
+ {
+  "id": "hsk3-112",
+  "concept": "at once",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-113",
+  "concept": "to express",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-114",
+  "concept": "to pass",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-115",
+  "concept": "history",
+  "p": 0.165
+ },
+ {
+  "id": "hsk3-116",
+  "concept": "to cry",
+  "p": 0.209
+ },
+ {
+  "id": "hsk3-117",
+  "concept": "to dare",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-118",
+  "concept": "meeting",
+  "p": 0.021
+ },
+ {
+  "id": "hsk3-119",
+  "concept": "frequently",
+  "p": 0.004
+ },
+ {
+  "id": "hsk3-120",
+  "concept": "low",
+  "p": 0.011
+ },
+ {
+  "id": "hsk3-121",
+  "concept": "program",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-122",
+  "concept": "health",
+  "p": 0.336
+ },
+ {
+  "id": "hsk3-123",
+  "concept": "to act on",
+  "p": 0.014
+ },
+ {
+  "id": "hsk3-124",
+  "concept": "the West",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-125",
+  "concept": "different",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-126",
+  "concept": "to marry",
+  "p": 0.393
+ },
+ {
+  "id": "hsk3-127",
+  "concept": "short",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-128",
+  "concept": "to agree",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-130",
+  "concept": "almost",
+  "p": 0.011
+ },
+ {
+  "id": "hsk3-131",
+  "concept": "nearby",
+  "p": 0.006
+ },
+ {
+  "id": "hsk3-132",
+  "concept": "conscientious",
+  "p": 0.013
+ },
+ {
+  "id": "hsk3-134",
+  "concept": "main",
+  "p": 0.002
+ },
+ {
+  "id": "hsk3-135",
+  "concept": "to meet",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-136",
+  "concept": "young",
+  "p": 0.004
+ },
+ {
+  "id": "hsk3-138",
+  "concept": "to draw",
+  "p": 0.002
+ },
+ {
+  "id": "hsk3-139",
+  "concept": "play",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-141",
+  "concept": "just now",
+  "p": 0.01
+ },
+ {
+  "id": "hsk3-142",
+  "concept": "office",
+  "p": 0.079
+ },
+ {
+  "id": "hsk3-143",
+  "concept": "environment",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-144",
+  "concept": "to be concerned about",
+  "p": 0.011
+ },
+ {
+  "id": "hsk3-146",
+  "concept": "to pile on top of one another",
+  "p": 0.291
+ },
+ {
+  "id": "hsk3-147",
+  "concept": "leg",
+  "p": 0.011
+ },
+ {
+  "id": "hsk3-148",
+  "concept": "team",
+  "p": 0.016
+ },
+ {
+  "id": "hsk3-150",
+  "concept": "one side",
+  "p": 0.045
+ },
+ {
+  "id": "hsk3-152",
+  "concept": "habit",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-153",
+  "concept": "to change",
+  "p": 0.004
+ },
+ {
+  "id": "hsk3-154",
+  "concept": "to forget",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-155",
+  "concept": "to plan",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-156",
+  "concept": "extremely",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-157",
+  "concept": "to be careful",
+  "p": 0.006
+ },
+ {
+  "id": "hsk3-158",
+  "concept": "to hold",
+  "p": 0.002
+ },
+ {
+  "id": "hsk3-160",
+  "concept": "to be hungry",
+  "p": 0.358
+ },
+ {
+  "id": "hsk3-162",
+  "concept": "level",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-163",
+  "concept": "to lend",
+  "p": 0.036
+ },
+ {
+  "id": "hsk3-164",
+  "concept": "east",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-166",
+  "concept": "to be afraid",
+  "p": 0.196
+ },
+ {
+  "id": "hsk3-168",
+  "concept": "blue",
+  "p": 0.125
+ },
+ {
+  "id": "hsk3-169",
+  "concept": "to take care of",
+  "p": 0.004
+ },
+ {
+  "id": "hsk3-170",
+  "concept": "culture",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-172",
+  "concept": "strange",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-173",
+  "concept": "gift",
+  "p": 0.16
+ },
+ {
+  "id": "hsk3-174",
+  "concept": "south",
+  "p": 0.004
+ },
+ {
+  "id": "hsk3-175",
+  "concept": "to raise",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-176",
+  "concept": "satisfied",
+  "p": 0.159
+ },
+ {
+  "id": "hsk3-177",
+  "concept": "old",
+  "p": 0.005
+ },
+ {
+  "id": "hsk3-179",
+  "concept": "yellow",
+  "p": 0.422
+ },
+ {
+  "id": "hsk3-180",
+  "concept": "manager",
+  "p": 0.006
+ },
+ {
+  "id": "hsk3-181",
+  "concept": "interest",
+  "p": 0.013
+ },
+ {
+  "id": "hsk3-182",
+  "concept": "to help",
+  "p": 0.008
+ },
+ {
+  "id": "hsk3-185",
+  "concept": "achievement",
+  "p": 0.007
+ },
+ {
+  "id": "hsk3-186",
+  "concept": "the middle",
+  "p": 0.006
+ },
+ {
+  "id": "hsk3-187",
+  "concept": "intelligent",
+  "p": 0.002
+ },
+ {
+  "id": "hsk3-188",
+  "concept": "how",
+  "p": 0.006
+ },
+ {
+  "id": "hsk3-191",
+  "concept": "convenient",
+  "p": 0.027
+ },
+ {
+  "id": "hsk3-192",
+  "concept": "sugar",
+  "p": 0.005
+ },
+ {
+  "id": "hsk3-193",
+  "concept": "identical",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-195",
+  "concept": "park",
+  "p": 0.061
+ },
+ {
+  "id": "hsk3-196",
+  "concept": "cordial",
+  "p": 0.199
+ },
+ {
+  "id": "hsk3-197",
+  "concept": "a moment",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-199",
+  "concept": "river",
+  "p": 0.012
+ },
+ {
+  "id": "hsk3-200",
+  "concept": "to move",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-202",
+  "concept": "comfortable",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-204",
+  "concept": "angle",
+  "p": 0.002
+ },
+ {
+  "id": "hsk3-205",
+  "concept": "healthy",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-206",
+  "concept": "clean",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-207",
+  "concept": "to feel relieved",
+  "p": 0.336
+ },
+ {
+  "id": "hsk3-208",
+  "concept": "grass",
+  "p": 0.002
+ },
+ {
+  "id": "hsk3-209",
+  "concept": "sweet",
+  "p": 0.075
+ },
+ {
+  "id": "hsk3-211",
+  "concept": "school assignment",
+  "p": 0.004
+ },
+ {
+  "id": "hsk3-212",
+  "concept": "thin",
+  "p": 0.023
+ },
+ {
+  "id": "hsk3-213",
+  "concept": "green",
+  "p": 0.201
+ },
+ {
+  "id": "hsk3-216",
+  "concept": "fresh",
+  "p": 0.024
+ },
+ {
+  "id": "hsk3-217",
+  "concept": "to feel sad",
+  "p": 0.015
+ },
+ {
+  "id": "hsk3-218",
+  "concept": "visitor",
+  "p": 0.011
+ },
+ {
+  "id": "hsk3-221",
+  "concept": "mathematics",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-223",
+  "concept": "to brush",
+  "p": 0.322
+ },
+ {
+  "id": "hsk3-224",
+  "concept": "kitchen",
+  "p": 0.25
+ },
+ {
+  "id": "hsk3-225",
+  "concept": "to practice",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-227",
+  "concept": "to say",
+  "p": 0.005
+ },
+ {
+  "id": "hsk3-228",
+  "concept": "neighbor",
+  "p": 0.014
+ },
+ {
+  "id": "hsk3-230",
+  "concept": "garden",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-232",
+  "concept": "holiday",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-236",
+  "concept": "map",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-238",
+  "concept": "street",
+  "p": 0.01
+ },
+ {
+  "id": "hsk3-239",
+  "concept": "to catch cold",
+  "p": 0.006
+ },
+ {
+  "id": "hsk3-240",
+  "concept": "to arrive late",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-241",
+  "concept": "quarter",
+  "p": 0.005
+ },
+ {
+  "id": "hsk3-244",
+  "concept": "the Xia or Hsia dynasty c. 2000 BC",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-245",
+  "concept": "library",
+  "p": 0.115
+ },
+ {
+  "id": "hsk3-247",
+  "concept": "to scrape",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-248",
+  "concept": "low",
+  "p": 0.007
+ },
+ {
+  "id": "hsk3-250",
+  "concept": "to go online",
+  "p": 0.013
+ },
+ {
+  "id": "hsk3-251",
+  "concept": "spring",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-256",
+  "concept": "to worry",
+  "p": 0.0
+ },
+ {
+  "id": "hsk3-259",
+  "concept": "altogether",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-261",
+  "concept": "north",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-262",
+  "concept": "to like",
+  "p": 0.047
+ },
+ {
+  "id": "hsk3-264",
+  "concept": "guesthouse",
+  "p": 0.056
+ },
+ {
+  "id": "hsk3-268",
+  "concept": "autumn",
+  "p": 0.097
+ },
+ {
+  "id": "hsk3-269",
+  "concept": "to have a high temperature",
+  "p": 0.045
+ },
+ {
+  "id": "hsk3-271",
+  "concept": "famous",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-272",
+  "concept": "to clean",
+  "p": 0.029
+ },
+ {
+  "id": "hsk3-274",
+  "concept": "to review",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-277",
+  "concept": "grade",
+  "p": 0.001
+ },
+ {
+  "id": "hsk3-279",
+  "concept": "tray",
+  "p": 0.018
+ },
+ {
+  "id": "hsk3-281",
+  "concept": "thirsty",
+  "p": 0.259
+ },
+ {
+  "id": "hsk3-283",
+  "concept": "word",
+  "p": 0.003
+ },
+ {
+  "id": "hsk3-284",
+  "concept": "sentence",
+  "p": 0.181
+ },
+ {
+  "id": "hsk3-289",
+  "concept": "to climb a mountain",
+  "p": 0.048
+ },
+ {
+  "id": "hsk4-000",
+  "concept": "right",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-001",
+  "concept": "to cross",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-002",
+  "concept": "and",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-003",
+  "concept": "class",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-004",
+  "concept": "and",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-005",
+  "concept": "to be",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-007",
+  "concept": "to use",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-008",
+  "concept": "indicating the beginning and continuation of an action or a state",
+  "p": 0.07
+ },
+ {
+  "id": "hsk4-009",
+  "concept": "to die",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-010",
+  "concept": "but",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-011",
+  "concept": "to live",
+  "p": 0.022
+ },
+ {
+  "id": "hsk4-012",
+  "concept": "to happen",
+  "p": 0.014
+ },
+ {
+  "id": "hsk4-013",
+  "concept": "only",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-014",
+  "concept": "all",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-015",
+  "concept": "circumstances",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-016",
+  "concept": "final",
+  "p": 0.093
+ },
+ {
+  "id": "hsk4-017",
+  "concept": "to become",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-018",
+  "concept": "to walk",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-019",
+  "concept": "feeling",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-020",
+  "concept": "to continue",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-021",
+  "concept": "large place used for a specific purpose",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-022",
+  "concept": "to advance",
+  "p": 0.06
+ },
+ {
+  "id": "hsk4-024",
+  "concept": "to pass through",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-025",
+  "concept": "not to have",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-026",
+  "concept": "everything",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-027",
+  "concept": "to follow",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-028",
+  "concept": "any",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-029",
+  "concept": "safe",
+  "p": 0.092
+ },
+ {
+  "id": "hsk4-030",
+  "concept": "outcome",
+  "p": 0.022
+ },
+ {
+  "id": "hsk4-031",
+  "concept": "complete",
+  "p": 0.013
+ },
+ {
+  "id": "hsk4-032",
+  "concept": "to send out",
+  "p": 0.009
+ },
+ {
+  "id": "hsk4-033",
+  "concept": "plan",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-037",
+  "concept": "cause",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-038",
+  "concept": "news",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-039",
+  "concept": "if only",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-041",
+  "concept": "to accept",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-042",
+  "concept": "among",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-043",
+  "concept": "success",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-044",
+  "concept": "even",
+  "p": 0.013
+ },
+ {
+  "id": "hsk4-046",
+  "concept": "to be certain",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-047",
+  "concept": "then",
+  "p": 0.007
+ },
+ {
+  "id": "hsk4-048",
+  "concept": "investigation",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-049",
+  "concept": "part",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-050",
+  "concept": "capability",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-051",
+  "concept": "to protect",
+  "p": 0.013
+ },
+ {
+  "id": "hsk4-052",
+  "concept": "genuine",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-053",
+  "concept": "to be in favor of",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-054",
+  "concept": "to fall",
+  "p": 0.133
+ },
+ {
+  "id": "hsk4-055",
+  "concept": "to change",
+  "p": 0.01
+ },
+ {
+  "id": "hsk4-056",
+  "concept": "method",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-057",
+  "concept": "guarantee",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-058",
+  "concept": "direct",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-060",
+  "concept": "forever",
+  "p": 0.013
+ },
+ {
+  "id": "hsk4-061",
+  "concept": "respect",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-062",
+  "concept": "perhaps",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-063",
+  "concept": "to exercise",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-064",
+  "concept": "to think over",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-066",
+  "concept": "to offer",
+  "p": 0.023
+ },
+ {
+  "id": "hsk4-068",
+  "concept": "spirit",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-069",
+  "concept": "to use",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-070",
+  "concept": "representative",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-071",
+  "concept": "mission",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-072",
+  "concept": "connection",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-073",
+  "concept": "thus",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-074",
+  "concept": "platform",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-075",
+  "concept": "to regard as",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-076",
+  "concept": "to obtain",
+  "p": 0.033
+ },
+ {
+  "id": "hsk4-077",
+  "concept": "to leave",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-078",
+  "concept": "life",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-079",
+  "concept": "to hand over",
+  "p": 0.009
+ },
+ {
+  "id": "hsk4-080",
+  "concept": "whole",
+  "p": 0.044
+ },
+ {
+  "id": "hsk4-081",
+  "concept": "just recently",
+  "p": 0.073
+ },
+ {
+  "id": "hsk4-082",
+  "concept": "regular",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-084",
+  "concept": "blood",
+  "p": 0.058
+ },
+ {
+  "id": "hsk4-085",
+  "concept": "straight",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-086",
+  "concept": "as if",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-087",
+  "concept": "finally",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-088",
+  "concept": "thanks",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-089",
+  "concept": "to persevere with",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-091",
+  "concept": "technology",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-092",
+  "concept": "to go",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-093",
+  "concept": "grave",
+  "p": 0.165
+ },
+ {
+  "id": "hsk4-094",
+  "concept": "to comprise",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-095",
+  "concept": "original",
+  "p": 0.01
+ },
+ {
+  "id": "hsk4-096",
+  "concept": "light",
+  "p": 0.231
+ },
+ {
+  "id": "hsk4-097",
+  "concept": "law",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-099",
+  "concept": "and",
+  "p": 0.013
+ },
+ {
+  "id": "hsk4-100",
+  "concept": "to receive",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-101",
+  "concept": "society",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-102",
+  "concept": "proof",
+  "p": 0.139
+ },
+ {
+  "id": "hsk4-104",
+  "concept": "background",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-105",
+  "concept": "indeed",
+  "p": 0.034
+ },
+ {
+  "id": "hsk4-106",
+  "concept": "not to be concerned",
+  "p": 0.011
+ },
+ {
+  "id": "hsk4-107",
+  "concept": "to receive",
+  "p": 0.007
+ },
+ {
+  "id": "hsk4-108",
+  "concept": "development",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-109",
+  "concept": "to speak",
+  "p": 0.263
+ },
+ {
+  "id": "hsk4-110",
+  "concept": "at least",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-111",
+  "concept": "explanation",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-112",
+  "concept": "to be in charge of",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-113",
+  "concept": "first",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-114",
+  "concept": "to comprehend",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-115",
+  "concept": "to report",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-116",
+  "concept": "to arrange",
+  "p": 0.019
+ },
+ {
+  "id": "hsk4-117",
+  "concept": "dream",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-118",
+  "concept": "again",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-119",
+  "concept": "happiness",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-120",
+  "concept": "nature",
+  "p": 0.011
+ },
+ {
+  "id": "hsk4-121",
+  "concept": "responsibility",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-122",
+  "concept": "to test",
+  "p": 0.009
+ },
+ {
+  "id": "hsk4-123",
+  "concept": "to do",
+  "p": 0.014
+ },
+ {
+  "id": "hsk4-124",
+  "concept": "to beat",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-125",
+  "concept": "to fill",
+  "p": 0.259
+ },
+ {
+  "id": "hsk4-126",
+  "concept": "to explain",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-127",
+  "concept": "many",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-128",
+  "concept": "pressure",
+  "p": 0.015
+ },
+ {
+  "id": "hsk4-129",
+  "concept": "due to",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-130",
+  "concept": "mother",
+  "p": 0.064
+ },
+ {
+  "id": "hsk4-131",
+  "concept": "to renounce",
+  "p": 0.045
+ },
+ {
+  "id": "hsk4-132",
+  "concept": "idea",
+  "p": 0.009
+ },
+ {
+  "id": "hsk4-133",
+  "concept": "course of events",
+  "p": 0.127
+ },
+ {
+  "id": "hsk4-134",
+  "concept": "even if",
+  "p": 0.013
+ },
+ {
+  "id": "hsk4-135",
+  "concept": "despite",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-136",
+  "concept": "deep",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-137",
+  "concept": "each",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-138",
+  "concept": "still",
+  "p": 0.019
+ },
+ {
+  "id": "hsk4-139",
+  "concept": "to be worth",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-140",
+  "concept": "experience",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-141",
+  "concept": "to discuss",
+  "p": 0.027
+ },
+ {
+  "id": "hsk4-142",
+  "concept": "to surpass",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-143",
+  "concept": "fake",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-144",
+  "concept": "afterwards",
+  "p": 0.012
+ },
+ {
+  "id": "hsk4-145",
+  "concept": "mouth",
+  "p": 0.329
+ },
+ {
+  "id": "hsk4-146",
+  "concept": "address",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-147",
+  "concept": "no matter what or how",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-148",
+  "concept": "nervous",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-149",
+  "concept": "to save",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-150",
+  "concept": "very",
+  "p": 0.012
+ },
+ {
+  "id": "hsk4-151",
+  "concept": "to accompany",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-152",
+  "concept": "to hang or suspend",
+  "p": 0.229
+ },
+ {
+  "id": "hsk4-153",
+  "concept": "original",
+  "p": 0.042
+ },
+ {
+  "id": "hsk4-154",
+  "concept": "condition",
+  "p": 0.013
+ },
+ {
+  "id": "hsk4-155",
+  "concept": "to advertise",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-157",
+  "concept": "crucial point",
+  "p": 0.119
+ },
+ {
+  "id": "hsk4-158",
+  "concept": "appearance",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-159",
+  "concept": "difficult",
+  "p": 0.016
+ },
+ {
+  "id": "hsk4-160",
+  "concept": "specialty",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-161",
+  "concept": "don't tell me ",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-162",
+  "concept": "to stipulate",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-163",
+  "concept": "thereupon",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-164",
+  "concept": "correct",
+  "p": 0.007
+ },
+ {
+  "id": "hsk4-167",
+  "concept": "enough",
+  "p": 0.039
+ },
+ {
+  "id": "hsk4-169",
+  "concept": "direction",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-170",
+  "concept": "marketplace",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-171",
+  "concept": "to educate",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-172",
+  "concept": "to take",
+  "p": 0.014
+ },
+ {
+  "id": "hsk4-173",
+  "concept": "danger",
+  "p": 0.296
+ },
+ {
+  "id": "hsk4-174",
+  "concept": "to supervise",
+  "p": 0.265
+ },
+ {
+  "id": "hsk4-175",
+  "concept": "in confusion or disorder",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-176",
+  "concept": "to fit",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-177",
+  "concept": "formal",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-178",
+  "concept": "to give rise to",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-179",
+  "concept": "always",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-180",
+  "concept": "to hold",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-182",
+  "concept": "content",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-183",
+  "concept": "to notify",
+  "p": 0.007
+ },
+ {
+  "id": "hsk4-184",
+  "concept": "emotion",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-185",
+  "concept": "spectators",
+  "p": 0.095
+ },
+ {
+  "id": "hsk4-186",
+  "concept": "purpose",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-187",
+  "concept": "international",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-188",
+  "concept": "beautiful",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-189",
+  "concept": "experience",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-190",
+  "concept": "broken",
+  "p": 0.011
+ },
+ {
+  "id": "hsk4-191",
+  "concept": "to push",
+  "p": 0.01
+ },
+ {
+  "id": "hsk4-193",
+  "concept": "science",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-194",
+  "concept": "mood",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-195",
+  "concept": "standard",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-197",
+  "concept": "wonderful",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-198",
+  "concept": "range",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-199",
+  "concept": "speed",
+  "p": 0.014
+ },
+ {
+  "id": "hsk4-200",
+  "concept": "really",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-201",
+  "concept": "result",
+  "p": 0.286
+ },
+ {
+  "id": "hsk4-203",
+  "concept": "economy",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-204",
+  "concept": "according to",
+  "p": 0.131
+ },
+ {
+  "id": "hsk4-205",
+  "concept": "to oppose",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-206",
+  "concept": "unexpectedly",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-207",
+  "concept": "important point",
+  "p": 0.029
+ },
+ {
+  "id": "hsk4-208",
+  "concept": "-fold",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-209",
+  "concept": "to wake up",
+  "p": 0.095
+ },
+ {
+  "id": "hsk4-210",
+  "concept": "to dislike",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-211",
+  "concept": "to lose",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-212",
+  "concept": "we or us  spoken to)",
+  "p": 0.036
+ },
+ {
+  "id": "hsk4-213",
+  "concept": "otherwise",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-214",
+  "concept": "free",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-215",
+  "concept": "movement",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-216",
+  "concept": "two",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-217",
+  "concept": "to raise",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-218",
+  "concept": "famous",
+  "p": 0.036
+ },
+ {
+  "id": "hsk4-219",
+  "concept": "to refuse",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-220",
+  "concept": "handsome",
+  "p": 0.007
+ },
+ {
+  "id": "hsk4-222",
+  "concept": "smoothly",
+  "p": 0.074
+ },
+ {
+  "id": "hsk4-223",
+  "concept": "art",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-224",
+  "concept": "trouble",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-225",
+  "concept": "to apply for sth",
+  "p": 0.017
+ },
+ {
+  "id": "hsk4-226",
+  "concept": "to act",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-228",
+  "concept": "to compete",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-229",
+  "concept": "to estimate",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-230",
+  "concept": "to be defeated",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-231",
+  "concept": "century",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-232",
+  "concept": "to manufacture",
+  "p": 0.009
+ },
+ {
+  "id": "hsk4-233",
+  "concept": "have no choice or option but to",
+  "p": 0.082
+ },
+ {
+  "id": "hsk4-234",
+  "concept": "local",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-235",
+  "concept": "roughly",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-236",
+  "concept": "to permit",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-238",
+  "concept": "to stop",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-239",
+  "concept": "to attract",
+  "p": 0.105
+ },
+ {
+  "id": "hsk4-240",
+  "concept": "common",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-241",
+  "concept": "magazine",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-242",
+  "concept": "since",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-243",
+  "concept": "to stop",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-244",
+  "concept": "to remind",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-246",
+  "concept": "manner",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-247",
+  "concept": "environs",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-248",
+  "concept": "to lose",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-249",
+  "concept": "complicated",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-250",
+  "concept": "to express",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-251",
+  "concept": "numeral",
+  "p": 0.014
+ },
+ {
+  "id": "hsk4-252",
+  "concept": "to invite",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-253",
+  "concept": "to be connected",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-254",
+  "concept": "outstanding",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-255",
+  "concept": "bright",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-256",
+  "concept": "sheet",
+  "p": 0.336
+ },
+ {
+  "id": "hsk4-258",
+  "concept": "best",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-259",
+  "concept": "flavor",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-260",
+  "concept": "to break",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-262",
+  "concept": "to set off",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-263",
+  "concept": "distance",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-264",
+  "concept": "light",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-265",
+  "concept": "wall",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-267",
+  "concept": "to doubt",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-268",
+  "concept": "to decorate",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-269",
+  "concept": "price",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-270",
+  "concept": "to put on or wear",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-271",
+  "concept": "to go to the bottom of a matter",
+  "p": 0.054
+ },
+ {
+  "id": "hsk4-272",
+  "concept": "light",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-273",
+  "concept": "however",
+  "p": 0.017
+ },
+ {
+  "id": "hsk4-274",
+  "concept": "to exchange",
+  "p": 0.077
+ },
+ {
+  "id": "hsk4-275",
+  "concept": "excited",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-276",
+  "concept": "to trap",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-277",
+  "concept": "in keeping with",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-278",
+  "concept": "to recline",
+  "p": 0.363
+ },
+ {
+  "id": "hsk4-279",
+  "concept": "answer",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-280",
+  "concept": "skin",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-281",
+  "concept": "to waste",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-283",
+  "concept": "to esteem",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-284",
+  "concept": "to move emotionally",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-285",
+  "concept": "to cheat",
+  "p": 0.173
+ },
+ {
+  "id": "hsk4-286",
+  "concept": "pitiful",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-287",
+  "concept": "language",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-288",
+  "concept": "to rub",
+  "p": 0.064
+ },
+ {
+  "id": "hsk4-289",
+  "concept": "fragrant",
+  "p": 0.257
+ },
+ {
+  "id": "hsk4-290",
+  "concept": "mature",
+  "p": 0.03
+ },
+ {
+  "id": "hsk4-291",
+  "concept": "bored",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-292",
+  "concept": "article",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-293",
+  "concept": "to trust",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-294",
+  "concept": "website",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-296",
+  "concept": "reality",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-297",
+  "concept": "age",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-298",
+  "concept": "almost",
+  "p": 0.061
+ },
+ {
+  "id": "hsk4-299",
+  "concept": "it is a pity",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-301",
+  "concept": "to recall",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-302",
+  "concept": "air",
+  "p": 0.014
+ },
+ {
+  "id": "hsk4-303",
+  "concept": "material",
+  "p": 0.063
+ },
+ {
+  "id": "hsk4-304",
+  "concept": "to be familiar with",
+  "p": 0.016
+ },
+ {
+  "id": "hsk4-305",
+  "concept": "as one wishes",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-306",
+  "concept": "to knock against",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-308",
+  "concept": "suitable",
+  "p": 0.088
+ },
+ {
+  "id": "hsk4-309",
+  "concept": "disappointed",
+  "p": 0.014
+ },
+ {
+  "id": "hsk4-310",
+  "concept": "impression",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-311",
+  "concept": "number",
+  "p": 0.038
+ },
+ {
+  "id": "hsk4-312",
+  "concept": "to be born",
+  "p": 0.049
+ },
+ {
+  "id": "hsk4-314",
+  "concept": "base",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-315",
+  "concept": "to adapt",
+  "p": 0.007
+ },
+ {
+  "id": "hsk4-316",
+  "concept": "to earn",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-317",
+  "concept": "to guess",
+  "p": 0.013
+ },
+ {
+  "id": "hsk4-318",
+  "concept": "everywhere",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-320",
+  "concept": "approximately",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-321",
+  "concept": "to shift to an earlier date",
+  "p": 0.016
+ },
+ {
+  "id": "hsk4-322",
+  "concept": "temporary",
+  "p": 0.029
+ },
+ {
+  "id": "hsk4-323",
+  "concept": "active",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-324",
+  "concept": "high level",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-326",
+  "concept": "echo",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-327",
+  "concept": "to take in",
+  "p": 0.017
+ },
+ {
+  "id": "hsk4-328",
+  "concept": "fear",
+  "p": 0.41
+ },
+ {
+  "id": "hsk4-329",
+  "concept": "careful",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-330",
+  "concept": "strict",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-331",
+  "concept": "timely",
+  "p": 0.025
+ },
+ {
+  "id": "hsk4-332",
+  "concept": "knowledge",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-334",
+  "concept": "tool",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-335",
+  "concept": "to shed",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-336",
+  "concept": "bitter",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-338",
+  "concept": "especially",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-339",
+  "concept": "page",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-340",
+  "concept": "to throw",
+  "p": 0.014
+ },
+ {
+  "id": "hsk4-341",
+  "concept": "confidence",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-343",
+  "concept": "deliberately",
+  "p": 0.013
+ },
+ {
+  "id": "hsk4-344",
+  "concept": "way of looking at a thing",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-345",
+  "concept": "romantic",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-346",
+  "concept": "to lessen",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-347",
+  "concept": "exhausting",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-348",
+  "concept": "to remain",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-349",
+  "concept": "just",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-350",
+  "concept": "to take the initiative",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-351",
+  "concept": "hard",
+  "p": 0.007
+ },
+ {
+  "id": "hsk4-352",
+  "concept": "to restrict",
+  "p": 0.257
+ },
+ {
+  "id": "hsk4-353",
+  "concept": "to judge",
+  "p": 0.014
+ },
+ {
+  "id": "hsk4-354",
+  "concept": "modern times",
+  "p": 0.226
+ },
+ {
+  "id": "hsk4-355",
+  "concept": "to pluck",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-356",
+  "concept": "interesting",
+  "p": 0.06
+ },
+ {
+  "id": "hsk4-357",
+  "concept": "kilometer",
+  "p": 0.055
+ },
+ {
+  "id": "hsk4-358",
+  "concept": "wages",
+  "p": 0.256
+ },
+ {
+  "id": "hsk4-359",
+  "concept": "benefit",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-360",
+  "concept": "to grieve",
+  "p": 0.29
+ },
+ {
+  "id": "hsk4-361",
+  "concept": "difference",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-362",
+  "concept": "dark",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-363",
+  "concept": "in the future",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-364",
+  "concept": "to chat",
+  "p": 0.113
+ },
+ {
+  "id": "hsk4-365",
+  "concept": "novel",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-366",
+  "concept": "to encourage",
+  "p": 0.009
+ },
+ {
+  "id": "hsk4-367",
+  "concept": "an ideal",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-368",
+  "concept": "to regret",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-370",
+  "concept": "to move",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-371",
+  "concept": "customer",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-372",
+  "concept": "to form",
+  "p": 0.014
+ },
+ {
+  "id": "hsk4-373",
+  "concept": "to spread",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-374",
+  "concept": "to arrange",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-376",
+  "concept": "to enrich",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-377",
+  "concept": "to excuse",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-378",
+  "concept": "belly",
+  "p": 0.016
+ },
+ {
+  "id": "hsk4-379",
+  "concept": "ordinarily",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-380",
+  "concept": "hot",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-381",
+  "concept": "author",
+  "p": 0.187
+ },
+ {
+  "id": "hsk4-382",
+  "concept": "quality",
+  "p": 0.026
+ },
+ {
+  "id": "hsk4-383",
+  "concept": "cheerful",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-384",
+  "concept": "to send",
+  "p": 0.022
+ },
+ {
+  "id": "hsk4-385",
+  "concept": "accurate",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-386",
+  "concept": "detailed",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-387",
+  "concept": "to prohibit",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-389",
+  "concept": "calm",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-390",
+  "concept": "shopping",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-391",
+  "concept": "amount",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-394",
+  "concept": "rich",
+  "p": 0.022
+ },
+ {
+  "id": "hsk4-395",
+  "concept": "pride",
+  "p": 0.299
+ },
+ {
+  "id": "hsk4-396",
+  "concept": "nature",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-397",
+  "concept": "to reduce",
+  "p": 0.047
+ },
+ {
+  "id": "hsk4-398",
+  "concept": "really",
+  "p": 0.01
+ },
+ {
+  "id": "hsk4-399",
+  "concept": "along with",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-400",
+  "concept": "to have no other option but to ",
+  "p": 0.038
+ },
+ {
+  "id": "hsk4-401",
+  "concept": "cipher",
+  "p": 0.012
+ },
+ {
+  "id": "hsk4-402",
+  "concept": "Asia",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-403",
+  "concept": "to apologize",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-404",
+  "concept": "to wade",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-405",
+  "concept": "soft",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-406",
+  "concept": "to visit",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-408",
+  "concept": "friendly",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-409",
+  "concept": "to taste",
+  "p": 0.189
+ },
+ {
+  "id": "hsk4-410",
+  "concept": "100 million",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-411",
+  "concept": "to talk",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-412",
+  "concept": "to put in order",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-413",
+  "concept": "broadcast",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-414",
+  "concept": "gradually",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-415",
+  "concept": "sour",
+  "p": 0.087
+ },
+ {
+  "id": "hsk4-416",
+  "concept": "to pollute",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-417",
+  "concept": "temperature",
+  "p": 0.015
+ },
+ {
+  "id": "hsk4-418",
+  "concept": "lone",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-420",
+  "concept": "wide",
+  "p": 0.035
+ },
+ {
+  "id": "hsk4-421",
+  "concept": "for example",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-422",
+  "concept": "to congratulate",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-423",
+  "concept": "to criticize",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-425",
+  "concept": "to grow",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-426",
+  "concept": "opposite",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-427",
+  "concept": "to lift",
+  "p": 0.009
+ },
+ {
+  "id": "hsk4-428",
+  "concept": "plan",
+  "p": 0.009
+ },
+ {
+  "id": "hsk4-429",
+  "concept": "to expand",
+  "p": 0.013
+ },
+ {
+  "id": "hsk4-430",
+  "concept": "premium",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-431",
+  "concept": "salt",
+  "p": 0.319
+ },
+ {
+  "id": "hsk4-432",
+  "concept": "to feel unwell",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-435",
+  "concept": "occasionally",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-436",
+  "concept": "appointment",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-438",
+  "concept": "thick",
+  "p": 0.014
+ },
+ {
+  "id": "hsk4-440",
+  "concept": "to look around",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-441",
+  "concept": "conveniently",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-442",
+  "concept": "companionship",
+  "p": 0.01
+ },
+ {
+  "id": "hsk4-443",
+  "concept": "stupid",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-445",
+  "concept": "to be patient",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-446",
+  "concept": "to play a joke",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-447",
+  "concept": "to mirror",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-448",
+  "concept": "plant",
+  "p": 0.062
+ },
+ {
+  "id": "hsk4-450",
+  "concept": "opposite",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-452",
+  "concept": "to lose weight",
+  "p": 0.054
+ },
+ {
+  "id": "hsk4-453",
+  "concept": "next",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-454",
+  "concept": "to hit",
+  "p": 0.015
+ },
+ {
+  "id": "hsk4-456",
+  "concept": "to translate",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-457",
+  "concept": "to be worried",
+  "p": 0.014
+ },
+ {
+  "id": "hsk4-458",
+  "concept": "characteristic",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-459",
+  "concept": "usually",
+  "p": 0.007
+ },
+ {
+  "id": "hsk4-460",
+  "concept": "scenery",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-461",
+  "concept": "joke",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-462",
+  "concept": "ocean",
+  "p": 0.073
+ },
+ {
+  "id": "hsk4-464",
+  "concept": "not only",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-465",
+  "concept": "to replace",
+  "p": 0.013
+ },
+ {
+  "id": "hsk4-468",
+  "concept": "to consult",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-470",
+  "concept": "a little bit",
+  "p": 0.045
+ },
+ {
+  "id": "hsk4-471",
+  "concept": "perspiration",
+  "p": 0.014
+ },
+ {
+  "id": "hsk4-472",
+  "concept": "lack",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-474",
+  "concept": "poor",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-475",
+  "concept": "to decorate",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-477",
+  "concept": "capital",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-478",
+  "concept": "to be startled",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-479",
+  "concept": "suddenly",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-480",
+  "concept": "to envy",
+  "p": 0.031
+ },
+ {
+  "id": "hsk4-481",
+  "concept": "to sign up",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-482",
+  "concept": "dirty",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-483",
+  "concept": "extremely",
+  "p": 0.066
+ },
+ {
+  "id": "hsk4-485",
+  "concept": "to sympathize with",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-486",
+  "concept": "to stroll",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-487",
+  "concept": "to sum up",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-488",
+  "concept": "to disturb",
+  "p": 0.007
+ },
+ {
+  "id": "hsk4-489",
+  "concept": "humor",
+  "p": 0.005
+ },
+ {
+  "id": "hsk4-490",
+  "concept": "to misunderstand",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-491",
+  "concept": "to be sorry",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-492",
+  "concept": "master",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-495",
+  "concept": "to meet the standard required",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-496",
+  "concept": "a relative",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-497",
+  "concept": "strength",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-498",
+  "concept": "weak point",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-499",
+  "concept": "to smoke",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-500",
+  "concept": "to take off",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-501",
+  "concept": "tennis",
+  "p": 0.022
+ },
+ {
+  "id": "hsk4-504",
+  "concept": "honest",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-505",
+  "concept": "to gather",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-507",
+  "concept": "merit",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-509",
+  "concept": "there's not enough time",
+  "p": 0.011
+ },
+ {
+  "id": "hsk4-510",
+  "concept": "universal",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-511",
+  "concept": "entrance",
+  "p": 0.011
+ },
+ {
+  "id": "hsk4-512",
+  "concept": "to work overtime",
+  "p": 0.013
+ },
+ {
+  "id": "hsk4-513",
+  "concept": "bustling with noise and excitement",
+  "p": 0.013
+ },
+ {
+  "id": "hsk4-515",
+  "concept": "sequence",
+  "p": 0.004
+ },
+ {
+  "id": "hsk4-516",
+  "concept": "lazy",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-518",
+  "concept": "on time",
+  "p": 0.058
+ },
+ {
+  "id": "hsk4-520",
+  "concept": "proud of oneself",
+  "p": 0.007
+ },
+ {
+  "id": "hsk4-521",
+  "concept": "courtesy",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-522",
+  "concept": "to postpone",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-525",
+  "concept": "gender",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-527",
+  "concept": "climate",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-528",
+  "concept": "towel",
+  "p": 0.201
+ },
+ {
+  "id": "hsk4-529",
+  "concept": "to applaud",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-532",
+  "concept": "shy",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-534",
+  "concept": "to have enough time",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-535",
+  "concept": "to cough",
+  "p": 0.012
+ },
+ {
+  "id": "hsk4-537",
+  "concept": "to go on an official or business trip",
+  "p": 0.039
+ },
+ {
+  "id": "hsk4-539",
+  "concept": "to shed tears",
+  "p": 0.092
+ },
+ {
+  "id": "hsk4-540",
+  "concept": "all",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-543",
+  "concept": "to invite applications for a job",
+  "p": 0.032
+ },
+ {
+  "id": "hsk4-544",
+  "concept": "lively",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-546",
+  "concept": "visa",
+  "p": 0.211
+ },
+ {
+  "id": "hsk4-547",
+  "concept": "warm",
+  "p": 0.24
+ },
+ {
+  "id": "hsk4-549",
+  "concept": "rural area",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-550",
+  "concept": "to arrange in order",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-551",
+  "concept": "narrow",
+  "p": 0.048
+ },
+ {
+  "id": "hsk4-552",
+  "concept": "to accumulate",
+  "p": 0.008
+ },
+ {
+  "id": "hsk4-553",
+  "concept": "orderly",
+  "p": 0.363
+ },
+ {
+  "id": "hsk4-554",
+  "concept": "form",
+  "p": 0.007
+ },
+ {
+  "id": "hsk4-555",
+  "concept": "to praise",
+  "p": 0.006
+ },
+ {
+  "id": "hsk4-559",
+  "concept": "to do business",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-561",
+  "concept": "to request leave of absence",
+  "p": 0.002
+ },
+ {
+  "id": "hsk4-565",
+  "concept": "to give a discount",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-569",
+  "concept": "height",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-570",
+  "concept": "embassy",
+  "p": 0.364
+ },
+ {
+  "id": "hsk4-574",
+  "concept": "to cultivate",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-575",
+  "concept": "to give or have an injection",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-577",
+  "concept": "grammar",
+  "p": 0.03
+ },
+ {
+  "id": "hsk4-578",
+  "concept": "to drink a toast",
+  "p": 0.395
+ },
+ {
+  "id": "hsk4-579",
+  "concept": "to photocopy",
+  "p": 0.007
+ },
+ {
+  "id": "hsk4-581",
+  "concept": "moist",
+  "p": 0.009
+ },
+ {
+  "id": "hsk4-583",
+  "concept": "fluent",
+  "p": 0.011
+ },
+ {
+  "id": "hsk4-584",
+  "concept": "dictionary",
+  "p": 0.118
+ },
+ {
+  "id": "hsk4-585",
+  "concept": "nice and cold",
+  "p": 0.01
+ },
+ {
+  "id": "hsk4-587",
+  "concept": "Yangtze River, or Chang Jiang",
+  "p": 0.0
+ },
+ {
+  "id": "hsk4-588",
+  "concept": "careless",
+  "p": 0.003
+ },
+ {
+  "id": "hsk4-589",
+  "concept": "winter vacation",
+  "p": 0.03
+ },
+ {
+  "id": "hsk4-590",
+  "concept": "Renminbi",
+  "p": 0.139
+ },
+ {
+  "id": "hsk4-591",
+  "concept": "careless",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-592",
+  "concept": "to prepare a lesson",
+  "p": 0.001
+ },
+ {
+  "id": "hsk4-596",
+  "concept": "to be on summer vacation",
+  "p": 0.002
+ },
+ {
+  "id": "zh-c01",
+  "concept": "I think…",
+  "p": 0.003
+ },
+ {
+  "id": "zh-c02",
+  "concept": "maybe",
+  "p": 0.011
+ },
+ {
+  "id": "zh-c04",
+  "concept": "see you tomorrow",
+  "p": 0.001
+ },
+ {
+  "id": "zh-c05",
+  "concept": "what do you do for work",
+  "p": 0.004
+ },
+ {
+  "id": "zh-c07",
+  "concept": "so busy",
+  "p": 0.001
+ },
+ {
+  "id": "zh-c08",
+  "concept": "weekend",
+  "p": 0.006
+ },
+ {
+  "id": "zh-c10",
+  "concept": "good idea",
+  "p": 0.029
+ },
+ {
+  "id": "zh-c12",
+  "concept": "keep going! you got this",
+  "p": 0.012
+ },
+ {
+  "id": "zh-f03",
+  "concept": "water",
+  "p": 0.218
+ },
+ {
+  "id": "zh-f04",
+  "concept": "rice",
+  "p": 0.291
+ },
+ {
+  "id": "zh-f08",
+  "concept": "menu",
+  "p": 0.002
+ },
+ {
+  "id": "zh-f09",
+  "concept": "delicious",
+  "p": 0.185
+ },
+ {
+  "id": "zh-f10",
+  "concept": "the bill, please",
+  "p": 0.002
+ },
+ {
+  "id": "zh-f11",
+  "concept": "I'm hungry",
+  "p": 0.023
+ },
+ {
+  "id": "zh-f12",
+  "concept": "not spicy, please",
+  "p": 0.037
+ },
+ {
+  "id": "zh-fe01",
+  "concept": "I like",
+  "p": 0.0
+ },
+ {
+  "id": "zh-fe02",
+  "concept": "I don't like",
+  "p": 0.0
+ },
+ {
+  "id": "zh-fe03",
+  "concept": "I'm tired",
+  "p": 0.029
+ },
+ {
+  "id": "zh-fe04",
+  "concept": "happy",
+  "p": 0.001
+ },
+ {
+  "id": "zh-fe05",
+  "concept": "why",
+  "p": 0.013
+ },
+ {
+  "id": "zh-fe06",
+  "concept": "because",
+  "p": 0.003
+ },
+ {
+  "id": "zh-fe07",
+  "concept": "really",
+  "p": 0.0
+ },
+ {
+  "id": "zh-fe08",
+  "concept": "of course",
+  "p": 0.004
+ },
+ {
+  "id": "zh-fe10",
+  "concept": "boring",
+  "p": 0.005
+ },
+ {
+  "id": "zh-fe11",
+  "concept": "interesting / fun",
+  "p": 0.004
+ },
+ {
+  "id": "zh-fe12",
+  "concept": "I love you",
+  "p": 0.016
+ },
+ {
+  "id": "zh-g01",
+  "concept": "hello",
+  "p": 0.0
+ },
+ {
+  "id": "zh-g02",
+  "concept": "good morning",
+  "p": 0.009
+ },
+ {
+  "id": "zh-g03",
+  "concept": "thank you",
+  "p": 0.0
+ },
+ {
+  "id": "zh-g05",
+  "concept": "sorry",
+  "p": 0.011
+ },
+ {
+  "id": "zh-g06",
+  "concept": "it's okay / no problem",
+  "p": 0.006
+ },
+ {
+  "id": "zh-g07",
+  "concept": "goodbye",
+  "p": 0.005
+ },
+ {
+  "id": "zh-g08",
+  "concept": "excuse me, may I ask…",
+  "p": 0.004
+ },
+ {
+  "id": "zh-g10",
+  "concept": "what's your name",
+  "p": 0.025
+ },
+ {
+  "id": "zh-g11",
+  "concept": "nice to meet you",
+  "p": 0.0
+ },
+ {
+  "id": "zh-g12",
+  "concept": "okay / sure",
+  "p": 0.0
+ },
+ {
+  "id": "zh-h02",
+  "concept": "room",
+  "p": 0.01
+ },
+ {
+  "id": "zh-h04",
+  "concept": "I have a reservation",
+  "p": 0.005
+ },
+ {
+  "id": "zh-h09",
+  "concept": "too noisy",
+  "p": 0.008
+ },
+ {
+  "id": "zh-h10",
+  "concept": "can I change rooms",
+  "p": 0.036
+ },
+ {
+  "id": "zh-h11",
+  "concept": "check out",
+  "p": 0.006
+ },
+ {
+  "id": "zh-n01",
+  "concept": "one, two, three",
+  "p": 0.128
+ },
+ {
+  "id": "zh-n02",
+  "concept": "four, five, six",
+  "p": 0.003
+ },
+ {
+  "id": "zh-n04",
+  "concept": "one hundred",
+  "p": 0.004
+ },
+ {
+  "id": "zh-n06",
+  "concept": "how much is it",
+  "p": 0.012
+ },
+ {
+  "id": "zh-n07",
+  "concept": "too expensive",
+  "p": 0.002
+ },
+ {
+  "id": "zh-n08",
+  "concept": "a bit cheaper, please",
+  "p": 0.03
+ },
+ {
+  "id": "zh-n09",
+  "concept": "how much in total",
+  "p": 0.001
+ },
+ {
+  "id": "zh-n10",
+  "concept": "this one",
+  "p": 0.06
+ },
+ {
+  "id": "zh-n11",
+  "concept": "that one",
+  "p": 0.001
+ },
+ {
+  "id": "zh-n12",
+  "concept": "I want this one",
+  "p": 0.001
+ },
+ {
+  "id": "zh-p01",
+  "concept": "dad",
+  "p": 0.002
+ },
+ {
+  "id": "zh-p02",
+  "concept": "mom",
+  "p": 0.001
+ },
+ {
+  "id": "zh-p05",
+  "concept": "older brother",
+  "p": 0.328
+ },
+ {
+  "id": "zh-p08",
+  "concept": "this is my friend",
+  "p": 0.016
+ },
+ {
+  "id": "zh-p09",
+  "concept": "do you have children",
+  "p": 0.005
+ },
+ {
+  "id": "zh-p12",
+  "concept": "we are friends",
+  "p": 0.004
+ },
+ {
+  "id": "zh-r01",
+  "concept": "how are you",
+  "p": 0.058
+ },
+ {
+  "id": "zh-r02",
+  "concept": "I'm fine",
+  "p": 0.016
+ },
+ {
+  "id": "zh-r04",
+  "concept": "I don't understand",
+  "p": 0.001
+ },
+ {
+  "id": "zh-r05",
+  "concept": "please say it again",
+  "p": 0.001
+ },
+ {
+  "id": "zh-r06",
+  "concept": "please speak slower",
+  "p": 0.002
+ },
+ {
+  "id": "zh-r07",
+  "concept": "how do you say it in Chinese",
+  "p": 0.004
+ },
+ {
+  "id": "zh-r10",
+  "concept": "a little bit",
+  "p": 0.0
+ },
+ {
+  "id": "zh-r11",
+  "concept": "I'm learning Chinese",
+  "p": 0.001
+ },
+ {
+  "id": "zh-r12",
+  "concept": "no problem",
+  "p": 0.002
+ },
+ {
+  "id": "zh-t03",
+  "concept": "where is…",
+  "p": 0.001
+ },
+ {
+  "id": "zh-t05",
+  "concept": "turn left",
+  "p": 0.007
+ },
+ {
+  "id": "zh-t06",
+  "concept": "turn right",
+  "p": 0.0
+ },
+ {
+  "id": "zh-t07",
+  "concept": "go straight",
+  "p": 0.007
+ },
+ {
+  "id": "zh-t08",
+  "concept": "stop here",
+  "p": 0.069
+ },
+ {
+  "id": "zh-t09",
+  "concept": "is it far",
+  "p": 0.002
+ },
+ {
+  "id": "zh-t10",
+  "concept": "very close",
+  "p": 0.027
+ },
+ {
+  "id": "zh-t11",
+  "concept": "slower, please",
+  "p": 0.009
+ },
+ {
+  "id": "zh-t12",
+  "concept": "we have arrived",
+  "p": 0.002
+ },
+ {
+  "id": "zh-ti02",
+  "concept": "today",
+  "p": 0.028
+ },
+ {
+  "id": "zh-ti03",
+  "concept": "tomorrow",
+  "p": 0.003
+ },
+ {
+  "id": "zh-ti04",
+  "concept": "yesterday",
+  "p": 0.002
+ },
+ {
+  "id": "zh-ti05",
+  "concept": "now",
+  "p": 0.005
+ },
+ {
+  "id": "zh-ti06",
+  "concept": "wait a moment",
+  "p": 0.091
+ },
+ {
+  "id": "zh-ti07",
+  "concept": "what day is it today",
+  "p": 0.009
+ },
+ {
+  "id": "zh-ti08",
+  "concept": "morning",
+  "p": 0.291
+ },
+ {
+  "id": "zh-ti09",
+  "concept": "evening / night",
+  "p": 0.0
+ },
+ {
+  "id": "zh-ti11",
+  "concept": "no time / out of time",
+  "p": 0.008
+ },
+ {
+  "id": "zh-ti12",
+  "concept": "hurry up / a bit faster",
+  "p": 0.002
+ }
+]
