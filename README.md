@@ -4,7 +4,7 @@ Version: 0.10.0
 
 Tech stack: Expo SDK 57 (React Native 0.86, TypeScript), ts-fsrs, MeloTTS (pre-rendered audio), expo-speech fallback, sql.js + fflate for Anki import, AsyncStorage + IndexedDB, GitHub Pages deployment.
 
-A speaking-first Mandarin trainer. Cards cannot be passed silently: the learner says the answer out loud before flipping. Reading and writing are out of scope by design.
+A speaking-first language trainer for Mandarin and Japanese. Cards cannot be passed silently: the learner says the answer out loud before flipping. Reading and writing are out of scope by design.
 
 Live app: https://sup3rrookie.github.io/xpress-lingua/
 
