@@ -1,6 +1,6 @@
 import { Platform } from 'react-native';
 
-// Imported-deck audio blobs live in IndexedDB (web). Native is a no-op for now —
+// Imported-deck audio blobs live in IndexedDB (web). Native is a no-op for now -
 // imports are web-first; native sessions fall back to TTS.
 // db 'xl-media', object store 'audio', key `${deckId}/${filename}`, value Blob.
 

@@ -121,7 +121,7 @@ export async function finalizeImport(
       await putAudio(a.audioKey, new Blob([copy.buffer], { type: mimeForFilename(a.filename) }));
       audioStored += 1;
     } catch {
-      // blob store unavailable — the session falls back to TTS for this card
+      // blob store unavailable, the session falls back to TTS for this card
     }
   }
 

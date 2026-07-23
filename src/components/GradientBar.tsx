@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { springs, tokens } from '../theme';
 import { useReducedMotion } from '../lib/motion';
 
-// Animated gradient progress bar — springs (gentle) to `pct` on load / change.
+// Animated gradient progress bar, springs (gentle) to `pct` on load / change.
 export default function GradientBar({
   pct,
   height = 8,

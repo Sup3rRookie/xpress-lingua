@@ -59,7 +59,7 @@ function FieldSelect({
         </View>
         <View style={styles.selectValuePill}>
           <Text style={styles.selectValueText} numberOfLines={1}>
-            {selected ? selected.name : '— none —'}
+            {selected ? selected.name : '(none)'}
           </Text>
           <Text style={styles.selectCaret}>{open ? '▴' : '▾'}</Text>
         </View>
@@ -76,7 +76,7 @@ function FieldSelect({
               }}
               accessibilityRole="button"
             >
-              <Text style={styles.optionName}>— None —</Text>
+              <Text style={styles.optionName}>None</Text>
             </Pressable>
           )}
           {fields.map((f) => (
@@ -144,7 +144,7 @@ export default function ImportMap({
       onDone(result);
     } catch {
       setProgress(null);
-      setError("Couldn't finish the import — nothing was saved. Try again?");
+      setError("Couldn't finish the import, nothing was saved. Try again?");
     }
   };
 
@@ -174,7 +174,7 @@ export default function ImportMap({
           </Text>
           {parsed.totalNotes > 1000 && (
             <Text style={styles.summaryWarn}>
-              Large deck — the first 1000 of {parsed.totalNotes} notes will be imported.
+              Large deck, the first 1000 of {parsed.totalNotes} notes will be imported.
             </Text>
           )}
           {skippedNote && <Text style={styles.summaryMuted}>{skippedNote}</Text>}

@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, ViewStyle } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-// Big soft violet glow field — absolutely positioned behind headers / cards.
+// Big soft violet glow field, absolutely positioned behind headers / cards.
 export default function GlowEllipse({
   width = 520,
   height = 360,

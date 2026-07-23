@@ -3,2898 +3,8862 @@
   "id": "hsk1-000",
   "hanzi": "的",
   "want": "de5",
-  "heard": "到",
-  "heard_py": "dao"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-001",
   "hanzi": "了",
   "want": "le5",
-  "heard": "走",
-  "heard_py": "zou"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk1-002",
+  "hanzi": "我",
+  "want": "wo3",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk1-003",
+  "hanzi": "是",
+  "want": "shi4",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk1-005",
+  "hanzi": "在",
+  "want": "zai4",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-006",
   "hanzi": "不",
   "want": "bu4",
-  "heard": "哇!",
-  "heard_py": "wa"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk1-007",
+  "hanzi": "有",
+  "want": "you3",
+  "heard": "你会你会",
+  "heard_py": [
+   "ni",
+   "hui",
+   "ni",
+   "hui"
+  ]
  },
  {
   "id": "hsk1-008",
   "hanzi": "他",
   "want": "ta1",
-  "heard": "蛤?",
-  "heard_py": "ha"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk1-009",
+  "hanzi": "这",
+  "want": "zhe4",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk1-010",
+  "hanzi": "个",
+  "want": "ge4",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk1-011",
   "hanzi": "和",
   "want": "he2",
-  "heard": "可",
-  "heard_py": "ke"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-015",
   "hanzi": "一",
   "want": "yi1",
-  "heard": "了",
-  "heard_py": "le"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-016",
   "hanzi": "会",
   "want": "hui4",
-  "heard": "嘿!嘿!",
-  "heard_py": "heihei"
+  "heard": "喂",
+  "heard_py": [
+   "wei"
+  ]
  },
  {
   "id": "hsk1-017",
   "hanzi": "都",
   "want": "dou1",
-  "heard": "喔!喔!",
-  "heard_py": "wowo"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk1-018",
+  "hanzi": "上",
+  "want": "shang4",
+  "heard": "好",
+  "heard_py": [
+   "hao"
+  ]
+ },
+ {
+  "id": "hsk1-020",
+  "hanzi": "很",
+  "want": "hen3",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk1-021",
+  "hanzi": "去",
+  "want": "qu4",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk1-022",
   "hanzi": "她",
   "want": "ta1",
-  "heard": "蛤?",
-  "heard_py": "ha"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk1-023",
   "hanzi": "想",
   "want": "xiang3",
-  "heard": "好",
-  "heard_py": "hao"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk1-024",
+  "hanzi": "能",
+  "want": "neng2",
+  "heard": "嗯嗯",
+  "heard_py": [
+   "n",
+   "n"
+  ]
+ },
+ {
+  "id": "hsk1-025",
+  "hanzi": "那",
+  "want": "na4",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-026",
   "hanzi": "看",
   "want": "kan4",
-  "heard": "Hen",
-  "heard_py": ""
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk1-027",
+  "hanzi": "做",
+  "want": "zuo4",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk1-028",
+  "hanzi": "什么",
+  "want": "shen2 me5",
+  "heard": "是嗎?是嗎?",
+  "heard_py": [
+   "shi",
+   "ma",
+   "shi",
+   "ma"
+  ]
+ },
+ {
+  "id": "hsk1-029",
+  "hanzi": "点",
+  "want": "dian3",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-030",
   "hanzi": "没",
   "want": "mei2",
-  "heard": "门",
-  "heard_py": "men"
+  "heard": "这次的节目是我们的第一节目我们的第一节目是我们的第一节目我们的第一节目是我们的第一节目我们的第一节目是我们的第一节目我们的第一节目是我们的第一节目我们的第一节目是我们的第一节目我们的第一节目是我们的第一节目我们的第一节目是我们的第一节目我们的第一节目是我们的第一节目我们的第一节目是我们的第一节目我们的第一节目是我们的第一节目我们的第一节目是我们的第一节目我们的第一节目是我们的第一节目我们的第一节目是我们的第一节目",
+  "heard_py": [
+   "zhe",
+   "ci",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "di",
+   "yi",
+   "jie",
+   "mu"
+  ]
  },
  {
-  "id": "hsk1-032",
-  "hanzi": "下",
-  "want": "xia4",
-  "heard": "假啊",
-  "heard_py": "jiaa"
+  "id": "hsk1-031",
+  "hanzi": "大",
+  "want": "da4",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-033",
   "hanzi": "里",
   "want": "li3",
-  "heard": "哼",
-  "heard_py": "heng"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-034",
   "hanzi": "年",
   "want": "nian2",
-  "heard": "眼",
-  "heard_py": "yan"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk1-035",
+  "hanzi": "多",
+  "want": "duo1",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-036",
   "hanzi": "吗",
   "want": "ma5",
-  "heard": "巴",
-  "heard_py": "ba"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-037",
   "hanzi": "太",
   "want": "tai4",
-  "heard": "嘿嘿",
-  "heard_py": "heihei"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-038",
   "hanzi": "呢",
   "want": "ne5",
-  "heard": "到",
-  "heard_py": "dao"
+  "heard": "对",
+  "heard_py": [
+   "dui"
+  ]
+ },
+ {
+  "id": "hsk1-039",
+  "hanzi": "小",
+  "want": "xiao3",
+  "heard": "加油",
+  "heard_py": [
+   "jia",
+   "you"
+  ]
+ },
+ {
+  "id": "hsk1-042",
+  "hanzi": "家",
+  "want": "jia1",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk1-044",
   "hanzi": "爱",
   "want": "ai4",
-  "heard": "便",
-  "heard_py": "bian"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk1-045",
+  "hanzi": "喜欢",
+  "want": "xi3 huan1",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-046",
   "hanzi": "吃",
   "want": "chi1",
-  "heard": "嘿啊 嘿啊",
-  "heard_py": "heiaheia"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
-  "id": "hsk1-049",
-  "hanzi": "几",
-  "want": "ji3",
-  "heard": "see you",
-  "heard_py": ""
+  "id": "hsk1-047",
+  "hanzi": "谁",
+  "want": "shui2",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk1-048",
+  "hanzi": "月",
+  "want": "yue4",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk1-050",
   "hanzi": "听",
   "want": "ting1",
-  "heard": "拼 拼",
-  "heard_py": "pinpin"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk1-051",
   "hanzi": "开",
   "want": "kai1",
-  "heard": "嘿!嘿!",
-  "heard_py": "heihei"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk1-052",
+  "hanzi": "叫",
+  "want": "jiao4",
+  "heard": "这边",
+  "heard_py": [
+   "zhe",
+   "bian"
+  ]
+ },
+ {
+  "id": "hsk1-053",
+  "hanzi": "请",
+  "want": "qing3",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk1-054",
+  "hanzi": "本",
+  "want": "ben3",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk1-055",
+  "hanzi": "回",
+  "want": "hui2",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk1-056",
+  "hanzi": "东西",
+  "want": "dong1 xi1",
+  "heard": "恭喜",
+  "heard_py": [
+   "gong",
+   "xi"
+  ]
+ },
+ {
+  "id": "hsk1-057",
+  "hanzi": "三",
+  "want": "san1",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-058",
   "hanzi": "买",
   "want": "mai3",
-  "heard": "滿",
-  "heard_py": "man"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-059",
   "hanzi": "岁",
   "want": "sui4",
-  "heard": "所以…",
-  "heard_py": "suoyi"
+  "heard": "誰誰",
+  "heard_py": [
+   "shui",
+   "shui"
+  ]
  },
  {
   "id": "hsk1-060",
   "hanzi": "住",
   "want": "zhu4",
-  "heard": "啾!啾!",
-  "heard_py": "jiujiu"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk1-061",
   "hanzi": "写",
   "want": "xie3",
-  "heard": "前",
-  "heard_py": "qian"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk1-062",
   "hanzi": "日",
   "want": "ri4",
-  "heard": "真",
-  "heard_py": "zhen"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk1-063",
   "hanzi": "喝",
   "want": "he1",
-  "heard": "ka",
-  "heard_py": ""
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk1-065",
+  "hanzi": "坐",
+  "want": "zuo4",
+  "heard": "我",
+  "heard_py": [
+   "wo"
+  ]
+ },
+ {
+  "id": "hsk1-067",
+  "hanzi": "分钟",
+  "want": "fen1 zhong1",
+  "heard": "尊重尊重",
+  "heard_py": [
+   "zun",
+   "zhong",
+   "zun",
+   "zhong"
+  ]
  },
  {
   "id": "hsk1-068",
   "hanzi": "四",
   "want": "si4",
-  "heard": "自",
-  "heard_py": "zi"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-069",
   "hanzi": "块",
   "want": "kuai4",
-  "heard": "歡迎!",
-  "heard_py": "huanying"
- },
- {
-  "id": "hsk1-070",
-  "hanzi": "多少",
-  "want": "duo1 shao3",
-  "heard": "剝手剝手",
-  "heard_py": "boshouboshou"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk1-072",
   "hanzi": "电影",
   "want": "dian4 ying3",
-  "heard": "登迎",
-  "heard_py": "dengying"
+  "heard": "EE",
+  "heard_py": []
  },
  {
   "id": "hsk1-073",
   "hanzi": "哪",
   "want": "na3",
-  "heard": "我",
-  "heard_py": "wo"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk1-074",
   "hanzi": "书",
   "want": "shu1",
-  "heard": "啪 啪",
-  "heard_py": "papa"
+  "heard": "說得",
+  "heard_py": [
+   "shuo",
+   "de"
+  ]
  },
  {
   "id": "hsk1-075",
   "hanzi": "五",
   "want": "wu3",
   "heard": "我",
-  "heard_py": "wo"
+  "heard_py": [
+   "wo"
+  ]
+ },
+ {
+  "id": "hsk1-076",
+  "hanzi": "先生",
+  "want": "xian1 sheng1",
+  "heard": "静",
+  "heard_py": [
+   "jing"
+  ]
  },
  {
   "id": "hsk1-078",
   "hanzi": "些",
   "want": "xie1",
-  "heard": "見!",
-  "heard_py": "jian"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-079",
   "hanzi": "狗",
   "want": "gou3",
-  "heard": "走",
-  "heard_py": "zou"
+  "heard": "我",
+  "heard_py": [
+   "wo"
+  ]
+ },
+ {
+  "id": "hsk1-080",
+  "hanzi": "学生",
+  "want": "xue2 sheng1",
+  "heard": "切成切成",
+  "heard_py": [
+   "qie",
+   "cheng",
+   "qie",
+   "cheng"
+  ]
  },
  {
   "id": "hsk1-081",
   "hanzi": "二",
   "want": "er4",
-  "heard": "嗯",
-  "heard_py": "n"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk1-082",
+  "hanzi": "儿子",
+  "want": "er2 zi5",
+  "heard": "二十二十",
+  "heard_py": [
+   "er",
+   "shi",
+   "er",
+   "shi"
+  ]
+ },
+ {
+  "id": "hsk1-083",
+  "hanzi": "中国",
+  "want": "zhong1 guo2",
+  "heard": "那是什么?",
+  "heard_py": [
+   "na",
+   "shi",
+   "shen",
+   "me"
+  ]
+ },
+ {
+  "id": "hsk1-084",
+  "hanzi": "电视",
+  "want": "dian4 shi4",
+  "heard": "必须",
+  "heard_py": [
+   "bi",
+   "xu"
+  ]
+ },
+ {
+  "id": "hsk1-086",
+  "hanzi": "学习",
+  "want": "xue2 xi2",
+  "heard": "追喜",
+  "heard_py": [
+   "zhui",
+   "xi"
+  ]
  },
  {
   "id": "hsk1-087",
   "hanzi": "六",
   "want": "liu4",
-  "heard": "多?多?",
-  "heard_py": "duoduo"
+  "heard": "",
+  "heard_py": []
  },
  {
-  "id": "hsk1-091",
-  "hanzi": "看见",
-  "want": "kan4 jian4",
-  "heard": "探檢",
-  "heard_py": "tanjian"
+  "id": "hsk1-089",
+  "hanzi": "名字",
+  "want": "ming2 zi4",
+  "heard": "您哲您哲",
+  "heard_py": [
+   "nin",
+   "zhe",
+   "nin",
+   "zhe"
+  ]
  },
  {
   "id": "hsk1-092",
   "hanzi": "女儿",
   "want": "nv3 er2",
-  "heard": "你啊?你啊?",
-  "heard_py": "niania"
+  "heard": "yeahyeah",
+  "heard_py": []
  },
  {
-  "id": "hsk1-095",
-  "hanzi": "漂亮",
-  "want": "piao4 liang4",
-  "heard": "套糧!",
-  "heard_py": "taoliang"
+  "id": "hsk1-094",
+  "hanzi": "字",
+  "want": "zi4",
+  "heard": "走",
+  "heard_py": [
+   "zou"
+  ]
+ },
+ {
+  "id": "hsk1-096",
+  "hanzi": "高兴",
+  "want": "gao1 xing4",
+  "heard": "好嘻 好嘻",
+  "heard_py": [
+   "hao",
+   "xi",
+   "hao",
+   "xi"
+  ]
  },
  {
   "id": "hsk1-097",
   "hanzi": "热",
   "want": "re4",
-  "heard": "哥",
-  "heard_py": "ge"
- },
- {
-  "id": "hsk1-099",
-  "hanzi": "电脑",
-  "want": "dian4 nao3",
-  "heard": "点了! 点了!",
-  "heard_py": "dianledianle"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk1-100",
   "hanzi": "读",
   "want": "du2",
-  "heard": "我 我",
-  "heard_py": "wowo"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk1-101",
+  "hanzi": "冷",
+  "want": "leng3",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk1-102",
+  "hanzi": "飞机",
+  "want": "fei1 ji1",
+  "heard": "分析",
+  "heard_py": [
+   "fen",
+   "xi"
+  ]
  },
  {
   "id": "hsk1-103",
   "hanzi": "猫",
   "want": "mao1",
-  "heard": "都!都!",
-  "heard_py": "doudou"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-106",
   "hanzi": "喂",
   "want": "wei4",
-  "heard": "分",
-  "heard_py": "fen"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-107",
   "hanzi": "八",
   "want": "ba1",
-  "heard": "啊?",
-  "heard_py": "a"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk1-109",
+  "hanzi": "七",
+  "want": "qi1",
+  "heard": "心 心",
+  "heard_py": [
+   "xin",
+   "xin"
+  ]
  },
  {
   "id": "hsk1-110",
   "hanzi": "菜",
   "want": "cai4",
-  "heard": "太太",
-  "heard_py": "taitai"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk1-111",
   "hanzi": "衣服",
   "want": "yi1 fu2",
-  "heard": "依活",
-  "heard_py": "yihuo"
+  "heard": "意思",
+  "heard_py": [
+   "yi",
+   "si"
+  ]
  },
  {
-  "id": "hsk1-114",
-  "hanzi": "前面",
-  "want": "qian2 mian4",
-  "heard": "前年",
-  "heard_py": "qiannian"
- },
- {
-  "id": "hsk1-119",
-  "hanzi": "苹果",
-  "want": "ping2 guo3",
-  "heard": "停過",
-  "heard_py": "tingguo"
+  "id": "hsk1-117",
+  "hanzi": "九",
+  "want": "jiu3",
+  "heard": "我",
+  "heard_py": [
+   "wo"
+  ]
  },
  {
   "id": "hsk1-123",
   "hanzi": "零",
   "want": "ling2",
-  "heard": "人?人?",
-  "heard_py": "renren"
+  "heard": "",
+  "heard_py": []
  },
  {
-  "id": "hsk1-125",
-  "hanzi": "椅子",
-  "want": "yi3 zi5",
-  "heard": "一詞",
-  "heard_py": "yici"
+  "id": "hsk1-126",
+  "hanzi": "北京",
+  "want": "bei3 jing1",
+  "heard": "美姬美姬",
+  "heard_py": [
+   "mei",
+   "ji",
+   "mei",
+   "ji"
+  ]
  },
  {
   "id": "hsk1-130",
   "hanzi": "汉语",
   "want": "han4 yu3",
-  "heard": "開語",
-  "heard_py": "kaiyu"
+  "heard": "嗨嗨",
+  "heard_py": [
+   "hai",
+   "hai"
+  ]
  },
  {
   "id": "hsk1-131",
   "hanzi": "饭馆",
   "want": "fan4 guan3",
-  "heard": "分管",
-  "heard_py": "fenguan"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-000",
+  "hanzi": "就",
+  "want": "jiu4",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-001",
   "hanzi": "要",
   "want": "yao4",
-  "heard": "丟啊丟啊",
-  "heard_py": "diuadiua"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk2-002",
   "hanzi": "也",
   "want": "ye3",
-  "heard": "点,点。",
-  "heard_py": "diandian"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk2-003",
+  "hanzi": "到",
+  "want": "dao4",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-004",
   "hanzi": "还",
   "want": "hai2",
-  "heard": "Han",
-  "heard_py": ""
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-005",
+  "hanzi": "着",
+  "want": "zhe5",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk2-006",
   "hanzi": "给",
   "want": "gei3",
-  "heard": "て",
-  "heard_py": ""
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-007",
   "hanzi": "让",
   "want": "rang4",
-  "heard": "整整",
-  "heard_py": "zhengzheng"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk2-008",
+  "hanzi": "吧",
+  "want": "ba5",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk2-009",
   "hanzi": "得",
   "want": "de2",
-  "heard": "到",
-  "heard_py": "dao"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk2-010",
   "hanzi": "可以",
   "want": "ke3 yi3",
-  "heard": "太義",
-  "heard_py": "taiyi"
+  "heard": "所以",
+  "heard_py": [
+   "suo",
+   "yi"
+  ]
  },
  {
   "id": "hsk2-011",
   "hanzi": "为",
   "want": "wei4",
-  "heard": "但",
-  "heard_py": "dan"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-012",
   "hanzi": "从",
   "want": "cong2",
-  "heard": "曾",
-  "heard_py": "ceng"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk2-013",
+  "hanzi": "真",
+  "want": "zhen1",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk2-014",
+  "hanzi": "两",
+  "want": "liang3",
+  "heard": "Yana",
+  "heard_py": []
  },
  {
   "id": "hsk2-015",
   "hanzi": "出",
   "want": "chu1",
-  "heard": "托!托!",
-  "heard_py": "tuotuo"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk2-016",
   "hanzi": "已经",
   "want": "yi3 jing1",
-  "heard": "一斤",
-  "heard_py": "yijin"
+  "heard": "一斤一斤",
+  "heard_py": [
+   "yi",
+   "jin",
+   "yi",
+   "jin"
+  ]
  },
  {
   "id": "hsk2-017",
   "hanzi": "最",
   "want": "zui4",
-  "heard": "所以所以",
-  "heard_py": "suoyisuoyi"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk2-018",
+  "hanzi": "再",
+  "want": "zai4",
+  "heard": "對",
+  "heard_py": [
+   "dui"
+  ]
  },
  {
   "id": "hsk2-019",
   "hanzi": "次",
   "want": "ci4",
-  "heard": "四",
-  "heard_py": "si"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-020",
+  "hanzi": "知道",
+  "want": "zhi1 dao4",
+  "heard": "到",
+  "heard_py": [
+   "dao"
+  ]
+ },
+ {
+  "id": "hsk2-022",
+  "hanzi": "走",
+  "want": "zou3",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-023",
   "hanzi": "它",
   "want": "ta1",
-  "heard": "蛤?",
-  "heard_py": "ha"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk2-027",
   "hanzi": "新",
   "want": "xin1",
-  "heard": "先",
-  "heard_py": "xian"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-028",
+  "hanzi": "找",
+  "want": "zhao3",
+  "heard": "啊",
+  "heard_py": [
+   "a"
+  ]
  },
  {
   "id": "hsk2-029",
   "hanzi": "快",
   "want": "kuai4",
-  "heard": "歡迎!",
-  "heard_py": "huanying"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-030",
   "hanzi": "比",
   "want": "bi3",
-  "heard": "BillBill",
-  "heard_py": ""
+  "heard": "你你",
+  "heard_py": [
+   "ni",
+   "ni"
+  ]
+ },
+ {
+  "id": "hsk2-032",
+  "hanzi": "觉得",
+  "want": "jue2 de5",
+  "heard": "接着接着",
+  "heard_py": [
+   "jie",
+   "zhe",
+   "jie",
+   "zhe"
+  ]
+ },
+ {
+  "id": "hsk2-033",
+  "hanzi": "向",
+  "want": "xiang4",
+  "heard": "下下",
+  "heard_py": [
+   "xia",
+   "xia"
+  ]
+ },
+ {
+  "id": "hsk2-034",
+  "hanzi": "希望",
+  "want": "xi1 wang4",
+  "heard": "洗喽洗喽",
+  "heard_py": [
+   "xi",
+   "lou",
+   "xi",
+   "lou"
+  ]
  },
  {
   "id": "hsk2-037",
   "hanzi": "别",
   "want": "bie2",
-  "heard": "編",
-  "heard_py": "bian"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-039",
   "hanzi": "第一",
   "want": "di4 yi1",
-  "heard": "對喲",
-  "heard_py": "duiyo"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-040",
+  "hanzi": "问",
+  "want": "wen4",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-041",
   "hanzi": "长",
   "want": "zhang3",
-  "heard": "成",
-  "heard_py": "cheng"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-042",
   "hanzi": "告诉",
   "want": "gao4 su4",
-  "heard": "こそ?",
-  "heard_py": ""
+  "heard": "大叔",
+  "heard_py": [
+   "da",
+   "shu"
+  ]
+ },
+ {
+  "id": "hsk2-043",
+  "hanzi": "事情",
+  "want": "shi4 qing2",
+  "heard": "是其",
+  "heard_py": [
+   "shi",
+   "qi"
+  ]
  },
  {
   "id": "hsk2-044",
   "hanzi": "号",
   "want": "hao4",
-  "heard": "到…到…",
-  "heard_py": "daodao"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk2-045",
   "hanzi": "高",
   "want": "gao1",
-  "heard": "走",
-  "heard_py": "zou"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk2-046",
+  "hanzi": "件",
+  "want": "jian4",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk2-047",
   "hanzi": "张",
   "want": "zhang1",
-  "heard": "整",
-  "heard_py": "zheng"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk2-049",
   "hanzi": "进",
   "want": "jin4",
-  "heard": "尖",
-  "heard_py": "jian"
- },
- {
-  "id": "hsk2-050",
-  "hanzi": "每",
-  "want": "mei3",
-  "heard": "門",
-  "heard_py": "men"
+  "heard": "去去",
+  "heard_py": [
+   "qu",
+   "qu"
+  ]
  },
  {
   "id": "hsk2-051",
   "hanzi": "您",
   "want": "nin2",
-  "heard": "麵",
-  "heard_py": "mian"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-052",
   "hanzi": "送",
   "want": "song4",
-  "heard": "增",
-  "heard_py": "zeng"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk2-053",
   "hanzi": "笑",
   "want": "xiao4",
-  "heard": "走",
-  "heard_py": "zou"
+  "heard": "好",
+  "heard_py": [
+   "hao"
+  ]
+ },
+ {
+  "id": "hsk2-054",
+  "hanzi": "女人",
+  "want": "nv3 ren2",
+  "heard": "Ri",
+  "heard_py": []
  },
  {
   "id": "hsk2-056",
   "hanzi": "完",
   "want": "wan2",
-  "heard": "文",
-  "heard_py": "wen"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk2-057",
   "hanzi": "路",
   "want": "lu4",
-  "heard": "不!不!",
-  "heard_py": "bubu"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-058",
+  "hanzi": "男人",
+  "want": "nan2 ren2",
+  "heard": "大人大人",
+  "heard_py": [
+   "da",
+   "ren",
+   "da",
+   "ren"
+  ]
  },
  {
   "id": "hsk2-059",
   "hanzi": "玩",
   "want": "wan2",
-  "heard": "穩",
-  "heard_py": "wen"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-060",
+  "hanzi": "正在",
+  "want": "zheng4 zai4",
+  "heard": "感謝感謝",
+  "heard_py": [
+   "gan",
+   "xie",
+   "gan",
+   "xie"
+  ]
+ },
+ {
+  "id": "hsk2-061",
+  "hanzi": "门",
+  "want": "men2",
+  "heard": "Win",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-062",
+  "hanzi": "穿",
+  "want": "chuan1",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk2-063",
   "hanzi": "外",
   "want": "wai4",
-  "heard": "文",
-  "heard_py": "wen"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-064",
+  "hanzi": "帮助",
+  "want": "bang1 zhu4",
+  "heard": "按住 按住",
+  "heard_py": [
+   "an",
+   "zhu",
+   "an",
+   "zhu"
+  ]
+ },
+ {
+  "id": "hsk2-065",
+  "hanzi": "错",
+  "want": "cuo4",
+  "heard": "左 左",
+  "heard_py": [
+   "zuo",
+   "zuo"
+  ]
  },
  {
   "id": "hsk2-066",
   "hanzi": "卖",
   "want": "mai4",
-  "heard": "本",
-  "heard_py": "ben"
+  "heard": "嗨",
+  "heard_py": [
+   "hai"
+  ]
+ },
+ {
+  "id": "hsk2-067",
+  "hanzi": "远",
+  "want": "yuan3",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk2-068",
+  "hanzi": "快乐",
+  "want": "kuai4 le4",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-069",
   "hanzi": "懂",
   "want": "dong3",
-  "heard": "左 左",
-  "heard_py": "zuozuo"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-070",
   "hanzi": "药",
   "want": "yao4",
-  "heard": "到",
-  "heard_py": "dao"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk2-071",
   "hanzi": "黑",
   "want": "hei1",
-  "heard": "哼 哼",
-  "heard_py": "hengheng"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-072",
+  "hanzi": "身体",
+  "want": "shen1 ti3",
+  "heard": "春体",
+  "heard_py": [
+   "chun",
+   "ti"
+  ]
  },
  {
   "id": "hsk2-073",
   "hanzi": "元",
   "want": "yuan2",
-  "heard": "人",
-  "heard_py": "ren"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk2-075",
   "hanzi": "红",
   "want": "hong2",
-  "heard": "魂",
-  "heard_py": "hun"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-076",
+  "hanzi": "欢迎",
+  "want": "huan1 ying2",
+  "heard": "唯一",
+  "heard_py": [
+   "wei",
+   "yi"
+  ]
  },
  {
   "id": "hsk2-077",
   "hanzi": "眼睛",
   "want": "yan3 jing1",
-  "heard": "嚴謹",
-  "heard_py": "yanjin"
+  "heard": "谢谢",
+  "heard_py": [
+   "xie",
+   "xie"
+  ]
  },
  {
   "id": "hsk2-078",
   "hanzi": "近",
   "want": "jin4",
-  "heard": "千",
-  "heard_py": "qian"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk2-080",
   "hanzi": "忙",
   "want": "mang2",
-  "heard": "门",
-  "heard_py": "men"
+  "heard": "啦",
+  "heard_py": [
+   "la"
+  ]
  },
  {
   "id": "hsk2-081",
   "hanzi": "离",
   "want": "li2",
-  "heard": "哒 哒",
-  "heard_py": "dada"
+  "heard": "咪",
+  "heard_py": [
+   "mi"
+  ]
  },
  {
   "id": "hsk2-082",
   "hanzi": "白",
   "want": "bai2",
-  "heard": "本",
-  "heard_py": "ben"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-084",
   "hanzi": "票",
   "want": "piao4",
-  "heard": "跳",
-  "heard_py": "tiao"
+  "heard": "",
+  "heard_py": []
  },
  {
-  "id": "hsk2-085",
-  "hanzi": "意思",
-  "want": "yi4 si1",
-  "heard": "第十",
-  "heard_py": "dishi"
+  "id": "hsk2-087",
+  "hanzi": "运动",
+  "want": "yun4 dong4",
+  "heard": "印度印度",
+  "heard_py": [
+   "yin",
+   "du",
+   "yin",
+   "du"
+  ]
+ },
+ {
+  "id": "hsk2-088",
+  "hanzi": "妻子",
+  "want": "qi1 zi3",
+  "heard": "細指",
+  "heard_py": [
+   "xi",
+   "zhi"
+  ]
  },
  {
   "id": "hsk2-089",
   "hanzi": "鱼",
   "want": "yu2",
-  "heard": "得",
-  "heard_py": "de"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-090",
   "hanzi": "累",
   "want": "lei4",
-  "heard": "哼 哼",
-  "heard_py": "hengheng"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk2-092",
   "hanzi": "洗",
   "want": "xi3",
-  "heard": "sir",
-  "heard_py": ""
+  "heard": "一",
+  "heard_py": [
+   "yi"
+  ]
+ },
+ {
+  "id": "hsk2-093",
+  "hanzi": "船",
+  "want": "chuan2",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk2-095",
   "hanzi": "上班",
   "want": "shang4 ban1",
-  "heard": "商本",
-  "heard_py": "shangben"
+  "heard": "刷板 刷板",
+  "heard_py": [
+   "shua",
+   "ban",
+   "shua",
+   "ban"
+  ]
  },
  {
-  "id": "hsk2-097",
-  "hanzi": "姐姐",
-  "want": "jie3 jie3",
-  "heard": "借煎借煎",
-  "heard_py": "jiejianjiejian"
+  "id": "hsk2-096",
+  "hanzi": "生日",
+  "want": "sheng1 ri4",
+  "heard": "是不是?是不是?",
+  "heard_py": [
+   "shi",
+   "bu",
+   "shi",
+   "shi",
+   "bu",
+   "shi"
+  ]
+ },
+ {
+  "id": "hsk2-098",
+  "hanzi": "课",
+  "want": "ke4",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-099",
+  "hanzi": "考试",
+  "want": "kao3 shi4",
+  "heard": "螃蟹",
+  "heard_py": [
+   "pang",
+   "xie"
+  ]
+ },
+ {
+  "id": "hsk2-100",
+  "hanzi": "千",
+  "want": "qian1",
+  "heard": "进",
+  "heard_py": [
+   "jin"
+  ]
  },
  {
   "id": "hsk2-101",
   "hanzi": "慢",
   "want": "man4",
-  "heard": "man",
-  "heard_py": ""
+  "heard": "嗯",
+  "heard_py": [
+   "n"
+  ]
+ },
+ {
+  "id": "hsk2-102",
+  "hanzi": "旁边",
+  "want": "pang2 bian1",
+  "heard": "后面",
+  "heard_py": [
+   "hou",
+   "mian"
+  ]
+ },
+ {
+  "id": "hsk2-103",
+  "hanzi": "颜色",
+  "want": "yan2 se4",
+  "heard": "嚴肅嚴肅",
+  "heard_py": [
+   "yan",
+   "su",
+   "yan",
+   "su"
+  ]
  },
  {
   "id": "hsk2-104",
   "hanzi": "雪",
   "want": "xue3",
-  "heard": "寫",
-  "heard_py": "xie"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-105",
+  "hanzi": "报纸",
+  "want": "bao4 zhi3",
+  "heard": "二指二指",
+  "heard_py": [
+   "er",
+   "zhi",
+   "er",
+   "zhi"
+  ]
  },
  {
   "id": "hsk2-106",
   "hanzi": "贵",
   "want": "gui4",
-  "heard": "滚!滚!",
-  "heard_py": "gungun"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk2-107",
   "hanzi": "机场",
   "want": "ji1 chang3",
-  "heard": "基成",
-  "heard_py": "jicheng"
+  "heard": "一朝",
+  "heard_py": [
+   "yi",
+   "zhao"
+  ]
  },
  {
   "id": "hsk2-108",
   "hanzi": "踢",
   "want": "ti1",
-  "heard": "Q.Q",
-  "heard_py": ""
- },
- {
-  "id": "hsk2-109",
-  "hanzi": "弟弟",
-  "want": "di4 di4",
-  "heard": "這個",
-  "heard_py": "zhege"
+  "heard": "进",
+  "heard_py": [
+   "jin"
+  ]
  },
  {
   "id": "hsk2-110",
   "hanzi": "百",
   "want": "bai3",
-  "heard": "版",
-  "heard_py": "ban"
+  "heard": "來",
+  "heard_py": [
+   "lai"
+  ]
+ },
+ {
+  "id": "hsk2-111",
+  "hanzi": "旅游",
+  "want": "lv3 you2",
+  "heard": "雨喔雨喔",
+  "heard_py": [
+   "yu",
+   "o",
+   "yu",
+   "o"
+  ]
  },
  {
   "id": "hsk2-112",
   "hanzi": "起床",
   "want": "qi3 chuang2",
-  "heard": "啟程",
-  "heard_py": "qicheng"
+  "heard": "洗床洗床",
+  "heard_py": [
+   "xi",
+   "chuang",
+   "xi",
+   "chuang"
+  ]
  },
  {
   "id": "hsk2-113",
   "hanzi": "题",
   "want": "ti2",
-  "heard": "哼",
-  "heard_py": "heng"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-114",
+  "hanzi": "便宜",
+  "want": "pian2 yi5",
+  "heard": "願意",
+  "heard_py": [
+   "yuan",
+   "yi"
+  ]
+ },
+ {
+  "id": "hsk2-115",
+  "hanzi": "唱歌",
+  "want": "chang4 ge1",
+  "heard": "看歌",
+  "heard_py": [
+   "kan",
+   "ge"
+  ]
+ },
+ {
+  "id": "hsk2-117",
+  "hanzi": "牛奶",
+  "want": "niu2 nai3",
+  "heard": "一来一来",
+  "heard_py": [
+   "yi",
+   "lai",
+   "yi",
+   "lai"
+  ]
+ },
+ {
+  "id": "hsk2-118",
+  "hanzi": "自行车",
+  "want": "zi4 xing2 che1",
+  "heard": "自行抽",
+  "heard_py": [
+   "zi",
+   "xing",
+   "chou"
+  ]
+ },
+ {
+  "id": "hsk2-119",
+  "hanzi": "鸡蛋",
+  "want": "ji1 dan4",
+  "heard": "吉他",
+  "heard_py": [
+   "ji",
+   "ta"
+  ]
  },
  {
   "id": "hsk2-120",
   "hanzi": "姓",
   "want": "xing4",
-  "heard": "生",
-  "heard_py": "sheng"
+  "heard": "77",
+  "heard_py": []
  },
  {
   "id": "hsk2-121",
   "hanzi": "游泳",
   "want": "you2 yong3",
   "heard": "有有",
-  "heard_py": "youyou"
+  "heard_py": [
+   "you",
+   "you"
+  ]
+ },
+ {
+  "id": "hsk2-122",
+  "hanzi": "跳舞",
+  "want": "tiao4 wu3",
+  "heard": "下午",
+  "heard_py": [
+   "xia",
+   "wu"
+  ]
  },
  {
   "id": "hsk2-123",
   "hanzi": "阴",
   "want": "yin1",
-  "heard": "天",
-  "heard_py": "tian"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-124",
+  "hanzi": "生病",
+  "want": "sheng1 bing4",
+  "heard": "是B是B",
+  "heard_py": [
+   "shi",
+   "shi"
+  ]
+ },
+ {
+  "id": "hsk2-125",
+  "hanzi": "左边",
+  "want": "zuo3 bian1",
+  "heard": "我編",
+  "heard_py": [
+   "wo",
+   "bian"
+  ]
+ },
+ {
+  "id": "hsk2-126",
+  "hanzi": "公斤",
+  "want": "gong1 jin1",
+  "heard": "好",
+  "heard_py": [
+   "hao"
+  ]
+ },
+ {
+  "id": "hsk2-128",
+  "hanzi": "手表",
+  "want": "shou3 biao3",
+  "heard": "收票",
+  "heard_py": [
+   "shou",
+   "piao"
+  ]
  },
  {
   "id": "hsk2-130",
   "hanzi": "西瓜",
   "want": "xi1 gua1",
-  "heard": "徐瓦",
-  "heard_py": "xuwa"
+  "heard": "蝎瓜蝎瓜",
+  "heard_py": [
+   "xie",
+   "gua",
+   "xie",
+   "gua"
+  ]
+ },
+ {
+  "id": "hsk2-131",
+  "hanzi": "晴",
+  "want": "qing2",
+  "heard": "77",
+  "heard_py": []
+ },
+ {
+  "id": "hsk2-132",
+  "hanzi": "羊肉",
+  "want": "yang2 rou4",
+  "heard": "Yalu",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-000",
+  "hanzi": "啊",
+  "want": "a5",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-001",
+  "hanzi": "把",
+  "want": "ba3",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-002",
   "hanzi": "被",
   "want": "bei4",
-  "heard": "到",
-  "heard_py": "dao"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-003",
   "hanzi": "自己",
   "want": "zi4 ji3",
-  "heard": "4G",
-  "heard_py": ""
+  "heard": "色疾",
+  "heard_py": [
+   "se",
+   "ji"
+  ]
+ },
+ {
+  "id": "hsk3-004",
+  "hanzi": "用",
+  "want": "yong4",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk3-005",
+  "hanzi": "如果",
+  "want": "ru2 guo3",
+  "heard": "你哭你哭",
+  "heard_py": [
+   "ni",
+   "ku",
+   "ni",
+   "ku"
+  ]
  },
  {
   "id": "hsk3-006",
   "hanzi": "又",
   "want": "you4",
-  "heard": "you",
-  "heard_py": ""
- },
- {
-  "id": "hsk3-007",
-  "hanzi": "只",
-  "want": "zhi3",
-  "heard": "主 主",
-  "heard_py": "zhuzhu"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk3-008",
   "hanzi": "更",
   "want": "geng4",
-  "heard": "分",
-  "heard_py": "fen"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk3-010",
   "hanzi": "地",
   "want": "di4",
-  "heard": "得",
-  "heard_py": "de"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk3-011",
   "hanzi": "才",
   "want": "cai2",
-  "heard": "台 台",
-  "heard_py": "taitai"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-012",
   "hanzi": "跟",
   "want": "gen1",
-  "heard": "ZEN",
-  "heard_py": ""
+  "heard": "",
+  "heard_py": []
  },
  {
-  "id": "hsk3-014",
-  "hanzi": "还是",
-  "want": "hai2 shi4",
-  "heard": "寒神",
-  "heard_py": "hanshen"
+  "id": "hsk3-013",
+  "hanzi": "像",
+  "want": "xiang4",
+  "heard": "下",
+  "heard_py": [
+   "xia"
+  ]
+ },
+ {
+  "id": "hsk3-015",
+  "hanzi": "认为",
+  "want": "ren4 wei2",
+  "heard": "拜拜",
+  "heard_py": [
+   "bai",
+   "bai"
+  ]
  },
  {
   "id": "hsk3-017",
   "hanzi": "带",
   "want": "dai4",
-  "heard": "BEN",
-  "heard_py": ""
+  "heard": "欸",
+  "heard_py": [
+   "ai"
+  ]
  },
  {
   "id": "hsk3-018",
   "hanzi": "位",
   "want": "wei4",
-  "heard": "分",
-  "heard_py": "fen"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-019",
   "hanzi": "种",
   "want": "zhong3",
-  "heard": "祝我!祝我!",
-  "heard_py": "zhuwozhuwo"
+  "heard": "",
+  "heard_py": []
  },
  {
-  "id": "hsk3-027",
-  "hanzi": "重要",
-  "want": "zhong4 yao4",
-  "heard": "中央",
-  "heard_py": "zhongyang"
+  "id": "hsk3-020",
+  "hanzi": "发现",
+  "want": "fa1 xian4",
+  "heard": "安心安心",
+  "heard_py": [
+   "an",
+   "xin",
+   "an",
+   "xin"
+  ]
+ },
+ {
+  "id": "hsk3-021",
+  "hanzi": "一定",
+  "want": "yi2 ding4",
+  "heard": "一滴一滴",
+  "heard_py": [
+   "yi",
+   "di",
+   "yi",
+   "di"
+  ]
+ },
+ {
+  "id": "hsk3-023",
+  "hanzi": "为了",
+  "want": "wei4 le5",
+  "heard": "未来",
+  "heard_py": [
+   "wei",
+   "lai"
+  ]
+ },
+ {
+  "id": "hsk3-024",
+  "hanzi": "一样",
+  "want": "yi1 yang4",
+  "heard": "也",
+  "heard_py": [
+   "ye"
+  ]
+ },
+ {
+  "id": "hsk3-026",
+  "hanzi": "而且",
+  "want": "er2 qie3",
+  "heard": "而气",
+  "heard_py": [
+   "er",
+   "qi"
+  ]
+ },
+ {
+  "id": "hsk3-029",
+  "hanzi": "地方",
+  "want": "di4 fang1",
+  "heard": "立刻",
+  "heard_py": [
+   "li",
+   "ke"
+  ]
  },
  {
   "id": "hsk3-030",
   "hanzi": "老",
   "want": "lao3",
-  "heard": "走",
-  "heard_py": "zou"
+  "heard": "好",
+  "heard_py": [
+   "hao"
+  ]
+ },
+ {
+  "id": "hsk3-034",
+  "hanzi": "担心",
+  "want": "dan1 xin1",
+  "heard": "答西",
+  "heard_py": [
+   "da",
+   "xi"
+  ]
  },
  {
   "id": "hsk3-035",
   "hanzi": "条",
   "want": "tiao2",
-  "heard": "頭?",
-  "heard_py": "tou"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk3-036",
   "hanzi": "放",
   "want": "fang4",
-  "heard": "分",
-  "heard_py": "fen"
+  "heard": "不",
+  "heard_py": [
+   "bu"
+  ]
  },
  {
   "id": "hsk3-037",
   "hanzi": "拿",
   "want": "na2",
-  "heard": "打",
-  "heard_py": "da"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-038",
+  "hanzi": "先",
+  "want": "xian1",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk3-039",
   "hanzi": "关系",
   "want": "guan1 xi4",
-  "heard": "專行!",
-  "heard_py": "zhuanxing"
+  "heard": "問喜問喜",
+  "heard_py": [
+   "wen",
+   "xi",
+   "wen",
+   "xi"
+  ]
+ },
+ {
+  "id": "hsk3-040",
+  "hanzi": "出现",
+  "want": "chu1 xian4",
+  "heard": "呼吸引呼吸引",
+  "heard_py": [
+   "hu",
+   "xi",
+   "yin",
+   "hu",
+   "xi",
+   "yin"
+  ]
  },
  {
   "id": "hsk3-041",
   "hanzi": "了解",
   "want": "liao3 jie3",
-  "heard": "老姐",
-  "heard_py": "laojie"
+  "heard": "牙界牙界",
+  "heard_py": [
+   "ya",
+   "jie",
+   "ya",
+   "jie"
+  ]
+ },
+ {
+  "id": "hsk3-044",
+  "hanzi": "国家",
+  "want": "guo2 jia1",
+  "heard": "我家",
+  "heard_py": [
+   "wo",
+   "jia"
+  ]
+ },
+ {
+  "id": "hsk3-046",
+  "hanzi": "分",
+  "want": "fen1",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-050",
+  "hanzi": "别人",
+  "want": "bie2 ren2",
+  "heard": "別別",
+  "heard_py": [
+   "bie",
+   "bie"
+  ]
  },
  {
   "id": "hsk3-051",
   "hanzi": "站",
   "want": "zhan4",
-  "heard": "真",
-  "heard_py": "zhen"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk3-052",
   "hanzi": "使",
   "want": "shi3",
-  "heard": "蛇",
-  "heard_py": "she"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-056",
   "hanzi": "信",
   "want": "xin4",
-  "heard": "先",
-  "heard_py": "xian"
+  "heard": "77",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-057",
+  "hanzi": "接",
+  "want": "jie1",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-059",
+  "hanzi": "花",
+  "want": "hua1",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk3-062",
+  "hanzi": "关于",
+  "want": "guan1 yu2",
+  "heard": "過敏過敏",
+  "heard_py": [
+   "guo",
+   "min",
+   "guo",
+   "min"
+  ]
+ },
+ {
+  "id": "hsk3-065",
+  "hanzi": "努力",
+  "want": "nu3 li4",
+  "heard": "我会",
+  "heard_py": [
+   "wo",
+   "hui"
+  ]
+ },
+ {
+  "id": "hsk3-066",
+  "hanzi": "以前",
+  "want": "yi3 qian2",
+  "heard": "Eason",
+  "heard_py": []
  },
  {
   "id": "hsk3-067",
   "hanzi": "办法",
   "want": "ban4 fa3",
-  "heard": "奔法",
-  "heard_py": "benfa"
+  "heard": "按法",
+  "heard_py": [
+   "an",
+   "fa"
+  ]
+ },
+ {
+  "id": "hsk3-068",
+  "hanzi": "特别",
+  "want": "te4 bie2",
+  "heard": "四伯爷",
+  "heard_py": [
+   "si",
+   "bo",
+   "ye"
+  ]
+ },
+ {
+  "id": "hsk3-069",
+  "hanzi": "难",
+  "want": "nan2",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk3-070",
+  "hanzi": "注意",
+  "want": "zhu4 yi4",
+  "heard": "不议",
+  "heard_py": [
+   "bu",
+   "yi"
+  ]
  },
  {
   "id": "hsk3-071",
   "hanzi": "讲",
   "want": "jiang3",
-  "heard": "叫",
-  "heard_py": "jiao"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-073",
   "hanzi": "万",
   "want": "wan4",
-  "heard": "問",
-  "heard_py": "wen"
+  "heard": "1",
+  "heard_py": []
  },
  {
-  "id": "hsk3-074",
-  "hanzi": "以为",
-  "want": "yi3 wei2",
-  "heard": "点 点",
-  "heard_py": "diandian"
+  "id": "hsk3-075",
+  "hanzi": "越",
+  "want": "yue4",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk3-077",
+  "hanzi": "影响",
+  "want": "ying3 xiang3",
+  "heard": "音响",
+  "heard_py": [
+   "yin",
+   "xiang"
+  ]
+ },
+ {
+  "id": "hsk3-078",
+  "hanzi": "游戏",
+  "want": "you2 xi4",
+  "heard": "努力",
+  "heard_py": [
+   "nu",
+   "li"
+  ]
+ },
+ {
+  "id": "hsk3-079",
+  "hanzi": "马",
+  "want": "ma3",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-082",
   "hanzi": "换",
   "want": "huan4",
-  "heard": "昏",
-  "heard_py": "hun"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-084",
+  "hanzi": "脸",
+  "want": "lian3",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-085",
   "hanzi": "口",
   "want": "kou3",
-  "heard": "何?",
-  "heard_py": "he"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
-  "id": "hsk3-089",
-  "hanzi": "突然",
-  "want": "tu1 ran2",
-  "heard": "忽然",
-  "heard_py": "huran"
+  "id": "hsk3-086",
+  "hanzi": "除了",
+  "want": "chu2 le5",
+  "heard": "走了",
+  "heard_py": [
+   "zou",
+   "le"
+  ]
+ },
+ {
+  "id": "hsk3-088",
+  "hanzi": "双",
+  "want": "shuang1",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-090",
   "hanzi": "段",
   "want": "duan4",
-  "heard": "問",
-  "heard_py": "wen"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk3-092",
   "hanzi": "米",
   "want": "mi3",
-  "heard": "連",
-  "heard_py": "lian"
+  "heard": "你",
+  "heard_py": [
+   "ni"
+  ]
+ },
+ {
+  "id": "hsk3-095",
+  "hanzi": "根据",
+  "want": "gen1 ju4",
+  "heard": "恩姬恩姬",
+  "heard_py": [
+   "en",
+   "ji",
+   "en",
+   "ji"
+  ]
+ },
+ {
+  "id": "hsk3-097",
+  "hanzi": "辆",
+  "want": "liang4",
+  "heard": "yeah",
+  "heard_py": []
  },
  {
   "id": "hsk3-099",
   "hanzi": "半",
   "want": "ban4",
-  "heard": "本",
-  "heard_py": "ben"
+  "heard": "嗯嗯",
+  "heard_py": [
+   "n",
+   "n"
+  ]
  },
  {
   "id": "hsk3-100",
   "hanzi": "愿意",
   "want": "yuan4 yi4",
-  "heard": "捐赢捐赢",
-  "heard_py": "juanyingjuanying"
- },
- {
-  "id": "hsk3-101",
-  "hanzi": "音乐",
-  "want": "yin1 yue4",
-  "heard": "醫院",
-  "heard_py": "yiyuan"
+  "heard": "readyready",
+  "heard_py": []
  },
  {
   "id": "hsk3-102",
   "hanzi": "包",
   "want": "bao1",
-  "heard": "走!走!",
-  "heard_py": "zouzou"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-103",
   "hanzi": "楼",
   "want": "lou2",
-  "heard": "到",
-  "heard_py": "dao"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
-  "id": "hsk3-107",
-  "hanzi": "故事",
-  "want": "gu4 shi4",
-  "heard": "鍋神",
-  "heard_py": "guoshen"
+  "id": "hsk3-104",
+  "hanzi": "清楚",
+  "want": "qing1 chu3",
+  "heard": "青霜",
+  "heard_py": [
+   "qing",
+   "shuang"
+  ]
+ },
+ {
+  "id": "hsk3-105",
+  "hanzi": "照片",
+  "want": "zhao4 pian1",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-106",
+  "hanzi": "银行",
+  "want": "yin2 hang2",
+  "heard": "一行",
+  "heard_py": [
+   "yi",
+   "xing"
+  ]
  },
  {
   "id": "hsk3-108",
   "hanzi": "一般",
   "want": "yi4 ban1",
-  "heard": "一本",
-  "heard_py": "yiben"
+  "heard": "一把",
+  "heard_py": [
+   "yi",
+   "ba"
+  ]
+ },
+ {
+  "id": "hsk3-109",
+  "hanzi": "可爱",
+  "want": "ke3 ai4",
+  "heard": "開開",
+  "heard_py": [
+   "kai",
+   "kai"
+  ]
+ },
+ {
+  "id": "hsk3-110",
+  "hanzi": "新闻",
+  "want": "xin1 wen2",
+  "heard": "西文西文",
+  "heard_py": [
+   "xi",
+   "wen",
+   "xi",
+   "wen"
+  ]
  },
  {
   "id": "hsk3-111",
   "hanzi": "声音",
   "want": "sheng1 yin1",
-  "heard": "摄影",
-  "heard_py": "sheying"
+  "heard": "输赢输赢",
+  "heard_py": [
+   "shu",
+   "ying",
+   "shu",
+   "ying"
+  ]
+ },
+ {
+  "id": "hsk3-113",
+  "hanzi": "表示",
+  "want": "biao3 shi4",
+  "heard": "聊事",
+  "heard_py": [
+   "liao",
+   "shi"
+  ]
  },
  {
   "id": "hsk3-116",
   "hanzi": "哭",
   "want": "ku1",
-  "heard": "可可",
-  "heard_py": "keke"
+  "heard": "我",
+  "heard_py": [
+   "wo"
+  ]
  },
  {
   "id": "hsk3-117",
   "hanzi": "敢",
   "want": "gan3",
-  "heard": "10",
-  "heard_py": ""
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-119",
   "hanzi": "经常",
   "want": "jing1 chang2",
-  "heard": "京城",
-  "heard_py": "jingcheng"
+  "heard": "进场进场",
+  "heard_py": [
+   "jin",
+   "chang",
+   "jin",
+   "chang"
+  ]
  },
  {
   "id": "hsk3-120",
   "hanzi": "低",
   "want": "di1",
-  "heard": "哆",
-  "heard_py": "duo"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-121",
+  "hanzi": "节目",
+  "want": "jie2 mu4",
+  "heard": "见了",
+  "heard_py": [
+   "jian",
+   "le"
+  ]
+ },
+ {
+  "id": "hsk3-122",
+  "hanzi": "健康",
+  "want": "jian4 kang1",
+  "heard": "请靠请靠",
+  "heard_py": [
+   "qing",
+   "kao",
+   "qing",
+   "kao"
+  ]
  },
  {
   "id": "hsk3-123",
   "hanzi": "作用",
   "want": "zuo4 yong4",
-  "heard": "所有",
-  "heard_py": "suoyou"
+  "heard": "左右",
+  "heard_py": [
+   "zuo",
+   "you"
+  ]
  },
  {
   "id": "hsk3-124",
   "hanzi": "西",
   "want": "xi1",
-  "heard": "可",
-  "heard_py": "ke"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-125",
   "hanzi": "差",
   "want": "cha4",
-  "heard": "他",
-  "heard_py": "ta"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
-  "id": "hsk3-130",
-  "hanzi": "几乎",
-  "want": "ji1 hu1",
-  "heard": "接我!接我!",
-  "heard_py": "jiewojiewo"
+  "id": "hsk3-126",
+  "hanzi": "结婚",
+  "want": "jie2 hun1",
+  "heard": "姐 嗯姐 嗯",
+  "heard_py": [
+   "jie",
+   "n",
+   "jie",
+   "n"
+  ]
+ },
+ {
+  "id": "hsk3-127",
+  "hanzi": "短",
+  "want": "duan3",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-129",
+  "hanzi": "教",
+  "want": "jiao4",
+  "heard": "加油",
+  "heard_py": [
+   "jia",
+   "you"
+  ]
+ },
+ {
+  "id": "hsk3-132",
+  "hanzi": "认真",
+  "want": "ren4 zhen1",
+  "heard": "这这",
+  "heard_py": [
+   "zhe",
+   "zhe"
+  ]
+ },
+ {
+  "id": "hsk3-135",
+  "hanzi": "遇到",
+  "want": "yu4 dao4",
+  "heard": "到到",
+  "heard_py": [
+   "dao",
+   "dao"
+  ]
+ },
+ {
+  "id": "hsk3-138",
+  "hanzi": "画",
+  "want": "hua4",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-139",
   "hanzi": "表演",
   "want": "biao3 yan3",
-  "heard": "大眼",
-  "heard_py": "dayan"
+  "heard": "了你",
+  "heard_py": [
+   "le",
+   "ni"
+  ]
  },
  {
   "id": "hsk3-140",
   "hanzi": "关",
   "want": "guan1",
-  "heard": "问",
-  "heard_py": "wen"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-141",
+  "hanzi": "刚才",
+  "want": "gang1 cai2",
+  "heard": "翻車翻車",
+  "heard_py": [
+   "fan",
+   "che",
+   "fan",
+   "che"
+  ]
+ },
+ {
+  "id": "hsk3-144",
+  "hanzi": "关心",
+  "want": "guan1 xin1",
+  "heard": "晚溪晚溪",
+  "heard_py": [
+   "wan",
+   "xi",
+   "wan",
+   "xi"
+  ]
  },
  {
   "id": "hsk3-145",
   "hanzi": "祝",
   "want": "zhu4",
-  "heard": "做!做!",
-  "heard_py": "zuozuo"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-146",
+  "hanzi": "层",
+  "want": "ceng2",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-147",
   "hanzi": "腿",
   "want": "tui3",
-  "heard": "Qual?",
-  "heard_py": ""
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-148",
   "hanzi": "班",
   "want": "ban1",
-  "heard": "Ben",
-  "heard_py": ""
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk3-149",
   "hanzi": "坏",
   "want": "huai4",
-  "heard": "回",
-  "heard_py": "hui"
+  "heard": "但…",
+  "heard_py": [
+   "dan"
+  ]
  },
  {
   "id": "hsk3-151",
   "hanzi": "鞋",
   "want": "xie2",
-  "heard": "前",
-  "heard_py": "qian"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk3-155",
   "hanzi": "打算",
   "want": "da3 suan4",
-  "heard": "打散",
-  "heard_py": "dasan"
+  "heard": "那是你那是你",
+  "heard_py": [
+   "na",
+   "shi",
+   "ni",
+   "na",
+   "shi",
+   "ni"
+  ]
  },
  {
-  "id": "hsk3-158",
-  "hanzi": "举行",
-  "want": "ju3 xing2",
-  "heard": "去行!去行!",
-  "heard_py": "quxingquxing"
+  "id": "hsk3-156",
+  "hanzi": "极",
+  "want": "ji2",
+  "heard": "一一",
+  "heard_py": [
+   "yi",
+   "yi"
+  ]
+ },
+ {
+  "id": "hsk3-157",
+  "hanzi": "小心",
+  "want": "xiao3 xin1",
+  "heard": "掌心",
+  "heard_py": [
+   "zhang",
+   "xin"
+  ]
+ },
+ {
+  "id": "hsk3-159",
+  "hanzi": "动物",
+  "want": "dong4 wu4",
+  "heard": "但…",
+  "heard_py": [
+   "dan"
+  ]
  },
  {
   "id": "hsk3-160",
   "hanzi": "饿",
   "want": "e4",
-  "heard": "啊?啊?",
-  "heard_py": "aa"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk3-161",
   "hanzi": "树",
   "want": "shu4",
-  "heard": "可可",
-  "heard_py": "keke"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-162",
+  "hanzi": "水平",
+  "want": "shui3 ping2",
+  "heard": "水滴",
+  "heard_py": [
+   "shui",
+   "di"
+  ]
+ },
+ {
+  "id": "hsk3-163",
+  "hanzi": "借",
+  "want": "jie4",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk3-164",
   "hanzi": "东",
   "want": "dong1",
-  "heard": "到",
-  "heard_py": "dao"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-167",
   "hanzi": "鸟",
   "want": "niao3",
-  "heard": "No. No.",
-  "heard_py": ""
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk3-168",
+  "hanzi": "蓝",
+  "want": "lan2",
+  "heard": "對",
+  "heard_py": [
+   "dui"
+  ]
  },
  {
   "id": "hsk3-171",
   "hanzi": "疼",
   "want": "teng2",
-  "heard": "衡",
-  "heard_py": "heng"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-173",
+  "hanzi": "礼物",
+  "want": "li3 wu4",
+  "heard": "以後以後",
+  "heard_py": [
+   "yi",
+   "hou",
+   "yi",
+   "hou"
+  ]
+ },
+ {
+  "id": "hsk3-174",
+  "hanzi": "南",
+  "want": "nan2",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-175",
+  "hanzi": "提高",
+  "want": "ti2 gao1",
+  "heard": "提早提早",
+  "heard_py": [
+   "ti",
+   "zao",
+   "ti",
+   "zao"
+  ]
+ },
+ {
+  "id": "hsk3-176",
+  "hanzi": "满意",
+  "want": "man3 yi4",
+  "heard": "马一",
+  "heard_py": [
+   "ma",
+   "yi"
+  ]
+ },
+ {
+  "id": "hsk3-177",
+  "hanzi": "旧",
+  "want": "jiu4",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-178",
   "hanzi": "司机",
   "want": "si1 ji1",
-  "heard": "4G",
-  "heard_py": ""
+  "heard": "設計",
+  "heard_py": [
+   "she",
+   "ji"
+  ]
  },
  {
   "id": "hsk3-179",
   "hanzi": "黄",
   "want": "huang2",
-  "heard": "狂",
-  "heard_py": "kuang"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk3-180",
+  "hanzi": "经理",
+  "want": "jing1 li3",
+  "heard": "金米金米",
+  "heard_py": [
+   "jin",
+   "mi",
+   "jin",
+   "mi"
+  ]
+ },
+ {
+  "id": "hsk3-181",
+  "hanzi": "兴趣",
+  "want": "xing4 qu4",
+  "heard": "进去进去",
+  "heard_py": [
+   "jin",
+   "qu",
+   "jin",
+   "qu"
+  ]
+ },
+ {
+  "id": "hsk3-182",
+  "hanzi": "帮忙",
+  "want": "bang1 mang2",
+  "heard": "大毛",
+  "heard_py": [
+   "da",
+   "mao"
+  ]
  },
  {
   "id": "hsk3-183",
   "hanzi": "电子",
   "want": "dian4 zi5",
-  "heard": "編詞",
-  "heard_py": "bianci"
+  "heard": "in thein the",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-186",
+  "hanzi": "中间",
+  "want": "zhong1 jian1",
+  "heard": "再见",
+  "heard_py": [
+   "zai",
+   "jian"
+  ]
+ },
+ {
+  "id": "hsk3-187",
+  "hanzi": "聪明",
+  "want": "cong1 ming2",
+  "heard": "Sondi",
+  "heard_py": []
  },
  {
   "id": "hsk3-189",
   "hanzi": "灯",
   "want": "deng1",
-  "heard": "增",
-  "heard_py": "zeng"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk3-192",
   "hanzi": "糖",
   "want": "tang2",
-  "heard": "好",
-  "heard_py": "hao"
+  "heard": "啊",
+  "heard_py": [
+   "a"
+  ]
+ },
+ {
+  "id": "hsk3-195",
+  "hanzi": "公园",
+  "want": "gong1 yuan2",
+  "heard": "空人",
+  "heard_py": [
+   "kong",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk3-196",
+  "hanzi": "热情",
+  "want": "re4 qing2",
+  "heard": "一二七一二七",
+  "heard_py": [
+   "yi",
+   "er",
+   "qi",
+   "yi",
+   "er",
+   "qi"
+  ]
+ },
+ {
+  "id": "hsk3-198",
+  "hanzi": "骑",
+  "want": "qi2",
+  "heard": "吸吸",
+  "heard_py": [
+   "xi",
+   "xi"
+  ]
  },
  {
   "id": "hsk3-199",
   "hanzi": "河",
   "want": "he2",
-  "heard": "可",
-  "heard_py": "ke"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-200",
   "hanzi": "搬",
   "want": "ban1",
-  "heard": "BenBen",
-  "heard_py": ""
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-203",
+  "hanzi": "体育",
+  "want": "ti3 yu4",
+  "heard": "TVTV",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-204",
+  "hanzi": "角",
+  "want": "jiao3",
+  "heard": "要",
+  "heard_py": [
+   "yao"
+  ]
  },
  {
   "id": "hsk3-205",
   "hanzi": "胖",
   "want": "pang4",
-  "heard": "哼!哼!",
-  "heard_py": "hengheng"
+  "heard": "答",
+  "heard_py": [
+   "da"
+  ]
  },
  {
   "id": "hsk3-206",
   "hanzi": "干净",
   "want": "gan1 jing4",
-  "heard": "淡金",
-  "heard_py": "danjin"
+  "heard": "安靜安靜",
+  "heard_py": [
+   "an",
+   "jing",
+   "an",
+   "jing"
+  ]
  },
  {
   "id": "hsk3-208",
   "hanzi": "草",
   "want": "cao3",
-  "heard": "頭",
-  "heard_py": "tou"
+  "heard": "好",
+  "heard_py": [
+   "hao"
+  ]
+ },
+ {
+  "id": "hsk3-209",
+  "hanzi": "甜",
+  "want": "tian2",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-210",
+  "hanzi": "安静",
+  "want": "an1 jing4",
+  "heard": "阿姬",
+  "heard_py": [
+   "a",
+   "ji"
+  ]
+ },
+ {
+  "id": "hsk3-211",
+  "hanzi": "作业",
+  "want": "zuo4 ye4",
+  "heard": "做一頁",
+  "heard_py": [
+   "zuo",
+   "yi",
+   "ye"
+  ]
  },
  {
   "id": "hsk3-212",
   "hanzi": "瘦",
   "want": "shou4",
-  "heard": "喝!喝!",
-  "heard_py": "hehe"
+  "heard": "說",
+  "heard_py": [
+   "shuo"
+  ]
  },
  {
   "id": "hsk3-213",
   "hanzi": "绿",
   "want": "lv4",
-  "heard": "来",
-  "heard_py": "lai"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
-  "id": "hsk3-215",
-  "hanzi": "蛋糕",
-  "want": "dan4 gao1",
-  "heard": "DANGO!",
-  "heard_py": ""
+  "id": "hsk3-214",
+  "hanzi": "啤酒",
+  "want": "pi2 jiu3",
+  "heard": "啼酒",
+  "heard_py": [
+   "ti",
+   "jiu"
+  ]
+ },
+ {
+  "id": "hsk3-216",
+  "hanzi": "新鲜",
+  "want": "xin1 xian1",
+  "heard": "谢谢谢谢",
+  "heard_py": [
+   "xie",
+   "xie",
+   "xie",
+   "xie"
+  ]
+ },
+ {
+  "id": "hsk3-218",
+  "hanzi": "客人",
+  "want": "ke4 ren2",
+  "heard": "个人个人",
+  "heard_py": [
+   "ge",
+   "ren",
+   "ge",
+   "ren"
+  ]
  },
  {
   "id": "hsk3-220",
   "hanzi": "碗",
   "want": "wan3",
-  "heard": "吻",
-  "heard_py": "wen"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk3-223",
+  "hanzi": "刷",
+  "want": "shua1",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-224",
+  "hanzi": "厨房",
+  "want": "chu2 fang2",
+  "heard": "出發",
+  "heard_py": [
+   "chu",
+   "fa"
+  ]
+ },
+ {
+  "id": "hsk3-226",
+  "hanzi": "爷爷",
+  "want": "ye2 ye2",
+  "heard": "唯一",
+  "heard_py": [
+   "wei",
+   "yi"
+  ]
  },
  {
   "id": "hsk3-227",
   "hanzi": "云",
   "want": "yun2",
-  "heard": "真",
-  "heard_py": "zhen"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-228",
   "hanzi": "邻居",
   "want": "lin2 ju1",
-  "heard": "铃银",
-  "heard_py": "lingyin"
+  "heard": "明居",
+  "heard_py": [
+   "ming",
+   "ju"
+  ]
+ },
+ {
+  "id": "hsk3-229",
+  "hanzi": "校长",
+  "want": "xiao4 zhang3",
+  "heard": "笑照",
+  "heard_py": [
+   "xiao",
+   "zhao"
+  ]
+ },
+ {
+  "id": "hsk3-230",
+  "hanzi": "花园",
+  "want": "hua1 yuan2",
+  "heard": "花蓮",
+  "heard_py": [
+   "hua",
+   "lian"
+  ]
  },
  {
   "id": "hsk3-232",
   "hanzi": "节日",
   "want": "jie2 ri4",
-  "heard": "节热 节热",
-  "heard_py": "jierejiere"
+  "heard": "見!",
+  "heard_py": [
+   "jian"
+  ]
  },
  {
   "id": "hsk3-233",
   "hanzi": "鼻子",
   "want": "bi2 zi5",
-  "heard": "彼此",
-  "heard_py": "bici"
+  "heard": "VissaVissa",
+  "heard_py": []
  },
  {
   "id": "hsk3-234",
   "hanzi": "叔叔",
   "want": "shu1 shu1",
-  "heard": "這說?這說?",
-  "heard_py": "zheshuozheshuo"
+  "heard": "说说说说",
+  "heard_py": [
+   "shuo",
+   "shuo",
+   "shuo",
+   "shuo"
+  ]
  },
  {
-  "id": "hsk3-236",
-  "hanzi": "地图",
-  "want": "di4 tu2",
-  "heard": "對我?",
-  "heard_py": "duiwo"
+  "id": "hsk3-240",
+  "hanzi": "迟到",
+  "want": "chi2 dao4",
+  "heard": "知道",
+  "heard_py": [
+   "zhi",
+   "dao"
+  ]
  },
  {
   "id": "hsk3-241",
   "hanzi": "刻",
   "want": "ke4",
-  "heard": "好",
-  "heard_py": "hao"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk3-242",
+  "hanzi": "锻炼",
+  "want": "duan4 lian4",
+  "heard": "拜拜",
+  "heard_py": [
+   "bai",
+   "bai"
+  ]
+ },
+ {
+  "id": "hsk3-243",
+  "hanzi": "裤子",
+  "want": "ku4 zi5",
+  "heard": "护者",
+  "heard_py": [
+   "hu",
+   "zhe"
+  ]
  },
  {
   "id": "hsk3-244",
   "hanzi": "夏",
   "want": "xia4",
-  "heard": "茶",
-  "heard_py": "cha"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk3-246",
   "hanzi": "电梯",
   "want": "dian4 ti1",
-  "heard": "辨题",
-  "heard_py": "bianti"
+  "heard": "等替等替",
+  "heard_py": [
+   "deng",
+   "ti",
+   "deng",
+   "ti"
+  ]
  },
  {
   "id": "hsk3-247",
   "hanzi": "刮",
   "want": "gua1",
-  "heard": "發",
-  "heard_py": "fa"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk3-248",
   "hanzi": "矮",
   "want": "ai3",
-  "heard": "韓",
-  "heard_py": "han"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-250",
+  "hanzi": "上网",
+  "want": "shang4 wang3",
+  "heard": "上了上了",
+  "heard_py": [
+   "shang",
+   "le",
+   "shang",
+   "le"
+  ]
+ },
+ {
+  "id": "hsk3-251",
+  "hanzi": "春",
+  "want": "chun1",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk3-252",
+  "hanzi": "面包",
+  "want": "mian4 bao1",
+  "heard": "念刀",
+  "heard_py": [
+   "nian",
+   "dao"
+  ]
+ },
+ {
+  "id": "hsk3-253",
+  "hanzi": "冰箱",
+  "want": "bing1 xiang1",
+  "heard": "音响音响",
+  "heard_py": [
+   "yin",
+   "xiang",
+   "yin",
+   "xiang"
+  ]
  },
  {
   "id": "hsk3-254",
   "hanzi": "阿姨",
   "want": "a1 yi2",
-  "heard": "愛",
-  "heard_py": "ai"
+  "heard": "哀 哀",
+  "heard_py": [
+   "ai",
+   "ai"
+  ]
  },
  {
   "id": "hsk3-256",
   "hanzi": "着急",
   "want": "zhao2 ji2",
-  "heard": "著急!",
-  "heard_py": "zhuji"
+  "heard": "抓急 抓急",
+  "heard_py": [
+   "zhua",
+   "ji",
+   "zhua",
+   "ji"
+  ]
+ },
+ {
+  "id": "hsk3-258",
+  "hanzi": "饱",
+  "want": "bao3",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-260",
+  "hanzi": "月亮",
+  "want": "yue4 liang4",
+  "heard": "熱点",
+  "heard_py": [
+   "re",
+   "dian"
+  ]
  },
  {
   "id": "hsk3-263",
   "hanzi": "衬衫",
   "want": "chen4 shan1",
-  "heard": "春仙",
-  "heard_py": "chunxian"
+  "heard": "是",
+  "heard_py": [
+   "shi"
+  ]
  },
  {
   "id": "hsk3-264",
   "hanzi": "宾馆",
   "want": "bin1 guan3",
-  "heard": "冰管",
-  "heard_py": "bingguan"
+  "heard": "英寡英寡",
+  "heard_py": [
+   "ying",
+   "gua",
+   "ying",
+   "gua"
+  ]
+ },
+ {
+  "id": "hsk3-265",
+  "hanzi": "冬",
+  "want": "dong1",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk3-266",
+  "hanzi": "裙子",
+  "want": "qun2 zi5",
+  "heard": "君子",
+  "heard_py": [
+   "jun",
+   "zi"
+  ]
  },
  {
   "id": "hsk3-268",
   "hanzi": "秋",
   "want": "qiu1",
-  "heard": "敲,敲",
-  "heard_py": "qiaoqiao"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk3-269",
   "hanzi": "发烧",
   "want": "fa1 shao1",
-  "heard": "發售!",
-  "heard_py": "fashou"
+  "heard": "发射!",
+  "heard_py": [
+   "fa",
+   "she"
+  ]
+ },
+ {
+  "id": "hsk3-270",
+  "hanzi": "伞",
+  "want": "san3",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk3-271",
+  "hanzi": "有名",
+  "want": "you3 ming2",
+  "heard": "有没",
+  "heard_py": [
+   "you",
+   "mei"
+  ]
  },
  {
   "id": "hsk3-272",
   "hanzi": "打扫",
   "want": "da3 sao3",
-  "heard": "打好!打好!",
-  "heard_py": "dahaodahao"
+  "heard": "安撒",
+  "heard_py": [
+   "an",
+   "sa"
+  ]
  },
  {
-  "id": "hsk3-275",
-  "hanzi": "熊猫",
-  "want": "xiong2 mao1",
-  "heard": "徐龍貓",
-  "heard_py": "xulongmao"
+  "id": "hsk3-273",
+  "hanzi": "葡萄",
+  "want": "pu2 tao2",
+  "heard": "不怕",
+  "heard_py": [
+   "bu",
+   "pa"
+  ]
+ },
+ {
+  "id": "hsk3-274",
+  "hanzi": "复习",
+  "want": "fu4 xi2",
+  "heard": "呼吸呼吸",
+  "heard_py": [
+   "hu",
+   "xi",
+   "hu",
+   "xi"
+  ]
  },
  {
   "id": "hsk3-279",
   "hanzi": "盘子",
   "want": "pan2 zi5",
-  "heard": "韓子",
-  "heard_py": "hanzi"
+  "heard": "韓國",
+  "heard_py": [
+   "han",
+   "guo"
+  ]
+ },
+ {
+  "id": "hsk3-280",
+  "hanzi": "铅笔",
+  "want": "qian1 bi3",
+  "heard": "先比先比",
+  "heard_py": [
+   "xian",
+   "bi",
+   "xian",
+   "bi"
+  ]
  },
  {
   "id": "hsk3-281",
   "hanzi": "渴",
   "want": "ke3",
-  "heard": "和",
-  "heard_py": "he"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk3-283",
   "hanzi": "词语",
   "want": "ci2 yu3",
-  "heard": "其語",
-  "heard_py": "qiyu"
+  "heard": "思雨思雨",
+  "heard_py": [
+   "si",
+   "yu",
+   "si",
+   "yu"
+  ]
  },
  {
-  "id": "hsk3-285",
-  "hanzi": "照相机",
-  "want": "zhao4 xiang4 ji1",
-  "heard": "朝向擊",
-  "heard_py": "chaoxiangji"
+  "id": "hsk3-287",
+  "hanzi": "字典",
+  "want": "zi4 dian3",
+  "heard": "也也",
+  "heard_py": [
+   "ye",
+   "ye"
+  ]
  },
  {
-  "id": "hsk3-290",
-  "hanzi": "黑板",
-  "want": "hei1 ban3",
-  "heard": "Tayban",
-  "heard_py": ""
+  "id": "hsk3-288",
+  "hanzi": "普通话",
+  "want": "pu3 tong1 hua4",
+  "heard": "不通話",
+  "heard_py": [
+   "bu",
+   "tong",
+   "hua"
+  ]
+ },
+ {
+  "id": "hsk3-289",
+  "hanzi": "爬山",
+  "want": "pa2 shan1",
+  "heard": "阿珊",
+  "heard_py": [
+   "a",
+   "shan"
+  ]
+ },
+ {
+  "id": "hsk3-291",
+  "hanzi": "行李箱",
+  "want": "xing2 li3 xiang1",
+  "heard": "行李小行李小",
+  "heard_py": [
+   "xing",
+   "li",
+   "xiao",
+   "xing",
+   "li",
+   "xiao"
+  ]
  },
  {
   "id": "hsk4-000",
   "hanzi": "对",
   "want": "dui4",
-  "heard": "vue, vue",
-  "heard_py": ""
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk4-001",
   "hanzi": "过",
   "want": "guo4",
-  "heard": "我",
-  "heard_py": "wo"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-002",
   "hanzi": "而",
   "want": "er2",
-  "heard": "答 答",
-  "heard_py": "dada"
+  "heard": "嗯",
+  "heard_py": [
+   "n"
+  ]
  },
  {
   "id": "hsk4-003",
   "hanzi": "等",
   "want": "deng3",
-  "heard": "坑 坑",
-  "heard_py": "kengkeng"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-004",
   "hanzi": "与",
   "want": "yu3",
-  "heard": "惹?惹?",
-  "heard_py": "rere"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk4-005",
   "hanzi": "当",
   "want": "dang1",
-  "heard": "到",
-  "heard_py": "dao"
- },
- {
-  "id": "hsk4-006",
-  "hanzi": "之",
-  "want": "zhi1",
-  "heard": "See you! See you!",
-  "heard_py": ""
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-007",
   "hanzi": "以",
   "want": "yi3",
-  "heard": "丟",
-  "heard_py": "diu"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-009",
   "hanzi": "死",
   "want": "si3",
-  "heard": "s",
-  "heard_py": ""
+  "heard": "",
+  "heard_py": []
  },
  {
-  "id": "hsk4-013",
-  "hanzi": "不过",
-  "want": "bu4 guo4",
-  "heard": "不和!不和!",
-  "heard_py": "buhebuhe"
+  "id": "hsk4-010",
+  "hanzi": "却",
+  "want": "que4",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-014",
+  "hanzi": "所有",
+  "want": "suo3 you3",
+  "heard": "所以說所以說",
+  "heard_py": [
+   "suo",
+   "yi",
+   "shuo",
+   "suo",
+   "yi",
+   "shuo"
+  ]
+ },
+ {
+  "id": "hsk4-017",
+  "hanzi": "成为",
+  "want": "cheng2 wei2",
+  "heard": "KoiKoi",
+  "heard_py": []
  },
  {
   "id": "hsk4-018",
   "hanzi": "行",
   "want": "xing2",
-  "heard": "Hen?Hen?",
-  "heard_py": ""
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-019",
+  "hanzi": "感觉",
+  "want": "gan3 jue2",
+  "heard": "感谢感谢",
+  "heard_py": [
+   "gan",
+   "xie",
+   "gan",
+   "xie"
+  ]
  },
  {
   "id": "hsk4-021",
   "hanzi": "场",
   "want": "chang3",
-  "heard": "疼!",
-  "heard_py": "teng"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk4-023",
   "hanzi": "内",
   "want": "nei4",
-  "heard": "ㄟ",
-  "heard_py": ""
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk4-025",
   "hanzi": "无",
   "want": "wu2",
-  "heard": "我?我?",
-  "heard_py": "wowo"
+  "heard": "",
+  "heard_py": []
  },
  {
-  "id": "hsk4-031",
-  "hanzi": "完全",
-  "want": "wan2 quan2",
-  "heard": "完成!完成!",
-  "heard_py": "wanchengwancheng"
+  "id": "hsk4-027",
+  "hanzi": "由",
+  "want": "you2",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-029",
+  "hanzi": "安全",
+  "want": "an1 quan2",
+  "heard": "按切",
+  "heard_py": [
+   "an",
+   "qie"
+  ]
+ },
+ {
+  "id": "hsk4-032",
+  "hanzi": "发",
+  "want": "fa1",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-035",
+  "hanzi": "连",
+  "want": "lian2",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-037",
+  "hanzi": "原因",
+  "want": "yuan2 yin1",
+  "heard": "非常非常",
+  "heard_py": [
+   "fei",
+   "chang",
+   "fei",
+   "chang"
+  ]
+ },
+ {
+  "id": "hsk4-038",
+  "hanzi": "消息",
+  "want": "xiao1 xi1",
+  "heard": "小心",
+  "heard_py": [
+   "xiao",
+   "xin"
+  ]
  },
  {
   "id": "hsk4-040",
   "hanzi": "干",
   "want": "gan4",
-  "heard": "很",
-  "heard_py": "hen"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
-  "id": "hsk4-041",
-  "hanzi": "接受",
-  "want": "jie1 shou4",
-  "heard": "介紹",
-  "heard_py": "jieshao"
+  "id": "hsk4-042",
+  "hanzi": "其中",
+  "want": "qi2 zhong1",
+  "heard": "7等7等",
+  "heard_py": [
+   "deng",
+   "deng"
+  ]
+ },
+ {
+  "id": "hsk4-044",
+  "hanzi": "甚至",
+  "want": "shen4 zhi4",
+  "heard": "看着看着",
+  "heard_py": [
+   "kan",
+   "zhe",
+   "kan",
+   "zhe"
+  ]
  },
  {
   "id": "hsk4-045",
   "hanzi": "拉",
   "want": "la1",
-  "heard": "大",
-  "heard_py": "da"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-046",
+  "hanzi": "肯定",
+  "want": "ken3 ding4",
+  "heard": "Hand it",
+  "heard_py": []
  },
  {
   "id": "hsk4-048",
   "hanzi": "调查",
   "want": "diao4 cha2",
-  "heard": "教察",
-  "heard_py": "jiaocha"
+  "heard": "要查",
+  "heard_py": [
+   "yao",
+   "cha"
+  ]
+ },
+ {
+  "id": "hsk4-049",
+  "hanzi": "部分",
+  "want": "bu4 fen4",
+  "heard": "不菲",
+  "heard_py": [
+   "bu",
+   "fei"
+  ]
+ },
+ {
+  "id": "hsk4-050",
+  "hanzi": "能力",
+  "want": "neng2 li4",
+  "heard": "媽咪媽咪",
+  "heard_py": [
+   "ma",
+   "mi",
+   "ma",
+   "mi"
+  ]
+ },
+ {
+  "id": "hsk4-051",
+  "hanzi": "保护",
+  "want": "bao3 hu4",
+  "heard": "阿虎阿虎",
+  "heard_py": [
+   "a",
+   "hu",
+   "a",
+   "hu"
+  ]
  },
  {
   "id": "hsk4-052",
   "hanzi": "真正",
   "want": "zhen1 zheng4",
-  "heard": "陣陣",
-  "heard_py": "zhenzhen"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk4-053",
+  "hanzi": "支持",
+  "want": "zhi1 chi2",
+  "heard": "這是這是",
+  "heard_py": [
+   "zhe",
+   "shi",
+   "zhe",
+   "shi"
+  ]
  },
  {
   "id": "hsk4-054",
   "hanzi": "掉",
   "want": "diao4",
-  "heard": "到",
-  "heard_py": "dao"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-055",
+  "hanzi": "改变",
+  "want": "gai3 bian4",
+  "heard": "丹尼丹尼",
+  "heard_py": [
+   "dan",
+   "ni",
+   "dan",
+   "ni"
+  ]
+ },
+ {
+  "id": "hsk4-057",
+  "hanzi": "保证",
+  "want": "bao3 zheng4",
+  "heard": "啊呛 啊呛",
+  "heard_py": [
+   "a",
+   "qiang",
+   "a",
+   "qiang"
+  ]
  },
  {
   "id": "hsk4-059",
   "hanzi": "组织",
   "want": "zu3 zhi1",
-  "heard": "佐知",
-  "heard_py": "zuozhi"
+  "heard": "多去多去",
+  "heard_py": [
+   "duo",
+   "qu",
+   "duo",
+   "qu"
+  ]
  },
  {
   "id": "hsk4-060",
   "hanzi": "永远",
   "want": "yong3 yuan3",
-  "heard": "永仁",
-  "heard_py": "yongren"
+  "heard": "別忍",
+  "heard_py": [
+   "bie",
+   "ren"
+  ]
  },
  {
   "id": "hsk4-061",
   "hanzi": "方面",
   "want": "fang1 mian4",
-  "heard": "方便",
-  "heard_py": "fangbian"
+  "heard": "放电放电",
+  "heard_py": [
+   "fang",
+   "dian",
+   "fang",
+   "dian"
+  ]
  },
  {
   "id": "hsk4-062",
   "hanzi": "也许",
   "want": "ye3 xu3",
-  "heard": "遺許",
-  "heard_py": "yixu"
+  "heard": "民叙",
+  "heard_py": [
+   "min",
+   "xu"
+  ]
  },
  {
-  "id": "hsk4-067",
-  "hanzi": "指",
-  "want": "zhi3",
-  "heard": "說",
-  "heard_py": "shuo"
+  "id": "hsk4-064",
+  "hanzi": "考虑",
+  "want": "kao3 lv4",
+  "heard": "好咪好咪",
+  "heard_py": [
+   "hao",
+   "mi",
+   "hao",
+   "mi"
+  ]
+ },
+ {
+  "id": "hsk4-065",
+  "hanzi": "份",
+  "want": "fen4",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-066",
+  "hanzi": "提供",
+  "want": "ti2 gong1",
+  "heard": "提高提高",
+  "heard_py": [
+   "ti",
+   "gao",
+   "ti",
+   "gao"
+  ]
+ },
+ {
+  "id": "hsk4-068",
+  "hanzi": "精神",
+  "want": "jing1 shen2",
+  "heard": "今时",
+  "heard_py": [
+   "jin",
+   "shi"
+  ]
+ },
+ {
+  "id": "hsk4-069",
+  "hanzi": "使用",
+  "want": "shi3 yong4",
+  "heard": "十一十一",
+  "heard_py": [
+   "shi",
+   "yi",
+   "shi",
+   "yi"
+  ]
+ },
+ {
+  "id": "hsk4-070",
+  "hanzi": "代表",
+  "want": "dai4 biao3",
+  "heard": "愛表",
+  "heard_py": [
+   "ai",
+   "biao"
+  ]
+ },
+ {
+  "id": "hsk4-071",
+  "hanzi": "任务",
+  "want": "ren4 wu4",
+  "heard": "让我",
+  "heard_py": [
+   "rang",
+   "wo"
+  ]
+ },
+ {
+  "id": "hsk4-072",
+  "hanzi": "联系",
+  "want": "lian2 xi4",
+  "heard": "年息",
+  "heard_py": [
+   "nian",
+   "xi"
+  ]
  },
  {
   "id": "hsk4-074",
   "hanzi": "台",
   "want": "tai2",
-  "heard": "哼?哼?",
-  "heard_py": "hengheng"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-075",
   "hanzi": "算",
   "want": "suan4",
-  "heard": "三",
-  "heard_py": "san"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-076",
+  "hanzi": "获得",
+  "want": "huo4 de2",
+  "heard": "我的我的",
+  "heard_py": [
+   "wo",
+   "de",
+   "wo",
+   "de"
+  ]
  },
  {
   "id": "hsk4-077",
   "hanzi": "留",
   "want": "liu2",
-  "heard": "多多",
-  "heard_py": "duoduo"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-078",
+  "hanzi": "生命",
+  "want": "sheng1 ming4",
+  "heard": "生意",
+  "heard_py": [
+   "sheng",
+   "yi"
+  ]
+ },
+ {
+  "id": "hsk4-079",
+  "hanzi": "交",
+  "want": "jiao1",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-081",
+  "hanzi": "刚刚",
+  "want": "gang1 gang1",
+  "heard": "安哥",
+  "heard_py": [
+   "an",
+   "ge"
+  ]
  },
  {
   "id": "hsk4-082",
   "hanzi": "正常",
   "want": "zheng4 chang2",
-  "heard": "真誠",
-  "heard_py": "zhencheng"
+  "heard": "正查",
+  "heard_py": [
+   "zheng",
+   "cha"
+  ]
+ },
+ {
+  "id": "hsk4-083",
+  "hanzi": "另外",
+  "want": "ling4 wai4",
+  "heard": "因为因为",
+  "heard_py": [
+   "yin",
+   "wei",
+   "yin",
+   "wei"
+  ]
  },
  {
   "id": "hsk4-084",
   "hanzi": "血",
   "want": "xue4",
-  "heard": "天",
-  "heard_py": "tian"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
-  "id": "hsk4-087",
-  "hanzi": "到底",
-  "want": "dao4 di3",
-  "heard": "多丟!",
-  "heard_py": "duodiu"
+  "id": "hsk4-085",
+  "hanzi": "挺",
+  "want": "ting3",
+  "heard": "这次的节目是我会尽力的我会尽力的我会尽力的我会尽力的我会尽力的我会尽力的我会尽力的我会尽力的我会尽力的我会尽力的我会尽力的我会尽力的我会尽力的",
+  "heard_py": [
+   "zhe",
+   "ci",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "hui",
+   "jin",
+   "li",
+   "de",
+   "wo",
+   "hui",
+   "jin",
+   "li",
+   "de",
+   "wo",
+   "hui",
+   "jin",
+   "li",
+   "de",
+   "wo",
+   "hui",
+   "jin",
+   "li",
+   "de",
+   "wo",
+   "hui",
+   "jin",
+   "li",
+   "de",
+   "wo",
+   "hui",
+   "jin",
+   "li",
+   "de",
+   "wo",
+   "hui",
+   "jin",
+   "li",
+   "de",
+   "wo",
+   "hui",
+   "jin",
+   "li",
+   "de",
+   "wo",
+   "hui",
+   "jin",
+   "li",
+   "de",
+   "wo",
+   "hui",
+   "jin",
+   "li",
+   "de",
+   "wo",
+   "hui",
+   "jin",
+   "li",
+   "de",
+   "wo",
+   "hui",
+   "jin",
+   "li",
+   "de",
+   "wo",
+   "hui",
+   "jin",
+   "li",
+   "de"
+  ]
+ },
+ {
+  "id": "hsk4-088",
+  "hanzi": "感谢",
+  "want": "gan3 xie4",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-090",
+  "hanzi": "座",
+  "want": "zuo4",
+  "heard": "我",
+  "heard_py": [
+   "wo"
+  ]
  },
  {
   "id": "hsk4-092",
   "hanzi": "往",
   "want": "wang3",
-  "heard": "WonWon",
-  "heard_py": ""
+  "heard": "哇",
+  "heard_py": [
+   "wa"
+  ]
+ },
+ {
+  "id": "hsk4-093",
+  "hanzi": "严重",
+  "want": "yan2 zhong4",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk4-094",
+  "hanzi": "包括",
+  "want": "bao1 kuo4",
+  "heard": "OKOK",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-096",
+  "hanzi": "光",
+  "want": "guang1",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk4-097",
   "hanzi": "法律",
   "want": "fa3 lv4",
-  "heard": "卡綠",
-  "heard_py": "kalv"
+  "heard": "三米三米",
+  "heard_py": [
+   "san",
+   "mi",
+   "san",
+   "mi"
+  ]
+ },
+ {
+  "id": "hsk4-098",
+  "hanzi": "父亲",
+  "want": "fu4 qin1",
+  "heard": "夫妻夫妻",
+  "heard_py": [
+   "fu",
+   "qi",
+   "fu",
+   "qi"
+  ]
+ },
+ {
+  "id": "hsk4-099",
+  "hanzi": "并且",
+  "want": "bing4 qie3",
+  "heard": "冰淇淋冰淇淋",
+  "heard_py": [
+   "bing",
+   "qi",
+   "lin",
+   "bing",
+   "qi",
+   "lin"
+  ]
  },
  {
   "id": "hsk4-100",
   "hanzi": "收",
   "want": "shou1",
-  "heard": "po po",
-  "heard_py": ""
+  "heard": "說",
+  "heard_py": [
+   "shuo"
+  ]
+ },
+ {
+  "id": "hsk4-102",
+  "hanzi": "证明",
+  "want": "zheng4 ming2",
+  "heard": "致命",
+  "heard_py": [
+   "zhi",
+   "ming"
+  ]
+ },
+ {
+  "id": "hsk4-103",
+  "hanzi": "记者",
+  "want": "ji4 zhe3",
+  "heard": "其實啊其實啊",
+  "heard_py": [
+   "qi",
+   "shi",
+   "a",
+   "qi",
+   "shi",
+   "a"
+  ]
  },
  {
   "id": "hsk4-104",
   "hanzi": "底",
   "want": "di3",
-  "heard": "哥",
-  "heard_py": "ge"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-108",
+  "hanzi": "发展",
+  "want": "fa1 zhan3",
+  "heard": "不敢不敢",
+  "heard_py": [
+   "bu",
+   "gan",
+   "bu",
+   "gan"
+  ]
  },
  {
   "id": "hsk4-109",
   "hanzi": "谈",
   "want": "tan2",
-  "heard": "很",
-  "heard_py": "hen"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-113",
+  "hanzi": "首先",
+  "want": "shou3 xian1",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-115",
   "hanzi": "报道",
   "want": "bao4 dao4",
   "heard": "到到",
-  "heard_py": "daodao"
+  "heard_py": [
+   "dao",
+   "dao"
+  ]
  },
  {
   "id": "hsk4-117",
   "hanzi": "梦",
   "want": "meng4",
-  "heard": "悶",
-  "heard_py": "men"
+  "heard": "嗯",
+  "heard_py": [
+   "n"
+  ]
+ },
+ {
+  "id": "hsk4-121",
+  "hanzi": "责任",
+  "want": "ze2 ren4",
+  "heard": "是",
+  "heard_py": [
+   "shi"
+  ]
+ },
+ {
+  "id": "hsk4-122",
+  "hanzi": "试",
+  "want": "shi4",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-123",
   "hanzi": "弄",
   "want": "nong4",
-  "heard": "猛啊 猛啊",
-  "heard_py": "mengamenga"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-124",
   "hanzi": "赢",
   "want": "ying2",
-  "heard": "Yen",
-  "heard_py": ""
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-125",
   "hanzi": "满",
   "want": "man3",
-  "heard": "門",
-  "heard_py": "men"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-127",
+  "hanzi": "许多",
+  "want": "xu3 duo1",
+  "heard": "選多",
+  "heard_py": [
+   "xuan",
+   "duo"
+  ]
+ },
+ {
+  "id": "hsk4-128",
+  "hanzi": "压力",
+  "want": "ya1 li4",
+  "heard": "要不要",
+  "heard_py": [
+   "yao",
+   "bu",
+   "yao"
+  ]
+ },
+ {
+  "id": "hsk4-129",
+  "hanzi": "由于",
+  "want": "you2 yu2",
+  "heard": "鸟宇鸟宇",
+  "heard_py": [
+   "niao",
+   "yu",
+   "niao",
+   "yu"
+  ]
+ },
+ {
+  "id": "hsk4-130",
+  "hanzi": "母亲",
+  "want": "mu3 qin1",
+  "heard": "惹性 惹性",
+  "heard_py": [
+   "re",
+   "xing",
+   "re",
+   "xing"
+  ]
+ },
+ {
+  "id": "hsk4-132",
+  "hanzi": "意见",
+  "want": "yi4 jian4",
+  "heard": "一切",
+  "heard_py": [
+   "yi",
+   "qie"
+  ]
  },
  {
   "id": "hsk4-135",
   "hanzi": "尽管",
   "want": "jin3 guan3",
-  "heard": "今晚",
-  "heard_py": "jinwan"
+  "heard": "精彩",
+  "heard_py": [
+   "jing",
+   "cai"
+  ]
+ },
+ {
+  "id": "hsk4-136",
+  "hanzi": "深",
+  "want": "shen1",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk4-137",
+  "hanzi": "各",
+  "want": "ge4",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-138",
   "hanzi": "仍然",
   "want": "reng2 ran2",
-  "heard": "人人",
-  "heard_py": "renren"
+  "heard": "啊",
+  "heard_py": [
+   "a"
+  ]
  },
  {
-  "id": "hsk4-146",
-  "hanzi": "地址",
-  "want": "di4 zhi3",
-  "heard": "得者",
-  "heard_py": "dezhe"
+  "id": "hsk4-139",
+  "hanzi": "值得",
+  "want": "zhi2 de5",
+  "heard": "謝謝",
+  "heard_py": [
+   "xie",
+   "xie"
+  ]
  },
  {
-  "id": "hsk4-150",
-  "hanzi": "十分",
-  "want": "shi2 fen1",
-  "heard": "10分",
-  "heard_py": "fen"
+  "id": "hsk4-141",
+  "hanzi": "讨论",
+  "want": "tao3 lun4",
+  "heard": "他问",
+  "heard_py": [
+   "ta",
+   "wen"
+  ]
+ },
+ {
+  "id": "hsk4-143",
+  "hanzi": "假",
+  "want": "jia3",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-144",
+  "hanzi": "后来",
+  "want": "hou4 lai2",
+  "heard": "后脉",
+  "heard_py": [
+   "hou",
+   "mai"
+  ]
+ },
+ {
+  "id": "hsk4-145",
+  "hanzi": "嘴",
+  "want": "zui3",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-147",
+  "hanzi": "无论",
+  "want": "wu2 lun4",
+  "heard": "不哩不哩",
+  "heard_py": [
+   "bu",
+   "li",
+   "bu",
+   "li"
+  ]
+ },
+ {
+  "id": "hsk4-148",
+  "hanzi": "紧张",
+  "want": "jin3 zhang1",
+  "heard": "吉祥吉祥",
+  "heard_py": [
+   "ji",
+   "xiang",
+   "ji",
+   "xiang"
+  ]
+ },
+ {
+  "id": "hsk4-149",
+  "hanzi": "省",
+  "want": "sheng3",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk4-151",
   "hanzi": "陪",
   "want": "pei2",
-  "heard": "很",
-  "heard_py": "hen"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-152",
+  "hanzi": "挂",
+  "want": "gua4",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-153",
+  "hanzi": "本来",
+  "want": "ben3 lai2",
+  "heard": "來",
+  "heard_py": [
+   "lai"
+  ]
  },
  {
   "id": "hsk4-155",
   "hanzi": "广告",
   "want": "guang3 gao4",
-  "heard": "反高!反高!",
-  "heard_py": "fangaofangao"
+  "heard": "網告",
+  "heard_py": [
+   "wang",
+   "gao"
+  ]
  },
  {
-  "id": "hsk4-157",
-  "hanzi": "关键",
-  "want": "guan1 jian4",
-  "heard": "萬箭!萬箭!",
-  "heard_py": "wanjianwanjian"
+  "id": "hsk4-159",
+  "hanzi": "困难",
+  "want": "kun4 nan2",
+  "heard": "孔家孔家",
+  "heard_py": [
+   "kong",
+   "jia",
+   "kong",
+   "jia"
+  ]
  },
  {
-  "id": "hsk4-160",
-  "hanzi": "专业",
-  "want": "zhuan1 ye4",
-  "heard": "尊严",
-  "heard_py": "zunyan"
+  "id": "hsk4-162",
+  "hanzi": "规定",
+  "want": "gui1 ding4",
+  "heard": "O.D.",
+  "heard_py": []
  },
  {
   "id": "hsk4-163",
   "hanzi": "于是",
   "want": "yu2 shi4",
-  "heard": "仪式",
-  "heard_py": "yishi"
+  "heard": "虚",
+  "heard_py": [
+   "xu"
+  ]
  },
  {
   "id": "hsk4-164",
   "hanzi": "正确",
   "want": "zheng4 que4",
-  "heard": "争取",
-  "heard_py": "zhengqu"
+  "heard": "謝謝",
+  "heard_py": [
+   "xie",
+   "xie"
+  ]
+ },
+ {
+  "id": "hsk4-166",
+  "hanzi": "群",
+  "want": "qun2",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-167",
   "hanzi": "够",
   "want": "gou4",
-  "heard": "多",
-  "heard_py": "duo"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
-  "id": "hsk4-170",
-  "hanzi": "市场",
-  "want": "shi4 chang3",
-  "heard": "失成",
-  "heard_py": "shicheng"
+  "id": "hsk4-168",
+  "hanzi": "火",
+  "want": "huo3",
+  "heard": "Lot",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-172",
+  "hanzi": "取",
+  "want": "qu3",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-174",
   "hanzi": "管理",
   "want": "guan3 li3",
-  "heard": "魂力!魂力!",
-  "heard_py": "hunlihunli"
+  "heard": "Money",
+  "heard_py": []
  },
  {
   "id": "hsk4-175",
   "hanzi": "乱",
   "want": "luan4",
-  "heard": "輪",
-  "heard_py": "lun"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-179",
+  "hanzi": "从来",
+  "want": "cong2 lai2",
+  "heard": "痛吗? 痛吗?",
+  "heard_py": [
+   "tong",
+   "ma",
+   "tong",
+   "ma"
+  ]
  },
  {
   "id": "hsk4-180",
   "hanzi": "抱",
   "want": "bao4",
-  "heard": "多",
-  "heard_py": "duo"
+  "heard": "",
+  "heard_py": []
  },
  {
-  "id": "hsk4-185",
-  "hanzi": "观众",
-  "want": "guan1 zhong4",
-  "heard": "不願中",
-  "heard_py": "buyuanzhong"
+  "id": "hsk4-181",
+  "hanzi": "律师",
+  "want": "lv4 shi1",
+  "heard": "雨水雨水",
+  "heard_py": [
+   "yu",
+   "shui",
+   "yu",
+   "shui"
+  ]
+ },
+ {
+  "id": "hsk4-182",
+  "hanzi": "内容",
+  "want": "nei4 rong2",
+  "heard": "一旦",
+  "heard_py": [
+   "yi",
+   "dan"
+  ]
+ },
+ {
+  "id": "hsk4-183",
+  "hanzi": "通知",
+  "want": "tong1 zhi1",
+  "heard": "空氣",
+  "heard_py": [
+   "kong",
+   "qi"
+  ]
+ },
+ {
+  "id": "hsk4-184",
+  "hanzi": "感情",
+  "want": "gan3 qing2",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk4-186",
   "hanzi": "目的",
   "want": "mu4 di4",
-  "heard": "模印",
-  "heard_py": "moyin"
+  "heard": "Ruby",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-187",
+  "hanzi": "国际",
+  "want": "guo2 ji4",
+  "heard": "我记!我记!",
+  "heard_py": [
+   "wo",
+   "ji",
+   "wo",
+   "ji"
+  ]
  },
  {
   "id": "hsk4-190",
   "hanzi": "破",
   "want": "po4",
-  "heard": "哈?",
-  "heard_py": "ha"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk4-191",
+  "hanzi": "推",
+  "want": "tui1",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-192",
+  "hanzi": "刀",
+  "want": "dao1",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-193",
+  "hanzi": "科学",
+  "want": "ke1 xue2",
+  "heard": "可惜可惜",
+  "heard_py": [
+   "ke",
+   "xi",
+   "ke",
+   "xi"
+  ]
+ },
+ {
+  "id": "hsk4-194",
+  "hanzi": "心情",
+  "want": "xin1 qing2",
+  "heard": "音息",
+  "heard_py": [
+   "yin",
+   "xi"
+  ]
  },
  {
   "id": "hsk4-195",
   "hanzi": "标准",
   "want": "biao1 zhun3",
-  "heard": "包準",
-  "heard_py": "baozhun"
+  "heard": "YESYES",
+  "heard_py": []
  },
  {
   "id": "hsk4-196",
   "hanzi": "职业",
   "want": "zhi2 ye4",
-  "heard": "直驗",
-  "heard_py": "zhiyan"
+  "heard": "不许",
+  "heard_py": [
+   "bu",
+   "xu"
+  ]
+ },
+ {
+  "id": "hsk4-197",
+  "hanzi": "精彩",
+  "want": "jing1 cai3",
+  "heard": "你在你在",
+  "heard_py": [
+   "ni",
+   "zai",
+   "ni",
+   "zai"
+  ]
+ },
+ {
+  "id": "hsk4-198",
+  "hanzi": "范围",
+  "want": "fan4 wei2",
+  "heard": "乖妹",
+  "heard_py": [
+   "guai",
+   "mei"
+  ]
+ },
+ {
+  "id": "hsk4-201",
+  "hanzi": "效果",
+  "want": "xiao4 guo3",
+  "heard": "教國",
+  "heard_py": [
+   "jiao",
+   "guo"
+  ]
+ },
+ {
+  "id": "hsk4-202",
+  "hanzi": "遍",
+  "want": "bian4",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk4-203",
+  "hanzi": "经济",
+  "want": "jing1 ji4",
+  "heard": "親戚",
+  "heard_py": [
+   "qin",
+   "qi"
+  ]
  },
  {
   "id": "hsk4-204",
   "hanzi": "按照",
   "want": "an4 zhao4",
-  "heard": "AngelAngel",
-  "heard_py": ""
+  "heard": "安裝",
+  "heard_py": [
+   "an",
+   "zhuang"
+  ]
+ },
+ {
+  "id": "hsk4-205",
+  "hanzi": "反对",
+  "want": "fan3 dui4",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-206",
+  "hanzi": "竟然",
+  "want": "jing4 ran2",
+  "heard": "反對",
+  "heard_py": [
+   "fan",
+   "dui"
+  ]
  },
  {
   "id": "hsk4-207",
-  "hanzi": "竟然",
-  "want": "jing4 ran2",
-  "heard": "驚人",
-  "heard_py": "jingren"
+  "hanzi": "重点",
+  "want": "zhong4 dian3",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-208",
   "hanzi": "倍",
   "want": "bei4",
-  "heard": "包",
-  "heard_py": "bao"
+  "heard": "喂喂",
+  "heard_py": [
+   "wei",
+   "wei"
+  ]
  },
  {
   "id": "hsk4-209",
   "hanzi": "醒",
   "want": "xing3",
-  "heard": "生",
-  "heard_py": "sheng"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-210",
+  "hanzi": "讨厌",
+  "want": "tao3 yan4",
+  "heard": "好烟",
+  "heard_py": [
+   "hao",
+   "yan"
+  ]
  },
  {
   "id": "hsk4-211",
   "hanzi": "输",
   "want": "shu1",
-  "heard": "可可",
-  "heard_py": "keke"
+  "heard": "分",
+  "heard_py": [
+   "fen"
+  ]
  },
  {
   "id": "hsk4-216",
   "hanzi": "俩",
   "want": "lia3",
-  "heard": "啦",
-  "heard_py": "la"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-217",
+  "hanzi": "增加",
+  "want": "zeng1 jia1",
+  "heard": "回家回家",
+  "heard_py": [
+   "hui",
+   "jia",
+   "hui",
+   "jia"
+  ]
+ },
+ {
+  "id": "hsk4-218",
+  "hanzi": "著名",
+  "want": "zhu4 ming2",
+  "heard": "祝美",
+  "heard_py": [
+   "zhu",
+   "mei"
+  ]
+ },
+ {
+  "id": "hsk4-219",
+  "hanzi": "拒绝",
+  "want": "ju4 jue2",
+  "heard": "GJ",
+  "heard_py": []
  },
  {
   "id": "hsk4-220",
   "hanzi": "帅",
   "want": "shuai4",
-  "heard": "Tray",
-  "heard_py": ""
+  "heard": "",
+  "heard_py": []
  },
  {
-  "id": "hsk4-224",
-  "hanzi": "麻烦",
-  "want": "ma2 fan2",
-  "heard": "晚安",
-  "heard_py": "wanan"
+  "id": "hsk4-221",
+  "hanzi": "不仅",
+  "want": "bu4 jin3",
+  "heard": "不急不急",
+  "heard_py": [
+   "bu",
+   "ji",
+   "bu",
+   "ji"
+  ]
+ },
+ {
+  "id": "hsk4-225",
+  "hanzi": "申请",
+  "want": "shen1 qing3",
+  "heard": "神奇神奇",
+  "heard_py": [
+   "shen",
+   "qi",
+   "shen",
+   "qi"
+  ]
+ },
+ {
+  "id": "hsk4-227",
+  "hanzi": "猪",
+  "want": "zhu1",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-228",
+  "hanzi": "竞争",
+  "want": "jing4 zheng1",
+  "heard": "靜珍靜珍",
+  "heard_py": [
+   "jing",
+   "zhen",
+   "jing",
+   "zhen"
+  ]
  },
  {
   "id": "hsk4-229",
   "hanzi": "估计",
   "want": "gu1 ji4",
-  "heard": "過濟",
-  "heard_py": "guoji"
- },
- {
-  "id": "hsk4-232",
-  "hanzi": "制造",
-  "want": "zhi4 zao4",
-  "heard": "之走",
-  "heard_py": "zhizou"
+  "heard": "不知",
+  "heard_py": [
+   "bu",
+   "zhi"
+  ]
  },
  {
   "id": "hsk4-233",
   "hanzi": "不得不",
   "want": "bu4 de2 bu4",
-  "heard": "不得播",
-  "heard_py": "budebo"
+  "heard": "不打波不打波",
+  "heard_py": [
+   "bu",
+   "da",
+   "bo",
+   "bu",
+   "da",
+   "bo"
+  ]
+ },
+ {
+  "id": "hsk4-234",
+  "hanzi": "当地",
+  "want": "dang1 di4",
+  "heard": "傍必傍必",
+  "heard_py": [
+   "bang",
+   "bi",
+   "bang",
+   "bi"
+  ]
+ },
+ {
+  "id": "hsk4-235",
+  "hanzi": "大概",
+  "want": "da4 gai4",
+  "heard": "OKOK",
+  "heard_py": []
  },
  {
   "id": "hsk4-238",
   "hanzi": "顿",
   "want": "dun4",
-  "heard": "增",
-  "heard_py": "zeng"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-239",
+  "hanzi": "吸引",
+  "want": "xi1 yin3",
+  "heard": "晶莹",
+  "heard_py": [
+   "jing",
+   "ying"
+  ]
  },
  {
   "id": "hsk4-244",
   "hanzi": "提醒",
   "want": "ti2 xing3",
-  "heard": "提前",
-  "heard_py": "tiqian"
+  "heard": "提息提息",
+  "heard_py": [
+   "ti",
+   "xi",
+   "ti",
+   "xi"
+  ]
+ },
+ {
+  "id": "hsk4-245",
+  "hanzi": "演员",
+  "want": "yan3 yuan2",
+  "heard": "對,對",
+  "heard_py": [
+   "dui",
+   "dui"
+  ]
+ },
+ {
+  "id": "hsk4-246",
+  "hanzi": "态度",
+  "want": "tai4 du4",
+  "heard": "太多",
+  "heard_py": [
+   "tai",
+   "duo"
+  ]
+ },
+ {
+  "id": "hsk4-247",
+  "hanzi": "周围",
+  "want": "zhou1 wei2",
+  "heard": "助为",
+  "heard_py": [
+   "zhu",
+   "wei"
+  ]
  },
  {
   "id": "hsk4-248",
   "hanzi": "丢",
   "want": "diu1",
-  "heard": "多",
-  "heard_py": "duo"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-250",
+  "hanzi": "表达",
+  "want": "biao3 da2",
+  "heard": "表巴",
+  "heard_py": [
+   "biao",
+   "ba"
+  ]
+ },
+ {
+  "id": "hsk4-251",
+  "hanzi": "数字",
+  "want": "shu4 zi4",
+  "heard": "說字",
+  "heard_py": [
+   "shuo",
+   "zi"
+  ]
+ },
+ {
+  "id": "hsk4-252",
+  "hanzi": "邀请",
+  "want": "yao1 qing3",
+  "heard": "起起",
+  "heard_py": [
+   "qi",
+   "qi"
+  ]
+ },
+ {
+  "id": "hsk4-254",
+  "hanzi": "优秀",
+  "want": "you1 xiu4",
+  "heard": "不秀不秀",
+  "heard_py": [
+   "bu",
+   "xiu",
+   "bu",
+   "xiu"
+  ]
+ },
+ {
+  "id": "hsk4-255",
+  "hanzi": "亮",
+  "want": "liang4",
+  "heard": "好",
+  "heard_py": [
+   "hao"
+  ]
  },
  {
   "id": "hsk4-256",
   "hanzi": "篇",
   "want": "pian1",
-  "heard": "天",
-  "heard_py": "tian"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-257",
+  "hanzi": "儿童",
+  "want": "er2 tong2",
+  "heard": "热疼热疼",
+  "heard_py": [
+   "re",
+   "teng",
+   "re",
+   "teng"
+  ]
+ },
+ {
+  "id": "hsk4-260",
+  "hanzi": "断",
+  "want": "duan4",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-261",
+  "hanzi": "千万",
+  "want": "qian1 wan4",
+  "heard": "性完性完",
+  "heard_py": [
+   "xing",
+   "wan",
+   "xing",
+   "wan"
+  ]
+ },
+ {
+  "id": "hsk4-263",
+  "hanzi": "距离",
+  "want": "ju4 li2",
+  "heard": "寂寞",
+  "heard_py": [
+   "ji",
+   "mo"
+  ]
+ },
+ {
+  "id": "hsk4-264",
+  "hanzi": "轻松",
+  "want": "qing1 song1",
+  "heard": "心中",
+  "heard_py": [
+   "xin",
+   "zhong"
+  ]
+ },
+ {
+  "id": "hsk4-265",
+  "hanzi": "墙",
+  "want": "qiang2",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk4-266",
+  "hanzi": "毕业",
+  "want": "bi4 ye4",
+  "heard": "唯一",
+  "heard_py": [
+   "wei",
+   "yi"
+  ]
  },
  {
   "id": "hsk4-267",
   "hanzi": "怀疑",
   "want": "huai2 yi2",
-  "heard": "回憶",
-  "heard_py": "huiyi"
+  "heard": "喂",
+  "heard_py": [
+   "wei"
+  ]
  },
  {
   "id": "hsk4-268",
   "hanzi": "修",
   "want": "xiu1",
-  "heard": "周 周",
-  "heard_py": "zhouzhou"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-269",
+  "hanzi": "价格",
+  "want": "jia4 ge2",
+  "heard": "嫁狗",
+  "heard_py": [
+   "jia",
+   "gou"
+  ]
  },
  {
   "id": "hsk4-270",
   "hanzi": "戴",
   "want": "dai4",
-  "heard": "大",
-  "heard_py": "da"
+  "heard": "",
+  "heard_py": []
  },
  {
-  "id": "hsk4-271",
-  "hanzi": "究竟",
-  "want": "jiu1 jing4",
-  "heard": "舊金",
-  "heard_py": "jiujin"
+  "id": "hsk4-272",
+  "hanzi": "轻",
+  "want": "qing1",
+  "heard": "77",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-273",
+  "hanzi": "然而",
+  "want": "ran2 er2",
+  "heard": "Yara",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-274",
+  "hanzi": "交流",
+  "want": "jiao1 liu2",
+  "heard": "就没有我就没有我",
+  "heard_py": [
+   "jiu",
+   "mei",
+   "you",
+   "wo",
+   "jiu",
+   "mei",
+   "you",
+   "wo"
+  ]
  },
  {
   "id": "hsk4-276",
   "hanzi": "困",
   "want": "kun4",
-  "heard": "昏 昏",
-  "heard_py": "hunhun"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-278",
   "hanzi": "躺",
   "want": "tang3",
-  "heard": "疼",
-  "heard_py": "teng"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-279",
   "hanzi": "答案",
   "want": "da2 an4",
-  "heard": "當然!",
-  "heard_py": "dangran"
+  "heard": "答答",
+  "heard_py": [
+   "da",
+   "da"
+  ]
+ },
+ {
+  "id": "hsk4-283",
+  "hanzi": "尊重",
+  "want": "zun1 zhong4",
+  "heard": "敬重敬重",
+  "heard_py": [
+   "jing",
+   "zhong",
+   "jing",
+   "zhong"
+  ]
+ },
+ {
+  "id": "hsk4-284",
+  "hanzi": "激动",
+  "want": "ji1 dong4",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-285",
+  "hanzi": "骗",
+  "want": "pian4",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-286",
+  "hanzi": "可怜",
+  "want": "ke3 lian2",
+  "heard": "思念",
+  "heard_py": [
+   "si",
+   "nian"
+  ]
+ },
+ {
+  "id": "hsk4-287",
+  "hanzi": "语言",
+  "want": "yu3 yan2",
+  "heard": "你耶你耶",
+  "heard_py": [
+   "ni",
+   "ye",
+   "ni",
+   "ye"
+  ]
  },
  {
   "id": "hsk4-288",
   "hanzi": "擦",
   "want": "ca1",
-  "heard": "他",
-  "heard_py": "ta"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk4-289",
   "hanzi": "香",
   "want": "xiang1",
-  "heard": "生",
-  "heard_py": "sheng"
+  "heard": "下",
+  "heard_py": [
+   "xia"
+  ]
+ },
+ {
+  "id": "hsk4-290",
+  "hanzi": "成熟",
+  "want": "cheng2 shu2",
+  "heard": "唱叔",
+  "heard_py": [
+   "chang",
+   "shu"
+  ]
+ },
+ {
+  "id": "hsk4-293",
+  "hanzi": "信任",
+  "want": "xin4 ren4",
+  "heard": "細呢細呢",
+  "heard_py": [
+   "xi",
+   "ne",
+   "xi",
+   "ne"
+  ]
+ },
+ {
+  "id": "hsk4-297",
+  "hanzi": "年龄",
+  "want": "nian2 ling2",
+  "heard": "你愛我",
+  "heard_py": [
+   "ni",
+   "ai",
+   "wo"
+  ]
+ },
+ {
+  "id": "hsk4-299",
+  "hanzi": "可惜",
+  "want": "ke3 xi1",
+  "heard": "仔细仔细",
+  "heard_py": [
+   "zi",
+   "xi",
+   "zi",
+   "xi"
+  ]
+ },
+ {
+  "id": "hsk4-301",
+  "hanzi": "回忆",
+  "want": "hui2 yi4",
+  "heard": "會",
+  "heard_py": [
+   "hui"
+  ]
  },
  {
   "id": "hsk4-303",
   "hanzi": "材料",
   "want": "cai2 liao4",
-  "heard": "檯料",
-  "heard_py": "tailiao"
+  "heard": "彈鳥",
+  "heard_py": [
+   "dan",
+   "niao"
+  ]
  },
  {
   "id": "hsk4-304",
   "hanzi": "熟悉",
   "want": "shu2 xi1",
-  "heard": "主席",
-  "heard_py": "zhuxi"
+  "heard": "生气生气",
+  "heard_py": [
+   "sheng",
+   "qi",
+   "sheng",
+   "qi"
+  ]
+ },
+ {
+  "id": "hsk4-306",
+  "hanzi": "撞",
+  "want": "zhuang4",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-307",
+  "hanzi": "互相",
+  "want": "hu4 xiang1",
+  "heard": "我想 我想",
+  "heard_py": [
+   "wo",
+   "xiang",
+   "wo",
+   "xiang"
+  ]
+ },
+ {
+  "id": "hsk4-309",
+  "hanzi": "失望",
+  "want": "shi1 wang4",
+  "heard": "是吗?是吗?",
+  "heard_py": [
+   "shi",
+   "ma",
+   "shi",
+   "ma"
+  ]
+ },
+ {
+  "id": "hsk4-310",
+  "hanzi": "印象",
+  "want": "yin4 xiang4",
+  "heard": "你一下你一下",
+  "heard_py": [
+   "ni",
+   "yi",
+   "xia",
+   "ni",
+   "yi",
+   "xia"
+  ]
+ },
+ {
+  "id": "hsk4-313",
+  "hanzi": "桥",
+  "want": "qiao2",
+  "heard": "叫",
+  "heard_py": [
+   "jiao"
+  ]
  },
  {
   "id": "hsk4-315",
   "hanzi": "适应",
   "want": "shi4 ying4",
-  "heard": "是因",
-  "heard_py": "shiyin"
+  "heard": "睡睡",
+  "heard_py": [
+   "shui",
+   "shui"
+  ]
+ },
+ {
+  "id": "hsk4-316",
+  "hanzi": "赚",
+  "want": "zhuan4",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-317",
+  "hanzi": "猜",
+  "want": "cai1",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-318",
+  "hanzi": "到处",
+  "want": "dao4 chu4",
+  "heard": "爆出",
+  "heard_py": [
+   "bao",
+   "chu"
+  ]
  },
  {
   "id": "hsk4-320",
   "hanzi": "大约",
   "want": "da4 yue1",
-  "heard": "大元",
-  "heard_py": "dayuan"
+  "heard": "阿里",
+  "heard_py": [
+   "a",
+   "li"
+  ]
  },
  {
-  "id": "hsk4-322",
-  "hanzi": "暂时",
-  "want": "zan4 shi2",
-  "heard": "30",
-  "heard_py": ""
+  "id": "hsk4-321",
+  "hanzi": "提前",
+  "want": "ti2 qian2",
+  "heard": "踢起来踢起来",
+  "heard_py": [
+   "ti",
+   "qi",
+   "lai",
+   "ti",
+   "qi",
+   "lai"
+  ]
  },
  {
   "id": "hsk4-325",
   "hanzi": "汤",
   "want": "tang1",
-  "heard": "疼",
-  "heard_py": "teng"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk4-326",
   "hanzi": "响",
   "want": "xiang3",
-  "heard": "好",
-  "heard_py": "hao"
+  "heard": "",
+  "heard_py": []
  },
  {
-  "id": "hsk4-329",
-  "hanzi": "仔细",
-  "want": "zi3 xi4",
-  "heard": "仔細",
-  "heard_py": "zaixi"
+  "id": "hsk4-327",
+  "hanzi": "收入",
+  "want": "shou1 ru4",
+  "heard": "瘦肉瘦肉",
+  "heard_py": [
+   "shou",
+   "rou",
+   "shou",
+   "rou"
+  ]
+ },
+ {
+  "id": "hsk4-330",
+  "hanzi": "严格",
+  "want": "yan2 ge2",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk4-332",
+  "hanzi": "知识",
+  "want": "zhi1 shi2",
+  "heard": "这是这是",
+  "heard_py": [
+   "zhe",
+   "shi",
+   "zhe",
+   "shi"
+  ]
+ },
+ {
+  "id": "hsk4-334",
+  "hanzi": "工具",
+  "want": "gong1 ju4",
+  "heard": "空氣空氣",
+  "heard_py": [
+   "kong",
+   "qi",
+   "kong",
+   "qi"
+  ]
  },
  {
   "id": "hsk4-335",
   "hanzi": "脱",
   "want": "tuo1",
-  "heard": "破! 破!",
-  "heard_py": "popo"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk4-336",
   "hanzi": "苦",
   "want": "ku3",
-  "heard": "或",
-  "heard_py": "huo"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-337",
   "hanzi": "租",
   "want": "zu1",
-  "heard": "走",
-  "heard_py": "zou"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-338",
+  "hanzi": "尤其",
+  "want": "you2 qi2",
+  "heard": "對不起對不起",
+  "heard_py": [
+   "dui",
+   "bu",
+   "qi",
+   "dui",
+   "bu",
+   "qi"
+  ]
  },
  {
   "id": "hsk4-339",
   "hanzi": "页",
   "want": "ye4",
-  "heard": "点、点。",
-  "heard_py": "diandian"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-340",
   "hanzi": "扔",
   "want": "reng1",
-  "heard": "分 分",
-  "heard_py": "fenfen"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
-  "id": "hsk4-344",
-  "hanzi": "看法",
-  "want": "kan4 fa3",
-  "heard": "癱法",
-  "heard_py": "tanfa"
+  "id": "hsk4-341",
+  "hanzi": "信心",
+  "want": "xin4 xin1",
+  "heard": "一夕",
+  "heard_py": [
+   "yi",
+   "xi"
+  ]
+ },
+ {
+  "id": "hsk4-342",
+  "hanzi": "博士",
+  "want": "bo2 shi4",
+  "heard": "不是不是",
+  "heard_py": [
+   "bu",
+   "shi",
+   "bu",
+   "shi"
+  ]
+ },
+ {
+  "id": "hsk4-343",
+  "hanzi": "故意",
+  "want": "gu4 yi4",
+  "heard": "呜咦",
+  "heard_py": [
+   "wu",
+   "yi"
+  ]
+ },
+ {
+  "id": "hsk4-345",
+  "hanzi": "浪漫",
+  "want": "lang4 man4",
+  "heard": "讓媽",
+  "heard_py": [
+   "rang",
+   "ma"
+  ]
  },
  {
   "id": "hsk4-346",
   "hanzi": "减少",
   "want": "jian3 shao3",
-  "heard": "坚守",
-  "heard_py": "jianshou"
+  "heard": "肩上",
+  "heard_py": [
+   "jian",
+   "shang"
+  ]
+ },
+ {
+  "id": "hsk4-348",
+  "hanzi": "剩",
+  "want": "sheng4",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-351",
   "hanzi": "硬",
   "want": "ying4",
-  "heard": "YinYin",
-  "heard_py": ""
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk4-354",
+  "hanzi": "现代",
+  "want": "xian4 dai4",
+  "heard": "信呆信呆",
+  "heard_py": [
+   "xin",
+   "dai",
+   "xin",
+   "dai"
+  ]
  },
  {
   "id": "hsk4-355",
   "hanzi": "弹",
   "want": "dan4",
-  "heard": "BEN",
-  "heard_py": ""
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-357",
+  "hanzi": "公里",
+  "want": "gong1 li3",
+  "heard": "互理互理",
+  "heard_py": [
+   "hu",
+   "li",
+   "hu",
+   "li"
+  ]
+ },
+ {
+  "id": "hsk4-359",
+  "hanzi": "好处",
+  "want": "hao3 chu4",
+  "heard": "阿初",
+  "heard_py": [
+   "a",
+   "chu"
+  ]
+ },
+ {
+  "id": "hsk4-360",
+  "hanzi": "伤心",
+  "want": "shang1 xin1",
+  "heard": "善心",
+  "heard_py": [
+   "shan",
+   "xin"
+  ]
  },
  {
   "id": "hsk4-362",
   "hanzi": "暗",
   "want": "an4",
-  "heard": "N",
-  "heard_py": ""
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
-  "id": "hsk4-366",
-  "hanzi": "鼓励",
-  "want": "gu3 li4",
-  "heard": "果力!果力!",
-  "heard_py": "guoliguoli"
+  "id": "hsk4-363",
+  "hanzi": "将来",
+  "want": "jiang1 lai2",
+  "heard": "這樣吧",
+  "heard_py": [
+   "zhe",
+   "yang",
+   "ba"
+  ]
+ },
+ {
+  "id": "hsk4-365",
+  "hanzi": "小说",
+  "want": "xiao3 shuo1",
+  "heard": "想說",
+  "heard_py": [
+   "xiang",
+   "shuo"
+  ]
+ },
+ {
+  "id": "hsk4-367",
+  "hanzi": "理想",
+  "want": "li3 xiang3",
+  "heard": "你小你小",
+  "heard_py": [
+   "ni",
+   "xiao",
+   "ni",
+   "xiao"
+  ]
+ },
+ {
+  "id": "hsk4-371",
+  "hanzi": "顾客",
+  "want": "gu4 ke4",
+  "heard": "不怕",
+  "heard_py": [
+   "bu",
+   "pa"
+  ]
+ },
+ {
+  "id": "hsk4-372",
+  "hanzi": "组成",
+  "want": "zu3 cheng2",
+  "heard": "走撐走撐",
+  "heard_py": [
+   "zou",
+   "cheng",
+   "zou",
+   "cheng"
+  ]
+ },
+ {
+  "id": "hsk4-373",
+  "hanzi": "流行",
+  "want": "liu2 xing2",
+  "heard": "よしよし",
+  "heard_py": []
  },
  {
   "id": "hsk4-374",
   "hanzi": "整理",
   "want": "zheng3 li3",
-  "heard": "真理",
-  "heard_py": "zhenli"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-375",
   "hanzi": "吵",
   "want": "chao3",
-  "heard": "頭",
-  "heard_py": "tou"
+  "heard": "",
+  "heard_py": []
  },
  {
-  "id": "hsk4-379",
-  "hanzi": "平时",
-  "want": "ping2 shi2",
-  "heard": "停时",
-  "heard_py": "tingshi"
+  "id": "hsk4-376",
+  "hanzi": "丰富",
+  "want": "feng1 fu4",
+  "heard": "松松",
+  "heard_py": [
+   "song",
+   "song"
+  ]
+ },
+ {
+  "id": "hsk4-377",
+  "hanzi": "原谅",
+  "want": "yuan2 liang4",
+  "heard": "人呢人呢",
+  "heard_py": [
+   "ren",
+   "ne",
+   "ren",
+   "ne"
+  ]
+ },
+ {
+  "id": "hsk4-378",
+  "hanzi": "肚子",
+  "want": "du3 zi5",
+  "heard": "走",
+  "heard_py": [
+   "zou"
+  ]
  },
  {
   "id": "hsk4-380",
   "hanzi": "辣",
   "want": "la4",
-  "heard": "答",
-  "heard_py": "da"
- },
- {
-  "id": "hsk4-381",
-  "hanzi": "作者",
-  "want": "zuo4 zhe3",
-  "heard": "坐著 坐著",
-  "heard_py": "zuozhuzuozhu"
+  "heard": "啊",
+  "heard_py": [
+   "a"
+  ]
  },
  {
   "id": "hsk4-382",
   "hanzi": "质量",
   "want": "zhi4 liang4",
-  "heard": "是量",
-  "heard_py": "shiliang"
+  "heard": "3秒3秒",
+  "heard_py": [
+   "miao",
+   "miao"
+  ]
+ },
+ {
+  "id": "hsk4-383",
+  "hanzi": "愉快",
+  "want": "yu2 kuai4",
+  "heard": "快",
+  "heard_py": [
+   "kuai"
+  ]
+ },
+ {
+  "id": "hsk4-384",
+  "hanzi": "寄",
+  "want": "ji4",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk4-385",
+  "hanzi": "准确",
+  "want": "zhun3 que4",
+  "heard": "本趣",
+  "heard_py": [
+   "ben",
+   "qu"
+  ]
  },
  {
   "id": "hsk4-387",
   "hanzi": "禁止",
   "want": "jin4 zhi3",
-  "heard": "精直",
-  "heard_py": "jingzhi"
+  "heard": "靜止靜止",
+  "heard_py": [
+   "jing",
+   "zhi",
+   "jing",
+   "zhi"
+  ]
  },
  {
   "id": "hsk4-388",
   "hanzi": "圆",
   "want": "yuan2",
-  "heard": "人",
-  "heard_py": "ren"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-390",
   "hanzi": "购物",
   "want": "gou4 wu4",
-  "heard": "耕務 耕務",
-  "heard_py": "gengwugengwu"
+  "heard": "抱我抱我",
+  "heard_py": [
+   "bao",
+   "wo",
+   "bao",
+   "wo"
+  ]
+ },
+ {
+  "id": "hsk4-392",
+  "hanzi": "勇敢",
+  "want": "yong3 gan3",
+  "heard": "弄开弄开",
+  "heard_py": [
+   "nong",
+   "kai",
+   "nong",
+   "kai"
+  ]
  },
  {
   "id": "hsk4-394",
   "hanzi": "富",
   "want": "fu4",
-  "heard": "婚",
-  "heard_py": "hun"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-395",
   "hanzi": "骄傲",
   "want": "jiao1 ao4",
-  "heard": "叫哦!叫哦!",
-  "heard_py": "jiaoojiaoo"
+  "heard": "叫叫",
+  "heard_py": [
+   "jiao",
+   "jiao"
+  ]
+ },
+ {
+  "id": "hsk4-398",
+  "hanzi": "果然",
+  "want": "guo3 ran2",
+  "heard": "苦辣苦辣",
+  "heard_py": [
+   "ku",
+   "la",
+   "ku",
+   "la"
+  ]
  },
  {
   "id": "hsk4-399",
   "hanzi": "随着",
   "want": "sui2 zhe5",
-  "heard": "隨著",
-  "heard_py": "suizhu"
+  "heard": "誰知啊?誰知啊?",
+  "heard_py": [
+   "shui",
+   "zhi",
+   "a",
+   "shui",
+   "zhi",
+   "a"
+  ]
  },
  {
   "id": "hsk4-401",
   "hanzi": "密码",
   "want": "mi4 ma3",
-  "heard": "今晚",
-  "heard_py": "jinwan"
+  "heard": "一馬",
+  "heard_py": [
+   "yi",
+   "ma"
+  ]
+ },
+ {
+  "id": "hsk4-402",
+  "hanzi": "亚洲",
+  "want": "ya4 zhou1",
+  "heard": "AzureAzure",
+  "heard_py": []
  },
  {
   "id": "hsk4-404",
   "hanzi": "趟",
   "want": "tang4",
-  "heard": "疼!疼!",
-  "heard_py": "tengteng"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-405",
   "hanzi": "软",
   "want": "ruan3",
-  "heard": "人",
-  "heard_py": "ren"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-407",
+  "hanzi": "森林",
+  "want": "sen1 lin2",
+  "heard": "吃米吃米",
+  "heard_py": [
+   "chi",
+   "mi",
+   "chi",
+   "mi"
+  ]
+ },
+ {
+  "id": "hsk4-408",
+  "hanzi": "友好",
+  "want": "you3 hao3",
+  "heard": "也好",
+  "heard_py": [
+   "ye",
+   "hao"
+  ]
  },
  {
   "id": "hsk4-409",
   "hanzi": "尝",
   "want": "chang2",
-  "heard": "疼",
-  "heard_py": "teng"
+  "heard": "走",
+  "heard_py": [
+   "zou"
+  ]
  },
  {
   "id": "hsk4-410",
   "hanzi": "亿",
   "want": "yi4",
-  "heard": "丢丢",
-  "heard_py": "diudiu"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk4-412",
+  "hanzi": "收拾",
+  "want": "shou1 shi2",
+  "heard": "收血",
+  "heard_py": [
+   "shou",
+   "xue"
+  ]
  },
  {
   "id": "hsk4-413",
   "hanzi": "广播",
   "want": "guang3 bo1",
-  "heard": "港播?",
-  "heard_py": "gangbo"
+  "heard": "滑波",
+  "heard_py": [
+   "hua",
+   "bo"
+  ]
  },
  {
   "id": "hsk4-415",
   "hanzi": "酸",
   "want": "suan1",
-  "heard": "三",
-  "heard_py": "san"
+  "heard": "是",
+  "heard_py": [
+   "shi"
+  ]
+ },
+ {
+  "id": "hsk4-416",
+  "hanzi": "污染",
+  "want": "wu1 ran3",
+  "heard": "喂喂",
+  "heard_py": [
+   "wei",
+   "wei"
+  ]
+ },
+ {
+  "id": "hsk4-417",
+  "hanzi": "温度",
+  "want": "wen1 du4",
+  "heard": "斑斗",
+  "heard_py": [
+   "ban",
+   "dou"
+  ]
+ },
+ {
+  "id": "hsk4-418",
+  "hanzi": "孤单",
+  "want": "gu1 dan1",
+  "heard": "蝴蝶",
+  "heard_py": [
+   "hu",
+   "die"
+  ]
  },
  {
   "id": "hsk4-420",
   "hanzi": "宽",
   "want": "kuan1",
-  "heard": "快",
-  "heard_py": "kuai"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-421",
+  "hanzi": "例如",
+  "want": "li4 ru2",
+  "heard": "丁",
+  "heard_py": [
+   "ding"
+  ]
  },
  {
   "id": "hsk4-422",
   "hanzi": "祝贺",
   "want": "zhu4 he4",
-  "heard": "如何? 如何?",
-  "heard_py": "ruheruhe"
+  "heard": "祝候",
+  "heard_py": [
+   "zhu",
+   "hou"
+  ]
+ },
+ {
+  "id": "hsk4-423",
+  "hanzi": "批评",
+  "want": "pi1 ping2",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-425",
+  "hanzi": "增长",
+  "want": "zeng1 zhang3",
+  "heard": "心臟心臟",
+  "heard_py": [
+   "xin",
+   "zang",
+   "xin",
+   "zang"
+  ]
+ },
+ {
+  "id": "hsk4-426",
+  "hanzi": "相反",
+  "want": "xiang1 fan3",
+  "heard": "兄凯兄凯",
+  "heard_py": [
+   "xiong",
+   "kai",
+   "xiong",
+   "kai"
+  ]
  },
  {
   "id": "hsk4-427",
   "hanzi": "抬",
   "want": "tai2",
-  "heard": "很",
-  "heard_py": "hen"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-429",
   "hanzi": "扩大",
   "want": "kuo4 da4",
-  "heard": "活大!",
-  "heard_py": "huoda"
+  "heard": "火大火大",
+  "heard_py": [
+   "huo",
+   "da",
+   "huo",
+   "da"
+  ]
+ },
+ {
+  "id": "hsk4-431",
+  "hanzi": "盐",
+  "want": "yan2",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-432",
+  "hanzi": "难受",
+  "want": "nan2 shou4",
+  "heard": "滿樹滿樹",
+  "heard_py": [
+   "man",
+   "shu",
+   "man",
+   "shu"
+  ]
+ },
+ {
+  "id": "hsk4-433",
+  "hanzi": "民族",
+  "want": "min2 zu2",
+  "heard": "您做",
+  "heard_py": [
+   "nin",
+   "zuo"
+  ]
+ },
+ {
+  "id": "hsk4-434",
+  "hanzi": "航班",
+  "want": "hang2 ban1",
+  "heard": "好 拜拜",
+  "heard_py": [
+   "hao",
+   "bai",
+   "bai"
+  ]
  },
  {
   "id": "hsk4-435",
   "hanzi": "偶尔",
   "want": "ou3 er3",
-  "heard": "or",
-  "heard_py": ""
+  "heard": "over over",
+  "heard_py": []
  },
  {
   "id": "hsk4-438",
   "hanzi": "厚",
   "want": "hou4",
-  "heard": "呵呵",
-  "heard_py": "hehe"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk4-439",
   "hanzi": "护士",
   "want": "hu4 shi4",
-  "heard": "鍋食",
-  "heard_py": "guoshi"
+  "heard": "或許或許",
+  "heard_py": [
+   "huo",
+   "xu",
+   "huo",
+   "xu"
+  ]
+ },
+ {
+  "id": "hsk4-441",
+  "hanzi": "顺便",
+  "want": "shun4 bian4",
+  "heard": "自便",
+  "heard_py": [
+   "zi",
+   "bian"
+  ]
+ },
+ {
+  "id": "hsk4-442",
+  "hanzi": "友谊",
+  "want": "you3 yi4",
+  "heard": "惹衣",
+  "heard_py": [
+   "re",
+   "yi"
+  ]
+ },
+ {
+  "id": "hsk4-443",
+  "hanzi": "笨",
+  "want": "ben4",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "hsk4-445",
+  "hanzi": "耐心",
+  "want": "nai4 xin1",
+  "heard": "再新",
+  "heard_py": [
+   "zai",
+   "xin"
+  ]
  },
  {
   "id": "hsk4-448",
   "hanzi": "植物",
   "want": "zhi2 wu4",
-  "heard": "食物",
-  "heard_py": "shiwu"
+  "heard": "整物",
+  "heard_py": [
+   "zheng",
+   "wu"
+  ]
+ },
+ {
+  "id": "hsk4-453",
+  "hanzi": "其次",
+  "want": "qi2 ci4",
+  "heard": "希慈希慈",
+  "heard_py": [
+   "xi",
+   "ci",
+   "xi",
+   "ci"
+  ]
+ },
+ {
+  "id": "hsk4-454",
+  "hanzi": "敲",
+  "want": "qiao1",
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-455",
   "hanzi": "脾气",
   "want": "pi2 qi4",
-  "heard": "提琴",
-  "heard_py": "tiqin"
+  "heard": "一起一起",
+  "heard_py": [
+   "yi",
+   "qi",
+   "yi",
+   "qi"
+  ]
  },
  {
   "id": "hsk4-456",
   "hanzi": "翻译",
   "want": "fan1 yi4",
-  "heard": "分以",
-  "heard_py": "fenyi"
+  "heard": "Felie",
+  "heard_py": []
  },
  {
-  "id": "hsk4-458",
-  "hanzi": "特点",
-  "want": "te4 dian3",
-  "heard": "科典",
-  "heard_py": "kedian"
+  "id": "hsk4-457",
+  "hanzi": "烦恼",
+  "want": "fan2 nao3",
+  "heard": "安娜安娜",
+  "heard_py": [
+   "an",
+   "na",
+   "an",
+   "na"
+  ]
  },
  {
-  "id": "hsk4-459",
-  "hanzi": "往往",
-  "want": "wang3 wang3",
-  "heard": "問望問望",
-  "heard_py": "wenwangwenwang"
+  "id": "hsk4-462",
+  "hanzi": "海洋",
+  "want": "hai3 yang2",
+  "heard": "嗨呀嗨呀",
+  "heard_py": [
+   "hai",
+   "ya",
+   "hai",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-464",
+  "hanzi": "不但",
+  "want": "bu4 dan4",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-465",
+  "hanzi": "代替",
+  "want": "dai4 ti4",
+  "heard": "阿曦",
+  "heard_py": [
+   "a",
+   "xi"
+  ]
  },
  {
   "id": "hsk4-467",
   "hanzi": "棵",
   "want": "ke1",
-  "heard": "po,po",
-  "heard_py": ""
+  "heard": "这次的节目是我们的节目我们的节目是我们的节目我们的节目是我们的节目我们的节目是我们的节目我们的节目是我们的节目我们的节目是我们的节目我们的节目是我们的节目我们的节目是我们的节目我们的节目是我们的节目我们的节目是我们的节目我们的节目是我们的节目我们的节目是我们的节目我们的节目是我们的节目我们的节目是我们的节目",
+  "heard_py": [
+   "zhe",
+   "ci",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu",
+   "shi",
+   "wo",
+   "men",
+   "de",
+   "jie",
+   "mu"
+  ]
  },
  {
   "id": "hsk4-468",
   "hanzi": "商量",
   "want": "shang1 liang2",
-  "heard": "善良 善良",
-  "heard_py": "shanliangshanliang"
+  "heard": "生涼",
+  "heard_py": [
+   "sheng",
+   "liang"
+  ]
  },
  {
   "id": "hsk4-471",
   "hanzi": "汗",
   "want": "han4",
-  "heard": "N",
-  "heard_py": ""
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-472",
   "hanzi": "缺少",
   "want": "que1 shao3",
-  "heard": "趨手!",
-  "heard_py": "qushou"
+  "heard": "去找",
+  "heard_py": [
+   "qu",
+   "zhao"
+  ]
+ },
+ {
+  "id": "hsk4-473",
+  "hanzi": "阅读",
+  "want": "yue4 du2",
+  "heard": "一毒一毒",
+  "heard_py": [
+   "yi",
+   "du",
+   "yi",
+   "du"
+  ]
  },
  {
   "id": "hsk4-474",
   "hanzi": "穷",
   "want": "qiong2",
-  "heard": "走我",
-  "heard_py": "zouwo"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-475",
+  "hanzi": "打扮",
+  "want": "da3 ban4",
+  "heard": "打吧打吧",
+  "heard_py": [
+   "da",
+   "ba",
+   "da",
+   "ba"
+  ]
+ },
+ {
+  "id": "hsk4-477",
+  "hanzi": "首都",
+  "want": "shou3 du1",
+  "heard": "手多手多",
+  "heard_py": [
+   "shou",
+   "duo",
+   "shou",
+   "duo"
+  ]
+ },
+ {
+  "id": "hsk4-478",
+  "hanzi": "吃惊",
+  "want": "chi1 jing1",
+  "heard": "接接",
+  "heard_py": [
+   "jie",
+   "jie"
+  ]
+ },
+ {
+  "id": "hsk4-480",
+  "hanzi": "羡慕",
+  "want": "xian4 mu4",
+  "heard": "全部全部",
+  "heard_py": [
+   "quan",
+   "bu",
+   "quan",
+   "bu"
+  ]
+ },
+ {
+  "id": "hsk4-481",
+  "hanzi": "报名",
+  "want": "bao4 ming2",
+  "heard": "Omi",
+  "heard_py": []
  },
  {
   "id": "hsk4-482",
   "hanzi": "脏",
   "want": "zang4",
-  "heard": "走",
-  "heard_py": "zou"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-483",
+  "hanzi": "极其",
+  "want": "ji2 qi2",
+  "heard": "一起一起",
+  "heard_py": [
+   "yi",
+   "qi",
+   "yi",
+   "qi"
+  ]
+ },
+ {
+  "id": "hsk4-484",
+  "hanzi": "日记",
+  "want": "ri4 ji4",
+  "heard": "打击",
+  "heard_py": [
+   "da",
+   "ji"
+  ]
+ },
+ {
+  "id": "hsk4-486",
+  "hanzi": "逛",
+  "want": "guang4",
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
+ },
+ {
+  "id": "hsk4-487",
+  "hanzi": "总结",
+  "want": "zong3 jie2",
+  "heard": "走急",
+  "heard_py": [
+   "zou",
+   "ji"
+  ]
  },
  {
   "id": "hsk4-488",
   "hanzi": "打扰",
   "want": "da3 rao3",
-  "heard": "大喲!大喲!",
-  "heard_py": "dayodayo"
+  "heard": "啊呦啊呦",
+  "heard_py": [
+   "a",
+   "you",
+   "a",
+   "you"
+  ]
+ },
+ {
+  "id": "hsk4-489",
+  "hanzi": "幽默",
+  "want": "you1 mo4",
+  "heard": "你不…你不…",
+  "heard_py": [
+   "ni",
+   "bu",
+   "ni",
+   "bu"
+  ]
+ },
+ {
+  "id": "hsk4-490",
+  "hanzi": "误会",
+  "want": "wu4 hui4",
+  "heard": "我会我会",
+  "heard_py": [
+   "wo",
+   "hui",
+   "wo",
+   "hui"
+  ]
  },
  {
   "id": "hsk4-493",
   "hanzi": "朵",
   "want": "duo3",
-  "heard": "波",
-  "heard_py": "bo"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-494",
   "hanzi": "镜子",
   "want": "jing4 zi5",
-  "heard": "金子",
-  "heard_py": "jinzi"
+  "heard": "KinzeKinze",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-495",
+  "hanzi": "合格",
+  "want": "he2 ge2",
+  "heard": "伯伯",
+  "heard_py": [
+   "bo",
+   "bo"
+  ]
  },
  {
   "id": "hsk4-496",
   "hanzi": "亲戚",
   "want": "qin1 qi1",
-  "heard": "清奇!",
-  "heard_py": "qingqi"
+  "heard": "清洗",
+  "heard_py": [
+   "qing",
+   "xi"
+  ]
+ },
+ {
+  "id": "hsk4-497",
+  "hanzi": "力气",
+  "want": "li4 qi4",
+  "heard": "一起一起",
+  "heard_py": [
+   "yi",
+   "qi",
+   "yi",
+   "qi"
+  ]
  },
  {
   "id": "hsk4-498",
   "hanzi": "缺点",
   "want": "que1 dian3",
-  "heard": "追點!",
-  "heard_py": "zhuidian"
+  "heard": "吃点 吃点",
+  "heard_py": [
+   "chi",
+   "dian",
+   "chi",
+   "dian"
+  ]
+ },
+ {
+  "id": "hsk4-499",
+  "hanzi": "抽烟",
+  "want": "chou1 yan1",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-501",
+  "hanzi": "网球",
+  "want": "wang3 qiu2",
+  "heard": "晚秋",
+  "heard_py": [
+   "wan",
+   "qiu"
+  ]
+ },
+ {
+  "id": "hsk4-502",
+  "hanzi": "老虎",
+  "want": "lao3 hu3",
+  "heard": "拉虎",
+  "heard_py": [
+   "la",
+   "hu"
+  ]
+ },
+ {
+  "id": "hsk4-505",
+  "hanzi": "集合",
+  "want": "ji2 he2",
+  "heard": "接好",
+  "heard_py": [
+   "jie",
+   "hao"
+  ]
  },
  {
   "id": "hsk4-506",
   "hanzi": "孙子",
   "want": "sun1 zi5",
-  "heard": "生子",
-  "heard_py": "shengzi"
+  "heard": "順著",
+  "heard_py": [
+   "shun",
+   "zhu"
+  ]
+ },
+ {
+  "id": "hsk4-507",
+  "hanzi": "优点",
+  "want": "you1 dian3",
+  "heard": "点点",
+  "heard_py": [
+   "dian",
+   "dian"
+  ]
+ },
+ {
+  "id": "hsk4-508",
+  "hanzi": "猴子",
+  "want": "hou2 zi5",
+  "heard": "好子",
+  "heard_py": [
+   "hao",
+   "zi"
+  ]
+ },
+ {
+  "id": "hsk4-510",
+  "hanzi": "普遍",
+  "want": "pu3 bian4",
+  "heard": "不變不變",
+  "heard_py": [
+   "bu",
+   "bian",
+   "bu",
+   "bian"
+  ]
  },
  {
   "id": "hsk4-511",
   "hanzi": "入口",
   "want": "ru4 kou3",
-  "heard": "如何",
-  "heard_py": "ruhe"
+  "heard": "落口",
+  "heard_py": [
+   "luo",
+   "kou"
+  ]
+ },
+ {
+  "id": "hsk4-512",
+  "hanzi": "加班",
+  "want": "jia1 ban1",
+  "heard": "加吧 加吧",
+  "heard_py": [
+   "jia",
+   "ba",
+   "jia",
+   "ba"
+  ]
  },
  {
   "id": "hsk4-513",
   "hanzi": "热闹",
   "want": "re4 nao4",
-  "heard": "真喔!真喔!",
-  "heard_py": "zhenozheno"
+  "heard": "任到任到",
+  "heard_py": [
+   "ren",
+   "dao",
+   "ren",
+   "dao"
+  ]
  },
  {
   "id": "hsk4-514",
   "hanzi": "散步",
   "want": "san4 bu4",
-  "heard": "先播",
-  "heard_py": "xianbo"
+  "heard": "向部向部",
+  "heard_py": [
+   "xiang",
+   "bu",
+   "xiang",
+   "bu"
+  ]
+ },
+ {
+  "id": "hsk4-515",
+  "hanzi": "顺序",
+  "want": "shun4 xu4",
+  "heard": "顺息",
+  "heard_py": [
+   "shun",
+   "xi"
+  ]
  },
  {
   "id": "hsk4-516",
   "hanzi": "懒",
   "want": "lan3",
-  "heard": "蚂",
-  "heard_py": "ma"
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-518",
+  "hanzi": "准时",
+  "want": "zhun3 shi2",
+  "heard": "准许",
+  "heard_py": [
+   "zhun",
+   "xu"
+  ]
+ },
+ {
+  "id": "hsk4-519",
+  "hanzi": "盒子",
+  "want": "he2 zi5",
+  "heard": "猴子",
+  "heard_py": [
+   "hou",
+   "zi"
+  ]
+ },
+ {
+  "id": "hsk4-520",
+  "hanzi": "得意",
+  "want": "de2 yi4",
+  "heard": "唯一",
+  "heard_py": [
+   "wei",
+   "yi"
+  ]
+ },
+ {
+  "id": "hsk4-521",
+  "hanzi": "礼貌",
+  "want": "li3 mao4",
+  "heard": "你到你到",
+  "heard_py": [
+   "ni",
+   "dao",
+   "ni",
+   "dao"
+  ]
+ },
+ {
+  "id": "hsk4-522",
+  "hanzi": "推迟",
+  "want": "tui1 chi2",
+  "heard": "配尺",
+  "heard_py": [
+   "pei",
+   "chi"
+  ]
  },
  {
   "id": "hsk4-523",
   "hanzi": "饼干",
   "want": "bing3 gan1",
-  "heard": "本干",
-  "heard_py": "bengan"
+  "heard": "對對",
+  "heard_py": [
+   "dui",
+   "dui"
+  ]
  },
  {
-  "id": "hsk4-525",
-  "hanzi": "性别",
-  "want": "xing4 bie2",
-  "heard": "心扁",
-  "heard_py": "xinbian"
+  "id": "hsk4-524",
+  "hanzi": "中文",
+  "want": "zhong1 wen2",
+  "heard": "对了对了",
+  "heard_py": [
+   "dui",
+   "le",
+   "dui",
+   "le"
+  ]
  },
  {
   "id": "hsk4-526",
   "hanzi": "袜子",
   "want": "wa4 zi5",
-  "heard": "外子",
-  "heard_py": "waizi"
+  "heard": "骂子",
+  "heard_py": [
+   "ma",
+   "zi"
+  ]
  },
  {
-  "id": "hsk4-533",
-  "hanzi": "握手",
-  "want": "wo4 shou3",
-  "heard": "無首",
-  "heard_py": "wushou"
+  "id": "hsk4-527",
+  "hanzi": "气候",
+  "want": "qi4 hou4",
+  "heard": "好",
+  "heard_py": [
+   "hao"
+  ]
+ },
+ {
+  "id": "hsk4-528",
+  "hanzi": "毛巾",
+  "want": "mao2 jin1",
+  "heard": "麻糬",
+  "heard_py": [
+   "ma",
+   "shu"
+  ]
+ },
+ {
+  "id": "hsk4-529",
+  "hanzi": "鼓掌",
+  "want": "gu3 zhang3",
+  "heard": "我找我找",
+  "heard_py": [
+   "wo",
+   "zhao",
+   "wo",
+   "zhao"
+  ]
+ },
+ {
+  "id": "hsk4-530",
+  "hanzi": "瓶子",
+  "want": "ping2 zi5",
+  "heard": "撐住撐住",
+  "heard_py": [
+   "cheng",
+   "zhu",
+   "cheng",
+   "zhu"
+  ]
+ },
+ {
+  "id": "hsk4-531",
+  "hanzi": "传真",
+  "want": "chuan2 zhen1",
+  "heard": "发针发针",
+  "heard_py": [
+   "fa",
+   "zhen",
+   "fa",
+   "zhen"
+  ]
+ },
+ {
+  "id": "hsk4-532",
+  "hanzi": "害羞",
+  "want": "hai4 xiu1",
+  "heard": "汗修",
+  "heard_py": [
+   "han",
+   "xiu"
+  ]
+ },
+ {
+  "id": "hsk4-534",
+  "hanzi": "来得及",
+  "want": "lai2 de5 ji2",
+  "heard": "掰得急",
+  "heard_py": [
+   "bai",
+   "de",
+   "ji"
+  ]
+ },
+ {
+  "id": "hsk4-535",
+  "hanzi": "咳嗽",
+  "want": "ke2 sou4",
+  "heard": "那是那是",
+  "heard_py": [
+   "na",
+   "shi",
+   "na",
+   "shi"
+  ]
+ },
+ {
+  "id": "hsk4-538",
+  "hanzi": "按时",
+  "want": "an4 shi2",
+  "heard": "愛時",
+  "heard_py": [
+   "ai",
+   "shi"
+  ]
  },
  {
   "id": "hsk4-539",
   "hanzi": "流泪",
   "want": "liu2 lei4",
-  "heard": "琉璃",
-  "heard_py": "liuli"
+  "heard": "有累",
+  "heard_py": [
+   "you",
+   "lei"
+  ]
+ },
+ {
+  "id": "hsk4-540",
+  "hanzi": "咸",
+  "want": "xian2",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-541",
+  "hanzi": "加油站",
+  "want": "jia1 you2 zhan4",
+  "heard": "加油转加油转",
+  "heard_py": [
+   "jia",
+   "you",
+   "zhuan",
+   "jia",
+   "you",
+   "zhuan"
+  ]
+ },
+ {
+  "id": "hsk4-542",
+  "hanzi": "节约",
+  "want": "jie2 yue1",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "hsk4-543",
+  "hanzi": "招聘",
+  "want": "zhao1 pin4",
+  "heard": "發屁",
+  "heard_py": [
+   "fa",
+   "pi"
+  ]
  },
  {
   "id": "hsk4-544",
   "hanzi": "活泼",
   "want": "huo2 po1",
-  "heard": "活泡",
-  "heard_py": "huopao"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "hsk4-545",
   "hanzi": "干燥",
   "want": "gan1 zao4",
-  "heard": "趕走",
-  "heard_py": "ganzou"
+  "heard": "按照按照",
+  "heard_py": [
+   "an",
+   "zhao",
+   "an",
+   "zhao"
+  ]
+ },
+ {
+  "id": "hsk4-546",
+  "hanzi": "签证",
+  "want": "qian1 zheng4",
+  "heard": "信證信證",
+  "heard_py": [
+   "xin",
+   "zheng",
+   "xin",
+   "zheng"
+  ]
  },
  {
   "id": "hsk4-547",
   "hanzi": "暖和",
   "want": "nuan3 huo5",
-  "heard": "滿火",
-  "heard_py": "manhuo"
+  "heard": "老婆老婆",
+  "heard_py": [
+   "lao",
+   "po",
+   "lao",
+   "po"
+  ]
+ },
+ {
+  "id": "hsk4-548",
+  "hanzi": "打印",
+  "want": "da3 yin4",
+  "heard": "答一",
+  "heard_py": [
+   "da",
+   "yi"
+  ]
  },
  {
   "id": "hsk4-549",
   "hanzi": "农村",
   "want": "nong2 cun1",
-  "heard": "能存",
-  "heard_py": "nengcun"
+  "heard": "夢中 夢中",
+  "heard_py": [
+   "meng",
+   "zhong",
+   "meng",
+   "zhong"
+  ]
+ },
+ {
+  "id": "hsk4-550",
+  "hanzi": "排列",
+  "want": "pai2 lie4",
+  "heard": "排练",
+  "heard_py": [
+   "pai",
+   "lian"
+  ]
  },
  {
   "id": "hsk4-551",
   "hanzi": "窄",
   "want": "zhai3",
-  "heard": "加油!加油!",
-  "heard_py": "jiayoujiayou"
+  "heard": "",
+  "heard_py": []
  },
  {
   "id": "hsk4-552",
   "hanzi": "积累",
   "want": "ji1 lei3",
-  "heard": "智慧",
-  "heard_py": "zhihui"
+  "heard": "智利",
+  "heard_py": [
+   "zhi",
+   "li"
+  ]
+ },
+ {
+  "id": "hsk4-554",
+  "hanzi": "表格",
+  "want": "biao3 ge2",
+  "heard": "叫國叫國",
+  "heard_py": [
+   "jiao",
+   "guo",
+   "jiao",
+   "guo"
+  ]
+ },
+ {
+  "id": "hsk4-555",
+  "hanzi": "表扬",
+  "want": "biao3 yang2",
+  "heard": "博雅",
+  "heard_py": [
+   "bo",
+   "ya"
+  ]
  },
  {
   "id": "hsk4-557",
   "hanzi": "牙膏",
   "want": "ya2 gao1",
-  "heard": "雅各",
-  "heard_py": "yage"
+  "heard": "字幕by索兰娅",
+  "heard_py": [
+   "zi",
+   "mu",
+   "suo",
+   "lan",
+   "ya"
+  ]
  },
  {
   "id": "hsk4-558",
   "hanzi": "长城",
   "want": "chang2 cheng2",
-  "heard": "長城",
-  "heard_py": "zhangcheng"
+  "heard": "長車",
+  "heard_py": [
+   "zhang",
+   "che"
+  ]
+ },
+ {
+  "id": "hsk4-560",
+  "hanzi": "请客",
+  "want": "qing3 ke4",
+  "heard": "敬禾敬禾",
+  "heard_py": [
+   "jing",
+   "he",
+   "jing",
+   "he"
+  ]
+ },
+ {
+  "id": "hsk4-563",
+  "hanzi": "导游",
+  "want": "dao3 you2",
+  "heard": "拜唷拜唷",
+  "heard_py": [
+   "bai",
+   "yo",
+   "bai",
+   "yo"
+  ]
+ },
+ {
+  "id": "hsk4-565",
+  "hanzi": "打折",
+  "want": "da3 zhe2",
+  "heard": "打之了",
+  "heard_py": [
+   "da",
+   "zhi",
+   "le"
+  ]
+ },
+ {
+  "id": "hsk4-567",
+  "hanzi": "堵车",
+  "want": "du3 che1",
+  "heard": "我撤",
+  "heard_py": [
+   "wo",
+   "che"
+  ]
+ },
+ {
+  "id": "hsk4-569",
+  "hanzi": "个子",
+  "want": "ge4 zi5",
+  "heard": "靠著靠著",
+  "heard_py": [
+   "kao",
+   "zhu",
+   "kao",
+   "zhu"
+  ]
+ },
+ {
+  "id": "hsk4-571",
+  "hanzi": "饺子",
+  "want": "jiao3 zi5",
+  "heard": "假子",
+  "heard_py": [
+   "jia",
+   "zi"
+  ]
+ },
+ {
+  "id": "hsk4-574",
+  "hanzi": "养成",
+  "want": "yang3 cheng2",
+  "heard": "氧吹",
+  "heard_py": [
+   "yang",
+   "chui"
+  ]
  },
  {
   "id": "hsk4-576",
   "hanzi": "理发",
   "want": "li3 fa4",
-  "heard": "Dia!Dia!",
-  "heard_py": ""
- },
- {
-  "id": "hsk4-577",
-  "hanzi": "语法",
-  "want": "yu3 fa3",
-  "heard": "雨啊?雨啊?",
-  "heard_py": "yuayua"
+  "heard": "一發",
+  "heard_py": [
+   "yi",
+   "fa"
+  ]
  },
  {
   "id": "hsk4-578",
   "hanzi": "干杯",
   "want": "gan1 bei1",
-  "heard": "天悲",
-  "heard_py": "tianbei"
+  "heard": "乾杯乾杯",
+  "heard_py": [
+   "qian",
+   "bei",
+   "qian",
+   "bei"
+  ]
  },
  {
   "id": "hsk4-579",
   "hanzi": "复印",
   "want": "fu4 yin4",
-  "heard": "呼應",
-  "heard_py": "huying"
+  "heard": "出音出音",
+  "heard_py": [
+   "chu",
+   "yin",
+   "chu",
+   "yin"
+  ]
+ },
+ {
+  "id": "hsk4-580",
+  "hanzi": "留学",
+  "want": "liu2 xue2",
+  "heard": "有血",
+  "heard_py": [
+   "you",
+   "xue"
+  ]
  },
  {
   "id": "hsk4-581",
   "hanzi": "湿润",
   "want": "shi1 run4",
-  "heard": "是人",
-  "heard_py": "shiren"
+  "heard": "去问去问",
+  "heard_py": [
+   "qu",
+   "wen",
+   "qu",
+   "wen"
+  ]
  },
  {
-  "id": "hsk4-585",
-  "hanzi": "凉快",
-  "want": "liang2 kuai4",
-  "heard": "兩款",
-  "heard_py": "liangkuan"
+  "id": "hsk4-583",
+  "hanzi": "流利",
+  "want": "liu2 li4",
+  "heard": "有力",
+  "heard_py": [
+   "you",
+   "li"
+  ]
+ },
+ {
+  "id": "hsk4-584",
+  "hanzi": "词典",
+  "want": "ci2 dian3",
+  "heard": "4点4点",
+  "heard_py": [
+   "dian",
+   "dian"
+  ]
+ },
+ {
+  "id": "hsk4-586",
+  "hanzi": "售货员",
+  "want": "shou4 huo4 yuan2",
+  "heard": "束火源",
+  "heard_py": [
+   "shu",
+   "huo",
+   "yuan"
+  ]
  },
  {
   "id": "hsk4-587",
   "hanzi": "长江",
   "want": "chang2 jiang1",
-  "heard": "糖漿",
-  "heard_py": "tangjiang"
+  "heard": "长假",
+  "heard_py": [
+   "chang",
+   "jia"
+  ]
  },
  {
   "id": "hsk4-588",
   "hanzi": "马虎",
   "want": "ma3 hu3",
-  "heard": "阿我",
-  "heard_py": "awo"
- },
- {
-  "id": "hsk4-589",
-  "hanzi": "寒假",
-  "want": "han2 jia4",
-  "heard": "彈架",
-  "heard_py": "danjia"
+  "heard": "拉呼 拉呼",
+  "heard_py": [
+   "la",
+   "hu",
+   "la",
+   "hu"
+  ]
  },
  {
   "id": "hsk4-591",
   "hanzi": "粗心",
   "want": "cu1 xin1",
-  "heard": "錯信",
-  "heard_py": "cuoxin"
+  "heard": "初心",
+  "heard_py": [
+   "chu",
+   "xin"
+  ]
  },
  {
-  "id": "hsk4-593",
-  "hanzi": "京剧",
-  "want": "jing1 ju4",
-  "heard": "金句",
-  "heard_py": "jinju"
+  "id": "hsk4-592",
+  "hanzi": "预习",
+  "want": "yu4 xi2",
+  "heard": "日洗",
+  "heard_py": [
+   "ri",
+   "xi"
+  ]
  },
  {
-  "id": "zh-g09",
-  "hanzi": "我叫丹尼尔",
-  "want": "wo3 jiao4 dan1 ni2 er3",
-  "heard": "我交代你二。",
-  "heard_py": "wojiaodainier"
+  "id": "hsk4-594",
+  "hanzi": "分之",
+  "want": "fen1 zhi1",
+  "heard": "嗯哲嗯哲",
+  "heard_py": [
+   "n",
+   "zhe",
+   "n",
+   "zhe"
+  ]
+ },
+ {
+  "id": "hsk4-595",
+  "hanzi": "填空",
+  "want": "tian2 kong4",
+  "heard": "甜痛",
+  "heard_py": [
+   "tian",
+   "tong"
+  ]
+ },
+ {
+  "id": "zh-g02",
+  "hanzi": "早上好",
+  "want": "zao3 shang4 hao3",
+  "heard": "早生好",
+  "heard_py": [
+   "zao",
+   "sheng",
+   "hao"
+  ]
+ },
+ {
+  "id": "zh-g08",
+  "hanzi": "请问",
+  "want": "qing3 wen4",
+  "heard": "新聞新聞",
+  "heard_py": [
+   "xin",
+   "wen",
+   "xin",
+   "wen"
+  ]
+ },
+ {
+  "id": "zh-g12",
+  "hanzi": "好的",
+  "want": "hao3 de5",
+  "heard": "好呢?好呢?",
+  "heard_py": [
+   "hao",
+   "ne",
+   "hao",
+   "ne"
+  ]
  },
  {
   "id": "zh-n01",
   "hanzi": "一 二 三",
   "want": "yi1 er4 san1",
-  "heard": "123",
-  "heard_py": ""
+  "heard": "123123",
+  "heard_py": []
  },
  {
   "id": "zh-n02",
   "hanzi": "四 五 六",
   "want": "si4 wu3 liu4",
   "heard": "456",
-  "heard_py": ""
+  "heard_py": []
  },
  {
   "id": "zh-n03",
   "hanzi": "七 八 九 十",
   "want": "qi1 ba1 jiu3 shi2",
-  "heard": "7,890",
-  "heard_py": ""
+  "heard": "吸八九湿",
+  "heard_py": [
+   "xi",
+   "ba",
+   "jiu",
+   "shi"
+  ]
+ },
+ {
+  "id": "zh-n04",
+  "hanzi": "一百",
+  "want": "yi4 bai3",
+  "heard": "100100",
+  "heard_py": []
+ },
+ {
+  "id": "zh-n05",
+  "hanzi": "钱",
+  "want": "qian2",
+  "heard": "",
+  "heard_py": []
+ },
+ {
+  "id": "zh-n08",
+  "hanzi": "便宜一点",
+  "want": "pian2 yi5 yi4 dian3",
+  "heard": "便宜点",
+  "heard_py": [
+   "pian",
+   "yi",
+   "dian"
+  ]
+ },
+ {
+  "id": "zh-n10",
+  "hanzi": "这个",
+  "want": "zhe4 ge4",
+  "heard": "对",
+  "heard_py": [
+   "dui"
+  ]
  },
  {
   "id": "zh-n11",
   "hanzi": "那个",
   "want": "na4 ge4",
-  "heard": "八个",
-  "heard_py": "bage"
+  "heard": "沒有沒有",
+  "heard_py": [
+   "mei",
+   "you",
+   "mei",
+   "you"
+  ]
  },
  {
   "id": "zh-f01",
   "hanzi": "咖啡",
   "want": "ka1 fei1",
-  "heard": "哈菲",
-  "heard_py": "hafei"
+  "heard": "say",
+  "heard_py": []
  },
  {
   "id": "zh-f02",
   "hanzi": "茶",
   "want": "cha2",
-  "heard": "他?他?",
-  "heard_py": "tata"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "zh-f04",
+  "hanzi": "米饭",
+  "want": "mi3 fan4",
+  "heard": "你敗",
+  "heard_py": [
+   "ni",
+   "bai"
+  ]
+ },
+ {
+  "id": "zh-f08",
+  "hanzi": "菜单",
+  "want": "cai4 dan1",
+  "heard": "猜的猜的",
+  "heard_py": [
+   "cai",
+   "de",
+   "cai",
+   "de"
+  ]
+ },
+ {
+  "id": "zh-f10",
+  "hanzi": "买单",
+  "want": "mai3 dan1",
+  "heard": "买的",
+  "heard_py": [
+   "mai",
+   "de"
+  ]
+ },
+ {
+  "id": "zh-f11",
+  "hanzi": "我饿了",
+  "want": "wo3 e4 le5",
+  "heard": "我很啊我很啊",
+  "heard_py": [
+   "wo",
+   "hen",
+   "a",
+   "wo",
+   "hen",
+   "a"
+  ]
  },
  {
   "id": "zh-t01",
   "hanzi": "出租车",
   "want": "chu1 zu1 che1",
-  "heard": "出自撤",
-  "heard_py": "chuziche"
+  "heard": "出左车",
+  "heard_py": [
+   "chu",
+   "zuo",
+   "che"
+  ]
+ },
+ {
+  "id": "zh-t06",
+  "hanzi": "右转",
+  "want": "you4 zhuan3",
+  "heard": "扭轉",
+  "heard_py": [
+   "niu",
+   "zhuan"
+  ]
+ },
+ {
+  "id": "zh-t09",
+  "hanzi": "远吗",
+  "want": "yuan3 ma5",
+  "heard": "人嗎?人嗎?",
+  "heard_py": [
+   "ren",
+   "ma",
+   "ren",
+   "ma"
+  ]
  },
  {
   "id": "zh-t10",
   "hanzi": "很近",
   "want": "hen3 jin4",
-  "heard": "澎精",
-  "heard_py": "pengjing"
+  "heard": "韓金",
+  "heard_py": [
+   "han",
+   "jin"
+  ]
  },
  {
   "id": "zh-r03",
   "hanzi": "你呢",
   "want": "ni3 ne5",
-  "heard": "妮娜?妮娜?",
-  "heard_py": "ninanina"
+  "heard": "你的",
+  "heard_py": [
+   "ni",
+   "de"
+  ]
+ },
+ {
+  "id": "zh-r06",
+  "hanzi": "请说慢一点",
+  "want": "qing3 shuo1 man4 yi4 dian3",
+  "heard": "请说慢一遍",
+  "heard_py": [
+   "qing",
+   "shuo",
+   "man",
+   "yi",
+   "bian"
+  ]
+ },
+ {
+  "id": "zh-r10",
+  "hanzi": "一点点",
+  "want": "yi4 dian3 dian3",
+  "heard": "一點念一點念",
+  "heard_py": [
+   "yi",
+   "dian",
+   "nian",
+   "yi",
+   "dian",
+   "nian"
+  ]
+ },
+ {
+  "id": "zh-ti04",
+  "hanzi": "昨天",
+  "want": "zuo2 tian1",
+  "heard": "我骗",
+  "heard_py": [
+   "wo",
+   "pian"
+  ]
+ },
+ {
+  "id": "zh-ti07",
+  "hanzi": "今天星期几",
+  "want": "jin1 tian1 xing1 qi1 ji3",
+  "heard": "晴天星期幾",
+  "heard_py": [
+   "qing",
+   "tian",
+   "xing",
+   "qi",
+   "ji"
+  ]
  },
  {
   "id": "zh-ti08",
   "hanzi": "早上",
   "want": "zao3 shang4",
-  "heard": "早晨",
-  "heard_py": "zaochen"
+  "heard": "早晨啊",
+  "heard_py": [
+   "zao",
+   "chen",
+   "a"
+  ]
  },
  {
-  "id": "zh-p02",
-  "hanzi": "妈妈",
-  "want": "ma1 ma1",
-  "heard": "Maga",
-  "heard_py": ""
+  "id": "zh-ti09",
+  "hanzi": "晚上",
+  "want": "wan3 shang4",
+  "heard": "完成 完成",
+  "heard_py": [
+   "wan",
+   "cheng",
+   "wan",
+   "cheng"
+  ]
  },
  {
-  "id": "zh-fe04",
-  "hanzi": "开心",
-  "want": "kai1 xin1",
-  "heard": "太心!太心!",
-  "heard_py": "taixintaixin"
+  "id": "zh-p01",
+  "hanzi": "爸爸",
+  "want": "ba4 ba4",
+  "heard": "晚了晚了",
+  "heard_py": [
+   "wan",
+   "le",
+   "wan",
+   "le"
+  ]
+ },
+ {
+  "id": "zh-p05",
+  "hanzi": "哥哥",
+  "want": "ge1 ge1",
+  "heard": "不夠不夠",
+  "heard_py": [
+   "bu",
+   "gou",
+   "bu",
+   "gou"
+  ]
+ },
+ {
+  "id": "zh-p07",
+  "hanzi": "老师",
+  "want": "lao3 shi1",
+  "heard": "抱拾",
+  "heard_py": [
+   "bao",
+   "shi"
+  ]
+ },
+ {
+  "id": "zh-fe03",
+  "hanzi": "我累了",
+  "want": "wo3 lei4 le5",
+  "heard": "完美了",
+  "heard_py": [
+   "wan",
+   "mei",
+   "le"
+  ]
+ },
+ {
+  "id": "zh-fe06",
+  "hanzi": "因为",
+  "want": "yin1 wei4",
+  "heard": "又沒又沒",
+  "heard_py": [
+   "you",
+   "mei",
+   "you",
+   "mei"
+  ]
+ },
+ {
+  "id": "zh-fe07",
+  "hanzi": "真的吗",
+  "want": "zhen1 de5 ma5",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
  },
  {
   "id": "zh-fe09",
   "hanzi": "太好了",
   "want": "tai4 hao3 le5",
-  "heard": "開好了!開好了!",
-  "heard_py": "kaihaolekaihaole"
+  "heard": "配好了",
+  "heard_py": [
+   "pei",
+   "hao",
+   "le"
+  ]
+ },
+ {
+  "id": "zh-fe11",
+  "hanzi": "有意思",
+  "want": "you3 yi4 si1",
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "zh-h01",
+  "hanzi": "酒店",
+  "want": "jiu3 dian4",
+  "heard": "酒滴",
+  "heard_py": [
+   "jiu",
+   "di"
+  ]
  },
  {
   "id": "zh-h05",
   "hanzi": "Wi-Fi 密码是什么",
   "want": "mi4 ma3 shi4 shen2 me5",
-  "heard": "玩翻译码是什么?",
-  "heard_py": "wanfanyimashishenme"
+  "heard": "WiFi 地碼是什麼?",
+  "heard_py": [
+   "di",
+   "ma",
+   "shi",
+   "shen",
+   "me"
+  ]
  },
  {
   "id": "zh-h06",
   "hanzi": "几楼",
   "want": "ji3 lou2",
-  "heard": "子佬",
-  "heard_py": "zilao"
+  "heard": "心如心如",
+  "heard_py": [
+   "xin",
+   "ru",
+   "xin",
+   "ru"
+  ]
  },
  {
-  "id": "zh-h07",
-  "hanzi": "空调",
-  "want": "kong1 tiao2",
-  "heard": "烘调",
-  "heard_py": "hongdiao"
+  "id": "zh-h08",
+  "hanzi": "热水",
+  "want": "re4 shui3",
+  "heard": "二水二水",
+  "heard_py": [
+   "er",
+   "shui",
+   "er",
+   "shui"
+  ]
  },
  {
   "id": "zh-h09",
   "hanzi": "太吵了",
   "want": "tai4 chao3 le5",
-  "heard": "開炒了!",
-  "heard_py": "kaichaole"
+  "heard": "字幕製作人Zither Harp",
+  "heard_py": [
+   "zi",
+   "mu",
+   "zhi",
+   "zuo",
+   "ren"
+  ]
+ },
+ {
+  "id": "zh-h11",
+  "hanzi": "退房",
+  "want": "tui4 fang2",
+  "heard": "退伐",
+  "heard_py": [
+   "tui",
+   "fa"
+  ]
+ },
+ {
+  "id": "zh-h12",
+  "hanzi": "帮我叫出租车",
+  "want": "bang1 wo3 jiao4 chu1 zu1 che1",
+  "heard": "我叫出租车",
+  "heard_py": [
+   "wo",
+   "jiao",
+   "chu",
+   "zu",
+   "che"
+  ]
+ },
+ {
+  "id": "zh-c02",
+  "hanzi": "可能",
+  "want": "ke3 neng2",
+  "heard": "看啊看啊",
+  "heard_py": [
+   "kan",
+   "a",
+   "kan",
+   "a"
+  ]
+ },
+ {
+  "id": "zh-c08",
+  "hanzi": "周末",
+  "want": "zhou1 mo4",
+  "heard": "矚目",
+  "heard_py": [
+   "zhu",
+   "mu"
+  ]
  }
 ]

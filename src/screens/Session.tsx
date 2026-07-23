@@ -15,7 +15,7 @@ import { playAudioKey } from '../lib/mediaStore';
 import { contourFromUrl, similarity } from '../lib/pitch';
 import doubledClipIds from '../data/zh-audio-doubles.json';
 
-// Word clips rendered as "word, word" (spoken twice) — fine for listening,
+// Word clips rendered as "word, word" (spoken twice), fine for listening,
 // unusable as a single-utterance pitch reference.
 const DOUBLED_CLIPS = new Set<string>(doubledClipIds as string[]);
 import { playUrl, recordingSupported, startRecording, stopRecording } from '../lib/recorder';
@@ -34,8 +34,10 @@ import PitchCompare from '../components/PitchCompare';
 
 type Phase = 'front' | 'back';
 
-// Tall enough for the zh card back incl. the pitch-contour comparison.
-const CARD_H = 640;
+// The card height follows its content (measured per face) so nothing ever
+// overflows the white face. These bound and pad that measurement.
+const MIN_CARD_H = 380;
+const FACE_PAD = 56; // faceSurface vertical padding (48) + edge strip (4) + buffer
 const XP_PER_CARD = 10;
 
 const GRADES: {
@@ -159,7 +161,7 @@ function SessionComplete({
   keepGoingBlocked: boolean;
 }) {
   const reduced = useReducedMotion();
-  const empty = reviewed === 0; // opened with nothing due — no fake celebration
+  const empty = reviewed === 0; // opened with nothing due, no fake celebration
   const [streak, setStreak] = useState<number | null>(null);
   const [hasMore, setHasMore] = useState(false);
   const cardAnim = useRef(new Animated.Value(reduced || empty ? 1 : 0)).current;
@@ -207,7 +209,7 @@ function SessionComplete({
 
       {empty ? (
         <Text style={styles.keepGoingHint}>
-          Today's new-card pace is used up — it's shared across all decks.
+          Today's new-card pace is used up, it's shared across all decks.
           {hasMore ? ' "Keep going" adds extra cards beyond the pace.' : ''}
         </Text>
       ) : (
@@ -234,7 +236,7 @@ function SessionComplete({
       <Animated.View style={{ opacity: ctaAnim, width: '100%', maxWidth: 320, gap: 10 }}>
         {hasMore && !keepGoingBlocked && (
           <ChunkyButton
-            label="🚀 Keep going — more new cards"
+            label="🚀 Keep going for more"
             gradient={tokens.brand.gradient}
             edge={tokens.brand.primaryDown}
             textColor={tokens.text.onCard}
@@ -244,7 +246,7 @@ function SessionComplete({
         )}
         {keepGoingBlocked && (
           <Text style={styles.keepGoingHint}>
-            Nothing more to unlock right now — finish the current scenario or raise your
+            Nothing more to unlock right now, finish the current scenario or raise your
             HSK starting level.
           </Text>
         )}
@@ -279,6 +281,9 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
   const [refContour, setRefContour] = useState<number[] | null>(null);
   const [userContour, setUserContour] = useState<number[] | null>(null);
   const [toneScore, setToneScore] = useState<number | null>(null);
+  const [frontH, setFrontH] = useState(0);
+  const [backH, setBackH] = useState(0);
+  const cardH = Math.max(MIN_CARD_H, (phase === 'front' ? frontH : backH) + FACE_PAD);
 
   const flipAnim = useRef(new Animated.Value(0)).current;
   const fxAnim = useRef(new Animated.Value(0)).current;
@@ -315,7 +320,7 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
   }, [item?.id]);
 
   // Mandarin tone feedback: prefetch the native clip's pitch contour per card.
-  // Reference comes from builtin rendered audio only — imported (audioKey) cards
+  // Reference comes from builtin rendered audio only, imported (audioKey) cards
   // and "spoken twice" clips (doubled contour ≠ single utterance) skip it.
   useEffect(() => {
     setRefContour(null);
@@ -470,8 +475,8 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
         <SegmentedProgress total={queue.length} current={index} />
 
         {/* Flashcard with glow underlay */}
-        <View style={styles.cardZone}>
-          <GlowEllipse width={440} height={CARD_H} style={styles.cardGlow} />
+        <View style={[styles.cardZone, { height: cardH }]}>
+          <GlowEllipse width={440} height={cardH} style={styles.cardGlow} />
 
           {/* FRONT */}
           <Animated.View
@@ -480,6 +485,10 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
           >
             <View style={styles.faceEdge}>
               <View style={styles.faceSurface}>
+               <View
+                 style={styles.faceContent}
+                 onLayout={(e) => setFrontH(e.nativeEvent.layout.height)}
+               >
                 {isNew && (
                   <LinearGradient
                     colors={tokens.brand.gradient}
@@ -487,7 +496,7 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                     end={{ x: 1, y: 1 }}
                     style={styles.newBadge}
                   >
-                    <Text style={styles.newBadgeText}>✨ NEW — listen first, then copy it</Text>
+                    <Text style={styles.newBadgeText}>✨ NEW. Listen first, then copy it</Text>
                   </LinearGradient>
                 )}
                 {isListen ? (
@@ -527,13 +536,14 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                 )}
                 <View style={styles.flipBtnWrap}>
                   <ChunkyButton
-                    label="I said it — flip"
+                    label="I said it, flip"
                     face={tokens.brand.primary}
                     edge={tokens.brand.primaryDown}
                     onPress={flip}
                     accessibilityHint="Flips the card to show the answer"
                   />
                 </View>
+               </View>
               </View>
             </View>
           </Animated.View>
@@ -545,6 +555,10 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
           >
             <View style={styles.faceEdge}>
               <View style={styles.faceSurface}>
+               <View
+                 style={styles.faceContent}
+                 onLayout={(e) => setBackH(e.nativeEvent.layout.height)}
+               >
                 {isZh && item.pinyin ? (
                   <TonePinyin pinyin={item.pinyin} size={26} />
                 ) : item.pinyin ? (
@@ -634,7 +648,7 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                         accessibilityHint="Listens to you say the phrase and checks it was understood"
                       >
                         <Text style={[styles.pillChipText, checking && styles.pillChipRecText]}>
-                          {checking ? '👂 Listening — say it!' : '🎯 Check me'}
+                          {checking ? '👂 Listening, say it!' : '🎯 Check me'}
                         </Text>
                       </Pressable>
                     )}
@@ -657,9 +671,9 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                       {checkResult.status === 'match' &&
                         `✓ Understood you perfectly! Heard: ${checkResult.heard}`}
                       {checkResult.status === 'close' &&
-                        `~ Almost — heard: ${checkResult.heard || '…'}. Listen and try again.`}
+                        `~ Almost, heard: ${checkResult.heard || '…'}. Listen and try again.`}
                       {checkResult.status === 'miss' &&
-                        `✗ Heard: ${checkResult.heard || 'nothing clear'} — play the native audio and copy it.`}
+                        `✗ Heard: ${checkResult.heard || 'nothing clear'}, play the native audio and copy it.`}
                       {checkResult.status === 'error' &&
                         '⚠ Microphone or recognition unavailable in this browser.'}
                     </Text>
@@ -683,6 +697,7 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                     />
                   ))}
                 </View>
+               </View>
               </View>
             </View>
           </Animated.View>
@@ -739,7 +754,7 @@ const styles = StyleSheet.create({
   counter: { fontFamily: fonts.stat, fontSize: 14, color: tokens.text.secondary },
   segmentRow: { flexDirection: 'row', gap: 3, marginBottom: 20 },
   segment: { flex: 1, height: 6, borderRadius: 3, overflow: 'hidden' },
-  cardZone: { height: CARD_H, justifyContent: 'center' },
+  cardZone: { justifyContent: 'center' },
   cardGlow: { alignSelf: 'center', top: 30 },
   face: {
     position: 'absolute',
@@ -797,6 +812,10 @@ const styles = StyleSheet.create({
     padding: 24,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  faceContent: {
+    width: '100%',
+    alignItems: 'center',
     gap: 14,
   },
   newBadge: {
@@ -831,7 +850,7 @@ const styles = StyleSheet.create({
     color: tokens.text.onCard,
     textAlign: 'center',
   },
-  // Non-zh target phrase — drop the Hanzi face, keep the plain card ink.
+  // Non-zh target phrase, drop the Hanzi face, keep the plain card ink.
   phrasePlain: {
     fontFamily: fonts.bodyBold,
   },
@@ -893,7 +912,7 @@ const styles = StyleSheet.create({
   gradeBtn: { flexGrow: 1, flexBasis: 100 },
   fxChip: {
     position: 'absolute',
-    top: CARD_H / 2 - 60,
+    top: '40%',
     alignSelf: 'center',
     flexDirection: 'row',
     alignItems: 'center',

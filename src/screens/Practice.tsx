@@ -19,7 +19,7 @@ const EAR_MODES: { mode: ToneMode; emoji: string; label: string }[] = [
   { mode: 'shadow', emoji: '🗣️', label: 'Repeat after me' },
 ];
 
-// Practice tab — ear training, sentences, HSK ladder, imported decks.
+// Practice tab, ear training, sentences, HSK ladder, imported decks.
 export default function Practice({
   banner,
   onParsed,
@@ -177,7 +177,7 @@ export default function Practice({
           <Pressable
             style={[styles.deckActionBtn, styles.studyBtn]}
             onPress={async () => {
-              // Self-heal: pace used up but words remain — grant extras and go.
+              // Self-heal: pace used up but words remain, grant extras and go.
               if (
                 hskStats &&
                 hskStats.dueCount + hskStats.freshAvailable === 0 &&
@@ -200,7 +200,7 @@ export default function Practice({
           accessibilityHint="Browse all words and sentences in every level without studying"
         >
           <Text style={styles.browseText}>
-            👀 Browse all materials — peek at any level, no studying required ›
+            👀 Browse all materials, peek at any level, no studying required ›
           </Text>
         </Pressable>
 
@@ -208,7 +208,7 @@ export default function Practice({
         <Text style={styles.sectionTitle}>Your decks</Text>
         {imported.length === 0 && (
           <Text style={styles.emptyDecksText}>
-            No imported decks yet — bring your own Anki deck below.
+            No imported decks yet, bring your own Anki deck below.
           </Text>
         )}
         {imported.map((d) => (
@@ -283,7 +283,7 @@ export default function Practice({
           accessibilityHint="Opens a file picker for an Anki .apkg export"
         />
         {parsing && (
-          <Text style={styles.parsingText}>Unpacking and reading the deck — big files can take a moment…</Text>
+          <Text style={styles.parsingText}>Unpacking and reading the deck, big files can take a moment…</Text>
         )}
       </View>
     </ScrollView>

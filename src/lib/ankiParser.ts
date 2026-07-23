@@ -1,4 +1,4 @@
-// Anki .apkg parsing — platform-agnostic (no React Native imports).
+// Anki .apkg parsing, platform-agnostic (no React Native imports).
 // Runs in the browser (sql.js WASM) and in Node (scripts/test-import.js).
 //
 // .apkg layout: a ZIP holding collection.anki21 (SQLite, schema 11, preferred)
@@ -26,7 +26,7 @@ export const APKG_ERROR_MESSAGES: Record<ApkgErrorCode, string> = {
   anki21b:
     "This deck uses Anki's newest format. In Anki: File → Export → check 'Support older Anki versions', then import again.",
   'sql-failed': "Couldn't read this deck (unsupported Anki version).",
-  'zero-notes': 'This deck contains no notes — nothing to import.',
+  'zero-notes': 'This deck contains no notes, nothing to import.',
 };
 
 const FIELD_SEP = '\x1f';
@@ -250,7 +250,7 @@ function matchHint(fields: FieldInfo[], hints: string[], taken: Set<number>): nu
  * Heuristic default mapping from field names + detected [sound:] tags.
  * `sampledNotes` = how many notes the FieldInfo stats were computed over
  * (min(totalNotes, 200)); a field only counts as the audio field by sound
- * tags alone when the majority of sampled notes carry one — a text field
+ * tags alone when the majority of sampled notes carry one, a text field
  * with the odd embedded [sound:] shouldn't steal the slot.
  */
 export function guessMapping(fields: FieldInfo[], sampledNotes?: number): FieldMapping {
@@ -311,7 +311,7 @@ export function buildDeckItems(
   for (const note of parsed.notes) {
     if (items.length >= cap) break;
     const phrase = cleanText(note[mapping.phrase] ?? '');
-    if (!phrase) continue; // nothing to say aloud — skip
+    if (!phrase) continue; // nothing to say aloud, skip
     const pinyin = mapping.pronunciation !== null ? cleanText(note[mapping.pronunciation] ?? '') : '';
     const meaning = mapping.meaning !== null ? cleanText(note[mapping.meaning] ?? '') : '';
 

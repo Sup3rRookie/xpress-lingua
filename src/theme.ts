@@ -1,4 +1,4 @@
-// "Neon Court" design system — dark-first, playful-premium.
+// "Neon Court" design system, dark-first, playful-premium.
 // `tokens` is the source of truth; `colors` is kept for backwards compatibility.
 
 export const tokens = {
@@ -36,7 +36,7 @@ export const tokens = {
   text: {
     primary: '#F4F2FF',
     secondary: '#A9A3C9',
-    muted: '#6E6893', // decorative only — below 4.5:1 on bg.base
+    muted: '#6E6893', // decorative only, below 4.5:1 on bg.base
     onCard: '#17133A',
     onCardMuted: '#55517E',
   },
@@ -97,7 +97,7 @@ export function hanziSize(hanzi: string): number {
   return 32;
 }
 
-// Legacy palette — kept so existing imports keep compiling.
+// Legacy palette, kept so existing imports keep compiling.
 export const colors = {
   bg: tokens.bg.base,
   bgCard: tokens.bg.raised,

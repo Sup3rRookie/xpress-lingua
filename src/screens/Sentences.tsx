@@ -84,7 +84,7 @@ export default function Sentences({
         </View>
         <Text style={styles.title}>Sentences</Text>
         <Text style={styles.subtitle}>
-          Words in action — every sentence uses only what you've learned.
+          Words in action, every sentence uses only what you've learned.
         </Text>
 
         {/* Tabs */}
@@ -137,7 +137,7 @@ export default function Sentences({
             ))}
             {metIds && filtered.length === 0 && (
               <Text style={styles.emptyText}>
-                No sentences unlocked here yet — every card you learn unlocks the sentences
+                No sentences unlocked here yet, every card you learn unlocks the sentences
                 built from it. Keep going! 🔓
               </Text>
             )}
@@ -147,7 +147,7 @@ export default function Sentences({
         {tab === 'mix' && (
           <>
             <Text style={styles.mixNote}>
-              Freshly generated from YOUR learned words — say each one out loud, then tap ▶
+              Freshly generated from YOUR learned words, say each one out loud, then tap ▶
               to compare.
             </Text>
             {generated.map((s) => (
@@ -155,7 +155,7 @@ export default function Sentences({
             ))}
             {metIds && generated.length === 0 && (
               <Text style={styles.emptyText}>
-                Learn a few more words first — the generator needs them as building blocks.
+                Learn a few more words first, the generator needs them as building blocks.
               </Text>
             )}
             {generated.length > 0 && (

@@ -57,8 +57,8 @@ export default function PitchCompare({
       : score >= 75
         ? { label: `🎯 Tones match: ${score}%`, bg: 'rgba(52,211,153,0.18)', fg: '#0B7A55' }
         : score >= 50
-          ? { label: `${score}% — close`, bg: 'rgba(251,191,36,0.20)', fg: '#8F5E06' }
-          : { label: `${score}% — listen again`, bg: 'rgba(251,113,133,0.16)', fg: '#B91C3C' };
+          ? { label: `Close (${score}%)`, bg: 'rgba(251,191,36,0.20)', fg: '#8F5E06' }
+          : { label: `Listen again (${score}%)`, bg: 'rgba(251,113,133,0.16)', fg: '#B91C3C' };
 
   return (
     <View style={styles.wrap} accessibilityLabel="Pitch contour comparison">

@@ -18,7 +18,7 @@ const UPCOMING = [
   { label: 'Arabic (Levantine)', emoji: '🇱🇧' },
 ];
 
-// You tab — stats, pace, backup, audio status, upcoming languages.
+// You tab, stats, pace, backup, audio status, upcoming languages.
 export default function Profile() {
   const [stats, setStats] = useState<DeckStats | null>(null);
   const [voiceOk, setVoiceOk] = useState(true);
@@ -45,7 +45,7 @@ export default function Profile() {
       ? `Mandarin voice: ✓ rendered clips (${builtinClips})`
       : voiceOk
         ? 'Mandarin voice: ✓ system voice'
-        : 'Mandarin voice: fallback — no Mandarin voice found in this browser, audio may use a default voice.';
+        : 'Mandarin voice: fallback, no Mandarin voice found in this browser, audio may use a default voice.';
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
@@ -115,7 +115,7 @@ export default function Profile() {
           </View>
           {stats?.pace.id === 'beast' && (
             <Text style={styles.paceWarn}>
-              🔥 Beast mode: expect 150+ daily reviews within a few weeks — only sustainable
+              🔥 Beast mode: expect 150+ daily reviews within a few weeks, only sustainable
               with a real 60-min/day habit.
             </Text>
           )}
@@ -145,7 +145,7 @@ export default function Profile() {
           </Pressable>
         </View>
         <Text style={styles.backupHint}>
-          Progress lives in this browser — back it up before switching devices or clearing
+          Progress lives in this browser, back it up before switching devices or clearing
           browser data.
         </Text>
 

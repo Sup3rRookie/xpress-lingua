@@ -3,6 +3,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Deck } from '../data/types';
 import { zhHsk } from '../data/zh-hsk';
+import { jaJlpt } from '../data/ja-jlpt';
 import { initBuiltinAudio, initVoice } from '../lib/audio';
 import { deckStats, DeckStats, grantBonusCards } from '../lib/srs';
 import { fonts, shadows, tokens } from '../theme';
@@ -22,7 +23,7 @@ const SCENARIO_TINTS = [
 const CARD_W = 132;
 const CARD_GAP = 8;
 
-// Learn tab — slim: header + streak, hero Continue, quick actions, conversations.
+// Learn tab, slim: header + streak, hero Continue, quick actions, conversations.
 export default function Home({
   deck,
   activeLang,
@@ -46,7 +47,7 @@ export default function Home({
   const scenarioScroll = useRef<ScrollView>(null);
   const scrollX = useRef(0);
 
-  // Mouse users can't touch-drag the carousel — arrows page it instead.
+  // Mouse users can't touch-drag the carousel, arrows page it instead.
   const pageCarousel = (dir: 1 | -1) => {
     const next = Math.max(0, scrollX.current + dir * 2 * (CARD_W + CARD_GAP));
     scenarioScroll.current?.scrollTo({ x: next, animated: true });
@@ -95,7 +96,7 @@ export default function Home({
       <GlowEllipse style={styles.headerGlow} />
 
       <View style={styles.inner}>
-        {/* Header — wordmark + language switcher + streak pill */}
+        {/* Header, wordmark + language switcher + streak pill */}
         <View style={styles.headerRow}>
           <Text style={styles.wordmark}>⚡ XpressLingua</Text>
           <View style={styles.headerRight}>
@@ -152,7 +153,7 @@ export default function Home({
                 !stats || toStudy > 0
                   ? 'Start session'
                   : stats.learned < stats.total
-                    ? '🚀 Pace done — keep going'
+                    ? '🚀 Pace done, keep going'
                     : 'Deck complete 🏆'
               }
               gradient={tokens.brand.gradient}
@@ -168,7 +169,7 @@ export default function Home({
           </View>
         </LinearGradient>
 
-        {/* Quick actions — Mandarin practice tools; Japanese equivalents come later */}
+        {/* Quick actions, Mandarin practice tools; Japanese equivalents come later */}
         {activeLang === 'zh' && (
         <View style={styles.quickRow}>
           {quickActions.map((q) => (
@@ -186,19 +187,31 @@ export default function Home({
           ))}
         </View>
         )}
+        {activeLang === 'ja' && (
+          <Pressable
+            style={[styles.quickChip, styles.jlptChip]}
+            onPress={() => onStudyDeck(jaJlpt)}
+            accessibilityRole="button"
+            accessibilityLabel="JLPT Ladder"
+            accessibilityHint="Starts a speaking session with the JLPT N5 to N3 ladder deck"
+          >
+            <Text style={styles.quickEmoji}>🎴</Text>
+            <Text style={styles.quickLabel}>JLPT Ladder (N5 to N3, 3,400+ words)</Text>
+          </Pressable>
+        )}
 
-        {/* Voice warning — moot once pre-rendered clips exist */}
+        {/* Voice warning, moot once pre-rendered clips exist */}
         {!voiceOk && builtinClips === 0 && (
           <View style={styles.warnBanner}>
             <Text style={styles.warnIcon}>⚠️</Text>
             <Text style={styles.warnText} numberOfLines={2}>
-              No {deck.langLabel} voice found in this browser yet. Chrome or Edge usually has one —
-              audio may use a default voice until then.
+              No {deck.langLabel} voice found in this browser yet. Chrome or Edge usually has one.
+              Audio may use a default voice until then.
             </Text>
           </View>
         )}
 
-        {/* Scenarios — sequential unlock: finish one to open the next */}
+        {/* Scenarios, sequential unlock: finish one to open the next */}
         <View style={styles.sectionRow}>
           <Text style={styles.sectionTitle}>Conversations</Text>
           <View style={styles.arrowRow}>
@@ -395,6 +408,7 @@ const styles = StyleSheet.create({
     color: tokens.text.secondary,
   },
   quickRow: { flexDirection: 'row', gap: 10 },
+  jlptChip: { flex: undefined, flexDirection: 'row', gap: 10, justifyContent: 'center' },
   quickChip: {
     flex: 1,
     alignItems: 'center',

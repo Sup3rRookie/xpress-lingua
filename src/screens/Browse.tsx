@@ -65,7 +65,7 @@ function Row({ item }: { item: DeckItem }) {
   );
 }
 
-// Peek at any deck level without studying it — the syllabus is optional.
+// Peek at any deck level without studying it, the syllabus is optional.
 export default function Browse({ onDone }: { onDone: () => void }) {
   const [tab, setTab] = useState('hsk1');
   const [query, setQuery] = useState('');

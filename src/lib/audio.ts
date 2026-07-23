@@ -23,7 +23,7 @@ export async function initBuiltinAudio(lang: string): Promise<number> {
       builtinFiles[lang] = (await res.json()).files ?? {};
     }
   } catch {
-    // no rendered audio yet — TTS fallback handles everything
+    // no rendered audio yet, TTS fallback handles everything
   }
   return Object.keys(builtinFiles[lang] ?? {}).length;
 }

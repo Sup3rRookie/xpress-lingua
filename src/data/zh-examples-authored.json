@@ -1,74 +1,290 @@
 {
-  "zh-g02": { "hanzi": "早上好！今天天气真好。", "gloss": "Good morning! The weather is great today." },
-  "zh-n01": { "hanzi": "一、二、三，开始！", "gloss": "One, two, three — go!" },
-  "zh-n02": { "hanzi": "我家有四口人，不是五口。", "gloss": "There are four people in my family, not five." },
-  "zh-r06": { "hanzi": "请说慢一点，我是初学者。", "gloss": "Please speak slower — I'm a beginner." },
-  "zh-r09": { "hanzi": "你是哪国人？— 我是马来西亚人。", "gloss": "Which country are you from? — I'm Malaysian." },
-  "zh-ti07": { "hanzi": "今天星期几？— 星期五。", "gloss": "What day is it today? — Friday." },
-  "zh-p09": { "hanzi": "你有孩子吗？— 有，一个女儿。", "gloss": "Do you have children? — Yes, a daughter." },
-  "zh-p12": { "hanzi": "我们是朋友，不是同事。", "gloss": "We're friends, not coworkers." },
-  "zh-h05": { "hanzi": "请问，Wi-Fi 密码是什么？", "gloss": "Excuse me, what's the Wi-Fi password?" },
-  "zh-h06": { "hanzi": "餐厅在几楼？— 三楼。", "gloss": "Which floor is the restaurant on? — The third." },
-  "zh-h08": { "hanzi": "房间里没有热水。", "gloss": "There's no hot water in the room." },
-  "hsk2-116": { "hanzi": "洗手间在右边。", "gloss": "The bathroom is on the right." },
-  "hsk2-132": { "hanzi": "我不吃羊肉。", "gloss": "I don't eat mutton." },
-  "hsk3-207": { "hanzi": "放心吧，没问题。", "gloss": "Don't worry — no problem." },
-  "hsk3-225": { "hanzi": "我每天练习说中文。", "gloss": "I practice speaking Chinese every day." },
-  "hsk3-275": { "hanzi": "熊猫真可爱！", "gloss": "Pandas are so cute!" },
-  "hsk3-277": { "hanzi": "你的孩子上几年级？", "gloss": "What grade is your child in?" },
-  "hsk3-283": { "hanzi": "这个词语怎么用？", "gloss": "How is this word used?" },
-  "hsk3-288": { "hanzi": "你的普通话说得很好。", "gloss": "You speak Mandarin very well." },
-  "hsk4-073": { "hanzi": "他病了，因此没来上班。", "gloss": "He was sick, therefore he didn't come to work." },
-  "hsk4-115": { "hanzi": "我看了那条新闻报道。", "gloss": "I read that news report." },
-  "hsk4-163": { "hanzi": "他很累，于是早点回家了。", "gloss": "He was tired, so he went home early." },
-  "hsk4-198": { "hanzi": "这不在我的工作范围。", "gloss": "That's outside the scope of my job." },
-  "hsk4-215": { "hanzi": "这个动作有点难。", "gloss": "This movement is a bit difficult." },
-  "hsk4-234": { "hanzi": "我想尝尝当地的菜。", "gloss": "I want to try the local food." },
-  "hsk4-273": { "hanzi": "我想去，然而没有时间。", "gloss": "I want to go; however, I have no time." },
-  "hsk4-324": { "hanzi": "这是一家高级酒店。", "gloss": "This is a high-end hotel." },
-  "hsk4-333": { "hanzi": "我专门来看你。", "gloss": "I came especially to see you." },
-  "hsk4-352": { "hanzi": "停车时间有限制。", "gloss": "There's a limit on parking time." },
-  "hsk4-398": { "hanzi": "他果然来了。", "gloss": "He came, just as expected." },
-  "hsk4-417": { "hanzi": "今天的温度是三十度。", "gloss": "Today's temperature is thirty degrees." },
-  "hsk4-424": { "hanzi": "老师很重视这个问题。", "gloss": "The teacher takes this problem seriously." },
-  "hsk4-429": { "hanzi": "公司正在扩大。", "gloss": "The company is expanding." },
-  "hsk4-433": { "hanzi": "中国有五十六个民族。", "gloss": "China has fifty-six ethnic groups." },
-  "hsk4-447": { "hanzi": "这反映了一个大问题。", "gloss": "This reflects a big problem." },
-  "hsk4-457": { "hanzi": "别烦恼，慢慢来。", "gloss": "Don't be troubled — take it slow." },
-  "hsk4-458": { "hanzi": "这个菜有什么特点？", "gloss": "What's special about this dish?" },
-  "hsk4-464": { "hanzi": "他不但会说中文，还会说英文。", "gloss": "He not only speaks Chinese but also English." },
-  "hsk4-487": { "hanzi": "我们来总结一下今天学的。", "gloss": "Let's summarize what we learned today." },
-  "hsk4-492": { "hanzi": "师傅，请去机场。", "gloss": "Driver, to the airport please." },
-  "hsk4-506": { "hanzi": "他的孙子今年五岁。", "gloss": "His grandson is five this year." },
-  "hsk4-513": { "hanzi": "晚上的夜市很热闹。", "gloss": "The night market is very lively in the evening." },
-  "hsk4-515": { "hanzi": "请按顺序排队。", "gloss": "Please queue in order." },
-  "hsk4-534": { "hanzi": "别急，还来得及。", "gloss": "Don't rush — there's still time." },
-  "hsk4-536": { "hanzi": "她是研究生，学中文。", "gloss": "She's a graduate student studying Chinese." },
-  "hsk4-539": { "hanzi": "她感动得流泪了。", "gloss": "She was moved to tears." },
-  "hsk4-543": { "hanzi": "公司在招聘新人。", "gloss": "The company is hiring new people." },
-  "hsk4-545": { "hanzi": "这里的天气很干燥。", "gloss": "The weather here is very dry." },
-  "hsk4-549": { "hanzi": "我爷爷住在农村。", "gloss": "My grandpa lives in the countryside." },
-  "hsk4-550": { "hanzi": "请按大小排列。", "gloss": "Please arrange them by size." },
-  "hsk4-552": { "hanzi": "学语言要积累词语。", "gloss": "Learning a language means accumulating vocabulary." },
-  "hsk4-555": { "hanzi": "老师表扬了他。", "gloss": "The teacher praised him." },
-  "hsk4-556": { "hanzi": "他是硕士，明年读博士。", "gloss": "He has a master's and starts a PhD next year." },
-  "hsk4-558": { "hanzi": "我想去看长城。", "gloss": "I want to go see the Great Wall." },
-  "hsk4-561": { "hanzi": "我明天要请假。", "gloss": "I need to take a day off tomorrow." },
-  "hsk4-562": { "hanzi": "我们去打乒乓球吧！", "gloss": "Let's go play ping-pong!" },
-  "hsk4-568": { "hanzi": "我要一个西红柿炒鸡蛋。", "gloss": "I'll have a tomato-and-egg stir-fry." },
-  "hsk4-571": { "hanzi": "晚上我们吃饺子。", "gloss": "We're having dumplings tonight." },
-  "hsk4-572": { "hanzi": "垃圾桶在门口。", "gloss": "The trash can is by the door." },
-  "hsk4-573": { "hanzi": "我不要塑料袋，谢谢。", "gloss": "No plastic bag for me, thanks." },
-  "hsk4-575": { "hanzi": "孩子最怕打针。", "gloss": "Kids fear injections the most." },
-  "hsk4-578": { "hanzi": "来，为友谊干杯！", "gloss": "Come — a toast to friendship!" },
-  "hsk4-581": { "hanzi": "南方的空气很湿润。", "gloss": "The air in the south is very humid." },
-  "hsk4-582": { "hanzi": "你会打羽毛球吗？", "gloss": "Can you play badminton?" },
-  "hsk4-586": { "hanzi": "售货员很热情。", "gloss": "The shop assistant is very friendly." },
-  "hsk4-587": { "hanzi": "长江是中国最长的河。", "gloss": "The Yangtze is China's longest river." },
-  "hsk4-588": { "hanzi": "他做事有点马虎。", "gloss": "He's a bit careless in what he does." },
-  "hsk4-590": { "hanzi": "可以用人民币付吗？", "gloss": "Can I pay in RMB?" },
-  "hsk4-592": { "hanzi": "请大家预习第五课。", "gloss": "Everyone please preview lesson five." },
-  "hsk4-593": { "hanzi": "周末我们去看京剧吧。", "gloss": "Let's go see Beijing opera this weekend." },
-  "hsk4-595": { "hanzi": "请把答案填空。", "gloss": "Please fill in the blanks with the answers." },
-  "hsk4-596": { "hanzi": "孩子们下周放暑假。", "gloss": "The kids start summer vacation next week." }
+  "zh-g02": {
+    "hanzi": "早上好！今天天气真好。",
+    "gloss": "Good morning! The weather is great today."
+  },
+  "zh-n01": {
+    "hanzi": "一、二、三，开始！",
+    "gloss": "One, two, three, go!"
+  },
+  "zh-n02": {
+    "hanzi": "我家有四口人，不是五口。",
+    "gloss": "There are four people in my family, not five."
+  },
+  "zh-r06": {
+    "hanzi": "请说慢一点，我是初学者。",
+    "gloss": "Please speak slower, I'm a beginner."
+  },
+  "zh-r09": {
+    "hanzi": "你是哪国人？我是马来西亚人。",
+    "gloss": "Which country are you from? I'm Malaysian."
+  },
+  "zh-ti07": {
+    "hanzi": "今天星期几？星期五。",
+    "gloss": "What day is it today? Friday."
+  },
+  "zh-p09": {
+    "hanzi": "你有孩子吗？有，一个女儿。",
+    "gloss": "Do you have children? Yes, a daughter."
+  },
+  "zh-p12": {
+    "hanzi": "我们是朋友，不是同事。",
+    "gloss": "We're friends, not coworkers."
+  },
+  "zh-h05": {
+    "hanzi": "请问，Wi-Fi 密码是什么？",
+    "gloss": "Excuse me, what's the Wi-Fi password?"
+  },
+  "zh-h06": {
+    "hanzi": "餐厅在几楼？三楼。",
+    "gloss": "Which floor is the restaurant on? The third."
+  },
+  "zh-h08": {
+    "hanzi": "房间里没有热水。",
+    "gloss": "There's no hot water in the room."
+  },
+  "hsk2-116": {
+    "hanzi": "洗手间在右边。",
+    "gloss": "The bathroom is on the right."
+  },
+  "hsk2-132": {
+    "hanzi": "我不吃羊肉。",
+    "gloss": "I don't eat mutton."
+  },
+  "hsk3-207": {
+    "hanzi": "放心吧，没问题。",
+    "gloss": "Don't worry, no problem."
+  },
+  "hsk3-225": {
+    "hanzi": "我每天练习说中文。",
+    "gloss": "I practice speaking Chinese every day."
+  },
+  "hsk3-275": {
+    "hanzi": "熊猫真可爱！",
+    "gloss": "Pandas are so cute!"
+  },
+  "hsk3-277": {
+    "hanzi": "你的孩子上几年级？",
+    "gloss": "What grade is your child in?"
+  },
+  "hsk3-283": {
+    "hanzi": "这个词语怎么用？",
+    "gloss": "How is this word used?"
+  },
+  "hsk3-288": {
+    "hanzi": "你的普通话说得很好。",
+    "gloss": "You speak Mandarin very well."
+  },
+  "hsk4-073": {
+    "hanzi": "他病了，因此没来上班。",
+    "gloss": "He was sick, therefore he didn't come to work."
+  },
+  "hsk4-115": {
+    "hanzi": "我看了那条新闻报道。",
+    "gloss": "I read that news report."
+  },
+  "hsk4-163": {
+    "hanzi": "他很累，于是早点回家了。",
+    "gloss": "He was tired, so he went home early."
+  },
+  "hsk4-198": {
+    "hanzi": "这不在我的工作范围。",
+    "gloss": "That's outside the scope of my job."
+  },
+  "hsk4-215": {
+    "hanzi": "这个动作有点难。",
+    "gloss": "This movement is a bit difficult."
+  },
+  "hsk4-234": {
+    "hanzi": "我想尝尝当地的菜。",
+    "gloss": "I want to try the local food."
+  },
+  "hsk4-273": {
+    "hanzi": "我想去，然而没有时间。",
+    "gloss": "I want to go; however, I have no time."
+  },
+  "hsk4-324": {
+    "hanzi": "这是一家高级酒店。",
+    "gloss": "This is a high-end hotel."
+  },
+  "hsk4-333": {
+    "hanzi": "我专门来看你。",
+    "gloss": "I came especially to see you."
+  },
+  "hsk4-352": {
+    "hanzi": "停车时间有限制。",
+    "gloss": "There's a limit on parking time."
+  },
+  "hsk4-398": {
+    "hanzi": "他果然来了。",
+    "gloss": "He came, just as expected."
+  },
+  "hsk4-417": {
+    "hanzi": "今天的温度是三十度。",
+    "gloss": "Today's temperature is thirty degrees."
+  },
+  "hsk4-424": {
+    "hanzi": "老师很重视这个问题。",
+    "gloss": "The teacher takes this problem seriously."
+  },
+  "hsk4-429": {
+    "hanzi": "公司正在扩大。",
+    "gloss": "The company is expanding."
+  },
+  "hsk4-433": {
+    "hanzi": "中国有五十六个民族。",
+    "gloss": "China has fifty-six ethnic groups."
+  },
+  "hsk4-447": {
+    "hanzi": "这反映了一个大问题。",
+    "gloss": "This reflects a big problem."
+  },
+  "hsk4-457": {
+    "hanzi": "别烦恼，慢慢来。",
+    "gloss": "Don't be troubled, take it slow."
+  },
+  "hsk4-458": {
+    "hanzi": "这个菜有什么特点？",
+    "gloss": "What's special about this dish?"
+  },
+  "hsk4-464": {
+    "hanzi": "他不但会说中文，还会说英文。",
+    "gloss": "He not only speaks Chinese but also English."
+  },
+  "hsk4-487": {
+    "hanzi": "我们来总结一下今天学的。",
+    "gloss": "Let's summarize what we learned today."
+  },
+  "hsk4-492": {
+    "hanzi": "师傅，请去机场。",
+    "gloss": "Driver, to the airport please."
+  },
+  "hsk4-506": {
+    "hanzi": "他的孙子今年五岁。",
+    "gloss": "His grandson is five this year."
+  },
+  "hsk4-513": {
+    "hanzi": "晚上的夜市很热闹。",
+    "gloss": "The night market is very lively in the evening."
+  },
+  "hsk4-515": {
+    "hanzi": "请按顺序排队。",
+    "gloss": "Please queue in order."
+  },
+  "hsk4-534": {
+    "hanzi": "别急，还来得及。",
+    "gloss": "Don't rush, there's still time."
+  },
+  "hsk4-536": {
+    "hanzi": "她是研究生，学中文。",
+    "gloss": "She's a graduate student studying Chinese."
+  },
+  "hsk4-539": {
+    "hanzi": "她感动得流泪了。",
+    "gloss": "She was moved to tears."
+  },
+  "hsk4-543": {
+    "hanzi": "公司在招聘新人。",
+    "gloss": "The company is hiring new people."
+  },
+  "hsk4-545": {
+    "hanzi": "这里的天气很干燥。",
+    "gloss": "The weather here is very dry."
+  },
+  "hsk4-549": {
+    "hanzi": "我爷爷住在农村。",
+    "gloss": "My grandpa lives in the countryside."
+  },
+  "hsk4-550": {
+    "hanzi": "请按大小排列。",
+    "gloss": "Please arrange them by size."
+  },
+  "hsk4-552": {
+    "hanzi": "学语言要积累词语。",
+    "gloss": "Learning a language means accumulating vocabulary."
+  },
+  "hsk4-555": {
+    "hanzi": "老师表扬了他。",
+    "gloss": "The teacher praised him."
+  },
+  "hsk4-556": {
+    "hanzi": "他是硕士，明年读博士。",
+    "gloss": "He has a master's and starts a PhD next year."
+  },
+  "hsk4-558": {
+    "hanzi": "我想去看长城。",
+    "gloss": "I want to go see the Great Wall."
+  },
+  "hsk4-561": {
+    "hanzi": "我明天要请假。",
+    "gloss": "I need to take a day off tomorrow."
+  },
+  "hsk4-562": {
+    "hanzi": "我们去打乒乓球吧！",
+    "gloss": "Let's go play ping-pong!"
+  },
+  "hsk4-568": {
+    "hanzi": "我要一个西红柿炒鸡蛋。",
+    "gloss": "I'll have a tomato-and-egg stir-fry."
+  },
+  "hsk4-571": {
+    "hanzi": "晚上我们吃饺子。",
+    "gloss": "We're having dumplings tonight."
+  },
+  "hsk4-572": {
+    "hanzi": "垃圾桶在门口。",
+    "gloss": "The trash can is by the door."
+  },
+  "hsk4-573": {
+    "hanzi": "我不要塑料袋，谢谢。",
+    "gloss": "No plastic bag for me, thanks."
+  },
+  "hsk4-575": {
+    "hanzi": "孩子最怕打针。",
+    "gloss": "Kids fear injections the most."
+  },
+  "hsk4-578": {
+    "hanzi": "来，为友谊干杯！",
+    "gloss": "Come, a toast to friendship!"
+  },
+  "hsk4-581": {
+    "hanzi": "南方的空气很湿润。",
+    "gloss": "The air in the south is very humid."
+  },
+  "hsk4-582": {
+    "hanzi": "你会打羽毛球吗？",
+    "gloss": "Can you play badminton?"
+  },
+  "hsk4-586": {
+    "hanzi": "售货员很热情。",
+    "gloss": "The shop assistant is very friendly."
+  },
+  "hsk4-587": {
+    "hanzi": "长江是中国最长的河。",
+    "gloss": "The Yangtze is China's longest river."
+  },
+  "hsk4-588": {
+    "hanzi": "他做事有点马虎。",
+    "gloss": "He's a bit careless in what he does."
+  },
+  "hsk4-590": {
+    "hanzi": "可以用人民币付吗？",
+    "gloss": "Can I pay in RMB?"
+  },
+  "hsk4-592": {
+    "hanzi": "请大家预习第五课。",
+    "gloss": "Everyone please preview lesson five."
+  },
+  "hsk4-593": {
+    "hanzi": "周末我们去看京剧吧。",
+    "gloss": "Let's go see Beijing opera this weekend."
+  },
+  "hsk4-595": {
+    "hanzi": "请把答案填空。",
+    "gloss": "Please fill in the blanks with the answers."
+  },
+  "hsk4-596": {
+    "hanzi": "孩子们下周放暑假。",
+    "gloss": "The kids start summer vacation next week."
+  }
 }

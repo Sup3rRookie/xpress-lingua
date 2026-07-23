@@ -15,10 +15,10 @@ import TonePinyin from '../components/TonePinyin';
 import Confetti from '../components/Confetti';
 
 // ---------------------------------------------------------------------------
-// Tone Trainer — Mandarin ear training. Three modes:
-//   quiz   — hear a 1-2 syllable word, pick its tone pattern (10-question rounds)
-//   pairs  — hear a word, pick it among confusable minimal-pair distractors
-//   shadow — pure listen-and-repeat reps over met (SRS-seen) items
+// Tone Trainer, Mandarin ear training. Three modes:
+//   quiz  , hear a 1-2 syllable word, pick its tone pattern (10-question rounds)
+//   pairs , hear a word, pick it among confusable minimal-pair distractors
+//   shadow, pure listen-and-repeat reps over met (SRS-seen) items
 // ---------------------------------------------------------------------------
 
 type Mode = 'quiz' | 'pairs' | 'shadow';
@@ -55,7 +55,7 @@ function shuffle<T>(arr: T[]): T[] {
 // Static pools, computed once at module load.
 const ALL_ITEMS: DeckItem[] = [...zhSurvival.items, ...zhHsk.items];
 
-// Quiz pool: short words whose every syllable carries a real (1-4) tone — a
+// Quiz pool: short words whose every syllable carries a real (1-4) tone, a
 // neutral-tone syllable would have no correct option among the 4 tone patterns.
 const QUIZ_POOL: DeckItem[] = ALL_ITEMS.filter((it) => {
   if (!it.pinyin.trim()) return false;
@@ -348,14 +348,14 @@ export default function ToneTrainer({
 
   const encouragement =
     score >= 10
-      ? 'Perfect ear — native-level listening! 🏆'
+      ? 'Perfect ear, native-level listening! 🏆'
       : score >= 8
         ? 'Sharp ears! Tones are sticking. 🎯'
         : score >= 6
-          ? 'Solid — a few more rounds and it clicks.'
+          ? 'Solid, a few more rounds and it clicks.'
           : score >= 4
             ? 'Getting there. Listen for the pitch shape, not the syllable.'
-            : 'Tones are the hard part — replay each answer and go again.';
+            : 'Tones are the hard part, replay each answer and go again.';
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
@@ -368,7 +368,7 @@ export default function ToneTrainer({
           </Pressable>
         </View>
         <Text style={styles.title}>Tone Trainer</Text>
-        <Text style={styles.subtitle}>Train your ear — hear the tone before you say it.</Text>
+        <Text style={styles.subtitle}>Train your ear, hear the tone before you say it.</Text>
 
         {/* Mode chips */}
         <View style={styles.tabRow}>
@@ -406,7 +406,7 @@ export default function ToneTrainer({
               <Text style={styles.gloss}>{shadowItem.gloss}</Text>
             </View>
             <Text style={styles.shadowHint}>
-              Listen, then say it out loud — match the pitch shape, not just the sounds.
+              Listen, then say it out loud. Match the pitch shape, not just the sounds.
             </Text>
             <View style={styles.shadowBtnRow}>
               <ChunkyButton
@@ -462,8 +462,8 @@ export default function ToneTrainer({
             <View style={styles.promptTile}>
               <Text style={styles.promptLabel}>
                 {mode === 'quiz'
-                  ? 'Listen — which tone pattern do you hear?'
-                  : 'Listen — which word do you hear?'}
+                  ? 'Listen, which tone pattern do you hear?'
+                  : 'Listen, which word do you hear?'}
               </Text>
               <Pressable
                 style={styles.replayBtn}
@@ -477,7 +477,7 @@ export default function ToneTrainer({
 
             {mode === 'quiz' &&
               quizQ.options.map((tones, i) => {
-                const a11y = `${quizQ.bases.join(' ')} — ${tones
+                const a11y = `${quizQ.bases.join(' ')}, ${tones
                   .map((t) => TONE_LABELS[t])
                   .join(' then ')}`;
                 return (

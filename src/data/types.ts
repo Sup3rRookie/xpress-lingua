@@ -4,7 +4,7 @@ export interface DeckItem {
   id: string;
   scenario: string;
   type: ItemType;
-  hanzi: string; // target phrase (any language — named for the original Mandarin deck)
+  hanzi: string; // target phrase (any language, named for the original Mandarin deck)
   // Pronunciation line. For zh decks: tone-marked, space-separated pinyin syllables
   // (tone-colored at render time). Imported decks put their reading/pronunciation
   // field here too; may be '' when the source deck has none.

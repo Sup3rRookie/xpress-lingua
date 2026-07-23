@@ -21,7 +21,7 @@ interface Piece {
   anim: Animated.Value;
 }
 
-// Custom confetti burst — ~40 small Views falling with x-drift + rotation.
+// Custom confetti burst, ~40 small Views falling with x-drift + rotation.
 // Fired once on mount; skipped entirely under reduce-motion.
 export default function Confetti({ count = 40, height = 560 }: { count?: number; height?: number }) {
   const reduced = useReducedMotion();

@@ -20,7 +20,7 @@ export function paceById(id: string | undefined) {
 }
 
 // enable_short_term OFF: with it on, a new card graded Good comes due ~10min
-// later, so every session re-serves recently learned cards before fresh ones —
+// later, so every session re-serves recently learned cards before fresh ones -
 // users experience this as "it keeps starting from the same words". Long-term
 // scheduling only: first Good pushes a card days out (classic FSRS behavior).
 const scheduler = fsrs(generatorParameters({ enable_fuzz: true, enable_short_term: false }));

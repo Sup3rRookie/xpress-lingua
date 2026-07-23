@@ -10,12 +10,12 @@ const F0_MAX = 450; // Hz
 const YIN_THRESHOLD = 0.15;
 const SILENCE_GATE = 0.01; // × max frame RMS
 const CONTOUR_POINTS = 64;
-const TARGET_SR = 16000; // decimate high sample rates — F0 lives well below this
+const TARGET_SR = 16000; // decimate high sample rates, F0 lives well below this
 
 const contourCache = new Map<string, number[]>();
 
 // Fetch + decode a clip and extract its contour. Null on any failure
-// (non-web, fetch error, undecodable audio) — callers hide the feature.
+// (non-web, fetch error, undecodable audio), callers hide the feature.
 export async function contourFromUrl(url: string): Promise<number[] | null> {
   const cached = contourCache.get(url);
   if (cached) return cached;
@@ -48,7 +48,7 @@ export async function contourFromUrl(url: string): Promise<number[] | null> {
   }
 }
 
-// Crude box-filter decimation — enough anti-aliasing for periodicity tracking.
+// Crude box-filter decimation, enough anti-aliasing for periodicity tracking.
 function downsample(
   samples: Float32Array,
   sampleRate: number

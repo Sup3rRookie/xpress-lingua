@@ -2,7 +2,7 @@ import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Progress backup: FSRS state, streak, pace, and imported deck definitions
-// (imported media blobs are NOT included — decks re-link audio on re-import).
+// (imported media blobs are NOT included, decks re-link audio on re-import).
 const KEYS = ['xl-store-v1', 'xl-imported-decks-v1'];
 
 export async function exportBackup(): Promise<boolean> {
