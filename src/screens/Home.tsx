@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Deck } from '../data/types';
 import { zhHsk } from '../data/zh-hsk';
@@ -100,12 +100,7 @@ export default function Home({
         <View style={styles.headerRow}>
           <Text style={styles.wordmark}>⚡ XpressLingua</Text>
           <View style={styles.headerRight}>
-            {(
-              [
-                ['zh', '🇨🇳'],
-                ['ja', '🇯🇵'],
-              ] as const
-            ).map(([lang, flag]) => (
+            {(['zh', 'ja'] as const).map((lang) => (
               <Pressable
                 key={lang}
                 style={[styles.langChip, activeLang === lang && styles.langChipActive]}
@@ -114,7 +109,7 @@ export default function Home({
                 accessibilityState={{ selected: activeLang === lang }}
                 accessibilityLabel={lang === 'zh' ? 'Mandarin' : 'Japanese'}
               >
-                <Text style={styles.langChipText}>{flag}</Text>
+                <Image source={{ uri: `flags/${lang}.png` }} style={styles.langFlag} />
               </Pressable>
             ))}
             <LinearGradient
@@ -301,20 +296,21 @@ const styles = StyleSheet.create({
   headerGlow: { top: -140, alignSelf: 'center' },
   headerRight: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   langChip: {
-    width: 34,
-    height: 34,
-    borderRadius: 17,
+    width: 40,
+    height: 30,
+    borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: tokens.bg.raised,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: tokens.border.subtle,
+    opacity: 0.55,
   },
   langChipActive: {
-    backgroundColor: 'rgba(139,92,246,0.22)',
     borderColor: tokens.brand.primary,
+    opacity: 1,
   },
-  langChipText: { fontSize: 16 },
+  langFlag: { width: 30, height: 20, borderRadius: 3 },
   sectionRow: {
     flexDirection: 'row',
     alignItems: 'center',
