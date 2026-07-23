@@ -1,0 +1,25 @@
+{
+  "name": "XpressLingua",
+  "short_name": "XpressLingua",
+  "description": "Speaking-first Mandarin trainer",
+  "start_url": "/xpress-lingua/",
+  "scope": "/xpress-lingua/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0E0B1E",
+  "theme_color": "#0E0B1E",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "name": "xpress-lingua",
-  "version": "0.8.1",
+  "version": "0.9.1",
   "main": "index.ts",
   "dependencies": {
     "@expo-google-fonts/baloo-2": "^0.4.2",
@@ -33,7 +33,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "deploy:web": "expo export --platform web && node scripts/inject-pwa.js"
   },
   "private": true
 }
