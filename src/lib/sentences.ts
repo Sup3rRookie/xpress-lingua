@@ -1,8 +1,9 @@
 import { zhSurvival } from '../data/zh-survival';
 import { zhHsk } from '../data/zh-hsk';
 import { SentenceEntry, SentencePattern, ZH_PATTERNS, ZH_SENTENCES } from '../data/zh-sentences';
-// Real Tatoeba sentences (CC-BY, attribution preserved) matched per HSK word.
+// Real Tatoeba sentences (CC-BY, attribution preserved) matched per word.
 import hskExamples from '../data/zh-hsk-examples.json';
+import jaExamples from '../data/ja-jlpt-examples.json';
 
 const ITEM_BY_ID = new Map([...zhSurvival.items, ...zhHsk.items].map((it) => [it.id, it]));
 
@@ -68,6 +69,7 @@ interface HskExample {
   attribution?: string; // Tatoeba CC-BY entries carry it; authored originals don't
 }
 const HSK_EXAMPLES = hskExamples as Record<string, HskExample>;
+const JA_EXAMPLES = jaExamples as Record<string, HskExample>;
 
 export interface Example {
   id: string; // audio clip id
@@ -82,13 +84,17 @@ export function unlockedSentences(metIds: Set<string>): SentenceEntry[] {
   return ZH_SENTENCES.filter((s) => s.itemIds.every((id) => metIds.has(id)));
 }
 
-// Example sentence for a card back: curated survival sentence first,
-// then the word's matched Tatoeba sentence (HSK deck).
+// Example sentence for a card back: curated Mandarin survival sentence first,
+// then the word's matched Tatoeba sentence (HSK words, then JLPT words).
+// JLPT examples have no pre-rendered clip, so their id has no matching audio
+// file and playback falls back to TTS.
 export function exampleFor(itemId: string): Example | undefined {
   const curated = ZH_SENTENCES.find((s) => s.itemIds.includes(itemId));
   if (curated) return curated;
   const hsk = HSK_EXAMPLES[itemId];
-  return hsk ? { id: `hske-${itemId}`, ...hsk } : undefined;
+  if (hsk) return { id: `hske-${itemId}`, ...hsk };
+  const ja = JA_EXAMPLES[itemId];
+  return ja ? { id: `jae-${itemId}`, ...ja } : undefined;
 }
 
 export interface GeneratedSentence {

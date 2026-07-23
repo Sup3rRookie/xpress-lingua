@@ -1,6 +1,6 @@
 # XpressLingua
 
-Version: 0.11.0
+Version: 0.12.0
 
 Tech stack: Expo SDK 57 (React Native 0.86, TypeScript), ts-fsrs, MeloTTS (pre-rendered audio), expo-speech fallback, sql.js + fflate for Anki import, AsyncStorage + IndexedDB, GitHub Pages deployment.
 

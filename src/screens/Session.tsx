@@ -301,6 +301,7 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
   const isNew = item ? newIds.has(item.id) : false;
   const isListen = item ? listenIds.has(item.id) : false;
   const isZh = deck.lang === 'zh';
+  const example = item ? exampleFor(item.id) : undefined;
 
   // Audio priority: imported deck audio → pre-rendered open-source clip → TTS.
   const playItemAudio = (it: DeckItem) => {
@@ -575,26 +576,27 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                 </Text>
                 {isListen && <Text style={styles.gloss}>= {item.gloss}</Text>}
 
-                {isZh && exampleFor(item.id) && (
+                {example && (
                   <View style={styles.exampleBox}>
                     <Text style={styles.exampleLabel}>IN A SENTENCE</Text>
                     <Pressable
-                      onPress={() => {
-                        const ex = exampleFor(item.id)!;
-                        playText(ex.id, ex.hanzi, deck.ttsLocale);
-                      }}
+                      onPress={() => playText(example.id, example.hanzi, deck.ttsLocale)}
                       accessibilityRole="button"
                       accessibilityLabel="Play example sentence"
                     >
                       <Text style={styles.exampleHanzi}>
-                        {exampleFor(item.id)!.hanzi} <Text style={styles.examplePlay}>▶</Text>
+                        {example.hanzi} <Text style={styles.examplePlay}>▶</Text>
                       </Text>
                     </Pressable>
-                    <TonePinyin pinyin={exampleFor(item.id)!.pinyin} size={13} />
-                    <Text style={styles.exampleGloss}>{exampleFor(item.id)!.gloss}</Text>
-                    {exampleFor(item.id)!.attribution && (
+                    {isZh ? (
+                      <TonePinyin pinyin={example.pinyin} size={13} />
+                    ) : (
+                      <Text style={styles.exampleReading}>{example.pinyin}</Text>
+                    )}
+                    <Text style={styles.exampleGloss}>{example.gloss}</Text>
+                    {example.attribution && (
                       <Text style={styles.exampleAttribution}>
-                        Sentence: {exampleFor(item.id)!.attribution} · CC-BY
+                        Sentence: {example.attribution} · CC-BY
                       </Text>
                     )}
                   </View>
@@ -786,6 +788,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   examplePlay: { color: tokens.brand.primary, fontSize: 13 },
+  exampleReading: {
+    fontFamily: fonts.bodySemiBold,
+    fontSize: 13,
+    color: tokens.brand.primaryDown,
+    textAlign: 'center',
+  },
   exampleAttribution: {
     fontFamily: fonts.bodyMedium,
     fontSize: 9,

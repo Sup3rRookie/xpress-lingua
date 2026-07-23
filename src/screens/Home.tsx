@@ -5,7 +5,13 @@ import { Deck } from '../data/types';
 import { zhHsk } from '../data/zh-hsk';
 import { jaJlpt } from '../data/ja-jlpt';
 import { initBuiltinAudio, initVoice } from '../lib/audio';
-import { deckStats, DeckStats, grantBonusCards } from '../lib/srs';
+import {
+  deckStats,
+  DeckStats,
+  getJlptStart,
+  grantBonusCards,
+  setJlptStart,
+} from '../lib/srs';
 import { fonts, shadows, tokens } from '../theme';
 import ChunkyButton from '../components/ChunkyButton';
 import GradientBar from '../components/GradientBar';
@@ -44,6 +50,8 @@ export default function Home({
   const [stats, setStats] = useState<DeckStats | null>(null);
   const [voiceOk, setVoiceOk] = useState(true);
   const [builtinClips, setBuiltinClips] = useState(0);
+  const [jlptStats, setJlptStats] = useState<DeckStats | null>(null);
+  const [jlptStart, setJlptStartState] = useState(5);
   const scenarioScroll = useRef<ScrollView>(null);
   const scrollX = useRef(0);
 
@@ -58,7 +66,28 @@ export default function Home({
     deckStats(deck).then(setStats);
     initVoice(deck.ttsLocale).then(setVoiceOk);
     initBuiltinAudio(deck.lang).then(setBuiltinClips);
-  }, [deck]);
+    if (activeLang === 'ja') {
+      deckStats(jaJlpt).then(setJlptStats);
+      getJlptStart().then(setJlptStartState);
+    }
+  }, [deck, activeLang]);
+
+  const changeJlptStart = async (level: number) => {
+    await setJlptStart(level);
+    setJlptStartState(level);
+    deckStats(jaJlpt).then(setJlptStats);
+  };
+
+  const studyJlpt = async () => {
+    if (
+      jlptStats &&
+      jlptStats.dueCount + jlptStats.freshAvailable === 0 &&
+      jlptStats.learned < jlptStats.total
+    ) {
+      await grantBonusCards(jlptStats.pace.perDay);
+    }
+    onStudyDeck(jaJlpt);
+  };
 
   useEffect(refresh, [refresh]);
 
@@ -183,16 +212,61 @@ export default function Home({
         </View>
         )}
         {activeLang === 'ja' && (
-          <Pressable
-            style={[styles.quickChip, styles.jlptChip]}
-            onPress={() => onStudyDeck(jaJlpt)}
-            accessibilityRole="button"
-            accessibilityLabel="JLPT Ladder"
-            accessibilityHint="Starts a speaking session with the JLPT N5 to N3 ladder deck"
-          >
-            <Text style={styles.quickEmoji}>🎴</Text>
-            <Text style={styles.quickLabel}>JLPT Ladder (N5 to N3, 3,400+ words)</Text>
-          </Pressable>
+          <View style={[styles.tile, styles.jlptCard]}>
+            <View style={styles.jlptHeader}>
+              <View style={[styles.scenarioEmojiWrap, { backgroundColor: 'rgba(34,211,238,0.14)' }]}>
+                <Text style={styles.scenarioEmoji}>🎴</Text>
+              </View>
+              <View style={styles.jlptHeaderBody}>
+                <Text style={styles.scenarioTitle}>JLPT Ladder (N5 to N3)</Text>
+                <Text style={styles.deckMeta}>
+                  {jlptStats
+                    ? `${jlptStats.learned}/${jlptStats.total} words · ${
+                        jlptStats.dueCount + jlptStats.freshAvailable
+                      } ready today`
+                    : 'loading…'}
+                </Text>
+              </View>
+              <Pressable
+                style={[styles.deckActionBtn, styles.studyBtn]}
+                onPress={studyJlpt}
+                accessibilityRole="button"
+                accessibilityHint="Starts a speaking session with the JLPT ladder deck"
+              >
+                <Text style={styles.studyBtnText}>▶ Study</Text>
+              </Pressable>
+            </View>
+            <GradientBar
+              pct={jlptStats && jlptStats.total > 0 ? Math.round((jlptStats.learned / jlptStats.total) * 100) : 0}
+              height={6}
+            />
+            <View style={styles.hskLevelRow}>
+              <Text style={styles.hskLevelLabel}>Start at:</Text>
+              {[
+                [5, 'N5'],
+                [4, 'N4'],
+                [3, 'N3'],
+              ].map(([lvl, label]) => (
+                <Pressable
+                  key={lvl as number}
+                  style={[styles.jlptLevelChip, jlptStart === lvl && styles.hskLevelChipActive]}
+                  onPress={() => changeJlptStart(lvl as number)}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: jlptStart === lvl }}
+                  accessibilityLabel={`Start at ${label}`}
+                >
+                  <Text
+                    style={[
+                      styles.hskLevelChipText,
+                      jlptStart === lvl && styles.hskLevelChipTextActive,
+                    ]}
+                  >
+                    {label}
+                  </Text>
+                </Pressable>
+              ))}
+            </View>
+          </View>
         )}
 
         {/* Voice warning, moot once pre-rendered clips exist */}
@@ -404,7 +478,51 @@ const styles = StyleSheet.create({
     color: tokens.text.secondary,
   },
   quickRow: { flexDirection: 'row', gap: 10 },
-  jlptChip: { flex: undefined, flexDirection: 'row', gap: 10, justifyContent: 'center' },
+  tile: {
+    backgroundColor: tokens.bg.raised,
+    borderRadius: tokens.radius.tile,
+    borderWidth: 1,
+    borderColor: tokens.border.subtle,
+    ...shadows.tile,
+  },
+  jlptCard: { padding: 14, gap: 10 },
+  jlptHeader: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  jlptHeaderBody: { flex: 1 },
+  deckMeta: { fontFamily: fonts.bodyMedium, fontSize: 12, color: tokens.text.secondary },
+  deckActionBtn: {
+    paddingVertical: 7,
+    paddingHorizontal: 10,
+    borderRadius: tokens.radius.pill,
+    borderWidth: 1,
+  },
+  studyBtn: {
+    borderColor: 'rgba(34,211,238,0.4)',
+    backgroundColor: 'rgba(34,211,238,0.14)',
+  },
+  studyBtnText: { fontFamily: fonts.bodySemiBold, fontSize: 13, color: tokens.brand.cyan },
+  hskLevelRow: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  hskLevelLabel: {
+    fontFamily: fonts.bodyMedium,
+    fontSize: 12,
+    color: tokens.text.secondary,
+    marginRight: 2,
+  },
+  jlptLevelChip: {
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: tokens.bg.elevated,
+    borderWidth: 1,
+    borderColor: tokens.border.subtle,
+  },
+  hskLevelChipActive: {
+    backgroundColor: 'rgba(139,92,246,0.22)',
+    borderColor: tokens.brand.primary,
+  },
+  hskLevelChipText: { fontFamily: fonts.bodySemiBold, fontSize: 13, color: tokens.text.secondary },
+  hskLevelChipTextActive: { color: tokens.text.primary },
   quickChip: {
     flex: 1,
     alignItems: 'center',

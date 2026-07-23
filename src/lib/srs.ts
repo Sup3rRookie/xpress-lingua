@@ -37,6 +37,7 @@ interface Store {
   totalReviews: number;
   pace?: PaceId;
   hskStart?: number; // 1-4: HSK levels up to this are open without completing priors
+  jlptStart?: number; // 5,4,3: JLPT levels down to this are open (N5 easiest = 5)
   bonusToday?: { date: string; count: number }; // user-requested extra new cards beyond the pace
 }
 
@@ -90,21 +91,36 @@ const hskLevel = (scenarioId: string): number | null => {
   const m = scenarioId.match(/^hsk(\d)$/);
   return m ? Number(m[1]) : null;
 };
+const jlptLevel = (scenarioId: string): number | null => {
+  const m = scenarioId.match(/^n(\d)$/);
+  return m ? Number(m[1]) : null;
+};
+
+// A ladder scenario is "opened by the start setting" if its level is within the
+// chosen start. HSK counts up (1 easiest), JLPT counts down (N5=5 easiest), so
+// the direction differs.
+function openedByStart(scenarioId: string, hskStart: number, jlptStart: number): boolean {
+  const h = hskLevel(scenarioId);
+  if (h !== null) return h <= hskStart;
+  const j = jlptLevel(scenarioId);
+  if (j !== null) return j >= jlptStart;
+  return false;
+}
 
 // Sequential scenario gating: the first scenario is always open; each next one
 // unlocks once every card of the previous scenario has been met. Single-scenario
-// decks (imported Anki decks) are effectively ungated. HSK decks honor a
-// user-chosen starting level: every level up to hskStart is open immediately.
+// decks (imported Anki decks) are effectively ungated. Ladder decks (HSK/JLPT)
+// honor a user-chosen starting level: every level up to the start is open.
 export function unlockedScenarioIds(
   deck: Deck,
   cardIds: Set<string>,
   hskStart = 1,
+  jlptStart = 5,
 ): Set<string> {
   const unlocked = new Set<string>();
   for (let i = 0; i < deck.scenarios.length; i++) {
     const sc = deck.scenarios[i];
-    const lvl = hskLevel(sc.id);
-    if (lvl !== null && lvl <= hskStart) {
+    if (openedByStart(sc.id, hskStart, jlptStart)) {
       unlocked.add(sc.id);
       continue;
     }
@@ -130,6 +146,17 @@ export async function getHskStart(): Promise<number> {
 export async function setHskStart(level: number): Promise<void> {
   const store = await loadStore();
   store.hskStart = Math.min(4, Math.max(1, level));
+  await saveStore(store);
+}
+
+export async function getJlptStart(): Promise<number> {
+  const store = await loadStore();
+  return store.jlptStart ?? 5;
+}
+
+export async function setJlptStart(level: number): Promise<void> {
+  const store = await loadStore();
+  store.jlptStart = Math.min(5, Math.max(3, level));
   await saveStore(store);
 }
 
@@ -168,12 +195,21 @@ export async function buildQueue(deck: Deck): Promise<SessionQueue> {
     paceById(store.pace ?? DEFAULT_PACE).perDay + bonus - introduced,
   );
   const hskStart = store.hskStart ?? 1;
-  const unlocked = unlockedScenarioIds(deck, new Set(Object.keys(store.cards)), hskStart);
-  // When the user starts at a higher HSK level, its words come before leftovers
-  // from the skipped lower levels.
+  const jlptStart = store.jlptStart ?? 5;
+  const unlocked = unlockedScenarioIds(
+    deck,
+    new Set(Object.keys(store.cards)),
+    hskStart,
+    jlptStart,
+  );
+  // When the user starts at a higher level, its words come before leftovers from
+  // the skipped easier levels (HSK counts up, JLPT counts down).
   const backfill = (it: DeckItem) => {
-    const lvl = hskLevel(it.scenario);
-    return lvl !== null && lvl < hskStart ? 1 : 0;
+    const h = hskLevel(it.scenario);
+    if (h !== null) return h < hskStart ? 1 : 0;
+    const j = jlptLevel(it.scenario);
+    if (j !== null) return j > jlptStart ? 1 : 0;
+    return 0;
   };
   const fresh = deck.items
     .filter((it) => !store.cards[it.id] && unlocked.has(it.scenario))
@@ -229,7 +265,12 @@ export async function deckStats(deck: Deck): Promise<DeckStats> {
   const store = await loadStore();
   const q = await buildQueue(deck);
   const metIds = new Set(Object.keys(store.cards));
-  const unlocked = unlockedScenarioIds(deck, metIds, store.hskStart ?? 1);
+  const unlocked = unlockedScenarioIds(
+    deck,
+    metIds,
+    store.hskStart ?? 1,
+    store.jlptStart ?? 5,
+  );
   const perScenario: DeckStats['perScenario'] = {};
   for (const sc of deck.scenarios) {
     perScenario[sc.id] = { seen: 0, total: 0, unlocked: unlocked.has(sc.id) };
