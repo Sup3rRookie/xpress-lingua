@@ -47,17 +47,21 @@ function idbOpen(): Promise<IDBDatabase | null> {
   });
 }
 
-function idbGet(key: string): Promise<{ ts: number; raw: string } | null> {
+// Distinguishes "read failed" (error true) from "no value stored" (value null,
+// error false). The caller must never treat a failed read as an empty store.
+function idbGet(
+  key: string,
+): Promise<{ value: { ts: number; raw: string } | null; error: boolean }> {
   return new Promise((resolve) => {
     idbOpen().then((db) => {
-      if (!db) return resolve(null);
+      if (!db) return resolve({ value: null, error: true });
       try {
         const tx = db.transaction(DB_STORE, 'readonly');
         const req = tx.objectStore(DB_STORE).get(key);
-        req.onsuccess = () => resolve(req.result ?? null);
-        req.onerror = () => resolve(null);
+        req.onsuccess = () => resolve({ value: req.result ?? null, error: false });
+        req.onerror = () => resolve({ value: null, error: true });
       } catch {
-        resolve(null);
+        resolve({ value: null, error: true });
       }
     });
   });
@@ -79,12 +83,24 @@ function idbSet(key: string, value: { ts: number; raw: string }): Promise<void> 
   });
 }
 
+export interface LoadResult {
+  raw: string | null;
+  // true when a backend errored so we could NOT determine the real state.
+  // Writers must abort rather than risk overwriting live data with an empty store.
+  readError: boolean;
+}
+
 // Load the freshest surviving copy. Heals whichever backend lost its data.
-export async function durableLoad(key: string): Promise<string | null> {
+export async function durableLoad(key: string): Promise<LoadResult> {
   if (Platform.OS !== 'web') {
-    return AsyncStorage.getItem(key);
+    try {
+      return { raw: await AsyncStorage.getItem(key), readError: false };
+    } catch {
+      return { raw: null, readError: true };
+    }
   }
   let local: { ts: number; raw: string } | null = null;
+  let localError = false;
   try {
     const raw = await AsyncStorage.getItem(key);
     if (raw != null) {
@@ -92,12 +108,16 @@ export async function durableLoad(key: string): Promise<string | null> {
       local = { ts, raw };
     }
   } catch {
-    // ignore
+    localError = true;
   }
   const idb = await idbGet(key);
 
-  const candidates = [local, idb].filter(Boolean) as { ts: number; raw: string }[];
-  if (candidates.length === 0) return null;
+  const candidates = [local, idb.value].filter(Boolean) as { ts: number; raw: string }[];
+  if (candidates.length === 0) {
+    // No data anywhere. If either backend errored, this is an uncertain read,
+    // not a confirmed empty store.
+    return { raw: null, readError: localError || idb.error };
+  }
   candidates.sort((a, b) => b.ts - a.ts);
   const best = candidates[0];
 
@@ -110,10 +130,10 @@ export async function durableLoad(key: string): Promise<string | null> {
       // ignore
     }
   }
-  if (!idb || idb.raw !== best.raw) {
+  if (!idb.value || idb.value.raw !== best.raw) {
     await idbSet(key, best);
   }
-  return best.raw;
+  return { raw: best.raw, readError: false };
 }
 
 export async function durableSave(key: string, raw: string): Promise<void> {

@@ -48,8 +48,14 @@ const emptyStore = (): Store => ({
   totalReviews: 0,
 });
 
+// Local calendar day (YYYY-MM-DD). Uses the device timezone so the daily pace
+// and streak roll over at local midnight, not 08:00 for a UTC+8 user.
+function localDay(ts: number = Date.now()): string {
+  const d = new Date(ts);
+  return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+}
 function today(): string {
-  return new Date().toISOString().slice(0, 10);
+  return localDay();
 }
 
 function reviveCard(s: SerializedCard): Card {
@@ -68,16 +74,41 @@ function serializeCard(c: Card): SerializedCard {
   };
 }
 
+// A store blob is only trusted if `cards` is a real (non-null, non-array) object.
+function parseStore(raw: string): Store | null {
+  const parsed = JSON.parse(raw);
+  if (
+    !parsed ||
+    typeof parsed !== 'object' ||
+    !parsed.cards ||
+    typeof parsed.cards !== 'object' ||
+    Array.isArray(parsed.cards)
+  ) {
+    return null;
+  }
+  return { ...emptyStore(), ...parsed };
+}
+
+const cardCount = (s: Store) => Object.keys(s.cards).length;
+
+// High-watermark of the largest card count seen this session. Cards only ever
+// grow (a review adds, never removes), so a save that would shrink the count is
+// always a regression from a bad read and must be refused. Reset only on restore.
+let maxCards = 0;
+export function resetProgressWatermark(count: number): void {
+  maxCards = count;
+}
+
+// Read-only load. On any error or corrupt blob returns emptyStore for display;
+// this value is NEVER persisted (writes go through mutateStore, which is strict).
 export async function loadStore(): Promise<Store> {
   try {
-    const raw = await durableLoad(KEY);
+    const { raw } = await durableLoad(KEY);
     if (!raw) return emptyStore();
-    const parsed = JSON.parse(raw);
-    // Guard against a corrupt/partial blob wiping progress.
-    if (!parsed || typeof parsed !== 'object' || typeof parsed.cards !== 'object') {
-      return emptyStore();
-    }
-    return { ...emptyStore(), ...parsed };
+    const store = parseStore(raw);
+    if (!store) return emptyStore();
+    if (cardCount(store) > maxCards) maxCards = cardCount(store);
+    return store;
   } catch {
     return emptyStore();
   }
@@ -87,17 +118,32 @@ async function saveStore(store: Store) {
   await durableSave(KEY, JSON.stringify(store));
 }
 
-// All writes go through this queue so concurrent load-modify-save operations
-// (a review landing while a setting changes, etc.) can never clobber each other.
+// All writes are serialized here so concurrent load-modify-save operations can
+// never clobber each other. Critically, a write is ABORTED (not saved) when the
+// read was uncertain or would shrink progress, so a transient storage failure
+// can never overwrite live data with an empty store.
 let writeQueue: Promise<void> = Promise.resolve();
 function mutateStore(fn: (store: Store) => void): Promise<void> {
   const run = async () => {
-    const store = await loadStore();
+    const res = await durableLoad(KEY);
+    if (res.readError) return; // uncertain read: do not risk clobbering
+    let store: Store;
+    if (res.raw == null) {
+      store = emptyStore(); // confirmed empty: genuinely a new user
+    } else {
+      const parsed = parseStore(res.raw);
+      if (!parsed) return; // corrupt but read succeeded: skip rather than overwrite
+      store = parsed;
+    }
+    if (cardCount(store) > maxCards) maxCards = cardCount(store);
     fn(store);
+    if (cardCount(store) < maxCards) return; // regression guard: never shrink
+    maxCards = cardCount(store);
     await saveStore(store);
   };
   writeQueue = writeQueue.then(run, run);
-  return writeQueue;
+  // Never reject to callers; a failed write is logged by being dropped, not thrown.
+  return writeQueue.catch(() => {});
 }
 
 export interface SessionQueue {
@@ -253,8 +299,8 @@ export async function review(itemId: string, rating: Grade): Promise<void> {
     }
 
     if (store.streak.last !== today()) {
-      const yesterday = new Date(Date.now() - 86_400_000).toISOString().slice(0, 10);
-      const dayBefore = new Date(Date.now() - 2 * 86_400_000).toISOString().slice(0, 10);
+      const yesterday = localDay(Date.now() - 86_400_000);
+      const dayBefore = localDay(Date.now() - 2 * 86_400_000);
       // Merciful streak: one missed day doesn't break it (punitive streaks churn users).
       store.streak.count =
         store.streak.last === yesterday || store.streak.last === dayBefore

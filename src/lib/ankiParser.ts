@@ -94,7 +94,12 @@ export function cleanText(raw: string): string {
   s = s.replace(/<br\s*\/?>/gi, ' ').replace(/<\/(?:div|p|li|tr)>/gi, ' ');
   s = s.replace(/<[^>]*>/g, '');
   s = s.replace(/&(?:amp|lt|gt|quot|#39|apos|nbsp);/g, (e) => ENTITIES[e] ?? e);
-  s = s.replace(/&#(\d+);/g, (_e, code: string) => String.fromCodePoint(Number(code)));
+  s = s.replace(/&#(\d+);/g, (e, code: string) => {
+    // String.fromCodePoint throws RangeError above U+10FFFF; leave such
+    // (malformed) entities literal rather than aborting the whole import.
+    const n = Number(code);
+    return n >= 0 && n <= 0x10ffff ? String.fromCodePoint(n) : e;
+  });
   s = s.replace(/\s+/g, ' ').trim();
   return s.length > FIELD_CAP ? s.slice(0, FIELD_CAP).trim() : s;
 }
