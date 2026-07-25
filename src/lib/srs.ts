@@ -147,8 +147,9 @@ function mutateStore(fn: (store: Store) => void): Promise<void> {
 }
 
 export interface SessionQueue {
-  due: DeckItem[];
+  due: DeckItem[]; // overdue cards served this session (capped by reviewCapFor)
   fresh: DeckItem[];
+  dueBacklog: number; // true count of overdue cards before the session cap
 }
 
 const hskLevel = (scenarioId: string): number | null => {
@@ -259,14 +260,14 @@ export async function buildQueue(deck: Deck): Promise<SessionQueue> {
   const now = new Date();
   const pace = paceById(store.pace ?? DEFAULT_PACE);
   const dueAt = (it: DeckItem) => new Date(store.cards[it.id].due).getTime();
-  const due = deck.items
+  // Full overdue set (most-overdue first); the session serves only a capped slice.
+  const overdue = deck.items
     .filter((it) => {
       const s = store.cards[it.id];
       return s && new Date(s.due) <= now;
     })
-    // Most-overdue first, then cap so the session stays digestible.
-    .sort((a, b) => dueAt(a) - dueAt(b))
-    .slice(0, reviewCapFor(pace));
+    .sort((a, b) => dueAt(a) - dueAt(b));
+  const due = overdue.slice(0, reviewCapFor(pace));
   const introduced = store.introducedToday.date === today() ? store.introducedToday.count : 0;
   const bonus = store.bonusToday?.date === today() ? store.bonusToday.count : 0;
   const freshBudget = Math.max(0, pace.perDay + bonus - introduced);
@@ -291,7 +292,7 @@ export async function buildQueue(deck: Deck): Promise<SessionQueue> {
     .filter((it) => !store.cards[it.id] && unlocked.has(it.scenario))
     .sort((a, b) => backfill(a) - backfill(b))
     .slice(0, freshBudget);
-  return { due, fresh };
+  return { due, fresh, dueBacklog: overdue.length };
 }
 
 export async function review(itemId: string, rating: Grade): Promise<void> {
@@ -325,7 +326,8 @@ export async function review(itemId: string, rating: Grade): Promise<void> {
 }
 
 export interface DeckStats {
-  dueCount: number;
+  dueCount: number; // reviews served this session (capped by reviewCapFor)
+  dueBacklog: number; // true count of overdue cards, uncapped (>= dueCount)
   freshAvailable: number;
   learned: number;
   total: number;
@@ -404,6 +406,7 @@ export async function deckStats(deck: Deck): Promise<DeckStats> {
   }
   return {
     dueCount: q.due.length,
+    dueBacklog: q.dueBacklog,
     freshAvailable: q.fresh.length,
     learned,
     total: deck.items.length,

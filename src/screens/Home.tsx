@@ -171,7 +171,11 @@ export default function Home({
               <Text style={styles.heroCount}>{stats ? toStudy : '–'}</Text>
               <Text style={styles.heroCountLabel}>
                 {stats
-                  ? `cards ready\n${stats.dueCount} due · ${stats.freshAvailable} new`
+                  ? `cards ready\n${stats.dueCount} due${
+                      stats.dueBacklog > stats.dueCount
+                        ? ` (+${stats.dueBacklog - stats.dueCount} waiting)`
+                        : ''
+                    } · ${stats.freshAvailable} new`
                   : 'loading…'}
               </Text>
             </View>

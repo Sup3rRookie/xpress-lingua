@@ -114,7 +114,27 @@ function useCountUp(target: number, delay: number, reduced: boolean): number {
 }
 
 // Segmented in-session progress: one segment per card.
+// Above this many cards, per-card segments become unreadable slivers; switch to
+// a single continuous progress bar instead.
+const SEGMENT_MAX = 30;
+
 function SegmentedProgress({ total, current }: { total: number; current: number }) {
+  if (total > SEGMENT_MAX) {
+    const pct = total > 0 ? Math.min(100, Math.max(0, (current / total) * 100)) : 0;
+    return (
+      <View
+        style={styles.continuousTrack}
+        accessibilityLabel={`Card ${current + 1} of ${total}`}
+      >
+        <LinearGradient
+          colors={tokens.brand.gradient}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+          style={[styles.continuousFill, { width: `${pct}%` }]}
+        />
+      </View>
+    );
+  }
   return (
     <View style={styles.segmentRow} accessibilityLabel={`Card ${current + 1} of ${total}`}>
       {Array.from({ length: total }, (_, i) => {
@@ -757,6 +777,14 @@ const styles = StyleSheet.create({
   counter: { fontFamily: fonts.stat, fontSize: 14, color: tokens.text.secondary },
   segmentRow: { flexDirection: 'row', gap: 3, marginBottom: 20 },
   segment: { flex: 1, height: 6, borderRadius: 3, overflow: 'hidden' },
+  continuousTrack: {
+    height: 6,
+    borderRadius: 3,
+    marginBottom: 20,
+    overflow: 'hidden',
+    backgroundColor: tokens.game.ringTrack,
+  },
+  continuousFill: { height: 6, borderRadius: 3 },
   cardZone: { justifyContent: 'center' },
   cardGlow: { alignSelf: 'center', top: 30 },
   face: {
