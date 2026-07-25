@@ -36,7 +36,7 @@ export const tokens = {
   text: {
     primary: '#F4F2FF',
     secondary: '#A9A3C9',
-    muted: '#6E6893', // decorative only, below 4.5:1 on bg.base
+    muted: '#8C86B0', // hints/captions: ~5.6:1 on bg.base, passes WCAG AA
     onCard: '#17133A',
     onCardMuted: '#55517E',
   },

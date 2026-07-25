@@ -244,19 +244,32 @@ export async function setPace(id: PaceId): Promise<void> {
   });
 }
 
+// Reviews served per session are capped so a multi-day backlog never becomes a
+// 150-card wall (the top churn cause). Overflow stays due and surfaces in the
+// next session, most-overdue first. The cap scales with pace so heavier learners
+// still clear more per sitting. Tunable: raise REVIEW_CAP_BASE / the multiplier
+// to lengthen sessions.
+const REVIEW_CAP_BASE = 20;
+export function reviewCapFor(pace: (typeof PACES)[number]): number {
+  return Math.max(REVIEW_CAP_BASE, pace.perDay * 2);
+}
+
 export async function buildQueue(deck: Deck): Promise<SessionQueue> {
   const store = await loadStore();
   const now = new Date();
-  const due = deck.items.filter((it) => {
-    const s = store.cards[it.id];
-    return s && new Date(s.due) <= now;
-  });
+  const pace = paceById(store.pace ?? DEFAULT_PACE);
+  const dueAt = (it: DeckItem) => new Date(store.cards[it.id].due).getTime();
+  const due = deck.items
+    .filter((it) => {
+      const s = store.cards[it.id];
+      return s && new Date(s.due) <= now;
+    })
+    // Most-overdue first, then cap so the session stays digestible.
+    .sort((a, b) => dueAt(a) - dueAt(b))
+    .slice(0, reviewCapFor(pace));
   const introduced = store.introducedToday.date === today() ? store.introducedToday.count : 0;
   const bonus = store.bonusToday?.date === today() ? store.bonusToday.count : 0;
-  const freshBudget = Math.max(
-    0,
-    paceById(store.pace ?? DEFAULT_PACE).perDay + bonus - introduced,
-  );
+  const freshBudget = Math.max(0, pace.perDay + bonus - introduced);
   const hskStart = store.hskStart ?? 1;
   const jlptStart = store.jlptStart ?? 5;
   const unlocked = unlockedScenarioIds(
@@ -317,10 +330,54 @@ export interface DeckStats {
   learned: number;
   total: number;
   streak: number;
-  totalReviews: number;
+  totalReviews: number; // global across every deck/language (study habit metric)
   perScenario: Record<string, { seen: number; total: number; unlocked: boolean }>;
   pace: (typeof PACES)[number];
   metIds: Set<string>;
+}
+
+export interface LanguageSummary {
+  reviews: number; // total spoken reps across the language's decks
+  learned: number; // distinct cards met across the language's decks
+  total: number; // distinct cards available across the language's decks
+}
+
+// Progress across a language's decks (survival + ladder + same-language imports),
+// so the "phrases spoken" tile and its progress bar measure the SAME population
+// and stay internally consistent. The denominator is SCOPED to material the
+// learner has opened (unlocked scenarios + the ladder levels their start setting
+// exposes) so day-one progress is a reachable fraction, not a tiny slice of the
+// whole language. A card the learner has already met is always counted, even if
+// its scenario later de-scopes, so real effort (spoken/met) never drops out.
+// Deduped by card id; malformed decks without an items array are skipped.
+export async function languageSummary(decks: Deck[]): Promise<LanguageSummary> {
+  const store = await loadStore();
+  const hskStart = store.hskStart ?? 1;
+  const jlptStart = store.jlptStart ?? 5;
+  const cardIds = new Set(Object.keys(store.cards));
+  const counted = new Set<string>();
+  let reviews = 0;
+  let learned = 0;
+  let total = 0;
+  for (const deck of decks) {
+    // Skip malformed/legacy records safely; unlockedScenarioIds reads both arrays.
+    if (!Array.isArray(deck?.items) || !Array.isArray(deck?.scenarios)) continue;
+    const unlocked = unlockedScenarioIds(deck, cardIds, hskStart, jlptStart);
+    for (const it of deck.items) {
+      if (counted.has(it.id)) continue;
+      const c = store.cards[it.id];
+      // Count opened (unlocked) material for the denominator, and always count a
+      // card the learner has already met so spoken/met totals never shrink.
+      if (!c && !unlocked.has(it.scenario)) continue;
+      counted.add(it.id);
+      total += 1;
+      if (c) {
+        learned += 1;
+        reviews += c.reps ?? 0;
+      }
+    }
+  }
+  return { reviews, learned, total };
 }
 
 export async function deckStats(deck: Deck): Promise<DeckStats> {

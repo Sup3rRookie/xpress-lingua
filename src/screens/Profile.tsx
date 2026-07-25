@@ -1,16 +1,26 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { zhSurvival } from '../data/zh-survival';
+import { Deck } from '../data/types';
 import { initBuiltinAudio, initVoice } from '../lib/audio';
-import { deckStats, DeckStats, PACES, PaceId, setPace } from '../lib/srs';
+import {
+  deckStats,
+  DeckStats,
+  languageSummary,
+  LanguageSummary,
+  PACES,
+  PaceId,
+  setPace,
+} from '../lib/srs';
+import { listImportedDecks } from '../lib/importedDecks';
 import { exportBackup, importBackup } from '../lib/backup';
 import { fonts, shadows, tokens } from '../theme';
 import GradientBar from '../components/GradientBar';
 import GlowEllipse from '../components/GlowEllipse';
 
+// Languages not yet shippable. Live languages (Mandarin, Japanese) are excluded
+// so an active language is never shown as "coming soon".
 const UPCOMING = [
-  { label: 'Japanese', emoji: '🇯🇵' },
   { label: 'Spanish', emoji: '🇪🇸' },
   { label: 'Arabic (Egyptian)', emoji: '🇪🇬' },
   { label: 'Korean', emoji: '🇰🇷' },
@@ -19,33 +29,65 @@ const UPCOMING = [
 ];
 
 // You tab, stats, pace, backup, audio status, upcoming languages.
-export default function Profile() {
+export default function Profile({
+  deck,
+  reviewDecks,
+}: {
+  deck: Deck;
+  reviewDecks: Deck[];
+}) {
   const [stats, setStats] = useState<DeckStats | null>(null);
+  const [summary, setSummary] = useState<LanguageSummary | null>(null);
   const [voiceOk, setVoiceOk] = useState(true);
   const [builtinClips, setBuiltinClips] = useState(0);
 
+  // Bumped on every refresh so a slow load from a previous language can't win a
+  // race and paint stale numbers after the user switches languages.
+  const gen = useRef(0);
   const refresh = useCallback(() => {
-    deckStats(zhSurvival).then(setStats);
-    initVoice(zhSurvival.ttsLocale).then(setVoiceOk);
-    initBuiltinAudio(zhSurvival.lang).then(setBuiltinClips);
-  }, []);
+    const g = (gen.current += 1);
+    const guard =
+      <T,>(fn: (v: T) => void) =>
+      (v: T) => {
+        if (gen.current === g) fn(v);
+      };
+    setStats(null);
+    setSummary(null);
+    // Survival deckStats drives streak + pace (both global, read from any deck).
+    deckStats(deck).then(guard(setStats));
+    // The "phrases spoken" tile (number, bar, and caption) all measure the same
+    // whole-language population: built-in survival + ladder decks plus any
+    // imported Anki decks of this language. Guarded against malformed records.
+    listImportedDecks()
+      .then((all) => {
+        const sameLang = all
+          .filter((d) => d?.deck?.lang === deck.lang)
+          .map((d) => d.deck);
+        return languageSummary([...reviewDecks, ...sameLang]);
+      })
+      .then(guard(setSummary));
+    initVoice(deck.ttsLocale).then(guard(setVoiceOk));
+    initBuiltinAudio(deck.lang).then(guard(setBuiltinClips));
+  }, [deck, reviewDecks]);
 
   useEffect(refresh, [refresh]);
 
   const changePace = async (id: PaceId) => {
     await setPace(id);
-    deckStats(zhSurvival).then(setStats);
+    deckStats(deck).then(setStats);
   };
 
   const metPct =
-    stats && stats.total > 0 ? Math.round((stats.learned / stats.total) * 100) : 0;
+    summary && summary.total > 0
+      ? Math.round((summary.learned / summary.total) * 100)
+      : 0;
 
   const audioLine =
     builtinClips > 0
-      ? `Mandarin voice: ✓ rendered clips (${builtinClips})`
+      ? `${deck.langLabel} voice: ✓ rendered clips (${builtinClips})`
       : voiceOk
-        ? 'Mandarin voice: ✓ system voice'
-        : 'Mandarin voice: fallback, no Mandarin voice found in this browser, audio may use a default voice.';
+        ? `${deck.langLabel} voice: ✓ system voice`
+        : `${deck.langLabel} voice: fallback, no ${deck.langLabel} voice found in this browser, audio may use a default voice.`;
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
@@ -73,12 +115,12 @@ export default function Profile() {
             <View style={styles.spokenChip}>
               <Text style={styles.flameEmoji}>🗣️</Text>
             </View>
-            <Text style={styles.tileStat}>{stats?.totalReviews ?? 0}</Text>
+            <Text style={styles.tileStat}>{summary?.reviews ?? 0}</Text>
             <Text style={styles.tileLabel}>phrases spoken</Text>
             <View style={styles.tileBarWrap}>
               <GradientBar pct={metPct} height={6} />
               <Text style={styles.tileBarCaption}>
-                {stats ? `${stats.learned}/${stats.total} cards met` : ' '}
+                {summary ? `${summary.learned}/${summary.total} phrases met` : ' '}
               </Text>
             </View>
           </View>

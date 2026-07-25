@@ -23,6 +23,8 @@ import TabBar, { TabId } from './src/components/TabBar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { zhSurvival } from './src/data/zh-survival';
 import { jaSurvival } from './src/data/ja-survival';
+import { zhHsk } from './src/data/zh-hsk';
+import { jaJlpt } from './src/data/ja-jlpt';
 import { Deck } from './src/data/types';
 import { ImportResult, PickedApkg } from './src/lib/apkgImport';
 import { requestPersistence } from './src/lib/durableStore';
@@ -41,6 +43,11 @@ type ToneMode = 'quiz' | 'pairs' | 'shadow';
 type SentencesTab = 'learned' | 'mix';
 
 const SURVIVAL: Record<string, Deck> = { zh: zhSurvival, ja: jaSurvival };
+// Every built-in deck per language, for the language-scoped "phrases spoken" total.
+const LANG_DECKS: Record<string, Deck[]> = {
+  zh: [zhSurvival, zhHsk],
+  ja: [jaSurvival, jaJlpt],
+};
 
 export default function App() {
   const [screen, setScreen] = useState<Screen>('home');
@@ -156,7 +163,9 @@ export default function App() {
           onBrowse={() => setScreen('browse')}
         />
       )}
-      {screen === 'profile' && <Profile />}
+      {screen === 'profile' && (
+        <Profile deck={SURVIVAL[activeLang]} reviewDecks={LANG_DECKS[activeLang]} />
+      )}
     </>
   );
 
@@ -171,12 +180,12 @@ export default function App() {
         </View>
       ) : (
         <>
-          {screen === 'browse' && <Browse onDone={() => selectTab('practice')} />}
-      {screen === 'sentences' && (
-            <Sentences initialTab={sentencesTab} onDone={() => selectTab('practice')} />
+          {screen === 'browse' && <Browse onDone={() => setScreen(lastTab)} />}
+          {screen === 'sentences' && (
+            <Sentences initialTab={sentencesTab} onDone={() => setScreen(lastTab)} />
           )}
           {screen === 'tone-trainer' && (
-            <ToneTrainer initialMode={toneMode} onDone={() => selectTab('practice')} />
+            <ToneTrainer initialMode={toneMode} onDone={() => setScreen(lastTab)} />
           )}
           {screen === 'import-map' && pendingImport && (
             <ImportMap
