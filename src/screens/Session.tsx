@@ -520,6 +520,7 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                     <ItemVisual
                       item={item}
                       size={148}
+                      lang={deck.lang}
                       tint={isZh ? toneTint(item.pinyin, 0.1) : 'rgba(139,92,246,0.10)'}
                     />
                     <Text style={styles.gloss}>{item.gloss}</Text>

@@ -63,6 +63,9 @@ export default function Home({
   };
 
   const refresh = useCallback(() => {
+    // Clear stale stats so switching languages never flashes the old deck's
+    // progress against the new deck's scenarios (shared scenario ids).
+    setStats(null);
     deckStats(deck).then(setStats);
     initVoice(deck.ttsLocale).then(setVoiceOk);
     initBuiltinAudio(deck.lang).then(setBuiltinClips);

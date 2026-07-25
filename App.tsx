@@ -131,6 +131,7 @@ export default function App() {
       {screen === 'practice' && (
         <Practice
           banner={banner}
+          activeLang={activeLang}
           onParsed={(picked) => {
             setPendingImport(picked);
             setBanner(null);

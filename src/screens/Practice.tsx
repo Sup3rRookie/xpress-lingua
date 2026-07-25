@@ -22,6 +22,7 @@ const EAR_MODES: { mode: ToneMode; emoji: string; label: string }[] = [
 // Practice tab, ear training, sentences, HSK ladder, imported decks.
 export default function Practice({
   banner,
+  activeLang,
   onParsed,
   onStudyImported,
   onStudyDeck,
@@ -30,6 +31,7 @@ export default function Practice({
   onBrowse,
 }: {
   banner: string | null;
+  activeLang: 'zh' | 'ja';
   onParsed: (picked: PickedApkg) => void;
   onStudyImported: (imported: ImportedDeck) => void;
   onStudyDeck: (d: Deck) => void;
@@ -87,6 +89,10 @@ export default function Practice({
           </View>
         )}
 
+        {/* Mandarin-only practice tools. Japanese equivalents are not built yet,
+            so they are hidden rather than served Mandarin content. */}
+        {activeLang === 'zh' && (
+        <>
         {/* Ear training */}
         <Text style={styles.sectionTitle}>Ear training</Text>
         <View style={styles.modeRow}>
@@ -203,6 +209,15 @@ export default function Practice({
             👀 Browse all materials, peek at any level, no studying required ›
           </Text>
         </Pressable>
+        </>
+        )}
+
+        {activeLang === 'ja' && (
+          <Text style={styles.jaNote}>
+            Japanese ear-training and sentence tools are coming soon. Study the JLPT ladder
+            from the Learn tab.
+          </Text>
+        )}
 
         {/* Imported decks */}
         <Text style={styles.sectionTitle}>Your decks</Text>
@@ -449,6 +464,12 @@ const styles = StyleSheet.create({
   emptyDecksText: {
     fontFamily: fonts.bodyMedium,
     fontSize: 13,
+    color: tokens.text.secondary,
+  },
+  jaNote: {
+    fontFamily: fonts.bodyMedium,
+    fontSize: 13,
+    lineHeight: 19,
     color: tokens.text.secondary,
   },
   deckRow: {

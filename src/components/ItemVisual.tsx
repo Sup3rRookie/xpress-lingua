@@ -8,15 +8,19 @@ export default function ItemVisual({
   item,
   size = 132,
   tint,
+  lang = 'zh',
 }: {
   item: DeckItem;
   size?: number;
   tint?: string;
+  lang?: string;
 }) {
   const [failed, setFailed] = useState(false);
-  const isBuiltin = !item.audioKey; // imported Anki cards have no generated images
+  // Generated images exist only for Mandarin (img/zh). Imported Anki cards have
+  // none. Anything else shows the emoji without firing a guaranteed 404.
+  const hasImages = lang === 'zh' && !item.audioKey;
 
-  if (failed || !isBuiltin) {
+  if (failed || !hasImages) {
     return (
       <View
         style={[
