@@ -1,9 +1,11 @@
 import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { durableLoad, durableSave } from './durableStore';
 
 // Progress backup: FSRS state, streak, pace, and imported deck definitions
 // (imported media blobs are NOT included, decks re-link audio on re-import).
-const KEYS = ['xl-store-v1', 'xl-imported-decks-v1'];
+const STORE_KEY = 'xl-store-v1';
+const KEYS = [STORE_KEY, 'xl-imported-decks-v1'];
 
 export async function exportBackup(): Promise<boolean> {
   if (Platform.OS !== 'web') return false;
@@ -13,7 +15,7 @@ export async function exportBackup(): Promise<boolean> {
     exportedAt: new Date().toISOString(),
   };
   for (const k of KEYS) {
-    const raw = await AsyncStorage.getItem(k);
+    const raw = k === STORE_KEY ? await durableLoad(k) : await AsyncStorage.getItem(k);
     if (raw) payload[k] = JSON.parse(raw);
   }
   const blob = new Blob([JSON.stringify(payload, null, 1)], { type: 'application/json' });
@@ -39,7 +41,10 @@ export function importBackup(): Promise<'ok' | 'invalid' | 'cancelled'> {
         const data = JSON.parse(await file.text());
         if (data.app !== 'xpress-lingua') return resolve('invalid');
         for (const k of KEYS) {
-          if (data[k]) await AsyncStorage.setItem(k, JSON.stringify(data[k]));
+          if (!data[k]) continue;
+          const raw = JSON.stringify(data[k]);
+          if (k === STORE_KEY) await durableSave(k, raw);
+          else await AsyncStorage.setItem(k, raw);
         }
         resolve('ok');
       } catch {

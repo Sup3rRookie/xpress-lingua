@@ -1,6 +1,6 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createEmptyCard, fsrs, generatorParameters, Rating, type Card, type Grade } from 'ts-fsrs';
 import { Deck, DeckItem } from '../data/types';
+import { durableLoad, durableSave } from './durableStore';
 
 const KEY = 'xl-store-v1';
 
@@ -70,16 +70,34 @@ function serializeCard(c: Card): SerializedCard {
 
 export async function loadStore(): Promise<Store> {
   try {
-    const raw = await AsyncStorage.getItem(KEY);
+    const raw = await durableLoad(KEY);
     if (!raw) return emptyStore();
-    return { ...emptyStore(), ...JSON.parse(raw) };
+    const parsed = JSON.parse(raw);
+    // Guard against a corrupt/partial blob wiping progress.
+    if (!parsed || typeof parsed !== 'object' || typeof parsed.cards !== 'object') {
+      return emptyStore();
+    }
+    return { ...emptyStore(), ...parsed };
   } catch {
     return emptyStore();
   }
 }
 
 async function saveStore(store: Store) {
-  await AsyncStorage.setItem(KEY, JSON.stringify(store));
+  await durableSave(KEY, JSON.stringify(store));
+}
+
+// All writes go through this queue so concurrent load-modify-save operations
+// (a review landing while a setting changes, etc.) can never clobber each other.
+let writeQueue: Promise<void> = Promise.resolve();
+function mutateStore(fn: (store: Store) => void): Promise<void> {
+  const run = async () => {
+    const store = await loadStore();
+    fn(store);
+    await saveStore(store);
+  };
+  writeQueue = writeQueue.then(run, run);
+  return writeQueue;
 }
 
 export interface SessionQueue {
@@ -144,9 +162,9 @@ export async function getHskStart(): Promise<number> {
 }
 
 export async function setHskStart(level: number): Promise<void> {
-  const store = await loadStore();
-  store.hskStart = Math.min(4, Math.max(1, level));
-  await saveStore(store);
+  return mutateStore((store) => {
+    store.hskStart = Math.min(4, Math.max(1, level));
+  });
 }
 
 export async function getJlptStart(): Promise<number> {
@@ -155,19 +173,18 @@ export async function getJlptStart(): Promise<number> {
 }
 
 export async function setJlptStart(level: number): Promise<void> {
-  const store = await loadStore();
-  store.jlptStart = Math.min(5, Math.max(3, level));
-  await saveStore(store);
+  return mutateStore((store) => {
+    store.jlptStart = Math.min(5, Math.max(3, level));
+  });
 }
 
 // "Keep going": the daily cap is a default, not a wall. Grants extra new-card
 // budget for today only.
 export async function grantBonusCards(n: number): Promise<void> {
-  const store = await loadStore();
-  const bonus =
-    store.bonusToday?.date === today() ? store.bonusToday.count : 0;
-  store.bonusToday = { date: today(), count: bonus + n };
-  await saveStore(store);
+  return mutateStore((store) => {
+    const bonus = store.bonusToday?.date === today() ? store.bonusToday.count : 0;
+    store.bonusToday = { date: today(), count: bonus + n };
+  });
 }
 
 export async function getPace(): Promise<(typeof PACES)[number]> {
@@ -176,9 +193,9 @@ export async function getPace(): Promise<(typeof PACES)[number]> {
 }
 
 export async function setPace(id: PaceId): Promise<void> {
-  const store = await loadStore();
-  store.pace = id;
-  await saveStore(store);
+  return mutateStore((store) => {
+    store.pace = id;
+  });
 }
 
 export async function buildQueue(deck: Deck): Promise<SessionQueue> {
@@ -219,34 +236,33 @@ export async function buildQueue(deck: Deck): Promise<SessionQueue> {
 }
 
 export async function review(itemId: string, rating: Grade): Promise<void> {
-  const store = await loadStore();
-  const now = new Date();
-  const existing = store.cards[itemId];
-  const isNew = !existing;
-  const card = existing ? reviveCard(existing) : createEmptyCard(now);
-  const result = scheduler.next(card, now, rating);
-  store.cards[itemId] = serializeCard(result.card);
-  store.totalReviews += 1;
+  return mutateStore((store) => {
+    const now = new Date();
+    const existing = store.cards[itemId];
+    const isNew = !existing;
+    const card = existing ? reviveCard(existing) : createEmptyCard(now);
+    const result = scheduler.next(card, now, rating);
+    store.cards[itemId] = serializeCard(result.card);
+    store.totalReviews += 1;
 
-  if (isNew) {
-    if (store.introducedToday.date !== today()) {
-      store.introducedToday = { date: today(), count: 0 };
+    if (isNew) {
+      if (store.introducedToday.date !== today()) {
+        store.introducedToday = { date: today(), count: 0 };
+      }
+      store.introducedToday.count += 1;
     }
-    store.introducedToday.count += 1;
-  }
 
-  if (store.streak.last !== today()) {
-    const yesterday = new Date(Date.now() - 86_400_000).toISOString().slice(0, 10);
-    const dayBefore = new Date(Date.now() - 2 * 86_400_000).toISOString().slice(0, 10);
-    // Merciful streak: one missed day doesn't break it (punitive streaks churn users).
-    store.streak.count =
-      store.streak.last === yesterday || store.streak.last === dayBefore
-        ? store.streak.count + 1
-        : 1;
-    store.streak.last = today();
-  }
-
-  await saveStore(store);
+    if (store.streak.last !== today()) {
+      const yesterday = new Date(Date.now() - 86_400_000).toISOString().slice(0, 10);
+      const dayBefore = new Date(Date.now() - 2 * 86_400_000).toISOString().slice(0, 10);
+      // Merciful streak: one missed day doesn't break it (punitive streaks churn users).
+      store.streak.count =
+        store.streak.last === yesterday || store.streak.last === dayBefore
+          ? store.streak.count + 1
+          : 1;
+      store.streak.last = today();
+    }
+  });
 }
 
 export interface DeckStats {

@@ -25,6 +25,7 @@ import { zhSurvival } from './src/data/zh-survival';
 import { jaSurvival } from './src/data/ja-survival';
 import { Deck } from './src/data/types';
 import { ImportResult, PickedApkg } from './src/lib/apkgImport';
+import { requestPersistence } from './src/lib/durableStore';
 import { tokens } from './src/theme';
 
 type Screen =
@@ -48,6 +49,8 @@ export default function App() {
   const [activeDeck, setActiveDeck] = useState<Deck>(zhSurvival);
 
   React.useEffect(() => {
+    // Ask the browser not to evict our progress (the localStorage-wipe fix).
+    requestPersistence();
     AsyncStorage.getItem('xl-lang').then((v) => {
       if (v === 'ja' || v === 'zh') setActiveLang(v);
     });
