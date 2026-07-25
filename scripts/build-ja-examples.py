@@ -38,6 +38,11 @@ def main():
     out, misses = {}, 0
     for it in tqdm(items, desc='ja-examples', unit='word', mininterval=3):
         word = it['hanzi']
+        # Grammar affixes (～がる, ～さん, ...) have no good single-word example
+        # and match garbage on the wave dash; skip them.
+        if '～' in word or '~' in word:
+            misses += 1
+            continue
         # Try the full word, then its kanji stem (drop trailing kana like る/う).
         stems = [word]
         stem = re.sub(r'[ぁ-ん]+$', '', word)

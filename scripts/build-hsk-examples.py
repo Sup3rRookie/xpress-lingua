@@ -41,14 +41,23 @@ def main():
         with open(surv_json, encoding='utf-8') as f:
             items += json.load(f)
 
+    # Convert to Simplified so traditional-only Tatoeba sentences never ship in
+    # the simplified deck, and so the headword-presence check is script-consistent.
+    try:
+        from zhconv import convert as _s2t
+        simp = lambda t: _s2t(t, 'zh-hans')
+    except ImportError:
+        simp = lambda t: t
+
     def find_best(word):
         # Tiered: short readable sentence first, then progressively longer.
         for max_len in (16, 24, 60):
             for cmn, eng, attr in pairs:
-                if word in cmn and len(cmn) > len(word) + 1:
-                    han_len = len(re.sub(r'[^一-鿿]', '', cmn))
+                cmn_s = simp(cmn)
+                if word in cmn_s and len(cmn_s) > len(word) + 1:
+                    han_len = len(re.sub(r'[^一-鿿]', '', cmn_s))
                     if 3 <= han_len <= max_len:
-                        return (cmn, eng, attr)
+                        return (cmn_s, eng, attr)
         return None
 
     out, missing = {}, []
