@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Deck, DeckItem } from '../data/types';
-import { builtinAudioUrl, playText, speak } from '../lib/audio';
+import { builtinAudioUrl, playText, speak, stopPlayback } from '../lib/audio';
 import { playAudioKey } from '../lib/mediaStore';
 import { contourFromUrl, similarity } from '../lib/pitch';
 import doubledClipIds from '../data/zh-audio-doubles.json';
@@ -316,6 +316,10 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
       setQueue([...q.due, ...q.fresh]);
     });
   }, [deck]);
+
+  // Stop any playing audio (clip/TTS, imported, or the user's own take) when the
+  // session unmounts so it doesn't bleed into the next screen.
+  useEffect(() => () => stopPlayback(), []);
 
   const item = useMemo(() => (queue && index < queue.length ? queue[index] : null), [queue, index]);
   const isNew = item ? newIds.has(item.id) : false;

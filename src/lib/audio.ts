@@ -47,6 +47,18 @@ export function stopPlayback(): void {
   else Speech.stop();
 }
 
+// Lets other modules (e.g. imported IndexedDB blobs, recorder playback) join the
+// same single-playback gate as clips and TTS. It does NOT interrupt anything on
+// its own — call stopPlayback() first. Returns an unregister that clears the slot
+// only if it still holds this stopper, so a naturally-ended clip can tidy up
+// without stomping a newer one.
+export function registerPlayback(stop: () => void): () => void {
+  stopCurrent = stop;
+  return () => {
+    if (stopCurrent === stop) stopCurrent = null;
+  };
+}
+
 // Resolves when playback ends, is interrupted, errors, or a safety cap elapses,
 // so a caller's "playing" indicator can never get stuck if the browser never
 // fires an end event (some engines don't). The cap is a backstop only: the real
@@ -70,8 +82,11 @@ function withCap(capMs: number, run: (done: () => void) => void): Promise<void> 
 }
 
 // TTS has no known duration, so cap loosely by text length. A rendered clip ends
-// on its own `onended`, so it only needs a generous backstop.
-const ttsCapMs = (text: string) => Math.min(12000, Math.max(1500, text.length * 400));
+// on its own `onended`, so it only needs a generous backstop. `slow` roughly
+// doubles the spoken duration (rate 0.5 vs 0.9), so double the cap to match or the
+// "playing" indicator clears while a slow utterance is still speaking.
+const ttsCapMs = (text: string, slow = false) =>
+  Math.min(12000, Math.max(1500, text.length * 400)) * (slow ? 2 : 1);
 const CLIP_CAP_MS = 20000;
 
 // Play by id: rendered clip first, TTS fallback. Returns a promise that resolves
@@ -132,7 +147,7 @@ export async function initVoice(locale: string): Promise<boolean> {
 
 export function speak(text: string, locale: string, slow = false): Promise<void> {
   stopPlayback();
-  return withCap(ttsCapMs(text), (done) => {
+  return withCap(ttsCapMs(text, slow), (done) => {
     const finish = () => {
       if (stopCurrent === stop) stopCurrent = null;
       done();

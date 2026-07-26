@@ -3,7 +3,7 @@ import { Animated, Pressable, ScrollView, StyleSheet, Text, View } from 'react-n
 import { zhSurvival } from '../data/zh-survival';
 import { zhHsk } from '../data/zh-hsk';
 import { DeckItem } from '../data/types';
-import { playText, speak } from '../lib/audio';
+import { playText, speak, stopPlayback } from '../lib/audio';
 import { deckStats } from '../lib/srs';
 import { syllables, toneOf, TONE_COLORS_DARK } from '../lib/pinyin';
 import { fonts, hanziSize, shadows, springs, tokens } from '../theme';
@@ -266,6 +266,9 @@ export default function ToneTrainer({
     },
     [],
   );
+
+  // Stop auto-played prompt audio when the trainer unmounts.
+  useEffect(() => () => stopPlayback(), []);
 
   // Auto-play the current prompt whenever it changes.
   const audioItem =

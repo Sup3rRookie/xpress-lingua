@@ -1,4 +1,5 @@
 import { Platform } from 'react-native';
+import { registerPlayback, stopPlayback } from './audio';
 
 // Imported-deck audio blobs live in IndexedDB (web). Native is a no-op for now -
 // imports are web-first; native sessions fall back to TTS.
@@ -86,7 +87,6 @@ export function mimeForFilename(filename: string): string {
 
 // Object-URL cache so repeat plays don't re-read IndexedDB.
 const urlCache = new Map<string, string>();
-let currentAudio: HTMLAudioElement | null = null;
 
 /** Play an imported audio blob. Resolves false when unavailable (caller falls back to TTS). */
 export async function playAudioKey(key: string): Promise<boolean> {
@@ -99,9 +99,31 @@ export async function playAudioKey(key: string): Promise<boolean> {
       url = URL.createObjectURL(blob);
       urlCache.set(key, url);
     }
-    currentAudio?.pause();
-    currentAudio = new Audio(url);
-    await currentAudio.play();
+    // Join the shared single-playback gate: interrupt whatever clip/TTS/imported
+    // audio is playing, then register this one so a later stopPlayback() (next
+    // card or screen unmount) can pause it too. Builtin/TTS and imported audio
+    // never overlap.
+    stopPlayback();
+    const audio = new Audio(url);
+    const unregister = registerPlayback(() => {
+      try {
+        audio.pause();
+      } catch {
+        // ignore
+      }
+    });
+    audio.onended = unregister;
+    audio.onerror = unregister;
+    try {
+      await audio.play();
+    } catch (e) {
+      unregister(); // drop the stale stopper so a later stopPlayback() can't run it
+      // A newer play() interrupted this one (pause() aborts the pending play).
+      // Report success so the caller does NOT fall back to TTS and stomp the
+      // playback that just took over.
+      if ((e as DOMException)?.name === 'AbortError') return true;
+      return false;
+    }
     return true;
   } catch {
     return false;
