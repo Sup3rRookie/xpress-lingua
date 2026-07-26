@@ -1,9 +1,9 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { DeckItem } from '../data/types';
 import { zhHsk } from '../data/zh-hsk';
 import { zhSurvival } from '../data/zh-survival';
-import { playText } from '../lib/audio';
+import { playText, stopPlayback } from '../lib/audio';
 import { exampleFor } from '../lib/sentences';
 import { fonts, shadows, tokens } from '../theme';
 import TonePinyin from '../components/TonePinyin';
@@ -18,7 +18,17 @@ const TABS = [
 
 function Row({ item }: { item: DeckItem }) {
   const [open, setOpen] = useState(false);
+  const [playing, setPlaying] = useState(false);
   const ex = open ? exampleFor(item.id) : undefined;
+  const playWord = async () => {
+    if (playing) return;
+    setPlaying(true);
+    try {
+      await playText(item.id, item.hanzi, 'zh-CN');
+    } finally {
+      setPlaying(false);
+    }
+  };
   return (
     <Pressable
       style={styles.row}
@@ -28,12 +38,13 @@ function Row({ item }: { item: DeckItem }) {
     >
       <View style={styles.rowTop}>
         <Pressable
-          style={styles.playBtn}
-          onPress={() => playText(item.id, item.hanzi, 'zh-CN')}
+          style={[styles.playBtn, playing && styles.playBtnActive]}
+          onPress={playWord}
           accessibilityRole="button"
           accessibilityLabel={`Play ${item.hanzi}`}
+          accessibilityState={{ busy: playing }}
         >
-          <Text style={styles.playIcon}>▶</Text>
+          <Text style={styles.playIcon}>{playing ? '❚❚' : '▶'}</Text>
         </Pressable>
         <Text style={styles.hanzi}>{item.hanzi}</Text>
         <View style={styles.rowBody}>
@@ -69,6 +80,8 @@ function Row({ item }: { item: DeckItem }) {
 export default function Browse({ onDone }: { onDone: () => void }) {
   const [tab, setTab] = useState('hsk1');
   const [query, setQuery] = useState('');
+  // Stop any playing clip when leaving the screen.
+  useEffect(() => () => stopPlayback(), []);
 
   const items = useMemo(() => {
     const source =
@@ -204,6 +217,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  playBtnActive: { backgroundColor: 'rgba(139,92,246,0.55)' },
   playIcon: { color: tokens.brand.cyan, fontSize: 12 },
   hanzi: { fontFamily: fonts.hanzi, fontSize: 18, color: tokens.text.primary },
   rowBody: { flexShrink: 0 },

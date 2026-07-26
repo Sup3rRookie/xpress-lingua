@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { zhSurvival } from '../data/zh-survival';
 import { SentenceEntry } from '../data/zh-sentences';
-import { playText, speak } from '../lib/audio';
+import { playText, speak, stopPlayback } from '../lib/audio';
 import { deckStats } from '../lib/srs';
 import { GeneratedSentence, generateSentences, unlockedSentences } from '../lib/sentences';
 import { fonts, shadows, tokens } from '../theme';
@@ -24,17 +24,26 @@ function SentenceRow({
   pinyin: string;
   gloss: string;
 }) {
+  const [playing, setPlaying] = useState(false);
+  const play = async () => {
+    if (playing) return;
+    setPlaying(true);
+    try {
+      await (id ? playText(id, hanzi, zhSurvival.ttsLocale) : speak(hanzi, zhSurvival.ttsLocale));
+    } finally {
+      setPlaying(false);
+    }
+  };
   return (
     <View style={styles.row}>
       <Pressable
-        style={styles.playBtn}
-        onPress={() =>
-          id ? playText(id, hanzi, zhSurvival.ttsLocale) : speak(hanzi, zhSurvival.ttsLocale)
-        }
+        style={[styles.playBtn, playing && styles.playBtnActive]}
+        onPress={play}
         accessibilityRole="button"
         accessibilityLabel={`Play ${hanzi}`}
+        accessibilityState={{ busy: playing }}
       >
-        <Text style={styles.playIcon}>▶</Text>
+        <Text style={styles.playIcon}>{playing ? '❚❚' : '▶'}</Text>
       </Pressable>
       <View style={styles.rowBody}>
         <Text style={styles.hanzi}>{hanzi}</Text>
@@ -56,6 +65,9 @@ export default function Sentences({
   const [metIds, setMetIds] = useState<Set<string> | null>(null);
   const [scenario, setScenario] = useState<string | null>(null);
   const [generated, setGenerated] = useState<GeneratedSentence[]>([]);
+
+  // Stop any playing clip when leaving the screen.
+  useEffect(() => () => stopPlayback(), []);
 
   useEffect(() => {
     deckStats(zhSurvival).then((s) => {
@@ -247,6 +259,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 2,
   },
+  playBtnActive: { backgroundColor: 'rgba(139,92,246,0.55)' },
   playIcon: { color: tokens.brand.cyan, fontSize: 14 },
   rowBody: { flex: 1, gap: 4, alignItems: 'flex-start' },
   hanzi: { fontFamily: fonts.hanzi, fontSize: 22, color: tokens.text.primary },
