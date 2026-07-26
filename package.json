@@ -1,6 +1,6 @@
 {
   "name": "xpress-lingua",
-  "version": "0.16.1",
+  "version": "0.17.0",
   "main": "index.ts",
   "dependencies": {
     "@expo-google-fonts/baloo-2": "^0.4.2",

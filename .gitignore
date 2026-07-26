@@ -44,3 +44,6 @@ scripts/.parser-build/
 scripts/.content-build/
 dist/
 scripts/.travel-raw.json
+scripts/.ja-entries.json
+scripts/.ja-render.log
+scripts/.deploy-build.log

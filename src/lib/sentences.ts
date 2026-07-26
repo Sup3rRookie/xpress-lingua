@@ -88,8 +88,8 @@ export function unlockedSentences(metIds: Set<string>): SentenceEntry[] {
 
 // Example sentence for a card back: curated Mandarin survival sentence first,
 // then the word's matched Tatoeba sentence (HSK words, then JLPT words).
-// JLPT examples have no pre-rendered clip, so their id has no matching audio
-// file and playback falls back to TTS.
+// JLPT examples have pre-rendered native clips (jae-<id>, see scripts/render-ja.py);
+// HSK examples still fall back to TTS.
 export function exampleFor(itemId: string): Example | undefined {
   const curated = ZH_SENTENCES.find((s) => s.itemIds.includes(itemId));
   if (curated) return curated;

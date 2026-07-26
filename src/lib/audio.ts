@@ -1,10 +1,14 @@
 import { Platform } from 'react-native';
 import * as Speech from 'expo-speech';
-import suspectIds from '../data/zh-audio-suspect.json';
+import zhSuspectIds from '../data/zh-audio-suspect.json';
+import jaSuspectIds from '../data/ja-audio-suspect.json';
 
-// Word clips that failed Whisper verification (wrong/garbled isolated-syllable
-// synthesis). Browser TTS is the safer fallback until the Colab re-render.
-const SUSPECT = new Set<string>(suspectIds as string[]);
+// Clips suppressed in favour of browser TTS. zh: failed Whisper verification
+// (wrong/garbled isolated-syllable synthesis). ja: MeloTTS emits silence for some
+// isolated short tokens (single kanji/kana, counters) and a silent-but-valid mp3
+// never triggers the onerror fallback, so the card would play nothing. Ids are
+// globally unique across languages, so one flat set is safe.
+const SUSPECT = new Set<string>([...(zhSuspectIds as string[]), ...(jaSuspectIds as string[])]);
 
 let voiceId: string | undefined;
 
