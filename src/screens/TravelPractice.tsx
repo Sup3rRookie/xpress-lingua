@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import travel from '../data/zh-travel-sentences.json';
-import { speak, stopPlayback } from '../lib/audio';
+import { playText, stopPlayback } from '../lib/audio';
 import { fonts, shadows, tokens } from '../theme';
 import GlowEllipse from '../components/GlowEllipse';
 import TonePinyin from '../components/TonePinyin';
@@ -68,7 +68,7 @@ export default function TravelPractice({ onDone }: { onDone: () => void }) {
 
   // Auto-play the native line whenever the sentence changes: hear it, then repeat.
   useEffect(() => {
-    if (current) speak(current.hanzi, LOCALE);
+    if (current) playText(current.id, current.hanzi, LOCALE);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [current?.id]);
 
@@ -119,7 +119,7 @@ export default function TravelPractice({ onDone }: { onDone: () => void }) {
             <View key={s.id} style={styles.row}>
               <Pressable
                 style={styles.playBtn}
-                onPress={() => speak(s.hanzi, LOCALE)}
+                onPress={() => playText(s.id, s.hanzi, LOCALE)}
                 accessibilityRole="button"
                 accessibilityLabel={`Play ${s.hanzi}`}
               >
@@ -243,7 +243,7 @@ export default function TravelPractice({ onDone }: { onDone: () => void }) {
             <View style={styles.controls}>
               <Pressable
                 style={styles.controlBtn}
-                onPress={() => speak(current.hanzi, LOCALE)}
+                onPress={() => playText(current.id, current.hanzi, LOCALE)}
                 accessibilityRole="button"
                 accessibilityLabel="Play again"
               >
@@ -252,7 +252,7 @@ export default function TravelPractice({ onDone }: { onDone: () => void }) {
               </Pressable>
               <Pressable
                 style={styles.controlBtn}
-                onPress={() => speak(current.hanzi, LOCALE, true)}
+                onPress={() => playText(`${current.id}-slow`, current.hanzi, LOCALE)}
                 accessibilityRole="button"
                 accessibilityLabel="Play slowly"
               >
