@@ -20,7 +20,15 @@ import doubledClipIds from '../data/zh-audio-doubles.json';
 const DOUBLED_CLIPS = new Set<string>(doubledClipIds as string[]);
 import { playUrl, recordingSupported, startRecording, stopRecording } from '../lib/recorder';
 import { checkPronunciation, CheckResult, speechCheckSupported } from '../lib/speechCheck';
-import { buildQueue, deckStats, grantBonusCards, review, Rating, type Grade } from '../lib/srs';
+import {
+  buildQueue,
+  deckStats,
+  DeckStats,
+  grantBonusCards,
+  review,
+  Rating,
+  type Grade,
+} from '../lib/srs';
 import { syllables, toneOf, TONE_COLORS } from '../lib/pinyin';
 import { exampleFor } from '../lib/sentences';
 import { fonts, hanziSize, shadows, springs, tokens } from '../theme';
@@ -167,15 +175,30 @@ function SegmentedProgress({ total, current }: { total: number; current: number 
   );
 }
 
+// Streak lengths worth a celebration (confetti); ordinary days stay calm so the
+// celebration keeps meaning something.
+const STREAK_MILESTONES = new Set([3, 7, 14, 30, 50, 100, 150, 200, 365]);
+
+// Scenario ids that are fully met in the given stats snapshot.
+function completedScenarioIds(s: DeckStats): Set<string> {
+  return new Set(
+    Object.entries(s.perScenario)
+      .filter(([, p]) => p.total > 0 && p.seen >= p.total)
+      .map(([id]) => id),
+  );
+}
+
 function SessionComplete({
   reviewed,
   deck,
+  completedBefore,
   onDone,
   onKeepGoing,
   keepGoingBlocked,
 }: {
   reviewed: number;
   deck: Deck;
+  completedBefore: Set<string>;
   onDone: () => void;
   onKeepGoing: () => void;
   keepGoingBlocked: boolean;
@@ -184,6 +207,8 @@ function SessionComplete({
   const empty = reviewed === 0; // opened with nothing due, no fake celebration
   const [streak, setStreak] = useState<number | null>(null);
   const [hasMore, setHasMore] = useState(false);
+  const [finishedScenario, setFinishedScenario] = useState<string | null>(null);
+  const [deckComplete, setDeckComplete] = useState(false);
   const cardAnim = useRef(new Animated.Value(reduced || empty ? 1 : 0)).current;
   const ctaAnim = useRef(new Animated.Value(reduced || empty ? 1 : 0)).current;
 
@@ -194,8 +219,30 @@ function SessionComplete({
       setHasMore(
         Object.values(s.perScenario).some((p) => p.unlocked && p.seen < p.total),
       );
+      // A scenario that is fully met now but was not when the session opened.
+      const newlyDone = deck.scenarios.find((sc) => {
+        const p = s.perScenario[sc.id];
+        return p && p.total > 0 && p.seen >= p.total && !completedBefore.has(sc.id);
+      });
+      setFinishedScenario(newlyDone ? newlyDone.title : null);
+      setDeckComplete(s.total > 0 && s.learned >= s.total);
     });
-  }, [deck]);
+  }, [deck, completedBefore]);
+
+  // Confetti is reserved for real milestones so it keeps its meaning.
+  const milestone =
+    !empty &&
+    (deckComplete ||
+      finishedScenario !== null ||
+      (streak !== null && STREAK_MILESTONES.has(streak)));
+  const doneEmoji = empty ? '😴' : deckComplete ? '🏆' : finishedScenario ? '🎊' : '🎉';
+  const doneTitle = empty
+    ? 'Nothing ready right now'
+    : deckComplete
+      ? 'Deck complete!'
+      : finishedScenario
+        ? 'Scenario complete!'
+        : 'Session complete';
 
   useEffect(() => {
     if (reduced || empty) return;
@@ -221,11 +268,12 @@ function SessionComplete({
   return (
     <View style={styles.center}>
       <GlowEllipse style={styles.doneGlow} />
-      {!empty && <Confetti />}
-      <Text style={styles.doneEmoji}>{empty ? '😴' : '🎉'}</Text>
-      <Text style={styles.doneTitle}>
-        {empty ? 'Nothing ready right now' : 'Session complete'}
-      </Text>
+      {milestone && <Confetti />}
+      <Text style={styles.doneEmoji}>{doneEmoji}</Text>
+      <Text style={styles.doneTitle}>{doneTitle}</Text>
+      {finishedScenario && !deckComplete && (
+        <Text style={styles.celebrateSub}>You finished {finishedScenario}</Text>
+      )}
 
       {empty ? (
         <Text style={styles.keepGoingHint}>
@@ -307,14 +355,24 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
 
   const flipAnim = useRef(new Animated.Value(0)).current;
   const fxAnim = useRef(new Animated.Value(0)).current;
+  // Scenarios already fully met when the session opened, so finishing one during
+  // this session can be detected and celebrated.
+  const completedBefore = useRef<Set<string>>(new Set());
 
   useEffect(() => {
-    buildQueue(deck).then((q) => {
-      setNewIds(new Set(q.fresh.map((i) => i.id)));
-      // ~30% of REVIEW cards flip direction: audio-first listening comprehension.
-      setListenIds(new Set(q.due.filter(() => Math.random() < 0.3).map((i) => i.id)));
-      setQueue([...q.due, ...q.fresh]);
-    });
+    // Baseline the already-complete scenarios BEFORE the queue appears, so the
+    // completion screen can never read an empty baseline and mis-celebrate.
+    deckStats(deck)
+      .then((s) => {
+        completedBefore.current = completedScenarioIds(s);
+        return buildQueue(deck);
+      })
+      .then((q) => {
+        setNewIds(new Set(q.fresh.map((i) => i.id)));
+        // ~30% of REVIEW cards flip direction: audio-first listening comprehension.
+        setListenIds(new Set(q.due.filter(() => Math.random() < 0.3).map((i) => i.id)));
+        setQueue([...q.due, ...q.fresh]);
+      });
   }, [deck]);
 
   // Stop any playing audio (clip/TTS, imported, or the user's own take) when the
@@ -377,10 +435,14 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
       <SessionComplete
         reviewed={reviewed}
         deck={deck}
+        completedBefore={completedBefore.current}
         onDone={onDone}
         keepGoingBlocked={keepGoingBlocked}
         onKeepGoing={async () => {
           await grantBonusCards(8);
+          // Re-baseline so the next completion screen celebrates only what THIS
+          // batch finishes, not a scenario already celebrated earlier.
+          completedBefore.current = completedScenarioIds(await deckStats(deck));
           const q = await buildQueue(deck);
           const next = [...q.due, ...q.fresh];
           if (next.length === 0) {
@@ -975,6 +1037,13 @@ const styles = StyleSheet.create({
     fontFamily: fonts.display,
     fontSize: 30,
     color: tokens.text.primary,
+  },
+  celebrateSub: {
+    fontFamily: fonts.bodySemiBold,
+    fontSize: 15,
+    color: tokens.brand.cyan,
+    marginTop: -4,
+    textAlign: 'center',
   },
   keepGoingHint: {
     fontFamily: fonts.bodyMedium,
