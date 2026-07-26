@@ -43,3 +43,4 @@ samples/
 scripts/.parser-build/
 scripts/.content-build/
 dist/
+scripts/.travel-raw.json

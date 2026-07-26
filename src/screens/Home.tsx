@@ -38,6 +38,7 @@ export default function Home({
   onStudyDeck,
   onSentences,
   onToneTrainer,
+  onTravel,
 }: {
   deck: Deck;
   activeLang: 'zh' | 'ja';
@@ -46,6 +47,7 @@ export default function Home({
   onStudyDeck: (d: Deck) => void;
   onSentences: () => void;
   onToneTrainer: () => void;
+  onTravel: () => void;
 }) {
   const [stats, setStats] = useState<DeckStats | null>(null);
   const [voiceOk, setVoiceOk] = useState(true);
@@ -199,6 +201,28 @@ export default function Home({
             />
           </View>
         </LinearGradient>
+
+        {/* Travel phrases: the listen-and-repeat scenario practice (Mandarin) */}
+        {activeLang === 'zh' && (
+          <Pressable
+            style={styles.travelCard}
+            onPress={onTravel}
+            accessibilityRole="button"
+            accessibilityLabel="Travel phrases"
+            accessibilityHint="Listen and repeat useful sentences by travel scenario"
+          >
+            <View style={styles.travelEmojiWrap}>
+              <Text style={styles.travelEmoji}>🧭</Text>
+            </View>
+            <View style={styles.travelBody}>
+              <Text style={styles.travelTitle}>Travel phrases</Text>
+              <Text style={styles.travelSub} numberOfLines={2}>
+                Listen and repeat useful lines for taxis, food, hotels and more
+              </Text>
+            </View>
+            <Text style={styles.travelArrow}>›</Text>
+          </Pressable>
+        )}
 
         {/* Quick actions, Mandarin practice tools; Japanese equivalents come later */}
         {activeLang === 'zh' && (
@@ -485,6 +509,35 @@ const styles = StyleSheet.create({
     color: tokens.text.secondary,
   },
   quickRow: { flexDirection: 'row', gap: 10 },
+  travelCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    padding: 14,
+    borderRadius: tokens.radius.tile,
+    backgroundColor: tokens.bg.raised,
+    borderWidth: 1,
+    borderColor: 'rgba(34,211,238,0.4)',
+    ...shadows.tile,
+  },
+  travelEmojiWrap: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(34,211,238,0.14)',
+  },
+  travelEmoji: { fontSize: 22 },
+  travelBody: { flex: 1, gap: 2 },
+  travelTitle: { fontFamily: fonts.bodyBold, fontSize: 16, color: tokens.text.primary },
+  travelSub: {
+    fontFamily: fonts.bodyMedium,
+    fontSize: 12,
+    lineHeight: 16,
+    color: tokens.text.secondary,
+  },
+  travelArrow: { fontFamily: fonts.bodyBold, fontSize: 22, color: tokens.brand.cyan },
   tile: {
     backgroundColor: tokens.bg.raised,
     borderRadius: tokens.radius.tile,
