@@ -30,12 +30,7 @@ function Row({ item }: { item: DeckItem }) {
     }
   };
   return (
-    <Pressable
-      style={styles.row}
-      onPress={() => setOpen((o) => !o)}
-      accessibilityRole="button"
-      accessibilityHint="Shows the example sentence"
-    >
+    <View style={styles.row}>
       <View style={styles.rowTop}>
         <Pressable
           style={[styles.playBtn, playing && styles.playBtnActive]}
@@ -46,13 +41,20 @@ function Row({ item }: { item: DeckItem }) {
         >
           <Text style={styles.playIcon}>{playing ? '❚❚' : '▶'}</Text>
         </Pressable>
-        <Text style={styles.hanzi}>{item.hanzi}</Text>
-        <View style={styles.rowBody}>
-          <TonePinyin pinyin={item.pinyin} size={13} dark />
-        </View>
-        <Text style={styles.gloss} numberOfLines={open ? 4 : 1}>
-          {item.gloss}
-        </Text>
+        <Pressable
+          style={styles.rowTapTarget}
+          onPress={() => setOpen((o) => !o)}
+          accessibilityRole="button"
+          accessibilityHint="Shows the example sentence"
+        >
+          <Text style={styles.hanzi}>{item.hanzi}</Text>
+          <View style={styles.rowBody}>
+            <TonePinyin pinyin={item.pinyin} size={13} dark />
+          </View>
+          <Text style={styles.gloss} numberOfLines={open ? 4 : 1}>
+            {item.gloss}
+          </Text>
+        </Pressable>
       </View>
       {open && exampleFor(item.id) && (
         <View style={styles.exampleBox}>
@@ -72,7 +74,7 @@ function Row({ item }: { item: DeckItem }) {
           <Text style={styles.exampleGloss}>{ex?.gloss}</Text>
         </View>
       )}
-    </Pressable>
+    </View>
   );
 }
 
@@ -207,6 +209,7 @@ const styles = StyleSheet.create({
     ...shadows.tile,
   },
   rowTop: { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  rowTapTarget: { flex: 1, flexDirection: 'row', alignItems: 'center', gap: 10 },
   playBtn: {
     width: 32,
     height: 32,
