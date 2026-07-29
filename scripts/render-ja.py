@@ -3,8 +3,12 @@
 # fugashi` + unidic_lite). Output is mp3 (via bundled ffmpeg) so the full JLPT set
 # stays small enough to ship. Resumable: skips clips already present.
 # Reads scripts/.ja-entries.json (built by scripts/build-ja-entries.js).
+# --slow renders a slower re-synthesis (id + "-slow") for shadowing. It is a real
+# re-synthesis, not slowed playback, so the pitch accent stays natural. Ids already
+# in ja-audio-suspect.json are skipped: the engine cannot voice them at any speed,
+# and both buttons should fall back to TTS together.
 # Usage: PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python PYTHONIOENCODING=utf-8 \
-#        python scripts/render-ja.py [--limit N]
+#        python scripts/render-ja.py [--slow] [--limit N]
 import json
 import os
 import subprocess
@@ -16,6 +20,7 @@ import imageio_ffmpeg
 FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'public', 'audio', 'ja')
+SUSPECT_JSON = os.path.join(ROOT, 'src', 'data', 'ja-audio-suspect.json')
 # MeloTTS-JP emits (valid but) silent audio for some isolated short tokens. A
 # silent mp3 never trips the app's onerror TTS fallback, so reject anything this
 # quiet: drop the file and count it a failure rather than shipping silence.
@@ -25,6 +30,13 @@ SILENCE_PEAK_DB = -30.0
 def entries():
     with open(os.path.join(ROOT, 'scripts', '.ja-entries.json'), encoding='utf-8') as f:
         return json.load(f)
+
+
+def suspect_ids():
+    if not os.path.exists(SUSPECT_JSON):
+        return set()
+    with open(SUSPECT_JSON, encoding='utf-8') as f:
+        return set(json.load(f))
 
 
 def peak_db(path):
@@ -38,11 +50,18 @@ def peak_db(path):
 
 def main():
     os.makedirs(OUT, exist_ok=True)
+    slow = '--slow' in sys.argv
+    suffix = '-slow' if slow else ''
+    speed = 0.6 if slow else 0.9
+    skip = suspect_ids() if slow else set()
     limit = int(sys.argv[sys.argv.index('--limit') + 1]) if '--limit' in sys.argv else None
-    todo = [e for e in entries() if not os.path.exists(os.path.join(OUT, e['id'] + '.mp3'))]
+    todo = [e for e in entries()
+            if e['id'] not in skip
+            and not os.path.exists(os.path.join(OUT, e['id'] + suffix + '.mp3'))]
     if limit:
         todo = todo[:limit]
-    print(f'{len(todo)} ja clips to render this run', flush=True)
+    print(f'{len(todo)} ja clips to render this run (speed={speed}, skipped {len(skip)} '
+          f'unvoiceable)', flush=True)
     if not todo:
         print('ALL RENDERED')
         return
@@ -53,11 +72,11 @@ def main():
     model = TTS(language='JP', device='auto')  # cuda when available
     spk = model.hps.data.spk2id['JP']
     fails = 0
-    for e in tqdm(todo, desc='ja', unit='clip', mininterval=3):
-        wav = os.path.join(tempfile.gettempdir(), 'ja_' + e['id'] + '.wav')
-        mp3 = os.path.join(OUT, e['id'] + '.mp3')
+    for e in tqdm(todo, desc='ja' + suffix, unit='clip', mininterval=3):
+        wav = os.path.join(tempfile.gettempdir(), 'ja_' + e['id'] + suffix + '.wav')
+        mp3 = os.path.join(OUT, e['id'] + suffix + '.mp3')
         try:
-            model.tts_to_file(e['text'], spk, wav, speed=0.9, quiet=True)
+            model.tts_to_file(e['text'], spk, wav, speed=speed, quiet=True)
             subprocess.run(
                 [FFMPEG, '-y', '-loglevel', 'error', '-i', wav,
                  '-ac', '1', '-ar', '24000', '-b:a', '64k', mp3],

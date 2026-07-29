@@ -681,6 +681,18 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                       <Text style={styles.exampleReading}>{example.pinyin}</Text>
                     )}
                     <Text style={styles.exampleGloss}>{example.gloss}</Text>
+                    {/* Sentences are what you shadow, so they get their own slow
+                        replay: rendered "-slow" clip when present, slowed TTS if not. */}
+                    <Pressable
+                      style={styles.exampleSlowBtn}
+                      onPress={() =>
+                        playText(`${example.id}-slow`, example.hanzi, deck.ttsLocale, true)
+                      }
+                      accessibilityRole="button"
+                      accessibilityLabel="Play example sentence slowly"
+                    >
+                      <Text style={styles.exampleSlowText}>🐢 Slow</Text>
+                    </Pressable>
                     {example.attribution && (
                       <Text style={styles.exampleAttribution}>
                         Sentence: {example.attribution} · CC-BY
@@ -697,11 +709,15 @@ export default function Session({ deck, onDone }: { deck: Deck; onDone: () => vo
                   >
                     <Text style={styles.pillChipText}>🔊 Native</Text>
                   </Pressable>
-                  {/* Slow is TTS-only, so it hides when the card has imported audio. */}
+                  {/* Plays the rendered "-slow" clip when one exists (a real slower
+                      re-synthesis, so tone and pitch accent stay correct) and falls
+                      back to slowed TTS. Hidden for imported-audio cards. */}
                   {!item.audioKey && (
                     <Pressable
                       style={styles.pillChip}
-                      onPress={() => speak(item.hanzi, deck.ttsLocale, true)}
+                      onPress={() =>
+                        playText(`${item.id}-slow`, item.hanzi, deck.ttsLocale, true)
+                      }
                       accessibilityRole="button"
                     >
                       <Text style={styles.pillChipText}>🐢 Slow</Text>
@@ -883,6 +899,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   examplePlay: { color: tokens.brand.primary, fontSize: 13 },
+  exampleSlowBtn: {
+    marginTop: 2,
+    paddingVertical: 4,
+    paddingHorizontal: 10,
+    borderRadius: 11,
+    backgroundColor: 'rgba(139,92,246,0.14)',
+  },
+  exampleSlowText: {
+    fontFamily: fonts.bodySemiBold,
+    fontSize: 11,
+    color: tokens.brand.primaryDown,
+  },
   exampleReading: {
     fontFamily: fonts.bodySemiBold,
     fontSize: 13,

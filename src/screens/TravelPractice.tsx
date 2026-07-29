@@ -252,7 +252,7 @@ export default function TravelPractice({ onDone }: { onDone: () => void }) {
               </Pressable>
               <Pressable
                 style={styles.controlBtn}
-                onPress={() => playText(`${current.id}-slow`, current.hanzi, LOCALE)}
+                onPress={() => playText(`${current.id}-slow`, current.hanzi, LOCALE, true)}
                 accessibilityRole="button"
                 accessibilityLabel="Play slowly"
               >

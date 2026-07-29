@@ -33,7 +33,8 @@ export async function initBuiltinAudio(lang: string): Promise<number> {
 }
 
 export function builtinAudioUrl(lang: string, id: string): string | null {
-  if (SUSPECT.has(id)) return null;
+  // "<id>-slow" is the same word, so a suspect id suppresses both speeds.
+  if (SUSPECT.has(id) || SUSPECT.has(id.replace(/-slow$/, ''))) return null;
   const f = builtinFiles[lang]?.[id];
   return f ? `audio/${lang}/${f}` : null;
 }
@@ -95,11 +96,17 @@ const CLIP_CAP_MS = 20000;
 
 // Play by id: rendered clip first, TTS fallback. Returns a promise that resolves
 // when playback finishes (or is interrupted / caps out). Fire-and-forget callers
-// can ignore it.
-export function playText(id: string, text: string, locale: string): Promise<void> {
+// can ignore it. Pass `slow` when the id is a "-slow" clip, so the TTS fallback
+// also slows down instead of speaking at normal rate.
+export function playText(
+  id: string,
+  text: string,
+  locale: string,
+  slow = false,
+): Promise<void> {
   const lang = locale.split('-')[0].toLowerCase();
   const url = builtinAudioUrl(lang, id);
-  if (!(url && Platform.OS === 'web')) return speak(text, locale);
+  if (!(url && Platform.OS === 'web')) return speak(text, locale, slow);
   stopPlayback();
   return withCap(CLIP_CAP_MS, (done) => {
     // `over` makes end and fallback mutually exclusive: whichever fires first
@@ -126,7 +133,7 @@ export function playText(id: string, text: string, locale: string): Promise<void
       if (over) return;
       over = true;
       if (stopCurrent === stop) stopCurrent = null;
-      speak(text, locale).finally(done);
+      speak(text, locale, slow).finally(done); // keep the rate if the clip fails to load
     };
     audio.onended = finish;
     audio.onerror = fallback;
