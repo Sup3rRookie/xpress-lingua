@@ -5,7 +5,7 @@ import { Deck } from '../data/types';
 import { zhHsk } from '../data/zh-hsk';
 import { jaJlpt } from '../data/ja-jlpt';
 import { initBuiltinAudio, initVoice } from '../lib/audio';
-import { hasTravelPack } from './TravelPractice';
+import { hasTravelPack } from '../lib/travelPacks';
 import {
   deckStats,
   DeckStats,
@@ -40,6 +40,7 @@ export default function Home({
   onSentences,
   onToneTrainer,
   onTravel,
+  onEpisode,
 }: {
   deck: Deck;
   activeLang: 'zh' | 'ja';
@@ -49,6 +50,7 @@ export default function Home({
   onSentences: () => void;
   onToneTrainer: () => void;
   onTravel: () => void;
+  onEpisode: () => void;
 }) {
   const [stats, setStats] = useState<DeckStats | null>(null);
   const [voiceOk, setVoiceOk] = useState(true);
@@ -220,6 +222,28 @@ export default function Home({
               <Text style={styles.travelTitle}>Travel phrases</Text>
               <Text style={styles.travelSub} numberOfLines={2}>
                 Listen and repeat useful lines for taxis, food, hotels and more
+              </Text>
+            </View>
+            <Text style={styles.travelArrow}>›</Text>
+          </Pressable>
+        )}
+
+        {/* Episode mode: hands-free listen-and-repeat over the same sentences. */}
+        {hasTravelPack(activeLang) && (
+          <Pressable
+            style={styles.episodeCard}
+            onPress={onEpisode}
+            accessibilityRole="button"
+            accessibilityLabel="Listen and repeat episodes"
+            accessibilityHint="Hands-free audio practice you can follow with the screen off"
+          >
+            <View style={styles.episodeEmojiWrap}>
+              <Text style={styles.travelEmoji}>🎧</Text>
+            </View>
+            <View style={styles.travelBody}>
+              <Text style={styles.travelTitle}>Listen & repeat</Text>
+              <Text style={styles.travelSub} numberOfLines={2}>
+                Short hands-free episodes. Hear a line, say it back, then hear what it means
               </Text>
             </View>
             <Text style={styles.travelArrow}>›</Text>
@@ -522,6 +546,19 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(34,211,238,0.4)',
     ...shadows.tile,
   },
+  // Same shape as the travel card, violet accent so the two read as a pair
+  // without competing for attention.
+  episodeCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    padding: 14,
+    borderRadius: tokens.radius.tile,
+    backgroundColor: tokens.bg.raised,
+    borderWidth: 1,
+    borderColor: 'rgba(139,92,246,0.4)',
+    ...shadows.tile,
+  },
   travelEmojiWrap: {
     width: 44,
     height: 44,
@@ -529,6 +566,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'rgba(34,211,238,0.14)',
+  },
+  episodeEmojiWrap: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(139,92,246,0.16)',
   },
   travelEmoji: { fontSize: 22 },
   travelBody: { flex: 1, gap: 2 },

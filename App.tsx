@@ -20,6 +20,7 @@ import Sentences from './src/screens/Sentences';
 import ToneTrainer from './src/screens/ToneTrainer';
 import Browse from './src/screens/Browse';
 import TravelPractice from './src/screens/TravelPractice';
+import Episode from './src/screens/Episode';
 import TabBar, { TabId } from './src/components/TabBar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { zhSurvival } from './src/data/zh-survival';
@@ -40,7 +41,8 @@ type Screen =
   | 'sentences'
   | 'tone-trainer'
   | 'browse'
-  | 'travel';
+  | 'travel'
+  | 'episode';
 type ToneMode = 'quiz' | 'pairs' | 'shadow';
 type SentencesTab = 'learned' | 'mix';
 
@@ -136,6 +138,7 @@ export default function App() {
             setScreen('tone-trainer');
           }}
           onTravel={() => setScreen('travel')}
+          onEpisode={() => setScreen('episode')}
         />
       )}
       {screen === 'practice' && (
@@ -192,6 +195,9 @@ export default function App() {
               lang={activeLang}
               onDone={() => setScreen(lastTab)}
             />
+          )}
+          {screen === 'episode' && (
+            <Episode key={activeLang} lang={activeLang} onDone={() => setScreen(lastTab)} />
           )}
           {screen === 'sentences' && (
             <Sentences initialTab={sentencesTab} onDone={() => setScreen(lastTab)} />

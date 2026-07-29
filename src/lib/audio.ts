@@ -11,6 +11,10 @@ import jaSuspectIds from '../data/ja-audio-suspect.json';
 const SUSPECT = new Set<string>([...(zhSuspectIds as string[]), ...(jaSuspectIds as string[])]);
 
 let voiceId: string | undefined;
+// The language voiceId was picked for. Episode mode interleaves English glosses
+// with the study language, and reusing a Japanese voice to read English gives
+// unintelligible output, so the pinned voice only applies to its own language.
+let voiceLang: string | undefined;
 
 // Pre-rendered open-source TTS clips served from public/audio/<lang>/.
 // Falls back to on-device/browser TTS for ids without a rendered clip.
@@ -150,6 +154,9 @@ export async function initVoice(locale: string): Promise<boolean> {
       voices.find((v) => v.language?.toLowerCase() === locale.toLowerCase()) ??
       voices.find((v) => v.language?.toLowerCase().startsWith(lang));
     voiceId = match?.identifier;
+    // Record the study language even when no voice matched, so the slower study
+    // rate still applies. Only the voice itself is conditional on a match.
+    voiceLang = lang;
     return !!match;
   } catch {
     return false;
@@ -168,10 +175,16 @@ export function speak(text: string, locale: string, slow = false): Promise<void>
       finish();
     };
     stopCurrent = stop;
+    // Only reuse the pinned voice when it belongs to the requested language.
+    const lang = locale.split('-')[0].toLowerCase();
+    const studyLang = Boolean(voiceLang && lang === voiceLang);
     Speech.speak(text, {
       language: locale,
-      voice: voiceId,
-      rate: slow ? 0.5 : 0.9,
+      voice: studyLang ? voiceId : undefined,
+      // The study language is deliberately slowed so it can be copied. Anything
+      // else (the English meaning in Episode mode) is the learner's own language
+      // and only carries meaning, so 0.9 just sounds sluggish.
+      rate: slow ? 0.5 : studyLang ? 0.9 : 1.0,
       onDone: finish,
       onStopped: finish,
       onError: finish,

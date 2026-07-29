@@ -49,3 +49,4 @@ scripts/.ja-render.log
 scripts/.deploy-build.log
 scripts/.jtr.log
 scripts/.ja-slow.log
+scripts/.en-entries.json

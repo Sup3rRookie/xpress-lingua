@@ -1,44 +1,11 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import zhTravel from '../data/zh-travel-sentences.json';
-import jaTravel from '../data/ja-travel-sentences.json';
+import { travelPack } from '../lib/travelPacks';
 import { playText, stopPlayback } from '../lib/audio';
 import { fonts, shadows, tokens } from '../theme';
 import GlowEllipse from '../components/GlowEllipse';
 import TonePinyin from '../components/TonePinyin';
-
-interface TSentence {
-  id: string;
-  scenario: string;
-  hanzi: string;
-  pinyin: string;
-  gloss: string;
-  situation: string;
-}
-interface TScenario {
-  id: string;
-  title: string;
-  emoji: string;
-}
-interface TravelPack {
-  lang: string;
-  langLabel: string;
-  ttsLocale: string;
-  scenarios: TScenario[];
-  sentences: TSentence[];
-}
-
-// One pack per language. Sentence ids carry a per-language prefix ("tr-" / "jtr-")
-// so the shared saved list and the audio manifest can never collide.
-const PACKS: Record<string, TravelPack> = {
-  zh: zhTravel as TravelPack,
-  ja: jaTravel as TravelPack,
-};
-
-export function hasTravelPack(lang: string): boolean {
-  return Boolean(PACKS[lang]);
-}
 
 const SAVED_KEY = 'xl-travel-saved';
 
@@ -60,7 +27,7 @@ export default function TravelPractice({
   lang: string;
   onDone: () => void;
 }) {
-  const pack = PACKS[lang] ?? PACKS.zh;
+  const pack = travelPack(lang);
   const SCENARIOS = pack.scenarios;
   const SENTENCES = pack.sentences;
   const LOCALE = pack.ttsLocale;
