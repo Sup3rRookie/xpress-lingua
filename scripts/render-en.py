@@ -20,7 +20,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'public', 'audio', 'en')
 STATE_JSON = os.path.join(ROOT, 'scripts', 'en-render-state.json')
 SILENCE_PEAK_DB = -30.0
-DEFAULT_SPEAKER = 'EN-US'  # others: EN-BR, EN-AU, EN_INDIA, EN-Default
+DEFAULT_SPEAKER = 'EN-AU'  # others: EN-US, EN-BR, EN_INDIA, EN-Default
 
 
 def entries():
