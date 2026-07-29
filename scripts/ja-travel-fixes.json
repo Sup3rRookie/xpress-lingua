@@ -1,0 +1,302 @@
+{
+ "_comment": "Corrections from two independent native-speaker review passes, applied by build-ja-travel-sentences.js on top of the generated set. Keyed by sentence id; only the listed fields are replaced. Keys starting with _ are documentation. _add appends new lines per scenario (ids continue after the existing ones, so existing ids and their audio never shift).",
+
+ "jtr-social-15": {
+  "hanzi": "マレーシアに行ったことがありますか。",
+  "pinyin": "marēshia ni itta koto ga arimasu ka",
+  "_why": "kita (came) is wrong from Japan; must be itta (went)"
+ },
+ "jtr-food-09": {
+  "hanzi": "牛肉は入っていますか。",
+  "pinyin": "gyūniku wa haitte imasu ka",
+  "_why": "contrastive wa, not ga, for does-it-contain (allergy line)"
+ },
+ "jtr-directions-04": {
+  "hanzi": "電車とバス、どっちが速いですか。",
+  "pinyin": "densha to basu, dotchi ga hayai desu ka",
+  "_why": "hayai = fast is 速い not 早い (early); Hepburn writes the sokuon before ch as t"
+ },
+ "jtr-hotel-10": {
+  "hanzi": "枕をもう一つもらえますか。",
+  "pinyin": "makura o mō hitotsu moraemasu ka",
+  "gloss": "Could I get one more pillow?",
+  "_why": "kasu (lend) is wrong for amenities; te-kudasai is blunt to staff (both reviewers)"
+ },
+ "jtr-hotel-01": {
+  "hanzi": "スミスという名前で予約しています。",
+  "pinyin": "sumisu to iu namae de yoyaku shite imasu",
+  "_why": "namae wa ... de double-marks; no guest says it"
+ },
+ "jtr-arrival-01": {
+  "hanzi": "一週間くらいの予定です。",
+  "pinyin": "isshūkan kurai no yotei desu",
+  "gloss": "I'm planning to stay about a week.",
+  "_why": "tomaru (lodge) is wrong answering immigration about duration"
+ },
+ "jtr-help-13": {
+  "hanzi": "スマホをなくしました。",
+  "pinyin": "sumaho o nakushimashita",
+  "gloss": "I've lost my phone.",
+  "_why": "otosu implies you know you dropped it; station and koban staff expect nakushimashita"
+ },
+ "jtr-arrival-09": {
+  "hanzi": "電車の乗り場はどちらですか。",
+  "pinyin": "densha no noriba wa dochira desu ka",
+  "_why": "densha noriba is not a real compound; dochira is the right register to staff"
+ },
+ "jtr-arrival-16": {
+  "hanzi": "これ、細かくしてもらえますか。",
+  "pinyin": "kore, komakaku shite moraemasu ka",
+  "_why": "set phrase komakaku suru, not komakai okane ni suru"
+ },
+ "jtr-directions-09": {
+  "hanzi": "スマホの地図で教えてもらえますか。",
+  "pinyin": "sumaho no chizu de oshiete moraemasu ka",
+  "gloss": "Could you show me on the map on my phone?",
+  "_why": "original was ambiguous about whose phone and showing what"
+ },
+ "jtr-food-00": {
+  "hanzi": "二人ですが、席は空いていますか。",
+  "pinyin": "futari desu ga, seki wa aite imasu ka",
+  "gloss": "There are two of us, do you have a table free?",
+  "_why": "seki aitemasu ka is what is actually said at the door"
+ },
+ "jtr-hotel-04": {
+  "hanzi": "チェックアウトの時間を少し遅くできますか。",
+  "pinyin": "chekku auto no jikan o sukoshi osoku dekimasu ka",
+  "_why": "you make the time late, not the checkout"
+ },
+ "jtr-hotel-12": {
+  "hanzi": "暖房をもう少し強くしてもらえますか。",
+  "pinyin": "danbō o mō sukoshi tsuyoku shite moraemasu ka",
+  "gloss": "Could you turn the heating up a bit?",
+  "_why": "original asked whether the heater is capable, not a request"
+ },
+ "jtr-taxi-14": {
+  "hanzi": "荷物をトランクに入れてもらえますか。",
+  "pinyin": "nimotsu o toranku ni irete moraemasu ka",
+  "gloss": "Could you put my bags in the trunk?",
+  "_why": "in Japan the driver loads the trunk; asking permission to do it yourself is odd"
+ },
+ "jtr-taxi-19": {
+  "hanzi": "どこで乗り換えればいいですか。",
+  "pinyin": "doko de norikaereba ii desu ka",
+  "_why": "original asks where THEY will transfer; advice-seeking takes -reba ii"
+ },
+ "jtr-directions-08": {
+  "hanzi": "この地図のどこにありますか。",
+  "pinyin": "kono chizu no doko ni arimasu ka",
+  "_why": "missing existential verb, sounded clipped"
+ },
+ "jtr-social-05": {
+  "hanzi": "日本のどこの出身ですか。",
+  "pinyin": "nihon no doko no shusshin desu ka",
+  "_why": "doko shusshin is colloquial ellipsis, mismatched with desu register"
+ },
+ "jtr-social-04": {
+  "hanzi": "お仕事は何をされていますか。",
+  "pinyin": "oshigoto wa nani o sarete imasu ka",
+  "situation": "Asking what someone does for work",
+  "_why": "textbook-flat original; situation text referenced a line that comes later"
+ },
+ "jtr-food-24": {
+  "gloss": "Could you include chopsticks as well?",
+  "_why": "awkward English gloss"
+ },
+
+ "_readings": "Below: the printed romaji was correct but a ja-JP engine would read the kanji the other way, so the learner would hear something different from what they read. Rewritten to be unambiguous.",
+ "jtr-hotel-17": {
+  "hanzi": "お風呂は何時まで使えますか。",
+  "pinyin": "ofuro wa nanji made tsukaemasu ka",
+  "_why": "入れます is read iremasu by TTS, not hairemasu"
+ },
+ "jtr-hotel-18": {
+  "hanzi": "お風呂に入ってもいいですか。",
+  "pinyin": "ofuro ni haitte mo ii desu ka",
+  "gloss": "Is it OK for me to use the bath?",
+  "situation": "Checking the bath rules",
+  "_why": "same iremasu ambiguity, plus two clauses were too long to shadow; the tattoo half is now its own line"
+ },
+ "jtr-social-19": {
+  "hanzi": "明日の夜、ひまですか。",
+  "pinyin": "ashita no yoru, hima desu ka",
+  "_why": "空いて is read suite by TTS, not aite"
+ },
+ "jtr-taxi-20": {
+  "hanzi": "どの線に乗ればいいですか。",
+  "pinyin": "dono sen ni noreba ii desu ka",
+  "_why": "何線 is read nansen by TTS, not nanisen"
+ },
+ "jtr-taxi-22": {
+  "hanzi": "このバス、空港に行きますか。",
+  "pinyin": "kono basu, kūkō ni ikimasu ka",
+  "gloss": "Does this bus go to the airport?",
+  "situation": "Checking a bus before you board",
+  "_why": "was a near-duplicate of directions-06; repurposed to the more useful check"
+ },
+ "jtr-directions-06": {
+  "hanzi": "空港ゆきのバス乗り場はどこですか。",
+  "pinyin": "kūkō yuki no basu noriba wa doko desu ka",
+  "_why": "行き is commonly read iki by TTS; kana fixes the reading"
+ },
+ "jtr-arrival-15": {
+  "hanzi": "この近くにエーティーエムはありますか。",
+  "pinyin": "kono chikaku ni ē tī emu wa arimasu ka",
+  "_why": "latin ATM is read letter-by-letter or skipped by ja TTS; kana is safe"
+ },
+ "jtr-arrival-17": {
+  "hanzi": "ワイファイのパスワードを教えてください。",
+  "pinyin": "waifai no pasuwādo o oshiete kudasai",
+  "_why": "latin Wi-Fi is unreliable in ja TTS"
+ },
+ "jtr-arrival-18": {
+  "hanzi": "シムカードはどこで買えますか。",
+  "pinyin": "shimu kādo wa doko de kaemasu ka",
+  "_why": "latin SIM is unreliable in ja TTS"
+ },
+ "jtr-social-16": {
+  "hanzi": "ライン、交換しませんか。",
+  "pinyin": "rain, kōkan shimasen ka",
+  "_why": "latin LINE is unreliable in ja TTS"
+ },
+ "jtr-help-20": {
+  "hanzi": "今のアナウンス、なんて言いましたか。",
+  "pinyin": "ima no anaunsu, nante iimashita ka",
+  "_why": "何て is not standard orthography"
+ },
+
+ "_emergency": "Safety-critical rewrites in the help scenario.",
+ "jtr-help-06": {
+  "hanzi": "頭が痛いです。",
+  "pinyin": "atama ga itai desu",
+  "gloss": "I have a headache.",
+  "situation": "Telling a doctor or pharmacist what hurts",
+  "_why": "two clauses was the hardest line to shadow in the emergency set; fever is now its own line"
+ },
+ "jtr-help-04": {
+  "gloss": "I feel nauseous / faint.",
+  "_why": "kibun ga warui signals nausea or faintness specifically; the general unwell line is added separately"
+ },
+ "jtr-help-19": {
+  "hanzi": "避難場所はどこですか。",
+  "pinyin": "hinan basho wa doko desu ka",
+  "gloss": "Where is the evacuation area?",
+  "_why": "nigeru is understood but hinan basho matches the wording on the actual signage"
+ },
+
+ "_repurposed": "Near-duplicates and low-value filler, rewritten into lines that were missing.",
+ "jtr-food-19": {
+  "hanzi": "カードでお願いします。",
+  "pinyin": "kādo de onegai shimasu",
+  "gloss": "Card, please.",
+  "situation": "Handing over your card to pay",
+  "_why": "was identical to shopping-13"
+ },
+ "jtr-taxi-12": {
+  "hanzi": "すみません、降ります。",
+  "pinyin": "sumimasen, orimasu",
+  "gloss": "Excuse me, I'm getting off.",
+  "situation": "Getting off a packed train or bus",
+  "_why": "was a duplicate of shopping-15 down to the same situation text"
+ },
+ "jtr-food-22": {
+  "hanzi": "ごちそうさまでした。",
+  "pinyin": "gochisōsama deshita",
+  "gloss": "Thanks for the meal.",
+  "situation": "Leaving a restaurant, expected every time",
+  "_why": "was a duplicate of social-11, and this line was missing entirely"
+ },
+ "jtr-arrival-22": {
+  "hanzi": "ここはどこですか。",
+  "pinyin": "koko wa doko desu ka",
+  "gloss": "Where am I?",
+  "situation": "You've come out of a station and have no idea where you are",
+  "_why": "was a duplicate of arrival-23, and this line was missing"
+ },
+ "jtr-arrival-20": {
+  "hanzi": "分かりません。",
+  "pinyin": "wakarimasen",
+  "gloss": "I don't understand.",
+  "situation": "Any time you are lost in a conversation",
+  "_why": "replaced a very narrow line with a top-three survival phrase that was missing"
+ },
+ "jtr-social-08": {
+  "hanzi": "会社員です。",
+  "pinyin": "kaishain desu",
+  "gloss": "I work for a company.",
+  "situation": "Saying what you do",
+  "_why": "the original only worked if the learner is an engineer"
+ },
+ "jtr-shopping-12": {
+  "hanzi": "税込みですか。",
+  "pinyin": "zeikomi desu ka",
+  "gloss": "Is tax included?",
+  "situation": "Checking a price tag before you pay",
+  "_why": "replaced a brush-off line most learners never use"
+ },
+ "jtr-arrival-19": {
+  "hanzi": "第二ターミナルはどっちですか。",
+  "pinyin": "dai ni tāminaru wa dotchi desu ka",
+  "_why": "the e-wa double particle is a known beginner stumbling block"
+ },
+ "jtr-hotel-07": {
+  "hanzi": "荷物を預かってもらえますか。",
+  "pinyin": "nimotsu o azukatte moraemasu ka",
+  "_why": "around 19 morae; context supplies the dropped opening clause"
+ },
+ "jtr-shopping-20": {
+  "hanzi": "海外のカードが使えますか。",
+  "pinyin": "kaigai no kādo ga tsukaemasu ka",
+  "gloss": "Do you take overseas cards?",
+  "_why": "a relative clause was the hardest sentence in the deck, and it carried latin ATM"
+ },
+ "jtr-food-25": {
+  "gloss": "A plastic bag, please (there's a charge).",
+  "_why": "differentiates it from shopping-17; bags are charged for in Japan"
+ },
+ "jtr-taxi-13": {
+  "gloss": "An itemised receipt, please (for expenses).",
+  "_why": "ryoshusho and reshiito are different things; the glosses did not distinguish them"
+ },
+
+ "_add": {
+  "help": [
+   { "hanzi": "警察を呼んでください。", "pinyin": "keisatsu o yonde kudasai", "gloss": "Please call the police.", "situation": "A theft, an assault or an accident" },
+   { "hanzi": "119番は救急、110番は警察です。", "pinyin": "hyakujūkyū ban wa kyūkyū, hyakutō ban wa keisatsu desu", "gloss": "119 is ambulance and fire, 110 is police.", "situation": "The two emergency numbers in Japan, worth memorising" },
+   { "hanzi": "ここが痛いです。", "pinyin": "koko ga itai desu", "gloss": "It hurts here.", "situation": "Pointing at what hurts. Covers every body part" },
+   { "hanzi": "熱があります。", "pinyin": "netsu ga arimasu", "gloss": "I have a fever.", "situation": "Describing a symptom" },
+   { "hanzi": "具合が悪いです。", "pinyin": "guai ga warui desu", "gloss": "I'm unwell.", "situation": "The general I-am-ill line" },
+   { "hanzi": "息ができません。", "pinyin": "iki ga dekimasen", "gloss": "I can't breathe.", "situation": "A real medical emergency" },
+   { "hanzi": "胸が痛いです。", "pinyin": "mune ga itai desu", "gloss": "I have chest pain.", "situation": "A real medical emergency" },
+   { "hanzi": "血が出ています。", "pinyin": "chi ga dete imasu", "gloss": "I'm bleeding.", "situation": "An injury" },
+   { "hanzi": "薬のアレルギーがあります。", "pinyin": "kusuri no arerugī ga arimasu", "gloss": "I'm allergic to some medicines.", "situation": "Before being treated or given medication" },
+   { "hanzi": "やめてください！", "pinyin": "yamete kudasai", "gloss": "Stop it!", "situation": "Harassment. Say it loudly" },
+   { "hanzi": "火事です！", "pinyin": "kaji desu", "gloss": "Fire!", "situation": "Raising the alarm" },
+   { "hanzi": "大使館に連絡したいです。", "pinyin": "taishikan ni renraku shitai desu", "gloss": "I want to contact my embassy.", "situation": "Passport lost or a serious problem" },
+   { "hanzi": "旅行保険に入っています。", "pinyin": "ryokō hoken ni haitte imasu", "gloss": "I have travel insurance.", "situation": "At a hospital or clinic reception" }
+  ],
+  "social": [
+   { "hanzi": "写真を撮ってもらえますか。", "pinyin": "shashin o totte moraemasu ka", "gloss": "Could you take a photo for us?", "situation": "The single most useful tourist line in Japan" },
+   { "hanzi": "ここで写真を撮ってもいいですか。", "pinyin": "koko de shashin o totte mo ii desu ka", "gloss": "Is it OK to take photos here?", "situation": "Temples, shops and restaurants often restrict this" },
+   { "hanzi": "大丈夫です。", "pinyin": "daijōbu desu", "gloss": "No thank you, I'm fine.", "situation": "The standard polite decline" }
+  ],
+  "food": [
+   { "hanzi": "一人です。", "pinyin": "hitori desu", "gloss": "Just one, please.", "situation": "Arriving alone at a restaurant" },
+   { "hanzi": "豚肉は入っていますか。", "pinyin": "butaniku wa haitte imasu ka", "gloss": "Does it contain pork?", "situation": "Checking before you order" }
+  ],
+  "taxi": [
+   { "hanzi": "この席、あいていますか。", "pinyin": "kono seki, aite imasu ka", "gloss": "Is this seat free?", "situation": "On a train or in a waiting area" }
+  ],
+  "hotel": [
+   { "hanzi": "部屋の鍵をなくしました。", "pinyin": "heya no kagi o nakushimashita", "gloss": "I've lost my room key.", "situation": "At the front desk" },
+   { "hanzi": "ワイファイのパスワードは何ですか。", "pinyin": "waifai no pasuwādo wa nan desu ka", "gloss": "What's the wifi password?", "situation": "At the front desk. This is where it is actually asked" },
+   { "hanzi": "タトゥーがあります。", "pinyin": "tatū ga arimasu", "gloss": "I have a tattoo.", "situation": "Many baths and onsen still restrict tattoos" }
+  ],
+  "shopping": [
+   { "hanzi": "これ、返品できますか。", "pinyin": "kore, henpin dekimasu ka", "gloss": "Can I return this?", "situation": "Back at the shop with a receipt" }
+  ],
+  "directions": [
+   { "hanzi": "もう一度お願いします。", "pinyin": "mō ichido onegai shimasu", "gloss": "One more time, please.", "situation": "You did not catch what they said" }
+  ]
+ }
+}

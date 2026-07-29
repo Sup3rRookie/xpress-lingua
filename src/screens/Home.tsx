@@ -5,6 +5,7 @@ import { Deck } from '../data/types';
 import { zhHsk } from '../data/zh-hsk';
 import { jaJlpt } from '../data/ja-jlpt';
 import { initBuiltinAudio, initVoice } from '../lib/audio';
+import { hasTravelPack } from './TravelPractice';
 import {
   deckStats,
   DeckStats,
@@ -202,8 +203,9 @@ export default function Home({
           </View>
         </LinearGradient>
 
-        {/* Travel phrases: the listen-and-repeat scenario practice (Mandarin) */}
-        {activeLang === 'zh' && (
+        {/* Travel phrases: the listen-and-repeat scenario practice. Shown for any
+            language that has a sentence pack. */}
+        {hasTravelPack(activeLang) && (
           <Pressable
             style={styles.travelCard}
             onPress={onTravel}

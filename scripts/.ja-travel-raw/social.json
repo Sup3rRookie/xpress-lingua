@@ -1,0 +1,146 @@
+[
+  {
+    "hanzi": "はじめまして、アリです。",
+    "pinyin": "hajimemashite, ari desu.",
+    "gloss": "Nice to meet you, I'm Ali.",
+    "situation": "First time meeting someone"
+  },
+  {
+    "hanzi": "よろしくお願いします。",
+    "pinyin": "yoroshiku onegai shimasu.",
+    "gloss": "Nice to meet you / I look forward to it.",
+    "situation": "Right after introducing yourself"
+  },
+  {
+    "hanzi": "マレーシアから来ました。",
+    "pinyin": "marēshia kara kimashita.",
+    "gloss": "I'm from Malaysia.",
+    "situation": "Saying where you are from"
+  },
+  {
+    "hanzi": "お名前は何ですか。",
+    "pinyin": "o-namae wa nan desu ka.",
+    "gloss": "What's your name?",
+    "situation": "Asking someone's name politely"
+  },
+  {
+    "hanzi": "お仕事は何ですか。",
+    "pinyin": "o-shigoto wa nan desu ka.",
+    "gloss": "What do you do for work?",
+    "situation": "Turning the question back to them"
+  },
+  {
+    "hanzi": "日本のどこ出身ですか。",
+    "pinyin": "nihon no doko shusshin desu ka.",
+    "gloss": "What part of Japan are you from?",
+    "situation": "Keeping the small talk going"
+  },
+  {
+    "hanzi": "日本は初めてです。",
+    "pinyin": "nihon wa hajimete desu.",
+    "gloss": "This is my first time in Japan.",
+    "situation": "Explaining you're a first-time visitor"
+  },
+  {
+    "hanzi": "一週間くらい日本にいます。",
+    "pinyin": "isshūkan kurai nihon ni imasu.",
+    "gloss": "I'm in Japan for about a week.",
+    "situation": "Saying how long you're staying"
+  },
+  {
+    "hanzi": "エンジニアをしています。",
+    "pinyin": "enjinia o shite imasu.",
+    "gloss": "I work as an engineer.",
+    "situation": "Saying what you do"
+  },
+  {
+    "hanzi": "日本語を勉強しています。",
+    "pinyin": "nihongo o benkyō shite imasu.",
+    "gloss": "I'm studying Japanese.",
+    "situation": "Explaining why you're trying to speak"
+  },
+  {
+    "hanzi": "日本語はまだ下手です。",
+    "pinyin": "nihongo wa mada heta desu.",
+    "gloss": "My Japanese is still bad.",
+    "situation": "Apologising for your level"
+  },
+  {
+    "hanzi": "もう少しゆっくり話してください。",
+    "pinyin": "mō sukoshi yukkuri hanashite kudasai.",
+    "gloss": "Please speak a little more slowly.",
+    "situation": "When someone talks too fast"
+  },
+  {
+    "hanzi": "この料理、すごくおいしいです。",
+    "pinyin": "kono ryōri, sugoku oishii desu.",
+    "gloss": "This dish is really delicious.",
+    "situation": "Complimenting the food"
+  },
+  {
+    "hanzi": "日本はきれいな国ですね。",
+    "pinyin": "nihon wa kirei na kuni desu ne.",
+    "gloss": "Japan is such a beautiful country.",
+    "situation": "Complimenting the country"
+  },
+  {
+    "hanzi": "ここ、すごくいいところですね。",
+    "pinyin": "koko, sugoku ii tokoro desu ne.",
+    "gloss": "This is a really nice place.",
+    "situation": "Complimenting a place you were taken to"
+  },
+  {
+    "hanzi": "日本のアニメが大好きです。",
+    "pinyin": "nihon no anime ga daisuki desu.",
+    "gloss": "I love Japanese anime.",
+    "situation": "Saying what you like"
+  },
+  {
+    "hanzi": "マレーシアに来たことがありますか。",
+    "pinyin": "marēshia ni kita koto ga arimasu ka.",
+    "gloss": "Have you ever been to Malaysia?",
+    "situation": "Asking if they've visited your country"
+  },
+  {
+    "hanzi": "LINE交換しませんか。",
+    "pinyin": "rain kōkan shimasen ka.",
+    "gloss": "Want to exchange LINE?",
+    "situation": "Swapping contacts with a new friend"
+  },
+  {
+    "hanzi": "連絡先を教えてもらえますか。",
+    "pinyin": "renrakusaki o oshiete moraemasu ka.",
+    "gloss": "Could you give me your contact info?",
+    "situation": "Asking for someone's contact politely"
+  },
+  {
+    "hanzi": "今度一緒にごはん食べませんか。",
+    "pinyin": "kondo issho ni gohan tabemasen ka.",
+    "gloss": "Shall we get a meal together sometime?",
+    "situation": "Making a simple plan to meet"
+  },
+  {
+    "hanzi": "明日の夜、空いていますか。",
+    "pinyin": "ashita no yoru, aite imasu ka.",
+    "gloss": "Are you free tomorrow evening?",
+    "situation": "Setting up a time to meet"
+  },
+  {
+    "hanzi": "今日は本当にありがとうございました。",
+    "pinyin": "kyō wa hontō ni arigatō gozaimashita.",
+    "gloss": "Thank you so much for today.",
+    "situation": "Warm thanks at the end of the day"
+  },
+  {
+    "hanzi": "今日はすごく楽しかったです。",
+    "pinyin": "kyō wa sugoku tanoshikatta desu.",
+    "gloss": "I had a really great time today.",
+    "situation": "Saying goodbye after hanging out"
+  },
+  {
+    "hanzi": "また会いましょう。",
+    "pinyin": "mata aimashō.",
+    "gloss": "Let's meet again.",
+    "situation": "Parting and hoping to see them again"
+  }
+]

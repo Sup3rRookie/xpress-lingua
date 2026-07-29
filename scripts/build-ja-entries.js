@@ -1,7 +1,8 @@
 // Writes scripts/.ja-entries.json = [{id, text}] for render-ja.py: the survival
-// deck, the JLPT ladder words, and the JLPT example sentences. Clip ids match
-// what the app requests via playText: survival/JLPT item ids as-is, examples
-// prefixed "jae-" (see exampleFor in src/lib/sentences.ts).
+// deck, the JLPT ladder words, the JLPT example sentences, and the travel
+// sentences. Clip ids match what the app requests via playText: survival/JLPT
+// item ids as-is, examples prefixed "jae-" (see exampleFor in src/lib/sentences.ts),
+// travel sentences already carry their own "jtr-" ids.
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -15,11 +16,13 @@ execSync(
 const { jaSurvival } = require(path.join(buildDir, 'ja-survival.js'));
 const jlpt = require(path.join(ROOT, 'src', 'data', 'ja-jlpt.json'));
 const ex = require(path.join(ROOT, 'src', 'data', 'ja-jlpt-examples.json'));
+const travel = require(path.join(ROOT, 'src', 'data', 'ja-travel-sentences.json'));
 
 const entries = [];
 for (const it of jaSurvival.items) entries.push({ id: it.id, text: it.hanzi });
 for (const it of jlpt.items) entries.push({ id: it.id, text: it.hanzi });
 for (const [k, v] of Object.entries(ex)) entries.push({ id: 'jae-' + k, text: v.hanzi });
+for (const s of travel.sentences) entries.push({ id: s.id, text: s.hanzi });
 
 const seen = new Set();
 const out = [];
@@ -30,5 +33,6 @@ for (const e of entries) {
 }
 fs.writeFileSync(path.join(__dirname, '.ja-entries.json'), JSON.stringify(out));
 console.log(
-  `ja entries: ${out.length} (survival ${jaSurvival.items.length} + jlpt ${jlpt.items.length} + examples ${Object.keys(ex).length})`,
+  `ja entries: ${out.length} (survival ${jaSurvival.items.length} + jlpt ${jlpt.items.length}` +
+    ` + examples ${Object.keys(ex).length} + travel ${travel.sentences.length})`,
 );

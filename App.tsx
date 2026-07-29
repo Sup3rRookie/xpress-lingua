@@ -184,7 +184,15 @@ export default function App() {
       ) : (
         <>
           {screen === 'browse' && <Browse onDone={() => setScreen(lastTab)} />}
-          {screen === 'travel' && <TravelPractice onDone={() => setScreen(lastTab)} />}
+          {/* key remounts on a language switch so no scenario/index/saved state
+              from the previous pack can leak into the new one. */}
+          {screen === 'travel' && (
+            <TravelPractice
+              key={activeLang}
+              lang={activeLang}
+              onDone={() => setScreen(lastTab)}
+            />
+          )}
           {screen === 'sentences' && (
             <Sentences initialTab={sentencesTab} onDone={() => setScreen(lastTab)} />
           )}

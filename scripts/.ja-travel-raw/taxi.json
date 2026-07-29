@@ -1,0 +1,146 @@
+[
+  {
+    "hanzi": "すみません、タクシー乗り場はどこですか。",
+    "pinyin": "sumimasen, takushī noriba wa doko desu ka",
+    "gloss": "Excuse me, where is the taxi stand?",
+    "situation": "Looking for taxis outside a station or airport"
+  },
+  {
+    "hanzi": "タクシーを一台お願いします。",
+    "pinyin": "takushī o ichidai onegai shimasu",
+    "gloss": "One taxi, please.",
+    "situation": "Asking hotel staff to call you a taxi"
+  },
+  {
+    "hanzi": "この住所までお願いします。",
+    "pinyin": "kono jūsho made onegai shimasu",
+    "gloss": "To this address, please.",
+    "situation": "Showing the driver an address on your phone"
+  },
+  {
+    "hanzi": "東京駅までお願いします。",
+    "pinyin": "tōkyō eki made onegai shimasu",
+    "gloss": "To Tokyo Station, please.",
+    "situation": "Telling the driver your destination"
+  },
+  {
+    "hanzi": "ここに行きたいんですけど。",
+    "pinyin": "koko ni ikitai n desu kedo",
+    "gloss": "I'd like to go here.",
+    "situation": "Pointing at a map or screen for the driver"
+  },
+  {
+    "hanzi": "だいたいいくらかかりますか。",
+    "pinyin": "daitai ikura kakarimasu ka",
+    "gloss": "About how much will it cost?",
+    "situation": "Checking the fare before you get in"
+  },
+  {
+    "hanzi": "何分ぐらいかかりますか。",
+    "pinyin": "nanpun gurai kakarimasu ka",
+    "gloss": "About how many minutes will it take?",
+    "situation": "Asking the driver how long the ride is"
+  },
+  {
+    "hanzi": "急いでもらえますか。",
+    "pinyin": "isoide moraemasu ka",
+    "gloss": "Could you hurry, please?",
+    "situation": "You're running late for a flight or train"
+  },
+  {
+    "hanzi": "次の信号で止めてください。",
+    "pinyin": "tsugi no shingō de tomete kudasai",
+    "gloss": "Please stop at the next light.",
+    "situation": "Telling the driver where to pull over"
+  },
+  {
+    "hanzi": "ここで大丈夫です。",
+    "pinyin": "koko de daijōbu desu",
+    "gloss": "Here is fine.",
+    "situation": "Stopping the taxi at your spot"
+  },
+  {
+    "hanzi": "カードで払えますか。",
+    "pinyin": "kādo de haraemasu ka",
+    "gloss": "Can I pay by card?",
+    "situation": "Checking payment options in the taxi"
+  },
+  {
+    "hanzi": "現金でお願いします。",
+    "pinyin": "genkin de onegai shimasu",
+    "gloss": "Cash, please.",
+    "situation": "Telling the driver how you'll pay"
+  },
+  {
+    "hanzi": "スイカ、使えますか。",
+    "pinyin": "suika, tsukaemasu ka",
+    "gloss": "Can I use Suica?",
+    "situation": "Asking if your IC card works here"
+  },
+  {
+    "hanzi": "領収書をください。",
+    "pinyin": "ryōshūsho o kudasai",
+    "gloss": "A receipt, please.",
+    "situation": "After paying the taxi driver"
+  },
+  {
+    "hanzi": "荷物、トランクに入れてもいいですか。",
+    "pinyin": "nimotsu, toranku ni irete mo ii desu ka",
+    "gloss": "Can I put my bags in the trunk?",
+    "situation": "Loading luggage into the taxi"
+  },
+  {
+    "hanzi": "切符はどこで買えますか。",
+    "pinyin": "kippu wa doko de kaemasu ka",
+    "gloss": "Where can I buy a ticket?",
+    "situation": "Finding the ticket machines in a station"
+  },
+  {
+    "hanzi": "大阪まで大人二枚ください。",
+    "pinyin": "ōsaka made otona nimai kudasai",
+    "gloss": "Two adult tickets to Osaka, please.",
+    "situation": "Buying tickets at the counter"
+  },
+  {
+    "hanzi": "何番線ですか。",
+    "pinyin": "nanbansen desu ka",
+    "gloss": "Which platform is it?",
+    "situation": "Asking staff where your train leaves from"
+  },
+  {
+    "hanzi": "この電車、渋谷に行きますか。",
+    "pinyin": "kono densha, shibuya ni ikimasu ka",
+    "gloss": "Does this train go to Shibuya?",
+    "situation": "Checking before you board"
+  },
+  {
+    "hanzi": "どこで乗り換えますか。",
+    "pinyin": "doko de norikaemasu ka",
+    "gloss": "Where do I transfer?",
+    "situation": "Asking about a connection on your route"
+  },
+  {
+    "hanzi": "何線に乗ればいいですか。",
+    "pinyin": "nanisen ni noreba ii desu ka",
+    "gloss": "Which line should I take?",
+    "situation": "Confused by the subway map"
+  },
+  {
+    "hanzi": "終電は何時ですか。",
+    "pinyin": "shūden wa nanji desu ka",
+    "gloss": "What time is the last train?",
+    "situation": "Planning your night out"
+  },
+  {
+    "hanzi": "空港行きのバスはどこですか。",
+    "pinyin": "kūkō yuki no basu wa doko desu ka",
+    "gloss": "Where's the bus to the airport?",
+    "situation": "Finding the right bus stop"
+  },
+  {
+    "hanzi": "このスーツケース、持ち込めますか。",
+    "pinyin": "kono sūtsukēsu, mochikomemasu ka",
+    "gloss": "Can I bring this suitcase on board?",
+    "situation": "Asking staff about luggage on a train or bus"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "hanzi": "すみません、駅はどこですか。",
+    "pinyin": "sumimasen, eki wa doko desu ka",
+    "gloss": "Excuse me, where is the station?",
+    "situation": "stopping someone on the street to find the nearest train station"
+  },
+  {
+    "hanzi": "東京駅へ行きたいんですが。",
+    "pinyin": "tōkyō eki e ikitai n desu ga",
+    "gloss": "I'd like to get to Tokyo Station.",
+    "situation": "opening line when you name your destination and want help"
+  },
+  {
+    "hanzi": "どうやって行けばいいですか。",
+    "pinyin": "dō yatte ikeba ii desu ka",
+    "gloss": "How should I get there?",
+    "situation": "after saying where you want to go, asking for the route"
+  },
+  {
+    "hanzi": "ここから歩けますか。",
+    "pinyin": "koko kara arukemasu ka",
+    "gloss": "Can I walk there from here?",
+    "situation": "checking if you need a train or taxi, or can just walk"
+  },
+  {
+    "hanzi": "歩いてどのくらいかかりますか。",
+    "pinyin": "aruite dono kurai kakarimasu ka",
+    "gloss": "How long does it take on foot?",
+    "situation": "you know you can walk, now you want the time"
+  },
+  {
+    "hanzi": "電車とバス、どっちが早いですか。",
+    "pinyin": "densha to basu, dotchi ga hayai desu ka",
+    "gloss": "Which is faster, the train or the bus?",
+    "situation": "choosing between two ways of getting somewhere"
+  },
+  {
+    "hanzi": "何番出口ですか。",
+    "pinyin": "nanban deguchi desu ka",
+    "gloss": "Which exit number is it?",
+    "situation": "inside a big station with many numbered exits"
+  },
+  {
+    "hanzi": "空港行きのバス乗り場はどこですか。",
+    "pinyin": "kūkō yuki no basu noriba wa doko desu ka",
+    "gloss": "Where is the bus stop for the airport?",
+    "situation": "looking for the airport bus outside a station or hotel"
+  },
+  {
+    "hanzi": "次の駅で降りればいいですか。",
+    "pinyin": "tsugi no eki de orireba ii desu ka",
+    "gloss": "Should I get off at the next station?",
+    "situation": "on the train, checking where to get off"
+  },
+  {
+    "hanzi": "この地図のどこですか。",
+    "pinyin": "kono chizu no doko desu ka",
+    "gloss": "Where is it on this map?",
+    "situation": "holding up a paper map and asking someone to point"
+  },
+  {
+    "hanzi": "スマホで見せてもらえますか。",
+    "pinyin": "sumaho de misete moraemasu ka",
+    "gloss": "Could you show me on my phone?",
+    "situation": "handing over your phone so they can point at the map"
+  },
+  {
+    "hanzi": "この住所へ行きたいんです。",
+    "pinyin": "kono jūsho e ikitai n desu",
+    "gloss": "I want to go to this address.",
+    "situation": "showing a written address to a taxi driver or a passerby"
+  },
+  {
+    "hanzi": "道に迷ってしまいました。",
+    "pinyin": "michi ni mayotte shimaimashita",
+    "gloss": "I've gotten lost.",
+    "situation": "admitting you're lost when you ask someone for help"
+  },
+  {
+    "hanzi": "トイレはどこですか。",
+    "pinyin": "toire wa doko desu ka",
+    "gloss": "Where is the toilet?",
+    "situation": "in a station, department store, or restaurant"
+  },
+  {
+    "hanzi": "近くにコンビニはありますか。",
+    "pinyin": "chikaku ni konbini wa arimasu ka",
+    "gloss": "Is there a convenience store nearby?",
+    "situation": "needing cash, a drink, or a snack while out walking"
+  },
+  {
+    "hanzi": "コインロッカーはどこにありますか。",
+    "pinyin": "koin rokkā wa doko ni arimasu ka",
+    "gloss": "Where are the coin lockers?",
+    "situation": "wanting to leave your luggage at a station"
+  },
+  {
+    "hanzi": "もう一度言ってもらえますか。",
+    "pinyin": "mō ichido itte moraemasu ka",
+    "gloss": "Could you say that again?",
+    "situation": "you missed what they said and need it repeated"
+  },
+  {
+    "hanzi": "もう少しゆっくり話してください。",
+    "pinyin": "mō sukoshi yukkuri hanashite kudasai",
+    "gloss": "Please speak a little more slowly.",
+    "situation": "when the directions come out too fast to follow"
+  },
+  {
+    "hanzi": "この道で合ってますか。",
+    "pinyin": "kono michi de attemasu ka",
+    "gloss": "Is this the right way?",
+    "situation": "mid-walk, checking you haven't gone the wrong direction"
+  },
+  {
+    "hanzi": "ここに書いてもらえますか。",
+    "pinyin": "koko ni kaite moraemasu ka",
+    "gloss": "Could you write it down here?",
+    "situation": "handing over a notepad because you can't remember the name"
+  },
+  {
+    "hanzi": "右に曲がって、まっすぐですね。",
+    "pinyin": "migi ni magatte, massugu desu ne",
+    "gloss": "So I turn right, then go straight, right?",
+    "situation": "repeating the directions back to check you understood"
+  },
+  {
+    "hanzi": "日本語があまり話せません。",
+    "pinyin": "nihongo ga amari hanasemasen",
+    "gloss": "I can't speak much Japanese.",
+    "situation": "warning someone up front so they keep it simple"
+  }
+]

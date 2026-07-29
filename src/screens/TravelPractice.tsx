@@ -1,7 +1,8 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import travel from '../data/zh-travel-sentences.json';
+import zhTravel from '../data/zh-travel-sentences.json';
+import jaTravel from '../data/ja-travel-sentences.json';
 import { playText, stopPlayback } from '../lib/audio';
 import { fonts, shadows, tokens } from '../theme';
 import GlowEllipse from '../components/GlowEllipse';
@@ -20,11 +21,25 @@ interface TScenario {
   title: string;
   emoji: string;
 }
+interface TravelPack {
+  lang: string;
+  langLabel: string;
+  ttsLocale: string;
+  scenarios: TScenario[];
+  sentences: TSentence[];
+}
 
-const SCENARIOS = travel.scenarios as TScenario[];
-const SENTENCES = travel.sentences as TSentence[];
-const SENTENCE_IDS = new Set(SENTENCES.map((s) => s.id));
-const LOCALE = travel.ttsLocale;
+// One pack per language. Sentence ids carry a per-language prefix ("tr-" / "jtr-")
+// so the shared saved list and the audio manifest can never collide.
+const PACKS: Record<string, TravelPack> = {
+  zh: zhTravel as TravelPack,
+  ja: jaTravel as TravelPack,
+};
+
+export function hasTravelPack(lang: string): boolean {
+  return Boolean(PACKS[lang]);
+}
+
 const SAVED_KEY = 'xl-travel-saved';
 
 const TINTS = [
@@ -38,45 +53,89 @@ const TINTS = [
 // Listen-and-repeat (shadowing) practice for real travel scenarios. No scoring:
 // you hear the native line, repeat it aloud, and can save any line to run past a
 // native-speaker friend later.
-export default function TravelPractice({ onDone }: { onDone: () => void }) {
+export default function TravelPractice({
+  lang,
+  onDone,
+}: {
+  lang: string;
+  onDone: () => void;
+}) {
+  const pack = PACKS[lang] ?? PACKS.zh;
+  const SCENARIOS = pack.scenarios;
+  const SENTENCES = pack.sentences;
+  const LOCALE = pack.ttsLocale;
+  // Mandarin readings are tone-coloured pinyin; Japanese readings are plain romaji.
+  const isZh = pack.lang === 'zh';
+
   const [scenario, setScenario] = useState<string | null>(null);
   const [index, setIndex] = useState(0);
   const [saved, setSaved] = useState<Set<string>>(new Set());
   const [viewSaved, setViewSaved] = useState(false);
+  // Guards the read-modify-write on the shared saved-list key.
+  const loaded = useRef(false);
+  const writeQueue = useRef<Promise<void>>(Promise.resolve());
 
   useEffect(() => {
-    AsyncStorage.getItem(SAVED_KEY).then((v) => {
-      if (!v) return;
-      try {
-        // Prune ids that no longer exist so the saved count can't drift from the list.
-        const ids = (JSON.parse(v) as string[]).filter((id) => SENTENCE_IDS.has(id));
+    // The saved list is shared across languages, so keep only ids from this pack
+    // and never write back ids belonging to the other one.
+    const mine = new Set(SENTENCES.map((s) => s.id));
+    AsyncStorage.getItem(SAVED_KEY)
+      .then((v) => {
+        let ids: string[] = [];
+        try {
+          if (v) ids = (JSON.parse(v) as string[]).filter((id) => mine.has(id));
+        } catch {
+          // ignore corrupt value
+        }
         setSaved(new Set(ids));
-      } catch {
-        // ignore corrupt value
-      }
-    });
-  }, []);
+      })
+      .finally(() => {
+        loaded.current = true;
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pack.lang]);
 
   // Stop any audio when leaving the screen.
   useEffect(() => () => stopPlayback(), []);
 
   const list = useMemo(
     () => (scenario ? SENTENCES.filter((s) => s.scenario === scenario) : []),
-    [scenario],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [scenario, pack.lang],
   );
   const current = scenario && index < list.length ? list[index] : null;
 
   // Auto-play the native line whenever the sentence changes: hear it, then repeat.
+  // Reaching the end of a scenario stops it, so the last line does not keep
+  // playing over the "Scenario done" card.
   useEffect(() => {
     if (current) playText(current.id, current.hanzi, LOCALE);
+    else stopPlayback();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [current?.id]);
 
   const persist = (next: Set<string>) => {
     setSaved(new Set(next));
-    AsyncStorage.setItem(SAVED_KEY, JSON.stringify([...next]));
+    // Serialise writes: each one re-reads, so two quick taps must not both read
+    // the same pre-write value and lose one of the changes.
+    writeQueue.current = writeQueue.current.then(async () => {
+      // Merge rather than overwrite: the key holds both languages' saved lines,
+      // so saving a Japanese line must not wipe the Mandarin ones.
+      const mine = new Set(SENTENCES.map((s) => s.id));
+      let others: string[] = [];
+      try {
+        const raw = await AsyncStorage.getItem(SAVED_KEY);
+        if (raw) others = (JSON.parse(raw) as string[]).filter((id) => !mine.has(id));
+      } catch {
+        // ignore corrupt value
+      }
+      await AsyncStorage.setItem(SAVED_KEY, JSON.stringify([...others, ...next]));
+    });
   };
   const toggleSave = (id: string) => {
+    // Ignore taps until the stored list has loaded, or this write would persist
+    // an empty set and destroy what was already saved.
+    if (!loaded.current) return;
     const next = new Set(saved);
     if (next.has(id)) next.delete(id);
     else next.add(id);
@@ -127,7 +186,11 @@ export default function TravelPractice({ onDone }: { onDone: () => void }) {
               </Pressable>
               <View style={styles.rowBody}>
                 <Text style={styles.rowHanzi}>{s.hanzi}</Text>
-                <TonePinyin pinyin={s.pinyin} size={13} dark />
+                {isZh ? (
+                  <TonePinyin pinyin={s.pinyin} size={13} dark />
+                ) : (
+                  <Text style={styles.rowReading}>{s.pinyin}</Text>
+                )}
                 <Text style={styles.rowGloss}>{s.gloss}</Text>
               </View>
               <Pressable
@@ -233,7 +296,11 @@ export default function TravelPractice({ onDone }: { onDone: () => void }) {
             <View style={styles.sentenceCard}>
               <Text style={styles.situation}>{current.situation}</Text>
               <Text style={styles.hanzi}>{current.hanzi}</Text>
-              <TonePinyin pinyin={current.pinyin} size={18} dark />
+              {isZh ? (
+                <TonePinyin pinyin={current.pinyin} size={18} dark />
+              ) : (
+                <Text style={styles.mainReading}>{current.pinyin}</Text>
+              )}
               <Text style={styles.gloss}>{current.gloss}</Text>
               <View style={styles.repeatHint}>
                 <Text style={styles.repeatHintText}>🗣️ Now say it out loud</Text>
@@ -486,6 +553,14 @@ const styles = StyleSheet.create({
   rowBody: { flex: 1, gap: 3 },
   rowHanzi: { fontFamily: fonts.hanzi, fontSize: 20, color: tokens.text.primary },
   rowGloss: { fontFamily: fonts.bodyMedium, fontSize: 13, color: tokens.text.secondary },
+  // Romaji reading for non-tonal languages (Japanese), in place of TonePinyin.
+  rowReading: { fontFamily: fonts.bodySemiBold, fontSize: 13, color: '#9FE8FF' },
+  mainReading: {
+    fontFamily: fonts.bodySemiBold,
+    fontSize: 18,
+    color: '#9FE8FF',
+    textAlign: 'center',
+  },
   starBtn: { padding: 4 },
   starOn: { fontSize: 20, color: tokens.game.xpGold },
 });

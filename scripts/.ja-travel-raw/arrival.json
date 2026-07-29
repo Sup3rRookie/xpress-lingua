@@ -1,0 +1,146 @@
+[
+  {
+    "hanzi": "観光で来ました。",
+    "pinyin": "kankō de kimashita",
+    "gloss": "I'm here for sightseeing.",
+    "situation": "The immigration officer asks the purpose of your visit."
+  },
+  {
+    "hanzi": "一週間くらい泊まります。",
+    "pinyin": "isshūkan kurai tomarimasu",
+    "gloss": "I'm staying about a week.",
+    "situation": "Immigration asks how long you'll be in Japan."
+  },
+  {
+    "hanzi": "ホテルの予約はこれです。",
+    "pinyin": "hoteru no yoyaku wa kore desu",
+    "gloss": "This is my hotel booking.",
+    "situation": "You're asked where you'll be staying and you show the reservation on your phone."
+  },
+  {
+    "hanzi": "申告するものはありません。",
+    "pinyin": "shinkoku suru mono wa arimasen",
+    "gloss": "I have nothing to declare.",
+    "situation": "At the customs counter after you pick up your bags."
+  },
+  {
+    "hanzi": "荷物はどこで受け取りますか。",
+    "pinyin": "nimotsu wa doko de uketorimasu ka",
+    "gloss": "Where do I pick up my luggage?",
+    "situation": "You've cleared immigration and can't find baggage claim."
+  },
+  {
+    "hanzi": "すみません、荷物が出てこないんです。",
+    "pinyin": "sumimasen, nimotsu ga dete konai n desu",
+    "gloss": "Excuse me, my bag hasn't come out.",
+    "situation": "The belt has stopped and your suitcase never appeared."
+  },
+  {
+    "hanzi": "スーツケースが壊れていました。",
+    "pinyin": "sūtsukēsu ga kowarete imashita",
+    "gloss": "My suitcase was damaged.",
+    "situation": "Your bag arrives with a cracked shell or a broken wheel."
+  },
+  {
+    "hanzi": "これが荷物のタグです。",
+    "pinyin": "kore ga nimotsu no tagu desu",
+    "gloss": "This is my baggage tag.",
+    "situation": "Staff at the lost luggage desk ask for your claim sticker."
+  },
+  {
+    "hanzi": "東京駅へ行きたいんですが。",
+    "pinyin": "tōkyō eki e ikitai n desu ga",
+    "gloss": "I'd like to get to Tokyo Station.",
+    "situation": "You're at the information desk working out how to reach the city."
+  },
+  {
+    "hanzi": "電車乗り場はどっちですか。",
+    "pinyin": "densha noriba wa docchi desu ka",
+    "gloss": "Which way is the train platform?",
+    "situation": "You've left the arrivals hall and need the station."
+  },
+  {
+    "hanzi": "リムジンバス乗り場はどこですか。",
+    "pinyin": "rimujin basu noriba wa doko desu ka",
+    "gloss": "Where is the airport bus stop?",
+    "situation": "You'd rather take the limousine bus than the train."
+  },
+  {
+    "hanzi": "次の電車は何時ですか。",
+    "pinyin": "tsugi no densha wa nanji desu ka",
+    "gloss": "What time is the next train?",
+    "situation": "You're on the platform and the board is only in Japanese."
+  },
+  {
+    "hanzi": "スイカを買いたいんですが。",
+    "pinyin": "suika o kaitai n desu ga",
+    "gloss": "I'd like to buy a Suica card.",
+    "situation": "At the ticket window, getting your first IC card."
+  },
+  {
+    "hanzi": "千円チャージお願いします。",
+    "pinyin": "sen'en chāji onegai shimasu",
+    "gloss": "A thousand yen top-up, please.",
+    "situation": "You're adding money to your IC card at the counter."
+  },
+  {
+    "hanzi": "両替はどこでできますか。",
+    "pinyin": "ryōgae wa doko de dekimasu ka",
+    "gloss": "Where can I change money?",
+    "situation": "You landed with no yen and need an exchange counter."
+  },
+  {
+    "hanzi": "この近くにATMはありますか。",
+    "pinyin": "kono chikaku ni ētīemu wa arimasu ka",
+    "gloss": "Is there an ATM near here?",
+    "situation": "You want to withdraw cash before leaving the terminal."
+  },
+  {
+    "hanzi": "細かいお金にしてもらえますか。",
+    "pinyin": "komakai okane ni shite moraemasu ka",
+    "gloss": "Could you break this into smaller notes?",
+    "situation": "You got a 10,000 yen bill and need change for the bus."
+  },
+  {
+    "hanzi": "Wi-Fiのパスワードを教えてください。",
+    "pinyin": "waifai no pasuwādo o oshiete kudasai",
+    "gloss": "Please tell me the wifi password.",
+    "situation": "At the information counter, trying to get online."
+  },
+  {
+    "hanzi": "SIMカードはどこで買えますか。",
+    "pinyin": "shimu kādo wa doko de kaemasu ka",
+    "gloss": "Where can I buy a SIM card?",
+    "situation": "You need mobile data before you head into the city."
+  },
+  {
+    "hanzi": "第二ターミナルへはどう行きますか。",
+    "pinyin": "dai ni tāminaru e wa dō ikimasu ka",
+    "gloss": "How do I get to Terminal 2?",
+    "situation": "Your connecting flight or meeting point is in another terminal."
+  },
+  {
+    "hanzi": "迎えの人を待っています。",
+    "pinyin": "mukae no hito o matte imasu",
+    "gloss": "I'm waiting for someone picking me up.",
+    "situation": "Staff ask if you need help while you stand around arrivals."
+  },
+  {
+    "hanzi": "今、空港に着きました。",
+    "pinyin": "ima, kūkō ni tsukimashita",
+    "gloss": "I've just arrived at the airport.",
+    "situation": "Phoning the friend or driver who is coming to get you."
+  },
+  {
+    "hanzi": "すみません、ここで合っていますか。",
+    "pinyin": "sumimasen, koko de atte imasu ka",
+    "gloss": "Excuse me, is this the right place?",
+    "situation": "You're not sure you're at the correct counter or meeting point."
+  },
+  {
+    "hanzi": "この列でいいですか。",
+    "pinyin": "kono retsu de ii desu ka",
+    "gloss": "Is this the right line?",
+    "situation": "Standing in a long queue at immigration, unsure it's the one for foreign passports."
+  }
+]

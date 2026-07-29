@@ -1,0 +1,134 @@
+[
+  {
+    "hanzi": "すみません、助けてください。",
+    "pinyin": "sumimasen, tasukete kudasai",
+    "gloss": "Excuse me, please help me.",
+    "situation": "asking a stranger for help"
+  },
+  {
+    "hanzi": "誰か助けて!",
+    "pinyin": "dareka tasukete",
+    "gloss": "Somebody help!",
+    "situation": "shouting in a real emergency"
+  },
+  {
+    "hanzi": "英語が話せる人はいますか。",
+    "pinyin": "eigo ga hanaseru hito wa imasu ka",
+    "gloss": "Is there anyone who speaks English?",
+    "situation": "when you can't explain in Japanese"
+  },
+  {
+    "hanzi": "救急車を呼んでください。",
+    "pinyin": "kyūkyūsha o yonde kudasai",
+    "gloss": "Please call an ambulance.",
+    "situation": "someone needs urgent medical help"
+  },
+  {
+    "hanzi": "気分が悪いです。",
+    "pinyin": "kibun ga warui desu",
+    "gloss": "I feel sick.",
+    "situation": "telling staff you suddenly feel unwell"
+  },
+  {
+    "hanzi": "お腹が痛いです。",
+    "pinyin": "onaka ga itai desu",
+    "gloss": "My stomach hurts.",
+    "situation": "describing stomach pain to a doctor"
+  },
+  {
+    "hanzi": "頭が痛くて、熱もあります。",
+    "pinyin": "atama ga itakute, netsu mo arimasu",
+    "gloss": "I have a headache and a fever too.",
+    "situation": "describing symptoms at a clinic"
+  },
+  {
+    "hanzi": "病院に連れて行ってください。",
+    "pinyin": "byōin ni tsurete itte kudasai",
+    "gloss": "Please take me to a hospital.",
+    "situation": "asking hotel staff or a taxi driver"
+  },
+  {
+    "hanzi": "近くに薬局はありますか。",
+    "pinyin": "chikaku ni yakkyoku wa arimasu ka",
+    "gloss": "Is there a pharmacy nearby?",
+    "situation": "looking for medicine"
+  },
+  {
+    "hanzi": "卵アレルギーがあります。",
+    "pinyin": "tamago arerugī ga arimasu",
+    "gloss": "I have an egg allergy.",
+    "situation": "warning staff or a doctor about an allergy"
+  },
+  {
+    "hanzi": "この薬を飲んでも大丈夫ですか。",
+    "pinyin": "kono kusuri o nonde mo daijōbu desu ka",
+    "gloss": "Is it okay for me to take this medicine?",
+    "situation": "checking with a pharmacist"
+  },
+  {
+    "hanzi": "パスポートをなくしました。",
+    "pinyin": "pasupōto o nakushimashita",
+    "gloss": "I lost my passport.",
+    "situation": "reporting a lost passport"
+  },
+  {
+    "hanzi": "財布を盗まれました。",
+    "pinyin": "saifu o nusumaremashita",
+    "gloss": "My wallet was stolen.",
+    "situation": "reporting a theft to the police"
+  },
+  {
+    "hanzi": "スマホをどこかに落としました。",
+    "pinyin": "sumaho o dokoka ni otoshimashita",
+    "gloss": "I dropped my phone somewhere.",
+    "situation": "when your phone goes missing"
+  },
+  {
+    "hanzi": "交番はどこですか。",
+    "pinyin": "kōban wa doko desu ka",
+    "gloss": "Where is the police box?",
+    "situation": "looking for the nearest koban"
+  },
+  {
+    "hanzi": "電車にかばんを忘れました。",
+    "pinyin": "densha ni kaban o wasuremashita",
+    "gloss": "I left my bag on the train.",
+    "situation": "at the station office after leaving something behind"
+  },
+  {
+    "hanzi": "忘れ物を取りに来たんですが。",
+    "pinyin": "wasuremono o tori ni kita n desu ga",
+    "gloss": "I've come to pick up something I left behind.",
+    "situation": "at a station lost and found counter"
+  },
+  {
+    "hanzi": "家族に電話してもらえますか。",
+    "pinyin": "kazoku ni denwa shite moraemasu ka",
+    "gloss": "Could you call my family for me?",
+    "situation": "asking someone to phone on your behalf"
+  },
+  {
+    "hanzi": "今のは地震ですか。",
+    "pinyin": "ima no wa jishin desu ka",
+    "gloss": "Was that an earthquake?",
+    "situation": "right after the ground shakes"
+  },
+  {
+    "hanzi": "どこに逃げればいいですか。",
+    "pinyin": "doko ni nigereba ii desu ka",
+    "gloss": "Where should I go to be safe?",
+    "situation": "during an evacuation"
+  },
+  {
+    "hanzi": "今のアナウンス、何て言いましたか。",
+    "pinyin": "ima no anaunsu, nante iimashita ka",
+    "gloss": "What did that announcement just say?",
+    "situation": "after an emergency announcement you didn't catch"
+  },
+  {
+    "hanzi": "何かあったんですか。",
+    "pinyin": "nani ka atta n desu ka",
+    "gloss": "Did something happen?",
+    "situation": "asking what's going on when people react"
+  }
+]

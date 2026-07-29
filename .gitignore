@@ -47,3 +47,5 @@ scripts/.travel-raw.json
 scripts/.ja-entries.json
 scripts/.ja-render.log
 scripts/.deploy-build.log
+scripts/.jtr.log
+scripts/.ja-slow.log

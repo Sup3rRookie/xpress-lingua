@@ -6,7 +6,9 @@ import { resetProgressWatermark } from './srs';
 // Progress backup: FSRS state, streak, pace, and imported deck definitions
 // (imported media blobs are NOT included, decks re-link audio on re-import).
 const STORE_KEY = 'xl-store-v1';
-const KEYS = [STORE_KEY, 'xl-imported-decks-v1'];
+// 'xl-travel-saved' is the "ask a native" list: user-created, not recoverable
+// from anything else, so it has to travel with the backup.
+const KEYS = [STORE_KEY, 'xl-imported-decks-v1', 'xl-travel-saved'];
 
 export async function exportBackup(): Promise<boolean> {
   if (Platform.OS !== 'web') return false;
